@@ -1,0 +1,3 @@
+[submodule "nr-core"]
+	path = nr-core
+	url = https://github.com/cp-nilly/nr-core
