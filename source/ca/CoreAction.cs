@@ -22,8 +22,14 @@ namespace ca
         {
             if (task == null || task.IsCompleted || task.IsFaulted)
                 task = Task.Factory.StartNew(action);
+
+            /*
+             * Consider to remove manually all RealmTime references of
+             * project to proceed with this installation of CA on your
+             * NR-Core project.
+             */
             /* .ContinueWith(exception => Program.Log.Fatal(exception.Exception.InnerException),
-                TaskContinuationOptions.OnlyOnFaulted) */
+                TaskContinuationOptions.OnlyOnFaulted); */
         }
     }
 }

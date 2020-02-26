@@ -47,6 +47,7 @@
     <Compile Include="CoreAction.cs" />
     <Compile Include="CoreConstant.cs" />
     <Compile Include="CoreManager.cs" />
+    <Compile Include="CoreWorldTask.cs" />
     <Compile Include="CoreThread.cs" />
     <Compile Include="CoreType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

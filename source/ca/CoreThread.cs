@@ -6,7 +6,43 @@ namespace ca
 {
     /// <summary>
     /// Represents a core thread according <see cref="CoreType"/>.
+    /// This algorithm runs a thread with such priority and background or not.
+    /// However, this algorithm is designed for procedures that require highest priority,
+    /// based on <see cref="CoreType"/> rather than <see cref="CoreWorldTask"/> which runs
+    /// with low priority and doesn't require such high attention by processor cores of
+    /// current server environment.
     /// </summary>
+    ///
+    /// <example>
+    ///
+    /// Usage of this algorithm:
+    /// - any thread that require priority and runs synchronously (concurrent scenario)
+    /// will fit with conditions of <see cref="CoreThread"/>
+    ///
+    /// - if you do use it very well, you'll not see any thread-unsafe issue, see below an
+    /// example of it:
+    ///
+    /// <code>
+    ///
+    ///     /* asuming <see cref="CoreThread"/> is running on <see cref="RealmManager"/> */
+    ///
+    ///
+    ///     var ct = new CoreThread(
+    ///         CoreType.Monitor,
+    ///         new CoreAction(() => Console.WriteLine("Monitor task: repeats every 1000 ms.")),
+    ///         this,
+    ///         1000,
+    ///         false);
+    ///     /* once this method is invoked, it'll invoke <see cref="action"/> every
+    ///     <see cref="delay"/>, repeating this process until its over (synchronously) */
+    ///     ct.start();
+    ///
+    ///     /* to stop the cycle must invoke <see cref="stop(bool)"/> method */
+    ///     ct.stop();
+    ///
+    /// </code>
+    ///
+    /// </example>
     public sealed class CoreThread
     {
         private readonly CoreAction action;

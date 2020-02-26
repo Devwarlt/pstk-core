@@ -10,6 +10,39 @@ namespace ca
     /// worlds and connected servers of game based on <see cref="CoreType"/>
     /// for each <see cref="cores"/>.
     /// </summary>
+    ///
+    /// <example>
+    ///
+    /// Usage of this algorithm:
+    /// - declaration of <see cref="CoreManager"/> is simple and easy to do at <see cref="RealmManager.Run"/>
+    /// method, see below:
+    ///
+    /// <code>
+    ///
+    ///     // declare the <see cref="CoreManager"/> as a new <see cref="RealmManager"/> property
+    ///     public CoreManager Core { get; private set; }
+    ///
+    ///     /* inside method <see cref="RealmManager.Run"/> */
+    ///
+    ///     Core = new CoreManager(this);
+    ///     Core.init();
+    ///     Core.start();
+    ///
+    ///     /* better be added inside method <see cref="RealmManager.Stop"/>
+    ///     as well to properly dispose cores when <see cref="RealmManager"/>
+    ///     is stopping */
+    ///
+    ///     Core.stop();
+    ///
+    /// </code>
+    ///
+    /// <para>
+    /// Note: it's not necessary to run <see cref="CoreManager"/> as internal thread / task of
+    /// <see cref="RealmManager"/> instance, the <see cref="System.Threading.Tasks.TaskScheduler"/>
+    /// will be responsible for this job, automatically.
+    /// </para>
+    ///
+    /// </example>
     public sealed class CoreManager
     {
         private readonly RealmManager manager;
@@ -115,8 +148,14 @@ namespace ca
 
         private void monitorAction()
         {
+            /*
+             * Consider to remove manually all RealmTime references of
+             * project to proceed with this installation of CA on your
+             * NR-Core project.
+             */
             // manager.ConMan.Tick();
             // manager.Monitor.Tick();
+
             manager.InterServer.Tick(CoreConstant.monitorTickMs);
         }
 

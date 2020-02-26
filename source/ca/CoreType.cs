@@ -19,19 +19,19 @@ namespace ca
         Monitor,
 
         /// <summary>
-        /// Flag that represents a world action for <see cref="CoreThread"/>
+        /// Flag that represents a world action for <see cref="CoreWorldTask"/>
         /// at <see cref="wServer.realm.worlds.World"/> to process a tick on world.
         /// </summary>
         World,
 
         /// <summary>
-        /// Flag that represents a world logic action for <see cref="CoreThread"/>
+        /// Flag that represents a world logic action for <see cref="CoreWorldTask"/>
         /// at <see cref="wServer.realm.worlds.World"/> to process a logic tick on world.
         /// </summary>
         WorldLogic,
 
         /// <summary>
-        /// Flag that represents a world timer action for <see cref="CoreThread"/>
+        /// Flag that represents a world timer action for <see cref="CoreWorldTask"/>
         /// at <see cref="wServer.realm.worlds.World"/> to process a timer tick on world.
         /// </summary>
         WorldTimer
