@@ -1,20 +1,20 @@
-﻿using System;
+﻿using ca.interfaces;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using wServer.realm.worlds;
 
 namespace ca
 {
     /// <summary>
     /// Represents a core world task according <see cref="CoreType"/>.
-    /// This algorithm runs an internal task for <see cref="World"/> and
-    /// verify if <see cref="World.Manager"/> is running or world isn't deleted yet.
+    /// This algorithm runs an internal task for <see cref="IWorld"/> and
+    /// verify if <see cref="IWorld.getManager"/> is running or world isn't deleted yet.
     /// </summary>
     ///
     /// <example>
     ///
     /// Usage of this algorithm:
-    /// - add it into <see cref="World"/> class on method <see cref="World.Init"/>
+    /// - add it into <see cref="IWorld"/> class on method <see cref="IWorld.initTasks"/>
     ///
     /// - proceed properly setup of it adding this algorithm for each procedure
     /// whose require some priority along world loop like tick and tick logic methods
@@ -39,7 +39,7 @@ namespace ca
     ///
     /// </code>
     ///
-    /// - doing this you'll make all internal loops of <see cref="World"/> asynchronous
+    /// - doing this you'll make all internal loops of <see cref="IWorld"/> asynchronous
     /// and use processor cores for this parallel programing job
     ///
     /// <para>
@@ -55,12 +55,11 @@ namespace ca
     public sealed class CoreWorldTask
     {
         private readonly Action action;
-        private readonly World world;
         private readonly ManualResetEvent mre;
         private readonly CoreType type;
-        private bool running;
+        private readonly IWorld world;
 
-        public CoreWorldTask(World world, Action action, CoreType type)
+        public CoreWorldTask(IWorld world, Action action, CoreType type)
         {
             this.world = world;
             this.action = action;
@@ -72,8 +71,6 @@ namespace ca
         public void run()
         {
             if (action == null) throw new ArgumentNullException("Action of CoreWorldTask shouldn't be null.");
-
-            running = true;
 
             int timeout;
 
@@ -91,7 +88,7 @@ namespace ca
                 {
                     mre.WaitOne(timeout);
                     action.Invoke();
-                } while (world.Manager != null && !world.Deleted);
+                } while (world.getManager() != null && !world.isDeleted());
             }, TaskCreationOptions.LongRunning);
         }
     }
