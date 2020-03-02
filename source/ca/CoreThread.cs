@@ -1,6 +1,6 @@
-﻿using log4net;
+﻿using ca.interfaces;
+using log4net;
 using System.Threading;
-using wServer.realm;
 
 namespace ca
 {
@@ -49,21 +49,21 @@ namespace ca
         private readonly CoreType coreType;
         private readonly int delay;
         private readonly ILog log;
-        private readonly RealmManager manager;
+        private readonly IRealmManager manager;
         private readonly ManualResetEvent resetEvent;
         private readonly Thread thread;
 
-        public CoreThread(CoreType coreType, CoreAction action, RealmManager manager, int delay, bool isBackground)
+        public CoreThread(CoreType coreType, CoreAction action, IRealmManager manager, int delay, bool isBackground)
             : this(null, coreType, action, manager, delay, isBackground)
         {
         }
 
-        public CoreThread(ILog log, CoreType coreType, CoreAction action, RealmManager manager, int delay, bool isBackground)
+        public CoreThread(ILog log, CoreType coreType, CoreAction action, IRealmManager manager, int delay, bool isBackground)
             : this(log, coreType, action, manager, delay, isBackground, isBackground ? ThreadPriority.Normal : ThreadPriority.AboveNormal)
         {
         }
 
-        public CoreThread(ILog log, CoreType coreType, CoreAction action, RealmManager manager, int delay, bool isBackground, ThreadPriority priority)
+        public CoreThread(ILog log, CoreType coreType, CoreAction action, IRealmManager manager, int delay, bool isBackground, ThreadPriority priority)
         {
             this.coreType = coreType;
             this.delay = delay;
@@ -78,7 +78,7 @@ namespace ca
                 {
                     action.runTask();
                     resetEvent.WaitOne(delay);
-                } while (!manager.Terminating || isAlive());
+                } while (!manager.isTerminating || isAlive());
             }))
             {
                 IsBackground = isBackground,

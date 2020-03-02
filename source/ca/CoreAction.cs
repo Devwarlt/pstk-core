@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Threading.Tasks;
 
 namespace ca
@@ -18,18 +19,12 @@ namespace ca
             task = null;
         }
 
-        public void runTask()
+        public void runTask(ILog log = null)
         {
             if (task == null || task.IsCompleted || task.IsFaulted)
-                task = Task.Factory.StartNew(action);
-
-            /*
-             * Consider to remove manually all RealmTime references of
-             * project to proceed with this installation of CA on your
-             * NR-Core project.
-             */
-            /* .ContinueWith(exception => Program.Log.Fatal(exception.Exception.InnerException),
-                TaskContinuationOptions.OnlyOnFaulted); */
+                task = Task.Factory.StartNew(action)
+                    .ContinueWith(exception => log?.Fatal(exception.Exception.InnerException),
+                        TaskContinuationOptions.OnlyOnFaulted);
         }
     }
 }

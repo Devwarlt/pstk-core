@@ -1,7 +1,7 @@
-﻿using log4net;
+﻿using ca.interfaces;
+using log4net;
 using System;
 using System.Linq;
-using wServer.realm;
 
 namespace ca
 {
@@ -14,21 +14,21 @@ namespace ca
     /// <example>
     ///
     /// Usage of this algorithm:
-    /// - declaration of <see cref="CoreManager"/> is simple and easy to do at <see cref="RealmManager.Run"/>
+    /// - declaration of <see cref="CoreManager"/> is simple and easy to do at <see cref="IRealmManager.startCores"/>
     /// method, see below:
     ///
     /// <code>
     ///
-    ///     // declare the <see cref="CoreManager"/> as a new <see cref="RealmManager"/> property
+    ///     // declare the <see cref="CoreManager"/> as a new <see cref="IRealmManager"/> property
     ///     public CoreManager Core { get; private set; }
     ///
-    ///     /* inside method <see cref="RealmManager.Run"/> */
+    ///     /* inside method <see cref="IRealmManager.startCores"/> */
     ///
     ///     Core = new CoreManager(this);
     ///     Core.init();
     ///     Core.start();
     ///
-    ///     /* better be added inside method <see cref="RealmManager.Stop"/>
+    ///     /* better be added inside method <see cref="IRealmManager.stopCores"/>
     ///     as well to properly dispose cores when <see cref="RealmManager"/>
     ///     is stopping */
     ///
@@ -38,20 +38,20 @@ namespace ca
     ///
     /// <para>
     /// Note: it's not necessary to run <see cref="CoreManager"/> as internal thread / task of
-    /// <see cref="RealmManager"/> instance, the <see cref="System.Threading.Tasks.TaskScheduler"/>
+    /// <see cref="IRealmManager"/> instance, the <see cref="System.Threading.Tasks.TaskScheduler"/>
     /// will be responsible for this job, automatically.
     /// </para>
     ///
     /// </example>
     public sealed class CoreManager
     {
-        private readonly RealmManager manager;
+        private readonly IRealmManager manager;
 
         private CoreThread[] cores;
         private bool initialized = false;
         private ILog log;
 
-        public CoreManager(RealmManager manager) => this.manager = manager;
+        public CoreManager(IRealmManager manager) => this.manager = manager;
 
         private event EventHandler<Action> packetHandler;
 
@@ -65,13 +65,13 @@ namespace ca
         /// Gets the number of milliseconds elapsed since the game started, but normalized.
         /// </summary>
         /// <returns></returns>
-        // public int getTickCount() => (int)Program.Uptime.ElapsedTicks;
+        public int getTickCount() => (int)manager.getProgram().getUptime().ElapsedTicks;
 
         /// <summary>
         /// Gets the number of milliseconds elapsed since the game started.
         /// </summary>
         /// <returns></returns>
-        // public int getTotalTickCount() => (int)Program.Uptime.ElapsedMilliseconds;
+        public int getTotalTickCount() => (int)manager.getProgram().getUptime().ElapsedMilliseconds;
 
         /// <summary>
         /// Initialize <see cref="CoreManager"/>.
@@ -122,17 +122,17 @@ namespace ca
             log.Info("All cores have been stopped!");
 
             if (disconnect)
-                foreach (var client in manager.Clients.Keys)
-                    client.Disconnect("Server is restarting.");
+                foreach (var client in manager.getClients()?.Keys)
+                    client.disconnect("Server is restarting.");
         }
 
         private void flushAction()
         {
-            var clients = manager.Clients.Keys.ToArray();
+            var clients = manager.getClients()?.Keys.ToArray();
 
             for (var k = 0; k < clients.Length; k++)
-                if (clients[k] != null && clients[k].Player != null && clients[k].Player.Owner != null)
-                    clients[k].Player.Flush();
+                if (clients[k] != null && clients[k].getPlayer() != null && clients[k].getPlayer().getWorld() != null)
+                    clients[k].getPlayer().flush();
         }
 
         private bool isInitialized()
@@ -148,15 +148,9 @@ namespace ca
 
         private void monitorAction()
         {
-            /*
-             * Consider to remove manually all RealmTime references of
-             * project to proceed with this installation of CA on your
-             * NR-Core project.
-             */
-            // manager.ConMan.Tick();
-            // manager.Monitor.Tick();
-
-            manager.InterServer.Tick(CoreConstant.monitorTickMs);
+            manager.getConnManager()?.tick();
+            manager.getMonitor()?.tick();
+            manager.getISManager()?.tick(CoreConstant.monitorTickMs);
         }
 
         private void onAddPendingPacket(object sender, Action action)
