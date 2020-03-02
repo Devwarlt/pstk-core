@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("ca")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Core Algorithms")]
+[assembly: AssemblyDescription("Core Algorithms, also known with acronym CA, are a collection of features available since C# 4.0 and .NET framework enhancements related to multithreading, parallel programming and concurrent programming topics.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("ca")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2020")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("LoESoft Games")]
+[assembly: AssemblyProduct("Core Algorithms")]
+[assembly: AssemblyCopyright("Copyright © LoESoft Games 2020")]
+[assembly: AssemblyTrademark("Core Algorithms")]
 [assembly: AssemblyCulture("")]
 
 // Definir ComVisible como false torna os tipos neste assembly invisíveis
@@ -33,4 +33,4 @@ using System.Runtime.InteropServices;
 // usando o '*' como mostrado abaixo:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.1.0")]
