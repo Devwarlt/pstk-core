@@ -1,5 +1,5 @@
 ﻿using ca.interfaces;
-using log4net;
+using System;
 using System.Threading;
 
 namespace ca
@@ -48,7 +48,7 @@ namespace ca
         private readonly CoreAction action;
         private readonly CoreType coreType;
         private readonly int delay;
-        private readonly ILog log;
+        private readonly Action<string> infoHandler;
         private readonly IRealmManager manager;
         private readonly ManualResetEvent resetEvent;
         private readonly Thread thread;
@@ -58,16 +58,16 @@ namespace ca
         {
         }
 
-        public CoreThread(ILog log, CoreType coreType, CoreAction action, IRealmManager manager, int delay, bool isBackground)
-            : this(log, coreType, action, manager, delay, isBackground, isBackground ? ThreadPriority.Normal : ThreadPriority.AboveNormal)
+        public CoreThread(Action<string> infoHandler, CoreType coreType, CoreAction action, IRealmManager manager, int delay, bool isBackground)
+            : this(infoHandler, coreType, action, manager, delay, isBackground, isBackground ? ThreadPriority.Normal : ThreadPriority.AboveNormal)
         {
         }
 
-        public CoreThread(ILog log, CoreType coreType, CoreAction action, IRealmManager manager, int delay, bool isBackground, ThreadPriority priority)
+        public CoreThread(Action<string> infoHandler, CoreType coreType, CoreAction action, IRealmManager manager, int delay, bool isBackground, ThreadPriority priority)
         {
             this.coreType = coreType;
             this.delay = delay;
-            this.log = log;
+            this.infoHandler = infoHandler;
             this.manager = manager;
             this.action = action;
 
@@ -92,7 +92,7 @@ namespace ca
 
         public void start(bool notifyOnLog = true)
         {
-            if (log != null && notifyOnLog) log.InfoFormat("Starting {0} core thread...", coreType);
+            if (notifyOnLog) infoHandler?.Invoke(string.Format("Starting {0} core thread...", coreType));
 
             thread.Start();
         }
@@ -100,7 +100,7 @@ namespace ca
         public void stop(bool notifyOnLog = true)
         {
             if (!thread.IsAlive) return;
-            if (log != null && notifyOnLog) log.InfoFormat("Stopping {0} core thread...", coreType);
+            if (notifyOnLog) infoHandler?.Invoke(string.Format("Stopping {0} core thread...", coreType));
 
             thread.Abort();
         }

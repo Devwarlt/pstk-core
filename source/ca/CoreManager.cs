@@ -1,5 +1,4 @@
 ﻿using ca.interfaces;
-using log4net;
 using System;
 using System.Linq;
 
@@ -45,13 +44,24 @@ namespace ca
     /// </example>
     public sealed class CoreManager
     {
+        private readonly Action<string> errorHandler;
+        private readonly Action<string> infoHandler;
         private readonly IRealmManager manager;
 
         private CoreThread[] cores;
         private bool initialized = false;
-        private ILog log;
 
-        public CoreManager(IRealmManager manager) => this.manager = manager;
+        public CoreManager(IRealmManager manager)
+            : this(manager, null, null)
+        {
+        }
+
+        public CoreManager(IRealmManager manager, Action<string> infoHandler, Action<string> errorHandler)
+        {
+            this.manager = manager;
+            this.infoHandler = infoHandler;
+            this.errorHandler = errorHandler;
+        }
 
         private event EventHandler<Action> packetHandler;
 
@@ -78,10 +88,9 @@ namespace ca
         /// </summary>
         public void init()
         {
-            log = LogManager.GetLogger(typeof(CoreManager));
             cores = new[] {
-                new CoreThread(log, CoreType.Flush, new CoreAction(flushAction), manager, CoreConstant.flushTickMs, false),
-                new CoreThread(log, CoreType.Monitor, new CoreAction(monitorAction), manager, CoreConstant.monitorTickMs, false)
+                new CoreThread(infoHandler, CoreType.Flush, new CoreAction(flushAction), manager, CoreConstant.flushTickMs, false),
+                new CoreThread(infoHandler, CoreType.Monitor, new CoreAction(monitorAction), manager, CoreConstant.monitorTickMs, false)
             };
 
             initialized = true;
@@ -90,37 +99,36 @@ namespace ca
         /// <summary>
         /// Start all <see cref="cores"/>.
         /// </summary>
-        public void start()
+        /// <param name="notifyOnLog"></param>
+        public void start(bool notifyOnLog = true)
         {
             if (!isInitialized()) return;
-
-            log.InfoFormat("Starting {0} core{1}...", cores.Length, cores.Length > 1 ? "s" : "");
+            if (notifyOnLog) infoHandler?.Invoke(string.Format("Starting {0} core{1}...", cores.Length, cores.Length > 1 ? "s" : ""));
 
             packetHandler += onAddPendingPacket;
 
             for (var i = 0; i < cores.Length; i++)
                 cores[i].start();
 
-            log.Info("All cores have been started!");
+            if (notifyOnLog) infoHandler?.Invoke("All cores have been started!");
         }
 
         /// <summary>
         /// Stop all <see cref="cores"/>.
         /// </summary>
+        /// <param name="notifyOnLog"></param>
         /// <param name="disconnect"></param>
-        public void stop(bool disconnect = false)
+        public void stop(bool notifyOnLog = true, bool disconnect = false)
         {
             if (!isInitialized()) return;
-
-            log.InfoFormat("Stopping {0} core{1}...", cores.Length, cores.Length > 1 ? "s" : "");
+            if (notifyOnLog) infoHandler.Invoke(string.Format("Stopping {0} core{1}...", cores.Length, cores.Length > 1 ? "s" : ""));
 
             for (var i = 0; i < cores.Length; i++)
                 cores[i].stop();
 
             packetHandler -= onAddPendingPacket;
 
-            log.Info("All cores have been stopped!");
-
+            if (notifyOnLog) infoHandler.Invoke("All cores have been stopped!");
             if (disconnect)
                 foreach (var client in manager.getClients()?.Keys)
                     client.disconnect("Server is restarting.");
@@ -135,11 +143,11 @@ namespace ca
                     clients[k].getPlayer().flush();
         }
 
-        private bool isInitialized()
+        private bool isInitialized(bool notifyOnLog = true)
         {
             if (!initialized)
             {
-                log.Error("RealmCore isn't initialized!");
+                if (notifyOnLog) errorHandler?.Invoke("RealmCore isn't initialized!");
                 return false;
             }
 

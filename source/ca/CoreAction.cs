@@ -1,5 +1,4 @@
-﻿using log4net;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace ca
@@ -19,11 +18,12 @@ namespace ca
             task = null;
         }
 
-        public void runTask(ILog log = null)
+        public void runTask(Action<Exception> fatalHandler = null)
         {
             if (task == null || task.IsCompleted || task.IsFaulted)
                 task = Task.Factory.StartNew(action)
-                    .ContinueWith(exception => log?.Fatal(exception.Exception.InnerException),
+                    .ContinueWith(exception =>
+                        fatalHandler?.Invoke(exception.Exception.InnerException),
                         TaskContinuationOptions.OnlyOnFaulted);
         }
     }
