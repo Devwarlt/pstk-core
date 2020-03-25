@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CA.Threading.Tasks;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -14,6 +15,22 @@ namespace CA.SandBox
             {
                 { "--help", ("h", "Show a list of all commands.", (input) => HandleHelp()) },
                 { "--test", ("t", "Execute a specific test.", (input) => HandleTest(input)) }
+            };
+
+        private static readonly Dictionary<string, (string description, Action<string[]> action)> TestCommandList
+            = new Dictionary<string, (string description, Action<string[]> action)>()
+            {
+                {
+                    "-c1",
+                    (
+                        "Execute a test for class 'InternalRoutine', for options:" +
+                        "\n\t[1].\ttimeout: 1000ms, total elapsed time: 100s" +
+                        "\n\t[2].\ttimeout: 500ms, total elapsed time: 50s" +
+                        "\n\t[3].\ttimeout: 250ms, total elapsed time: 25s" +
+                        "\n\t[4].\ttimeout: 125ms, total elapsed time: 12.5s",
+                        (args) => HandleTestC1Options(args)
+                    )
+                }
             };
 
         private static Dictionary<string, string> Commands = new Dictionary<string, string>();
@@ -140,20 +157,140 @@ namespace CA.SandBox
 
             if (string.IsNullOrWhiteSpace(input))
             {
-                foreach (var entry in CommandList)
+                foreach (var entry in TestCommandList)
                     Info(string.Format(
-                        "[{0}]. {1}{2}\n\t{3}\n",
+                        "[{0}]. {1}\n\t\t{2}\n\n{3}\n",
                         entryId++,
-                        entry.Key.Remove(0, 2),
-                        $" (alias: {entry.Value.alias})" ?? "",
-                        entry.Value.description
+                        entry.Key,
+                        entry.Value.description,
+                        $"\tUsage: --test {entry.Key} [option] (without brackets)"
                     ));
 
                 Tail();
                 return;
             }
 
-            Tail();
+            var args = input.Split(' ');
+
+            if (args.Length == 0)
+            {
+                Tail();
+                return;
+            }
+
+            var command = args[0];
+
+            if (!TestCommandList.ContainsKey(command))
+            {
+                Error("Invalid option!");
+                Tail();
+                return;
+            }
+
+            var newInput = args.Skip(1).ToArray();
+
+            TestCommandList[command].action.Invoke(newInput);
+        }
+
+        /*
+            "Execute a test for class 'InternalRoutine', for options:" +
+            "\n\t[1].\ttimeout: 1000ms, total elapsed time: 100s" +
+            "\n\t[2].\ttimeout: 500ms, total elapsed time: 50s" +
+            "\n\t[3].\ttimeout: 250ms, total elapsed time: 25s" +
+            "\n\t[4].\ttimeout: 125ms, total elapsed time: 12.5s",
+        */
+
+        private static void HandleTestC1Options(string[] args)
+        {
+            if (args.Length < 1)
+            {
+                Error("This command requires one extra argument.");
+                Tail();
+                return;
+            }
+
+            var option = args[0];
+            var timeout = -1;
+
+            switch (option)
+            {
+                case "1": timeout = 1000; break;
+                case "2": timeout = 500; break;
+                case "3": timeout = 250; break;
+                case "4": timeout = 125; break;
+                default:
+                    Error($"Invalid option: {option}");
+                    Tail();
+                    return;
+            }
+
+            var (min, max) = (1f, 100f);
+            var i = min;
+            var displayed100Percent = false;
+            var isCompleted = false;
+            void progress()
+            {
+                displayed100Percent = i == max;
+
+                Info($"[onProgress] {i}/{max} {(i / max).ToString("##.00%")}");
+            }
+            var onProgressRoutine = new InternalRoutine(1000, (routine) => progress());
+            var onTestingRoutine = new InternalRoutine(timeout, (routine) =>
+            {
+                if (i < max) i++;
+
+                if (i == max) routine.Stop();
+            });
+            var whenCompleteRoutine = new InternalRoutine(200, (routine) =>
+            {
+                if (i < max) return;
+
+                if (i == max && (onProgressRoutine.IsRunning || onTestingRoutine.IsRunning))
+                {
+                    onProgressRoutine.Stop();
+                    onTestingRoutine.Stop();
+                    return;
+                }
+
+                if (!displayed100Percent) progress();
+
+                isCompleted = true;
+
+                Warn("[whenComplete] The test has been completed its routine!");
+
+                routine.Stop();
+
+                Breakline();
+                Warn("All routines have been stopped: 'onTesting', 'onProgress' and 'whenComplete'");
+                Tail();
+            });
+
+            Info($"Starting tests for option: {option}");
+            Info(
+                $"Starting incrementing from {min} to {max} every {timeout} ms (ETA to finish this " +
+                $"task: {(max * timeout / 1000f).ToString("##.00")}s)."
+            );
+            Breakline();
+            Warn("Press ANY key to stop 'onTesting', 'onProgress' and 'whenComplete' routines...");
+            Breakline();
+
+            onProgressRoutine.Start();
+            onTestingRoutine.Start();
+            whenCompleteRoutine.Start();
+
+            Console.ReadKey(true);
+
+            if (!isCompleted)
+            {
+                onProgressRoutine.Stop();
+                onTestingRoutine.Stop();
+                whenCompleteRoutine.Stop();
+
+                Breakline();
+                Warn("All routines have been stopped: 'onTesting', 'onProgress' and 'whenComplete'");
+                Breakline();
+                Tail();
+            }
         }
 
         #endregion "Command Handlers"
