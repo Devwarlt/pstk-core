@@ -1,4 +1,5 @@
 ﻿using CA.Threading.Tasks;
+using CA.Threading.Tasks.Procedures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,22 @@ namespace CA.SandBox
                         "\n\t[2].\ttimeout: 500ms, total elapsed time: 50s" +
                         "\n\t[3].\ttimeout: 250ms, total elapsed time: 25s" +
                         "\n\t[4].\ttimeout: 125ms, total elapsed time: 12.5s",
-                        (args) => HandleTestC1Options(args)
+                        (args) => HandleTestC1Options(args, numRequiredArgs: 1)
+                    )
+                },
+                {
+                    "-c2",
+                    (
+                        "Execute a test for class 'AsyncProcedure' and 'AsyncProcedurePool', for options:" +
+                        "\n\t[1].\t2 async procedures in parallel" +
+                        "\n\t[2].\t4 async procedures in parallel" +
+                        "\n\t[3].\t8 async procedures in parallel" +
+                        "\n\t[4].\t16 async procedures in parallel" +
+                        "\n\t[5].\t32 async procedures in parallel" +
+                        "\n\t[6].\t64 async procedures in parallel" +
+                        "\n\t[7].\t128 async procedures in parallel" +
+                        "\n\t[8].\t256 async procedures in parallel",
+                        (args) => HandleTestC2Options(args, numRequiredArgs: 1)
                     )
                 }
             };
@@ -192,19 +208,11 @@ namespace CA.SandBox
             TestCommandList[command].action.Invoke(newInput);
         }
 
-        /*
-            "Execute a test for class 'InternalRoutine', for options:" +
-            "\n\t[1].\ttimeout: 1000ms, total elapsed time: 100s" +
-            "\n\t[2].\ttimeout: 500ms, total elapsed time: 50s" +
-            "\n\t[3].\ttimeout: 250ms, total elapsed time: 25s" +
-            "\n\t[4].\ttimeout: 125ms, total elapsed time: 12.5s",
-        */
-
-        private static void HandleTestC1Options(string[] args)
+        private static void HandleTestC1Options(string[] args, int numRequiredArgs)
         {
-            if (args.Length < 1)
+            if (args.Length < numRequiredArgs)
             {
-                Error("This command requires one extra argument.");
+                Error($"This command requires {numRequiredArgs} extra argument{(numRequiredArgs > 1 ? "s" : "")}.");
                 Tail();
                 return;
             }
@@ -228,67 +236,208 @@ namespace CA.SandBox
             var i = min;
             var displayed100Percent = false;
             var isCompleted = false;
+            var isForced = false;
             void progress()
             {
                 displayed100Percent = i == max;
 
-                Info($"[onProgress] {i}/{max} {(i / max).ToString("##.00%")}");
+                Info($"[progressRoutine] {i}/{max} {(i / max).ToString("##.00%")}");
             }
-            var onProgressRoutine = new InternalRoutine(1000, (routine) => progress());
-            var onTestingRoutine = new InternalRoutine(timeout, (routine) =>
-            {
-                if (i < max) i++;
 
-                if (i == max) routine.Stop();
+            var source = new CancellationTokenSource();
+            var syncForced = new ManualResetEvent(false);
+            var progressRoutine = new InternalRoutine(1000, progress);
+            progressRoutine.AttachToParent(source.Token);
+            progressRoutine.onInitializing += (s, e) => Info("[progressRoutine] Initializing progress routine...");
+            progressRoutine.onFinished += (s, e) =>
+            {
+                Info("[progressRoutine] Stopping progress routine...");
+
+                syncForced.Set();
+            };
+
+            var incrementRoutine = new InternalRoutine(timeout, (routine) =>
+            {
+                if (i < max) ++i;
+
+                if (i == max) source.Cancel();
             });
-            var whenCompleteRoutine = new InternalRoutine(200, (routine) =>
+            incrementRoutine.AttachToParent(source.Token);
+            incrementRoutine.onInitializing += (s, e) =>
             {
-                if (i < max) return;
+                Info("[incrementRoutine] Initializing increment routine...");
+                Info(
+                    $"[incrementRoutine] Starting incrementing from {min} to {max} " +
+                    $"every {timeout} ms (ETA to finish this task: " +
+                    $"{(max * timeout / 1000f).ToString("##.00")}s)."
+                );
 
-                if (i == max && (onProgressRoutine.IsRunning || onTestingRoutine.IsRunning))
-                {
-                    onProgressRoutine.Stop();
-                    onTestingRoutine.Stop();
-                    return;
-                }
+                progressRoutine.Start();
+            };
+            incrementRoutine.onFinished += (s, e) =>
+            {
+                Info("[incrementRoutine] Stopping increment routine...");
+
+                if (isForced) return;
 
                 if (!displayed100Percent) progress();
 
                 isCompleted = true;
 
-                Warn("[whenComplete] The test has been completed its routine!");
-
-                routine.Stop();
-
                 Breakline();
-                Warn("All routines have been stopped: 'onTesting', 'onProgress' and 'whenComplete'");
+                Warn("[Success] All routines have been stopped: 'incrementRoutine' and 'progressRoutine'");
                 Tail();
-            });
+            };
 
-            Info($"Starting tests for option: {option}");
-            Info(
-                $"Starting incrementing from {min} to {max} every {timeout} ms (ETA to finish this " +
-                $"task: {(max * timeout / 1000f).ToString("##.00")}s)."
-            );
+            Warn("All routines have been started: 'incrementRoutine' and 'progressRoutine'");
             Breakline();
-            Warn("Press ANY key to stop 'onTesting', 'onProgress' and 'whenComplete' routines...");
+            Warn("Press ANY key to stop all internal routines...");
             Breakline();
 
-            onProgressRoutine.Start();
-            onTestingRoutine.Start();
-            whenCompleteRoutine.Start();
+            incrementRoutine.Start();
 
             Console.ReadKey(true);
 
             if (!isCompleted)
             {
-                onProgressRoutine.Stop();
-                onTestingRoutine.Stop();
-                whenCompleteRoutine.Stop();
+                isForced = true;
+
+                source.Cancel();
+                syncForced.WaitOne();
 
                 Breakline();
-                Warn("All routines have been stopped: 'onTesting', 'onProgress' and 'whenComplete'");
+                Warn("[Forced] All routines have been stopped: 'incrementRoutine' and 'progressRoutine'");
+                Tail();
+            }
+        }
+
+        private static void HandleTestC2Options(string[] args, int numRequiredArgs)
+        {
+            if (args.Length < numRequiredArgs)
+            {
+                Error($"This command requires {numRequiredArgs} extra argument{(numRequiredArgs > 1 ? "s" : "")}.");
+                Tail();
+                return;
+            }
+
+            var option = args[0];
+            var numProcedures = -1;
+
+            switch (option)
+            {
+                case "1": numProcedures = 2; break;
+                case "2": numProcedures = 4; break;
+                case "3": numProcedures = 8; break;
+                case "4": numProcedures = 16; break;
+                case "5": numProcedures = 32; break;
+                case "6": numProcedures = 64; break;
+                case "7": numProcedures = 128; break;
+                case "8": numProcedures = 256; break;
+                default:
+                    Error($"Invalid option: {option}");
+                    Tail();
+                    return;
+            }
+
+            var rand = new Random();
+            var (maxMin, maxMax) = (25, 100);
+            var pool = new IAsyncProcedure[numProcedures];
+            var intRange = Enumerable.Range(rand.Next(0, rand.Next(maxMin, maxMax)), numProcedures).ToArray();
+            var source = new CancellationTokenSource();
+
+            for (var i = 0; i < numProcedures; i++)
+            {
+                var procedure = new AsyncProcedure<int>(
+                    $"AsyncProcedure#{i + 1}",
+                    intRange[i],
+                    (instance, name, input) =>
+                    {
+                        var timeout = rand.Next(50, 200);
+                        var toIncrement = 100;
+
+                        Info(
+                               $"[{name}] Starting procedure: increment {input} in {(toIncrement > 0 ? "+" : "-")}" +
+                               $"{toIncrement} unit{(Math.Abs(toIncrement) > 1 ? "s" : "")} (timeout: " +
+                               $"{timeout}, ETA: {(toIncrement * timeout / 1000f).ToString("##.00")}s)."
+                           );
+
+                        var initialized = new ManualResetEvent(false);
+                        var finished = new ManualResetEvent(false);
+                        var j = 0;
+                        var procedureSource = new CancellationTokenSource();
+                        var newInput = input;
+                        var routine = new InternalRoutine(timeout, (thisRoutine) =>
+                        {
+                            if (j++ == toIncrement)
+                            {
+                                procedureSource.Cancel();
+                                Warn($"[{name}] Stopping internal routine.");
+                                return;
+                            }
+
+                            newInput++;
+                        });
+                        routine.AttachToParent(procedureSource.Token);
+                        routine.onInitialized += (s, e) => initialized.Set();
+                        routine.onFinished += (s, e) => finished.Set();
+                        routine.Start();
+
+                        initialized.WaitOne();
+                        finished.WaitOne();
+
+                        return new AsyncProcedureEventArgs<int>(newInput, true);
+                    }
+                );
+                procedure.AttachToParent(source.Token);
+                procedure.onCompleted += (s, e) => Warn($"[{((IAsyncProcedure)s).GetName}] Finished procedure with result '{e.Input}'.");
+                pool[i] = procedure;
+            }
+
+            var procedurePool = new AsyncProcedurePool(pool, source);
+            var isCompleted = false;
+
+            Task.Run(() =>
+            {
                 Breakline();
+                Warn(
+                    $"All procedures have been started: {procedurePool.NumProcedures} " +
+                    $"async procedure{(procedurePool.NumProcedures > 1 ? "s" : "")}"
+                );
+                Breakline();
+
+                var results = procedurePool.ExecuteAllAsParallel();
+
+                isCompleted = true;
+
+                Breakline();
+                Warn(
+                    $"[Success] All procedures have been stopped: {procedurePool.NumProcedures} " +
+                    $"async procedure{(procedurePool.NumProcedures > 1 ? "s" : "")}"
+                );
+                Breakline();
+                Info("Displaying results:");
+
+                for (var i = 0; i < procedurePool.NumProcedures; i++)
+                    Info($"[name: {procedurePool[i].GetName}] Result: {(results[i] ? "success" : "failed")}");
+
+                Tail();
+            });
+
+            Breakline();
+            Warn("Press ANY key to stop all procedures...");
+            Breakline();
+
+            Console.ReadKey(true);
+
+            if (!isCompleted)
+            {
+                procedurePool.CancelAll();
+
+                Breakline();
+                Warn(
+                    $"[Forced] All procedures have been stopped: {procedurePool.NumProcedures} " +
+                    $"async procedure{(procedurePool.NumProcedures > 1 ? "s" : "")}"
+                );
                 Tail();
             }
         }
@@ -305,7 +454,7 @@ namespace CA.SandBox
                   888           d88P  888
                   888    888   d88P   888
                   Y88b  d88P  d8888888888
-                    Y8888P  d88888 88888
+                    Y8888P  d88888  88888
                                 888 888
                                 888 888
 .d8888b   8888b.  88888b.   .d88888 88888b.   .d88b.  888  888
