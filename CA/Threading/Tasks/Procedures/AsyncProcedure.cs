@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CA.Threading.Tasks.Procedures
@@ -8,34 +9,68 @@ namespace CA.Threading.Tasks.Procedures
     /// Recommended to use it with <see cref="AsyncProcedurePool"/>.
     /// </summary>
     /// <typeparam name="TInput"></typeparam>
+    /// <exception cref="ArgumentNullException"></exception>
+    /// <exception cref="OperationCanceledException"></exception>
     public sealed class AsyncProcedure<TInput> : IAsyncProcedure
     {
-        private readonly TInput input;
+#pragma warning disable
         private readonly string name;
-        private readonly Func<string, TInput, Task<bool>> procedure;
-        private readonly Action whenCanceled;
+        private readonly TInput input;
+        private readonly Func<TInput, CancellationToken, Task<AsyncProcedureEventArgs<TInput>>> procedure;
 
-        private bool isCanceled;
-        private string message;
-
-#pragma warning disable CS1591
+        private CancellationToken token = default;
 
         public AsyncProcedure(
-
-#pragma warning restore CS1591
             string name,
             TInput input,
-            Func<string, TInput, Task<bool>> procedure,
-            Action whenCanceled = null
+            Func<AsyncProcedure<TInput>, string, TInput, AsyncProcedureEventArgs<TInput>> procedure
             )
         {
-            this.name = name;
-            this.whenCanceled = whenCanceled;
-            this.procedure = procedure;
+            if (input == null) throw new ArgumentNullException("input");
+            if (procedure == null) throw new ArgumentNullException("procedure");
 
-            message = string.Empty;
-            isCanceled = false;
+            this.name = name;
+            this.input = input;
+            this.procedure = async (inputRef, tokenRef) =>
+            {
+                Task<AsyncProcedureEventArgs<TInput>> task;
+
+                if (tokenRef != null) task = Task.Run(() => procedure(this, name, inputRef), tokenRef);
+                else task = Task.Run(() => procedure(this, name, inputRef));
+
+                return task.Result;
+            };
         }
+
+#pragma warning restore
+
+        /// <summary>
+        /// When procedure is canceled by parent task via <see cref="CancellationToken"/>
+        /// and forced to stop all running processes.
+        /// </summary>
+        public event EventHandler<AsyncProcedureEventArgs<TInput>> onCanceled;
+
+        /// <summary>
+        /// When procedure is completed with success.
+        /// </summary>
+        public event EventHandler<AsyncProcedureEventArgs<TInput>> onCompleted;
+
+        /// <summary>
+        /// Get the name of procedure.
+        /// </summary>
+        public string GetName => name;
+
+        /// <summary>
+        /// Get the <see cref="CancellationToken"/> of attached task.
+        /// </summary>
+        public CancellationToken GetToken => token;
+
+        /// <summary>
+        /// Attach a process to parent in case of external task
+        /// cancellation request.
+        /// </summary>
+        /// <param name="token"></param>
+        public void AttachToParent(CancellationToken token) => this.token = token;
 
         /// <summary>
         /// Execute the procedure.
@@ -43,48 +78,24 @@ namespace CA.Threading.Tasks.Procedures
         /// <returns></returns>
         public bool Execute()
         {
-            var task = procedure.Invoke(message, input);
-            var result = task.Result;
-
-            isCanceled = !result;
-
-            if (!result && whenCanceled != null) whenCanceled.Invoke();
-
-            return result;
-        }
-
-        /// <summary>
-        /// Execute the procedure asynchronously.
-        /// </summary>
-        /// <returns></returns>
-        public async Task<bool> ExecuteAsync()
-        {
-            var asyncTask = Task.Run(() => procedure.Invoke(message, input));
-
-            await asyncTask;
-
-            var result = asyncTask.Result;
-
-            isCanceled = !result;
-
-            if (!result && whenCanceled != null) whenCanceled.Invoke();
-
-            return result;
-        }
-
-        /// <summary>
-        /// Gets the current <see cref="ProcedureInfo"/> state information.
-        ///
-        /// <para>
-        /// Note: values could be updated while procedure is running.
-        /// </para>
-        /// </summary>
-        /// <returns></returns>
-        public ProcedureInfo GetProcedureInfo()
-            => new ProcedureInfo
+            try
             {
-                Name = name,
-                Message = message
-            };
+                var task = procedure.Invoke(input, token);
+
+                token.ThrowIfCancellationRequested();
+
+                var result = task.Result;
+
+                onCompleted?.Invoke(this, result);
+
+                return true;
+            }
+            catch (OperationCanceledException)
+            {
+                onCanceled?.Invoke(this, new AsyncProcedureEventArgs<TInput>(input, false));
+            }
+
+            return false;
+        }
     }
 }

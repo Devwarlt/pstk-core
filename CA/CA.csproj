@@ -22,6 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\Core Algorithms.xml</DocumentationFile>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\Core Algorithms.xml</DocumentationFile>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,9 +48,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threading\Tasks\InternalRoutine.cs" />
     <Compile Include="Threading\Tasks\Procedures\AsyncProcedure.cs" />
+    <Compile Include="Threading\Tasks\Procedures\AsyncProcedureEventArgs.cs" />
     <Compile Include="Threading\Tasks\Procedures\AsyncProcedurePool.cs" />
     <Compile Include="Threading\Tasks\Procedures\IAsyncProcedure.cs" />
-    <Compile Include="Threading\Tasks\Procedures\ProcedureInfo.cs" />
+    <Compile Include="Threading\Tasks\Procedures\IAttachedTask.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

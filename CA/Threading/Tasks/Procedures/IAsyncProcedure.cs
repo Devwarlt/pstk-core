@@ -1,17 +1,13 @@
-﻿using System.Threading.Tasks;
-
-namespace CA.Threading.Tasks.Procedures
+﻿namespace CA.Threading.Tasks.Procedures
 {
-#pragma warning disable CS1591
+#pragma warning disable
 
-    public interface IAsyncProcedure
+    public interface IAsyncProcedure : IAttachedTask
     {
+        string GetName { get; }
+
         bool Execute();
-
-        Task<bool> ExecuteAsync();
-
-        ProcedureInfo GetProcedureInfo();
     }
 
-#pragma warning restore CS1591
+#pragma warning restore
 }

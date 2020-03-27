@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CA.Threading.Tasks.Procedures;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -9,7 +10,8 @@ namespace CA.Threading.Tasks
     /// </summary>
     /// <exception cref="ArgumentException"></exception>
     /// <exception cref="ArgumentNullException"></exception>
-    public sealed class InternalRoutine : IDisposable
+    /// <exception cref="OperationCanceledException"></exception>
+    public sealed class InternalRoutine : IAttachedTask
     {
         private readonly ManualResetEvent resetEvent;
         private readonly Action<InternalRoutine, bool> routine;
@@ -17,27 +19,26 @@ namespace CA.Threading.Tasks
 
         private bool isCanceled = false;
 
-#pragma warning disable CS1591
+#pragma warning disable
+
+        private CancellationToken token = default;
 
         public InternalRoutine(
-
-#pragma warning restore CS1591
             int timeout,
-            Action<InternalRoutine> routine
-            ) : this(timeout, routine, null) { }
-
-#pragma warning disable CS1591
+            Action routine
+            ) : this(timeout, (nternalRoutine) => routine(), null) { }
 
         public InternalRoutine(
-
-#pragma warning restore CS1591
             int timeout,
             Action<InternalRoutine> routine,
-            Action<string> errorLogger
+            Action<string> errorLogger = null
             )
+
+#pragma warning restore
+
         {
             if (timeout <= 0) throw new ArgumentException("Only positive numbers are allowed.", "timeout");
-            if (routine == null) throw new ArgumentNullException("routine", "Routine couldn't be null.");
+            if (routine == null) throw new ArgumentNullException("routine");
 
             this.timeout = timeout;
             this.routine = (instance, cancel) => { if (!cancel) routine.Invoke(instance); };
@@ -46,72 +47,96 @@ namespace CA.Threading.Tasks
             onError += (s, e) =>
             {
                 errorLogger?.Invoke(e.ToString());
-                Stop();
+                Finish();
             };
         }
+
+        /// <summary>
+        /// When routine finished its task.
+        /// </summary>
+        public event EventHandler onFinished;
+
+        /// <summary>
+        /// When routine is already initialized.
+        /// </summary>
+        public event EventHandler onInitialized;
+
+        /// <summary>
+        /// When routine is preparing to initialize.
+        /// </summary>
+        public event EventHandler onInitializing;
 
         private event EventHandler<Exception> onError;
 
         /// <summary>
-        /// Check if current routine still running in background.
+        /// Get the <see cref="CancellationToken"/> of attached task.
         /// </summary>
-        public bool IsRunning => !isCanceled;
-
-#pragma warning disable CS1591
-
-        public void Dispose() => isCanceled = true;
-
-#pragma warning restore CS1591
+        public CancellationToken GetToken => token;
 
         /// <summary>
-        /// Starts the routine.
+        /// Attach a process to parent in case of external task
+        /// cancellation request.
         /// </summary>
-        public void Start()
-            => Task.Factory.StartNew(() => Loop(),
-                TaskCreationOptions.LongRunning)
-            .ContinueWith(t => onError.Invoke(null, t.Exception.InnerException),
-                TaskContinuationOptions.OnlyOnFaulted);
+        /// <param name="token"></param>
+        public void AttachToParent(CancellationToken token) => this.token = token;
 
         /// <summary>
-        /// Starts the routine asynchronously.
+        /// Initialize and starts the core routine, to stop it must use
+        /// <see cref="CancellationTokenSource.Cancel(bool)"/>.
         /// </summary>
-        public void StartAsync()
-            => Task.Factory.StartNew(() => LoopAsync(),
-                TaskCreationOptions.LongRunning)
-            .ContinueWith(t => onError.Invoke(null, t.Exception.InnerException),
-                TaskContinuationOptions.OnlyOnFaulted);
+        public void Start() => Initialize(Loop, true);
 
-        /// <summary>
-        /// Stop the routine.
-        /// </summary>
-        public void Stop() => Dispose();
+        private void Finish()
+        {
+            isCanceled = true;
+            onFinished?.Invoke(this, null);
+        }
+
+        private void Initialize(Action method, bool isInitializing)
+        {
+            if (token != default)
+                try
+                {
+                    isCanceled = token.IsCancellationRequested;
+
+                    token.ThrowIfCancellationRequested();
+
+                    Task.Run(() =>
+                    {
+                        if (isInitializing) onInitializing?.Invoke(this, null);
+
+                        method.Invoke();
+
+                        if (isInitializing) onInitialized?.Invoke(this, null);
+                    }, token).ContinueWith(t =>
+                        onError.Invoke(null, t.Exception.InnerException),
+                        TaskContinuationOptions.OnlyOnFaulted
+                    );
+                }
+                catch (OperationCanceledException) { Finish(); }
+            else
+                Task.Run(() =>
+                {
+                    if (isInitializing) onInitializing?.Invoke(this, null);
+
+                    method.Invoke();
+
+                    if (isInitializing) onInitialized?.Invoke(this, null);
+                }).ContinueWith(t =>
+                    onError.Invoke(null, t.Exception.InnerException),
+                    TaskContinuationOptions.OnlyOnFaulted
+                );
+        }
 
         private void Loop()
         {
-            Task.Run(() => routine.Invoke(this, isCanceled)).ContinueWith(t =>
-                onError.Invoke(null, t.Exception.InnerException),
-                TaskContinuationOptions.OnlyOnFaulted
-            );
+            Initialize(() => routine.Invoke(this, isCanceled), false);
 
             if (isCanceled) return;
 
             resetEvent.WaitOne(timeout);
 
             Loop();
-        }
-
-        private async void LoopAsync()
-        {
-            await Task.Run(() => routine.Invoke(this, isCanceled)).ContinueWith(t =>
-                onError.Invoke(null, t.Exception.InnerException),
-                TaskContinuationOptions.OnlyOnFaulted
-            );
-
-            if (isCanceled) return;
-
-            resetEvent.WaitOne(timeout);
-
-            LoopAsync();
         }
     }
 }
