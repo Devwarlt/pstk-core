@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace CA.Threading.Tasks.Procedures
 {
     /// <summary>
-    /// Handle <see cref="AsyncProcedure{TInput}"/> instances
-    /// into pool of synchronous or asynchronous routines.
+    /// Handle <see cref="AsyncProcedure{TInput}"/> instances into pool of synchronous or asynchronous routines.
     /// </summary>
     /// <exception cref="ArgumentNullException"></exception>
     /// <exception cref="ArgumentOutOfRangeException"></exception>
@@ -61,8 +60,7 @@ namespace CA.Threading.Tasks.Procedures
 #pragma warning restore
 
         /// <summary>
-        /// Attach a process to parent in case of external task
-        /// cancelation request.
+        /// Attach a process to parent in case of external task cancelation request.
         /// </summary>
         /// <param name="token"></param>
         public void AttachToParent(CancellationToken token)
@@ -78,7 +76,7 @@ namespace CA.Threading.Tasks.Procedures
         public void CancelAll() => source.Cancel();
 
         /// <summary>
-        /// Execute the <see cref="pool"/> of routines.
+        /// Execute the pool of routines.
         /// </summary>
         /// <returns></returns>
         public IEnumerable<bool> ExecuteAll()
@@ -88,8 +86,7 @@ namespace CA.Threading.Tasks.Procedures
         }
 
         /// <summary>
-        /// Execute the <see cref="pool"/> of routines
-        /// in parallel.
+        /// Execute the <see cref="pool"/> of routines in parallel.
         /// </summary>
         /// <returns></returns>
         public bool[] ExecuteAllAsParallel()

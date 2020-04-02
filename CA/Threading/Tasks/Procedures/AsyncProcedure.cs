@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 namespace CA.Threading.Tasks.Procedures
 {
     /// <summary>
-    /// Used for situations that require dependency between other procedure.
-    /// Recommended to use it with <see cref="AsyncProcedurePool"/>.
+    /// Used for situations that require dependency between other procedure. Recommended to use it with <see cref="AsyncProcedurePool"/>.
     /// </summary>
     /// <typeparam name="TInput"></typeparam>
     /// <exception cref="ArgumentNullException"></exception>
@@ -45,15 +44,14 @@ namespace CA.Threading.Tasks.Procedures
 #pragma warning restore
 
         /// <summary>
-        /// When procedure is canceled by parent task via <see cref="CancellationToken"/>
-        /// and forced to stop all running processes.
+        /// When procedure is canceled by parent task via <see cref="CancellationToken"/> and forced to stop all running processes.
         /// </summary>
-        public event EventHandler<AsyncProcedureEventArgs<TInput>> onCanceled;
+        public event EventHandler<AsyncProcedureEventArgs<TInput>> OnCanceled;
 
         /// <summary>
         /// When procedure is completed with success.
         /// </summary>
-        public event EventHandler<AsyncProcedureEventArgs<TInput>> onCompleted;
+        public event EventHandler<AsyncProcedureEventArgs<TInput>> OnCompleted;
 
         /// <summary>
         /// Get the name of procedure.
@@ -66,8 +64,7 @@ namespace CA.Threading.Tasks.Procedures
         public CancellationToken GetToken => token;
 
         /// <summary>
-        /// Attach a process to parent in case of external task
-        /// cancellation request.
+        /// Attach a process to parent in case of external task cancellation request.
         /// </summary>
         /// <param name="token"></param>
         public void AttachToParent(CancellationToken token) => this.token = token;
@@ -75,6 +72,7 @@ namespace CA.Threading.Tasks.Procedures
         /// <summary>
         /// Execute the procedure.
         /// </summary>
+        /// <exception cref="OperationCanceledException"></exception>
         /// <returns></returns>
         public bool Execute()
         {
@@ -86,13 +84,13 @@ namespace CA.Threading.Tasks.Procedures
 
                 var result = task.Result;
 
-                onCompleted?.Invoke(this, result);
+                OnCompleted?.Invoke(this, result);
 
                 return true;
             }
             catch (OperationCanceledException)
             {
-                onCanceled?.Invoke(this, new AsyncProcedureEventArgs<TInput>(input, false));
+                OnCanceled?.Invoke(this, new AsyncProcedureEventArgs<TInput>(input, false));
             }
 
             return false;

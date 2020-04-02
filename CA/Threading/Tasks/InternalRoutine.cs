@@ -8,7 +8,7 @@ namespace CA.Threading.Tasks
     /// <summary>
     /// Used for synchronous or asynchronous routine.
     /// </summary>
-    /// <exception cref="ArgumentException"></exception>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
     /// <exception cref="ArgumentNullException"></exception>
     /// <exception cref="OperationCanceledException"></exception>
     public sealed class InternalRoutine : IAttachedTask
@@ -37,7 +37,7 @@ namespace CA.Threading.Tasks
 #pragma warning restore
 
         {
-            if (timeout <= 0) throw new ArgumentException("Only positive numbers are allowed.", "timeout");
+            if (timeout <= 0) throw new ArgumentOutOfRangeException("timeout", "Only non-zero and non-negative values are permitted.");
             if (routine == null) throw new ArgumentNullException("routine");
 
             this.timeout = timeout;
@@ -54,17 +54,17 @@ namespace CA.Threading.Tasks
         /// <summary>
         /// When routine finished its task.
         /// </summary>
-        public event EventHandler onFinished;
+        public event EventHandler OnFinished;
 
         /// <summary>
         /// When routine is already initialized.
         /// </summary>
-        public event EventHandler onInitialized;
+        public event EventHandler OnInitialized;
 
         /// <summary>
         /// When routine is preparing to initialize.
         /// </summary>
-        public event EventHandler onInitializing;
+        public event EventHandler OnInitializing;
 
         private event EventHandler<Exception> onError;
 
@@ -74,22 +74,20 @@ namespace CA.Threading.Tasks
         public CancellationToken GetToken => token;
 
         /// <summary>
-        /// Attach a process to parent in case of external task
-        /// cancellation request.
+        /// Attach a process to parent in case of external task cancellation request.
         /// </summary>
         /// <param name="token"></param>
         public void AttachToParent(CancellationToken token) => this.token = token;
 
         /// <summary>
-        /// Initialize and starts the core routine, to stop it must use
-        /// <see cref="CancellationTokenSource.Cancel(bool)"/>.
+        /// Initialize and starts the core routine, to stop it must use <see cref="CancellationTokenSource.Cancel(bool)"/>.
         /// </summary>
         public void Start() => Initialize(Loop, true);
 
         private void Finish()
         {
             isCanceled = true;
-            onFinished?.Invoke(this, null);
+            OnFinished?.Invoke(this, null);
         }
 
         private void Initialize(Action method, bool isInitializing)
@@ -103,11 +101,11 @@ namespace CA.Threading.Tasks
 
                     Task.Run(() =>
                     {
-                        if (isInitializing) onInitializing?.Invoke(this, null);
+                        if (isInitializing) OnInitializing?.Invoke(this, null);
 
                         method.Invoke();
 
-                        if (isInitializing) onInitialized?.Invoke(this, null);
+                        if (isInitializing) OnInitialized?.Invoke(this, null);
                     }, token).ContinueWith(t =>
                         onError.Invoke(null, t.Exception.InnerException),
                         TaskContinuationOptions.OnlyOnFaulted
@@ -117,11 +115,11 @@ namespace CA.Threading.Tasks
             else
                 Task.Run(() =>
                 {
-                    if (isInitializing) onInitializing?.Invoke(this, null);
+                    if (isInitializing) OnInitializing?.Invoke(this, null);
 
                     method.Invoke();
 
-                    if (isInitializing) onInitialized?.Invoke(this, null);
+                    if (isInitializing) OnInitialized?.Invoke(this, null);
                 }).ContinueWith(t =>
                     onError.Invoke(null, t.Exception.InnerException),
                     TaskContinuationOptions.OnlyOnFaulted

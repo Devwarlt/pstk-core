@@ -46,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\Tasks\AutomatedRestarter.cs" />
+    <Compile Include="Threading\Tasks\AutomatedRestarterFlag.cs" />
+    <Compile Include="Threading\Tasks\AutomatedRestarterListener.cs" />
     <Compile Include="Threading\Tasks\InternalRoutine.cs" />
     <Compile Include="Threading\Tasks\Procedures\AsyncProcedure.cs" />
     <Compile Include="Threading\Tasks\Procedures\AsyncProcedureEventArgs.cs" />
