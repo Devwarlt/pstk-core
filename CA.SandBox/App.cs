@@ -46,6 +46,19 @@ namespace CA.SandBox
                         "\n\t[8].\t256 async procedures in parallel",
                         (args) => HandleTestC2Options(args, numRequiredArgs: 1)
                     )
+                },
+                {
+                    "-c3",
+                    (
+                        "Execute a test for class 'AutomatedRestarter', for options:" +
+                        "\n\t[1].\t30 seconds" +
+                        "\n\t[2].\t1 minute" +
+                        "\n\t[3].\t2 minutes" +
+                        "\n\t[4].\t3 minutes" +
+                        "\n\t[5].\t4 minutes" +
+                        "\n\t[6].\t5 minutes",
+                        (args) => HandleTestC3Options(args, numRequiredArgs: 1)
+                    )
                 }
             };
 
@@ -248,8 +261,8 @@ namespace CA.SandBox
             var syncForced = new ManualResetEvent(false);
             var progressRoutine = new InternalRoutine(1000, progress);
             progressRoutine.AttachToParent(source.Token);
-            progressRoutine.onInitializing += (s, e) => Info("[progressRoutine] Initializing progress routine...");
-            progressRoutine.onFinished += (s, e) =>
+            progressRoutine.OnInitializing += (s, e) => Info("[progressRoutine] Initializing progress routine...");
+            progressRoutine.OnFinished += (s, e) =>
             {
                 Info("[progressRoutine] Stopping progress routine...");
 
@@ -263,7 +276,7 @@ namespace CA.SandBox
                 if (i == max) source.Cancel();
             });
             incrementRoutine.AttachToParent(source.Token);
-            incrementRoutine.onInitializing += (s, e) =>
+            incrementRoutine.OnInitializing += (s, e) =>
             {
                 Info("[incrementRoutine] Initializing increment routine...");
                 Info(
@@ -274,7 +287,7 @@ namespace CA.SandBox
 
                 progressRoutine.Start();
             };
-            incrementRoutine.onFinished += (s, e) =>
+            incrementRoutine.OnFinished += (s, e) =>
             {
                 Info("[incrementRoutine] Stopping increment routine...");
 
@@ -378,8 +391,8 @@ namespace CA.SandBox
                             newInput++;
                         });
                         routine.AttachToParent(procedureSource.Token);
-                        routine.onInitialized += (s, e) => initialized.Set();
-                        routine.onFinished += (s, e) => finished.Set();
+                        routine.OnInitialized += (s, e) => initialized.Set();
+                        routine.OnFinished += (s, e) => finished.Set();
                         routine.Start();
 
                         initialized.WaitOne();
@@ -389,9 +402,13 @@ namespace CA.SandBox
                     }
                 );
                 procedure.AttachToParent(source.Token);
-                procedure.onCompleted += (s, e) => Warn($"[{((IAsyncProcedure)s).GetName}] Finished procedure with result '{e.Input}'.");
+                procedure.OnCompleted += (s, e) => Warn($"[{((IAsyncProcedure)s).GetName}] Finished procedure with result '{e.Input}'.");
                 pool[i] = procedure;
             }
+
+            Breakline();
+            Warn("Press ANY key to stop all procedures...");
+            Breakline();
 
             var procedurePool = new AsyncProcedurePool(pool, source);
             var isCompleted = false;
@@ -423,10 +440,6 @@ namespace CA.SandBox
                 Tail();
             });
 
-            Breakline();
-            Warn("Press ANY key to stop all procedures...");
-            Breakline();
-
             Console.ReadKey(true);
 
             if (!isCompleted)
@@ -438,6 +451,74 @@ namespace CA.SandBox
                     $"[Forced] All procedures have been stopped: {procedurePool.NumProcedures} " +
                     $"async procedure{(procedurePool.NumProcedures > 1 ? "s" : "")}"
                 );
+                Tail();
+            }
+        }
+
+        private static void HandleTestC3Options(string[] args, int numRequiredArgs)
+        {
+            if (args.Length < numRequiredArgs)
+            {
+                Error($"This command requires {numRequiredArgs} extra argument{(numRequiredArgs > 1 ? "s" : "")}.");
+                Tail();
+                return;
+            }
+
+            var option = args[0];
+            TimeSpan timeout;
+
+            switch (option)
+            {
+                case "1": timeout = TimeSpan.FromSeconds(30); break;
+                case "2": timeout = TimeSpan.FromMinutes(1); break;
+                case "3": timeout = TimeSpan.FromMinutes(2); break;
+                case "4": timeout = TimeSpan.FromMinutes(3); break;
+                case "5": timeout = TimeSpan.FromMinutes(4); break;
+                case "6": timeout = TimeSpan.FromMinutes(5); break;
+                default:
+                    Error($"Invalid option: {option}");
+                    Tail();
+                    return;
+            }
+
+            var isCompleted = false;
+            var totalMs = timeout.TotalMilliseconds;
+            var time75p = TimeSpan.FromMilliseconds(totalMs * 0.75);
+            var time50p = TimeSpan.FromMilliseconds(totalMs * 0.5);
+            var time25p = TimeSpan.FromMilliseconds(totalMs * 0.25);
+            void log(TimeSpan time) => Info($"[AutomatedRestarter] Messaged notify when remains {time.TotalMilliseconds} ms to stop routine.");
+            var restarter = new AutomatedRestarter(timeout);
+            restarter.AddEventListeners(new[]
+            {
+                new KeyValuePair<TimeSpan, Action>(timeout, () => log(timeout)),
+                new KeyValuePair<TimeSpan, Action>(time75p, () => log(time75p)),
+                new KeyValuePair<TimeSpan, Action>(time50p, () => log(time50p)),
+                new KeyValuePair<TimeSpan, Action>(time25p, () => log(time25p))
+            });
+            restarter.OnFinished += (s, e) =>
+            {
+                isCompleted = true;
+
+                Breakline();
+                Warn("[Success] Automated restarter have been stopped.");
+                Tail();
+            };
+
+            Info($"[AutomatedRestarter] This process will stop within {totalMs} ms...");
+            Breakline();
+            Warn("Press ANY key to stop automated restarter...");
+            Breakline();
+
+            restarter.Start();
+
+            Console.ReadKey(true);
+
+            if (!isCompleted)
+            {
+                restarter.Stop();
+
+                Breakline();
+                Warn("[Forced] Automated restarter have been stopped.");
                 Tail();
             }
         }
