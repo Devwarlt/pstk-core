@@ -9,8 +9,10 @@ namespace CA.Threading.Tasks.Procedures
     {
 #pragma warning disable
 
-        public AsyncProcedureEventArgs(TInput input, bool result)
-            : base()
+        public AsyncProcedureEventArgs(
+            TInput input,
+            bool result
+            ) : base()
         {
             Input = input;
             Result = result;

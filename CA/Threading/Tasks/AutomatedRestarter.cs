@@ -7,15 +7,13 @@ namespace CA.Threading.Tasks
 {
     /// <summary>
     /// Creates an <see cref="InternalRoutine"/> adapted to handle events and execute a process when threshold is achieved.
-    /// The internal routine ticks every 1000 milliseconds, defined by constant <see cref="ROUTINE_MS"/>.
     /// </summary>
     /// <exception cref="ArgumentNullException"></exception>
     /// <exception cref="ArgumentOutOfRangeException"></exception>
     /// <exception cref="InvalidOperationException"></exception>
     public sealed class AutomatedRestarter
     {
-        private const int ROUTINE_MS = 1000;
-
+        private readonly int routineMs;
         private readonly CancellationTokenSource source;
         private readonly TimeSpan timeout;
 
@@ -25,24 +23,36 @@ namespace CA.Threading.Tasks
         private InternalRoutine routine;
 
         /// <summary>
-        /// Creates a new instance of <see cref="AutomatedRestarter"/>, make sure <paramref name="timeout"/> is in milliseconds.
+        /// Creates a new instance of <see cref="AutomatedRestarter"/>.
         /// </summary>
         /// <param name="timeout"></param>
+        /// <param name="routineMs"></param>
+        /// <param name="errorLogger"></param>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        public AutomatedRestarter(TimeSpan timeout)
+        public AutomatedRestarter(
+            TimeSpan timeout,
+            int routineMs = 1000,
+            Action<string> errorLogger = null
+            )
         {
+            if (routineMs <= 0) throw new ArgumentOutOfRangeException("routineMs", "Only non-zero and non-negative values are permitted.");
+
             if (timeout == null) throw new ArgumentNullException("timeout");
 
+            this.routineMs = routineMs;
             this.timeout = timeout;
 
             source = new CancellationTokenSource();
             listeners = new List<AutomatedRestarterListener>();
+            onError += (s, e) => errorLogger?.Invoke(e.ToString());
         }
 
         /// <summary>
         /// When routine finished its task.
         /// </summary>
         public event EventHandler OnFinished;
+
+        private event EventHandler<Exception> onError;
 
         /// <summary>
         /// Get the current <see cref="AutomatedRestarter"/> flag.
@@ -80,21 +90,25 @@ namespace CA.Threading.Tasks
         /// <exception cref="InvalidOperationException"></exception>
         public void AddEventListeners(KeyValuePair<TimeSpan, Action>[] listeners)
         {
-            switch (GetFlag)
+            try
             {
-                default: break;
-                case AutomatedRestarterFlag.Running | AutomatedRestarterFlag.Stopped:
-                    throw new InvalidOperationException($"You cannot perform new listener addition when in {GetFlag} mode.");
+                switch (GetFlag)
+                {
+                    default: break;
+                    case AutomatedRestarterFlag.Running | AutomatedRestarterFlag.Stopped:
+                        throw new InvalidOperationException($"You cannot perform new listener addition when in {GetFlag} mode.");
+                }
+
+                foreach (var listener in listeners)
+                {
+                    var entry = new AutomatedRestarterListener { Timeout = listener.Key, Handler = listener.Value };
+
+                    if (entry.IsInvalid) throw new InvalidOperationException("The listener is invalid.");
+
+                    this.listeners.Add(entry);
+                }
             }
-
-            foreach (var listener in listeners)
-            {
-                var entry = new AutomatedRestarterListener { Timeout = listener.Key, Handler = listener.Value };
-
-                if (entry.IsInvalid) throw new InvalidOperationException("The listener is invalid.");
-
-                this.listeners.Add(entry);
-            }
+            catch (InvalidOperationException e) { onError.Invoke(null, e); }
         }
 
         /// <summary>
@@ -104,46 +118,54 @@ namespace CA.Threading.Tasks
         /// <exception cref="InvalidOperationException"></exception>
         public void Start()
         {
-            if (routine != null || GetFlag == AutomatedRestarterFlag.Running)
-                throw new InvalidOperationException("AutomatedRestarter instance is already running.");
-
-            if (OnFinished == null) throw new ArgumentNullException("OnFinished", "Event must be raised once routine finish its execution.");
-
-            listeners = listeners.OrderByDescending(listener => listener.Timeout.TotalMilliseconds).ToList();
-
-            var isCompleted = false;
-
-            routine = new InternalRoutine(ROUTINE_MS, () =>
+            try
             {
-                if (GetTickCount >= finalTickCount && !isCompleted)
+                if (routine != null || GetFlag == AutomatedRestarterFlag.Running)
+                    throw new InvalidOperationException("AutomatedRestarter instance is already running.");
+
+                if (OnFinished == null) throw new ArgumentNullException("OnFinished", "Event must be raised once routine finish its execution.");
+
+                listeners = listeners.OrderByDescending(listener => listener.Timeout.TotalMilliseconds).ToList();
+
+                var isCompleted = false;
+
+                routine = new InternalRoutine(routineMs, () =>
                 {
-                    isCompleted = true;
-
-                    Stop(true);
-                    return;
-                }
-
-                if (listeners.Count > 0)
-                    for (var i = 0; i < listeners.Count; i++)
+                    if (GetTickCount >= finalTickCount && !isCompleted)
                     {
-                        var timeout = finalTickCount - listeners[i].Timeout.TotalMilliseconds;
+                        isCompleted = true;
 
-                        if (GetTickCount >= timeout)
-                        {
-                            listeners[i].Handler.Invoke();
-                            listeners.RemoveAt(i);
-                            break;
-                        }
+                        Stop(true);
+                        return;
                     }
-            });
-            routine.AttachToParent(source.Token);
 
-            initialTickCount = GetTickCount;
-            finalTickCount = initialTickCount + (long)timeout.TotalMilliseconds;
+                    if (listeners.Count > 0)
+                        for (var i = 0; i < listeners.Count; i++)
+                        {
+                            var timeout = finalTickCount - listeners[i].Timeout.TotalMilliseconds;
 
-            routine.Start();
+                            if (GetTickCount >= timeout)
+                            {
+                                listeners[i].Handler.Invoke();
+                                listeners.RemoveAt(i);
+                                break;
+                            }
+                        }
+                });
+                routine.AttachToParent(source.Token);
 
-            GetFlag = AutomatedRestarterFlag.Running;
+                initialTickCount = GetTickCount;
+                finalTickCount = initialTickCount + (long)timeout.TotalMilliseconds;
+
+                routine.Start();
+
+                GetFlag = AutomatedRestarterFlag.Running;
+            }
+            catch (Exception e)
+            {
+                if (e is InvalidCastException || e is ArgumentNullException)
+                    onError.Invoke(null, e);
+            }
         }
 
         /// <summary>
@@ -154,16 +176,24 @@ namespace CA.Threading.Tasks
         /// <exception cref="InvalidOperationException"></exception>
         public void Stop(bool isFinished = false)
         {
-            if (source.IsCancellationRequested || GetFlag == AutomatedRestarterFlag.Stopped)
-                throw new InvalidOperationException("AutomatedRestarter instance is already stopped.");
+            try
+            {
+                if (source.IsCancellationRequested || GetFlag == AutomatedRestarterFlag.Stopped)
+                    throw new InvalidOperationException("AutomatedRestarter instance is already stopped.");
 
-            if (OnFinished == null) throw new ArgumentNullException("OnFinished", "Event must be raised once routine finish its execution.");
+                if (OnFinished == null) throw new ArgumentNullException("OnFinished", "Event must be raised once routine finish its execution.");
 
-            source.Cancel();
+                source.Cancel();
 
-            if (isFinished) OnFinished.Invoke(this, null);
+                if (isFinished) OnFinished.Invoke(this, null);
 
-            GetFlag = AutomatedRestarterFlag.Stopped;
+                GetFlag = AutomatedRestarterFlag.Stopped;
+            }
+            catch (Exception e)
+            {
+                if (e is InvalidCastException || e is ArgumentNullException)
+                    onError.Invoke(null, e);
+            }
         }
     }
 }

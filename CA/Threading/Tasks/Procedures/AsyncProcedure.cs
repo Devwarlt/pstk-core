@@ -13,8 +13,8 @@ namespace CA.Threading.Tasks.Procedures
     public sealed class AsyncProcedure<TInput> : IAsyncProcedure
     {
 #pragma warning disable
-        private readonly string name;
         private readonly TInput input;
+        private readonly string name;
         private readonly Func<TInput, CancellationToken, Task<AsyncProcedureEventArgs<TInput>>> procedure;
 
         private CancellationToken token = default;
@@ -22,7 +22,8 @@ namespace CA.Threading.Tasks.Procedures
         public AsyncProcedure(
             string name,
             TInput input,
-            Func<AsyncProcedure<TInput>, string, TInput, AsyncProcedureEventArgs<TInput>> procedure
+            Func<AsyncProcedure<TInput>, string, TInput, AsyncProcedureEventArgs<TInput>> procedure,
+            Action<string> errorLogger = null
             )
         {
             if (input == null) throw new ArgumentNullException("input");
@@ -39,6 +40,8 @@ namespace CA.Threading.Tasks.Procedures
 
                 return task.Result;
             };
+
+            onError += (s, e) => errorLogger?.Invoke(e.ToString());
         }
 
 #pragma warning restore
@@ -52,6 +55,8 @@ namespace CA.Threading.Tasks.Procedures
         /// When procedure is completed with success.
         /// </summary>
         public event EventHandler<AsyncProcedureEventArgs<TInput>> OnCompleted;
+
+        private event EventHandler<Exception> onError;
 
         /// <summary>
         /// Get the name of procedure.
@@ -88,9 +93,10 @@ namespace CA.Threading.Tasks.Procedures
 
                 return true;
             }
-            catch (OperationCanceledException)
+            catch (OperationCanceledException e)
             {
                 OnCanceled?.Invoke(this, new AsyncProcedureEventArgs<TInput>(input, false));
+                onError.Invoke(null, e);
             }
 
             return false;
