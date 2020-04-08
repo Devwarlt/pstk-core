@@ -1,9 +1,12 @@
 ﻿using CA.Networking.Utils;
+using CA.Threading.Tasks.Procedures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CA.Networking
 {
@@ -11,7 +14,9 @@ namespace CA.Networking
     /// Represents a structure of inbound connection type.
     /// </summary>
     /// <exception cref="InvalidCastException"></exception>
-    public struct InboundConnection
+    /// <exception cref="InvalidOperationException"></exception>
+    /// <exception cref="OperationCanceledException"></exception>
+    public struct InboundConnection : IAttachedTask
     {
         private readonly int bufferSize;
         private readonly ConnectionCentral central;
@@ -20,14 +25,21 @@ namespace CA.Networking
 
 #pragma warning disable
 
-        public InboundConnection(ConnectionCentral central, int bufferSize)
+        private CancellationToken token;
+
+        public InboundConnection(
+            ConnectionCentral central,
+            int bufferSize
+            )
         {
             this.central = central;
             this.bufferSize = bufferSize;
 
             inboundLocker = new object();
             maxConnections = central.MaxInboundConnectionsByIp;
+            token = default;
 
+            GetFlag = ConnectionFlag.Idle;
             Sockets = new List<Socket>(maxConnections);
         }
 
@@ -39,6 +51,11 @@ namespace CA.Networking
         public int GetConnections => Sockets.Count;
 
         /// <summary>
+        /// Get the current <see cref="ConnectionFlag"/> flag.
+        /// </summary>
+        public ConnectionFlag GetFlag { get; private set; }
+
+        /// <summary>
         /// Returns the <see cref="IPAddress"/> from remote associated <see cref="Sockets"/>.
         /// </summary>
         public IPAddress GetIPAddress
@@ -46,11 +63,16 @@ namespace CA.Networking
             get
             {
                 if (Sockets.Count == 0)
-                    throw new InvalidOperationException("There is not IP associated to any socket yet.");
+                    throw new InvalidOperationException("There is no IP associated to any socket yet.");
 
                 return Sockets.Where(skt => skt != null).First().GetIpAddress();
             }
         }
+
+        /// <summary>
+        /// Get the <see cref="CancellationToken"/> of attached task.
+        /// </summary>
+        public CancellationToken GetToken => token;
 
         /// <summary>
         /// Get a list of all sockets associated to <see cref="IPAddress"/>.
@@ -82,6 +104,12 @@ namespace CA.Networking
         }
 
         /// <summary>
+        /// Attach a process to parent in case of external task cancellation request.
+        /// </summary>
+        /// <param name="token"></param>
+        public void AttachToParent(CancellationToken token) => this.token = token;
+
+        /// <summary>
         /// Compare two <see cref="InboundConnection"/> by <see cref="IPAddress"/>.
         /// </summary>
         /// <param name="obj"></param>
@@ -104,17 +132,60 @@ namespace CA.Networking
         /// <summary>
         /// Remove <see cref="Socket"/> to current inbound connection of current thread.
         /// </summary>
-        /// <exception cref="InvalidCastException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
         /// <param name="socket"></param>
         public void Remove(Socket socket)
         {
             lock (inboundLocker)
             {
                 if (Sockets.Count == 0)
-                    throw new InvalidOperationException($"There is no socket to remove to current IP {socket.GetIpAddress().ToString()}.");
+                    throw new InvalidOperationException($"There is no socket to remove from current IP {socket.GetIpAddress().ToString()}.");
 
                 Sockets.Remove(socket);
             }
+        }
+
+        /// <summary>
+        /// Start listening for inbound traffic.
+        /// </summary>
+        /// <exception cref="InvalidOperationException"></exception>
+        public void Start()
+        {
+            if (token == default) throw new InvalidOperationException("InboundConnection task is not attached to parent.");
+
+            if (GetFlag == ConnectionFlag.Listening)
+                throw new InvalidOperationException("This listener can only run in a single thread for inbound traffic.");
+
+            GetFlag = ConnectionFlag.Listening;
+
+            Initialize(Loop);
+        }
+
+        /// <summary>
+        /// Stop listening for inbound traffic.
+        /// </summary>
+        /// <exception cref="InvalidOperationException"></exception>
+        public void Stop()
+        {
+            if (token.IsCancellationRequested || GetFlag == ConnectionFlag.Aborted)
+                throw new InvalidOperationException("This listener was already stopped.");
+
+            GetFlag = ConnectionFlag.Aborted;
+        }
+
+        private void Initialize(Action method)
+        {
+            try
+            {
+                token.ThrowIfCancellationRequested();
+
+                Task.Run(() => method.Invoke(), token);
+            }
+            catch (OperationCanceledException) { Stop(); }
+        }
+
+        private void Loop()
+        {
         }
     }
 }

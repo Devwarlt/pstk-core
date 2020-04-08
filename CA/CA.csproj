@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Networking\ConnectionCentral.cs" />
-    <Compile Include="Networking\ConnectionCentralFlag.cs" />
+    <Compile Include="Networking\ConnectionFlag.cs" />
     <Compile Include="Networking\ConnectionType.cs" />
     <Compile Include="Networking\InboundConnection.cs" />
     <Compile Include="Networking\Utils\ConnectionUtils.cs" />

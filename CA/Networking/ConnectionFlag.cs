@@ -3,10 +3,10 @@
 namespace CA.Networking
 {
     /// <summary>
-    /// Represents current flag of <see cref="ConnectionCentral"/> routine.
+    /// Represents current flag of connection routines.
     /// </summary>
     [Flags]
-    public enum ConnectionCentralFlag
+    public enum ConnectionFlag
     {
         /// <summary>
         /// When not listening for inbound connections.
@@ -14,7 +14,7 @@ namespace CA.Networking
         Idle,
 
         /// <summary>
-        /// When listening for inbound connections and processing new clients.
+        /// When listening for inbound traffic.
         /// </summary>
         Listening,
 
