@@ -45,6 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Networking\ConnectionCentral.cs" />
+    <Compile Include="Networking\ConnectionCentralFlag.cs" />
+    <Compile Include="Networking\ConnectionType.cs" />
+    <Compile Include="Networking\InboundConnection.cs" />
+    <Compile Include="Networking\Utils\ConnectionUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threading\Tasks\AutomatedRestarter.cs" />
     <Compile Include="Threading\Tasks\AutomatedRestarterFlag.cs" />
