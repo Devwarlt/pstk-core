@@ -13,13 +13,18 @@ namespace CA.Networking
     /// <exception cref="InvalidCastException"></exception>
     public struct InboundConnection
     {
+        private readonly int bufferSize;
+        private readonly ConnectionCentral central;
         private readonly object inboundLocker;
         private readonly int maxConnections;
 
 #pragma warning disable
 
-        public InboundConnection(ConnectionCentral central)
+        public InboundConnection(ConnectionCentral central, int bufferSize)
         {
+            this.central = central;
+            this.bufferSize = bufferSize;
+
             inboundLocker = new object();
             maxConnections = central.MaxInboundConnectionsByIp;
 
@@ -61,7 +66,7 @@ namespace CA.Networking
 #pragma warning restore
 
         /// <summary>
-        /// Add <see cref="Socket"/> to current inbound connection to current thread.
+        /// Add <see cref="Socket"/> to current inbound connection of current thread.
         /// </summary>
         /// <exception cref="InvalidCastException"></exception>
         /// <param name="socket"></param>
@@ -97,7 +102,7 @@ namespace CA.Networking
 #pragma warning restore
 
         /// <summary>
-        /// Remove <see cref="Socket"/> to current inbound connection to current thread.
+        /// Remove <see cref="Socket"/> to current inbound connection of current thread.
         /// </summary>
         /// <exception cref="InvalidCastException"></exception>
         /// <param name="socket"></param>

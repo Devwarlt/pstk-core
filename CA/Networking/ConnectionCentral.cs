@@ -16,6 +16,7 @@ namespace CA.Networking
     /// <exception cref="InvalidOperationException"></exception>
     public sealed class ConnectionCentral
     {
+        private readonly int bufferSize;
         private readonly TcpListener listener;
         private readonly CancellationTokenSource source;
 
@@ -23,12 +24,12 @@ namespace CA.Networking
 
 #pragma warning disable
 
-        public ConnectionCentral(int port, ushort maxConnections)
-            : this(port, maxConnections, ConnectionType.Local)
+        public ConnectionCentral(int port, ushort maxConnections, int bufferSize)
+            : this(port, maxConnections, bufferSize, ConnectionType.Local)
         {
         }
 
-        public ConnectionCentral(int port, ushort maxConnections, ConnectionType type)
+        public ConnectionCentral(int port, ushort maxConnections, int bufferSize, ConnectionType type)
         {
             if (maxConnections == 0)
                 throw new ArgumentException("This service needs to listen for at last 1 inbound connection.", "maxConnections");
@@ -36,12 +37,13 @@ namespace CA.Networking
             if (!Enum.IsDefined(typeof(ConnectionType), (short)type))
                 throw new ArgumentOutOfRangeException("type", $"ConnectionType {(ushort)type} is invalid.");
 
+            this.bufferSize = bufferSize;
+
             listener = TcpListener.Create(port);
             listener.Server.NoDelay = true;
             listener.Server.UseOnlyOverlappedIO = true;
             listener.Server.Ttl = (short)type;
             source = new CancellationTokenSource();
-
             connections = new List<InboundConnection>(maxConnections);
         }
 
@@ -64,11 +66,22 @@ namespace CA.Networking
         public void Start()
         {
             if (GetFlag == ConnectionCentralFlag.Listening)
-                throw new InvalidOperationException("Duplicated initialization, this service can only run in a single thread for inbound connections.");
+                throw new InvalidOperationException("This service can only run in a single thread for inbound connections.");
 
             GetFlag = ConnectionCentralFlag.Listening;
 
             Accept();
+        }
+
+        /// <summary>
+        /// Stop listening for new clients.
+        /// </summary>
+        public void Stop()
+        {
+            if (source.IsCancellationRequested || GetFlag == ConnectionCentralFlag.Aborted)
+                throw new InvalidOperationException("This server was already stopped.");
+
+            GetFlag = ConnectionCentralFlag.Aborted;
         }
 
         private void Accept()
@@ -84,9 +97,8 @@ namespace CA.Networking
 
                     if (!index.HasValue)
                     {
-                        var inboundConn = new InboundConnection(this);
+                        var inboundConn = new InboundConnection(this, bufferSize);
                         inboundConn.Add(connection.Client);
-
                         connections.Add(inboundConn);
                     }
                     else
@@ -107,7 +119,7 @@ namespace CA.Networking
 
                 Task.Run(() => method.Invoke(), source.Token);
             }
-            catch (OperationCanceledException) { GetFlag = ConnectionCentralFlag.Aborted; }
+            catch (OperationCanceledException) { Stop(); }
         }
     }
 }
