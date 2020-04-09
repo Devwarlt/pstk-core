@@ -1,6 +1,7 @@
 ﻿using CA.Networking.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
@@ -18,6 +19,7 @@ namespace CA.Networking
     {
         private readonly int bufferSize;
         private readonly TcpListener listener;
+        private readonly ushort maxPacketsPerEndPoint;
         private readonly CancellationTokenSource source;
 
         private List<InboundConnection> connections;
@@ -27,22 +29,34 @@ namespace CA.Networking
         public ConnectionCentral(
             int port,
             ushort maxConnections,
+            ushort maxPacketsPerEndPoint,
             int bufferSize
-            ) : this(port, maxConnections, bufferSize, ConnectionType.Local) { }
+            ) : this(port, maxConnections, maxPacketsPerEndPoint, bufferSize, ConnectionType.Local) { }
 
         public ConnectionCentral(
-            int port, ushort maxConnections,
+            int port,
+            ushort maxConnections,
+            ushort maxPacketsPerEndPoint,
             int bufferSize,
             ConnectionType type,
             Action<string> errorLogger = null
             )
+
+#pragma warning restore
+
         {
             if (maxConnections == 0)
-                throw new ArgumentException("This service needs to listen for at last 1 inbound connection.", "maxConnections");
+                throw new ArgumentException("This service needs to listen for at least 1 inbound connection.", "maxConnections");
+
+            if (maxPacketsPerEndPoint == 0)
+                throw new ArgumentException("This service needs to handle at least 1 inbound packet per endpoint.", "maxPacketsPerEndPoint");
 
             if (!Enum.IsDefined(typeof(ConnectionType), (short)type))
                 throw new ArgumentOutOfRangeException("type", $"ConnectionType {(ushort)type} is invalid.");
 
+            if (bufferSize <= 0) throw new ArgumentOutOfRangeException("bufferSize", "Only non-zero and non-negative values are permitted.");
+
+            this.maxPacketsPerEndPoint = maxPacketsPerEndPoint;
             this.bufferSize = bufferSize;
 
             listener = TcpListener.Create(port);
@@ -53,8 +67,6 @@ namespace CA.Networking
             connections = new List<InboundConnection>(maxConnections);
             onError += (s, e) => errorLogger?.Invoke(e.ToString());
         }
-
-#pragma warning restore
 
         private event EventHandler<Exception> onError;
 
@@ -67,6 +79,27 @@ namespace CA.Networking
         /// Get the maximum number of <see cref="InboundConnection"/> associated per <see cref="IPAddress"/>.
         /// </summary>
         public int MaxInboundConnectionsByIp { get; private set; }
+
+        /// <summary>
+        /// Gets a matrix of all <see cref="InboundPacket"/> from all <see cref="InboundConnection"/>.
+        /// </summary>
+        /// <returns></returns>
+        public InboundPacket[][] GetAllInboundPackets()
+        {
+            var matrix = new List<InboundPacket[]>();
+            var conns = connections.ToArray();
+
+            for (var i = 0; i < conns.Length; i++)
+            {
+                var packets = conns[i].GetEndPointPackets().ToArray();
+
+                if (packets.Length == 0) continue;
+
+                matrix.Add(packets);
+            }
+
+            return matrix.ToArray();
+        }
 
         /// <summary>
         /// Start listening for new clients.
@@ -89,6 +122,7 @@ namespace CA.Networking
         /// <summary>
         /// Stop listening for new clients.
         /// </summary>
+        /// <exception cref="InvalidOperationException"></exception>
         public void Stop()
         {
             try
@@ -97,6 +131,12 @@ namespace CA.Networking
                     throw new InvalidOperationException("This server was already stopped.");
 
                 GetFlag = ConnectionFlag.Aborted;
+
+                var conns = connections.ToArray();
+
+                for (var i = 0; i < conns.Length; i++)
+                    try { conns[i].Stop(); }
+                    catch (InvalidOperationException) { }
             }
             catch (InvalidOperationException e) { onError.Invoke(null, e); }
         }
@@ -105,27 +145,27 @@ namespace CA.Networking
         {
             Initialize(async () =>
             {
-                var connection = await listener.AcceptTcpClientAsync();
-                var ip = connection.Client.GetIpAddress();
+                var conn = await listener.AcceptTcpClientAsync();
+                var ip = conn.Client.GetIpAddress();
 
                 if (ip != null)
                 {
-                    int? index = connections.FindIndex(conn => conn.Equals(ip));
+                    var currConn = connections.FirstOrDefault(connection => connection.Equals(ip));
 
-                    if (!index.HasValue)
+                    if (currConn == default)
                     {
-                        var inboundConn = new InboundConnection(this, bufferSize);
+                        var inboundConn = new InboundConnection(this, bufferSize, maxPacketsPerEndPoint);
 
                         try
                         {
-                            inboundConn.Add(connection.Client);
+                            inboundConn.Add(conn);
                             inboundConn.AttachToParent(source.Token);
                             connections.Add(inboundConn);
                         }
                         catch (InvalidCastException e) { onError.Invoke(null, e); }
                     }
                     else
-                        connections[index.Value].Add(connection.Client);
+                        currConn.Add(conn);
                 }
             });
 

@@ -11,17 +11,21 @@ using System.Threading.Tasks;
 namespace CA.Networking
 {
     /// <summary>
-    /// Represents a structure of inbound connection type.
+    /// Represents an inbound connection type.
     /// </summary>
     /// <exception cref="InvalidCastException"></exception>
     /// <exception cref="InvalidOperationException"></exception>
     /// <exception cref="OperationCanceledException"></exception>
-    public struct InboundConnection : IAttachedTask
+    /// <exception cref="SocketException"></exception>
+    public class InboundConnection : IAttachedTask
     {
         private readonly int bufferSize;
         private readonly ConnectionCentral central;
         private readonly object inboundLocker;
         private readonly int maxConnections;
+        private readonly ushort maxPacketsPerEndPoint;
+
+        private List<InboundTraffic> inboundTraffics;
 
 #pragma warning disable
 
@@ -29,26 +33,38 @@ namespace CA.Networking
 
         public InboundConnection(
             ConnectionCentral central,
-            int bufferSize
+            int bufferSize,
+            ushort maxPacketsPerEndPoint
             )
         {
             this.central = central;
             this.bufferSize = bufferSize;
+            this.maxPacketsPerEndPoint = maxPacketsPerEndPoint;
 
             inboundLocker = new object();
             maxConnections = central.MaxInboundConnectionsByIp;
             token = default;
+            inboundTraffics = new List<InboundTraffic>();
 
             GetFlag = ConnectionFlag.Idle;
-            Sockets = new List<Socket>(maxConnections);
+            Clients = new List<TcpClient>();
+
+            onAdd = null;
         }
 
 #pragma warning restore
 
+        private event EventHandler<TcpClient> onAdd;
+
         /// <summary>
-        /// Get number of connections associated to <see cref="Sockets"/>.
+        /// Get a list of all sockets associated to <see cref="IPAddress"/>.
         /// </summary>
-        public int GetConnections => Sockets.Count;
+        public List<TcpClient> Clients { get; private set; }
+
+        /// <summary>
+        /// Get number of connections associated to <see cref="Clients"/>.
+        /// </summary>
+        public int GetConnections { get { lock (inboundLocker) return Clients.Count; } }
 
         /// <summary>
         /// Get the current <see cref="ConnectionFlag"/> flag.
@@ -56,16 +72,17 @@ namespace CA.Networking
         public ConnectionFlag GetFlag { get; private set; }
 
         /// <summary>
-        /// Returns the <see cref="IPAddress"/> from remote associated <see cref="Sockets"/>.
+        /// Returns the <see cref="IPAddress"/> from remote associated <see cref="Clients"/>.
         /// </summary>
         public IPAddress GetIPAddress
         {
             get
             {
-                if (Sockets.Count == 0)
-                    throw new InvalidOperationException("There is no IP associated to any socket yet.");
+                lock (inboundLocker)
+                    if (Clients.Count == 0)
+                        throw new InvalidOperationException("There is no IP associated to any socket yet.");
 
-                return Sockets.Where(skt => skt != null).First().GetIpAddress();
+                return Clients.Where(skt => skt != null).First().Client.GetIpAddress();
             }
         }
 
@@ -73,11 +90,6 @@ namespace CA.Networking
         /// Get the <see cref="CancellationToken"/> of attached task.
         /// </summary>
         public CancellationToken GetToken => token;
-
-        /// <summary>
-        /// Get a list of all sockets associated to <see cref="IPAddress"/>.
-        /// </summary>
-        public List<Socket> Sockets { get; private set; }
 
 #pragma warning disable
 
@@ -88,19 +100,19 @@ namespace CA.Networking
 #pragma warning restore
 
         /// <summary>
-        /// Add <see cref="Socket"/> to current inbound connection of current thread.
+        /// Add <see cref="TcpClient"/> to current inbound connection of current thread.
         /// </summary>
         /// <exception cref="InvalidCastException"></exception>
-        /// <param name="socket"></param>
-        public void Add(Socket socket)
+        /// <param name="tcpClient"></param>
+        public void Add(TcpClient tcpClient)
         {
             lock (inboundLocker)
-            {
-                if (Sockets.Count == maxConnections)
-                    throw new InvalidCastException($"Cannot associate more sockets to current IP {socket.GetIpAddress().ToString()}, limit is set to {maxConnections}.");
+                if (Clients.Count == maxConnections)
+                    throw new InvalidCastException($"Cannot associate more sockets to current IP {tcpClient.Client.GetIpAddress().ToString()}, limit is set to {maxConnections}.");
 
-                Sockets.Add(socket);
-            }
+            Clients.Add(tcpClient);
+
+            onAdd.Invoke(null, tcpClient);
         }
 
         /// <summary>
@@ -123,6 +135,27 @@ namespace CA.Networking
             return toCompare.GetIPAddress.Equals(toCompare.GetIPAddress);
         }
 
+        /// <summary>
+        /// Get an enumerable of <see cref="InboundPacket"/> from <see cref="InboundTraffic"/>.
+        /// All pending packets are enqueued into <see cref="InboundConnection"/> for each <see cref="EndPoint"/>.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<InboundPacket> GetEndPointPackets()
+        {
+            var traffics = inboundTraffics.ToArray();
+
+            for (var i = 0; i < traffics.Length; i++)
+            {
+                if (GetFlag == ConnectionFlag.Aborted) yield break;
+
+                var inboundTraffic = traffics[i];
+
+                if (!inboundTraffic.HasPackets) continue;
+
+                yield return new InboundPacket(traffics[i].EndPoint, traffics[i].Dequeue());
+            }
+        }
+
 #pragma warning disable
 
         public override int GetHashCode() => GetIPAddress.GetHashCode();
@@ -130,18 +163,21 @@ namespace CA.Networking
 #pragma warning restore
 
         /// <summary>
-        /// Remove <see cref="Socket"/> to current inbound connection of current thread.
+        /// Remove <see cref="TcpClient"/> to current inbound connection of current thread.
         /// </summary>
         /// <exception cref="InvalidOperationException"></exception>
-        /// <param name="socket"></param>
-        public void Remove(Socket socket)
+        /// <exception cref="SocketException"></exception>
+        /// <param name="tcpClient"></param>
+        public void Remove(TcpClient tcpClient)
         {
             lock (inboundLocker)
-            {
-                if (Sockets.Count == 0)
-                    throw new InvalidOperationException($"There is no socket to remove from current IP {socket.GetIpAddress().ToString()}.");
+                if (Clients.Count == 0)
+                    throw new InvalidOperationException($"There is no socket to remove from current IP {tcpClient.Client.GetIpAddress().ToString()}.");
 
-                Sockets.Remove(socket);
+            if (Clients.Contains(tcpClient))
+            {
+                Clients.Remove(tcpClient);
+                tcpClient.Close();
             }
         }
 
@@ -158,7 +194,7 @@ namespace CA.Networking
 
             GetFlag = ConnectionFlag.Listening;
 
-            Initialize(Loop);
+            onAdd += OnAddSocket;
         }
 
         /// <summary>
@@ -171,6 +207,12 @@ namespace CA.Networking
                 throw new InvalidOperationException("This listener was already stopped.");
 
             GetFlag = ConnectionFlag.Aborted;
+
+            onAdd -= OnAddSocket;
+
+            lock (inboundLocker)
+                for (var i = 0; i < Clients.Count; i++)
+                    Clients[i].Close();
         }
 
         private void Initialize(Action method)
@@ -184,8 +226,50 @@ namespace CA.Networking
             catch (OperationCanceledException) { Stop(); }
         }
 
-        private void Loop()
+        private void OnAddSocket(object sender, TcpClient tcpClient)
         {
+            if (sender == null) return;
+
+            if (tcpClient.Connected)
+            {
+                var procedure = new AsyncProcedure<KeyValuePair<InboundConnection, TcpClient>>(
+                    $"{GetIPAddress.ToString()} - PID: #{Clients.Count + 1}",
+                    new KeyValuePair<InboundConnection, TcpClient>((InboundConnection)sender, tcpClient),
+                    (instance, name, input) =>
+                    {
+                        var inboundConn = input.Key;
+                        var socket = input.Value;
+
+                        do
+                        {
+                            if (!socket.Connected) break;
+
+                            var buffer = new byte[inboundConn.bufferSize];
+                            var receiveTask = Task.Run(async () => await socket.GetStream().ReadAsync(buffer, 0, buffer.Length));
+
+                            Task.WaitAll(receiveTask);
+
+                            var data = receiveTask.Result;
+                            var inboundTraffic = inboundConn.inboundTraffics.FirstOrDefault(inb => inb.EndPoint == socket.Client.RemoteEndPoint);
+
+                            if (inboundTraffic == default)
+                            {
+                                inboundTraffic = new InboundTraffic(socket.Client.RemoteEndPoint, inboundConn.maxPacketsPerEndPoint);
+                                inboundConn.inboundTraffics.Add(inboundTraffic);
+                            }
+
+                            inboundTraffic.Enqueue(data);
+                        } while (inboundConn.GetFlag == ConnectionFlag.Listening);
+
+                        inboundConn.Remove(socket);
+
+                        return new AsyncProcedureEventArgs<KeyValuePair<InboundConnection, TcpClient>>(input, true);
+                    }
+                );
+                procedure.AttachToParent(GetToken);
+                procedure.Execute();
+            }
+            else throw new SocketException((int)SocketError.NotConnected);
         }
     }
 }

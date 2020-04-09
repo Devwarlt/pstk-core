@@ -22,7 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\Core Algorithms.xml</DocumentationFile>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\Core Algorithms.xml</DocumentationFile>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,8 @@
     <Compile Include="Networking\ConnectionFlag.cs" />
     <Compile Include="Networking\ConnectionType.cs" />
     <Compile Include="Networking\InboundConnection.cs" />
+    <Compile Include="Networking\InboundPacket.cs" />
+    <Compile Include="Networking\InboundTraffic.cs" />
     <Compile Include="Networking\Utils\ConnectionUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threading\Tasks\AutomatedRestarter.cs" />
