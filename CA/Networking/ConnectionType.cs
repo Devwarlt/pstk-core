@@ -5,7 +5,7 @@ namespace CA.Networking
     /// <summary>
     /// Represents the type of connection for <see cref="ConnectionCentral"/> instance.
     /// </summary>
-    [Flags]
+    [Flags, Obsolete]
     public enum ConnectionType : short
     {
         /// <summary>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 
 namespace CA.Networking
@@ -6,6 +7,7 @@ namespace CA.Networking
     /// <summary>
     /// Represents an inbound traffic from <see cref="InboundConnection"/>.
     /// </summary>
+    [Obsolete]
     public class InboundTraffic
     {
         private readonly object inboundLock;

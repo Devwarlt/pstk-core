@@ -15,6 +15,7 @@ namespace CA.Networking
     /// <exception cref="ArgumentException"></exception>
     /// <exception cref="ArgumentOutOfRangeException"></exception>
     /// <exception cref="InvalidOperationException"></exception>
+    [Obsolete("This feature isn't completed, avoid use it for your projects. No test was made within its development period.", true)]
     public sealed class ConnectionCentral
     {
         private readonly int bufferSize;

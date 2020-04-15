@@ -17,6 +17,7 @@ namespace CA.Networking
     /// <exception cref="InvalidOperationException"></exception>
     /// <exception cref="OperationCanceledException"></exception>
     /// <exception cref="SocketException"></exception>
+    [Obsolete("This feature isn't completed, avoid use it for your projects. No test was made within its development period.", true)]
     public class InboundConnection : IAttachedTask
     {
         private readonly int bufferSize;

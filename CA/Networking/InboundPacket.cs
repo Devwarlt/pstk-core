@@ -1,10 +1,12 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 
 namespace CA.Networking
 {
     /// <summary>
     /// Represents a structure for inbound packet from <see cref="InboundTraffic"/>.
     /// </summary>
+    [Obsolete]
     public readonly struct InboundPacket
     {
         /// <summary>

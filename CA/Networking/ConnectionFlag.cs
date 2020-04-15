@@ -5,7 +5,7 @@ namespace CA.Networking
     /// <summary>
     /// Represents current flag of connection routines.
     /// </summary>
-    [Flags]
+    [Flags, Obsolete]
     public enum ConnectionFlag
     {
         /// <summary>
