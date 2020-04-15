@@ -28,7 +28,8 @@ namespace CA.SandBox
                         "\n\t[1].\ttimeout: 1000ms, total elapsed time: 100s" +
                         "\n\t[2].\ttimeout: 500ms, total elapsed time: 50s" +
                         "\n\t[3].\ttimeout: 250ms, total elapsed time: 25s" +
-                        "\n\t[4].\ttimeout: 125ms, total elapsed time: 12.5s",
+                        "\n\t[4].\ttimeout: 125ms, total elapsed time: 12.5s" +
+                        "\n\t[5].\ttimeout: 200ms, total elapsed time: 20s [enable delta variation]",
                         (args) => HandleTestC1Options(args, numRequiredArgs: 1)
                     )
                 },
@@ -232,6 +233,7 @@ namespace CA.SandBox
 
             var option = args[0];
             var timeout = -1;
+            var isDeltaVariationEnabled = false;
 
             switch (option)
             {
@@ -239,6 +241,7 @@ namespace CA.SandBox
                 case "2": timeout = 500; break;
                 case "3": timeout = 250; break;
                 case "4": timeout = 125; break;
+                case "5": timeout = 200; isDeltaVariationEnabled = true; break;
                 default:
                     Error($"Invalid option: {option}");
                     Tail();
@@ -273,9 +276,15 @@ namespace CA.SandBox
             {
                 if (i < max) ++i;
 
+                if (isDeltaVariationEnabled && i >= max / 3 && i < max * 2 / 3) Thread.Sleep(timeout + 5);
+
                 if (i == max) source.Cancel();
             });
             incrementRoutine.AttachToParent(source.Token);
+
+            if (isDeltaVariationEnabled)
+                incrementRoutine.OnDeltaVariation += (s, e) => Warn($"[incrementRoutine] Long execution detected! delta: {e.Delta} / tps: {e.TicksPerSecond} / timeout: {e.Timeout}ms");
+
             incrementRoutine.OnInitializing += (s, e) =>
             {
                 Info("[incrementRoutine] Initializing increment routine...");

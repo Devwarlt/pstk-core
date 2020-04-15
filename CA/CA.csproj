@@ -57,6 +57,7 @@
     <Compile Include="Threading\Tasks\AutomatedRestarterFlag.cs" />
     <Compile Include="Threading\Tasks\AutomatedRestarterListener.cs" />
     <Compile Include="Threading\Tasks\InternalRoutine.cs" />
+    <Compile Include="Threading\Tasks\InternalRoutineEventArgs.cs" />
     <Compile Include="Threading\Tasks\Procedures\AsyncProcedure.cs" />
     <Compile Include="Threading\Tasks\Procedures\AsyncProcedureEventArgs.cs" />
     <Compile Include="Threading\Tasks\Procedures\AsyncProcedurePool.cs" />

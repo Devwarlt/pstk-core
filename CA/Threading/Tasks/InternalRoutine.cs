@@ -15,8 +15,10 @@ namespace CA.Threading.Tasks
     {
         private readonly ManualResetEvent resetEvent;
         private readonly Action<InternalRoutine, bool> routine;
+        private readonly int ticksPerSecond;
         private readonly int timeout;
 
+        private int delta = 0;
         private bool isCanceled = false;
 
 #pragma warning disable
@@ -43,6 +45,7 @@ namespace CA.Threading.Tasks
             this.timeout = timeout;
             this.routine = (instance, cancel) => { if (!cancel) routine.Invoke(instance); };
 
+            ticksPerSecond = 1000 / timeout;
             resetEvent = new ManualResetEvent(false);
             onError += (s, e) =>
             {
@@ -50,6 +53,11 @@ namespace CA.Threading.Tasks
                 Finish();
             };
         }
+
+        /// <summary>
+        /// When routine <see cref="timeout"/> takes more time than usual to execute.
+        /// </summary>
+        public event EventHandler<InternalRoutineEventArgs> OnDeltaVariation;
 
         /// <summary>
         /// When routine finished its task.
@@ -82,16 +90,12 @@ namespace CA.Threading.Tasks
         /// <summary>
         /// Initialize and starts the core routine, to stop it must use <see cref="CancellationTokenSource.Cancel(bool)"/>.
         /// </summary>
-        public void Start() => Initialize(Loop, true);
+        public void Start() => Execute(Loop, true);
 
-        private void Finish()
+        private Task<int> Execute(Action method, bool isInitializing)
         {
-            isCanceled = true;
-            OnFinished?.Invoke(this, null);
-        }
+            Task<int> task = null;
 
-        private void Initialize(Action method, bool isInitializing)
-        {
             if (token != default)
                 try
                 {
@@ -99,40 +103,62 @@ namespace CA.Threading.Tasks
 
                     token.ThrowIfCancellationRequested();
 
-                    Task.Run(() =>
+                    task = Task.Run(() =>
                     {
                         if (isInitializing) OnInitializing?.Invoke(this, null);
 
+                        var elapsedMs = Environment.TickCount;
+
                         method.Invoke();
 
+                        var elapsedMsDelta = Environment.TickCount - elapsedMs;
+
                         if (isInitializing) OnInitialized?.Invoke(this, null);
-                    }, token).ContinueWith(t =>
-                        onError.Invoke(null, t.Exception.InnerException),
-                        TaskContinuationOptions.OnlyOnFaulted
-                    );
+
+                        return timeout - elapsedMsDelta;
+                    }, token);
                 }
                 catch (OperationCanceledException) { Finish(); }
             else
-                Task.Run(() =>
+                task = Task.Run(() =>
                 {
                     if (isInitializing) OnInitializing?.Invoke(this, null);
 
+                    var elapsedMs = Environment.TickCount;
+
                     method.Invoke();
 
+                    var elapsedMsDelta = Environment.TickCount - elapsedMs;
+
                     if (isInitializing) OnInitialized?.Invoke(this, null);
-                }).ContinueWith(t =>
-                    onError.Invoke(null, t.Exception.InnerException),
-                    TaskContinuationOptions.OnlyOnFaulted
-                );
+
+                    return timeout - elapsedMsDelta;
+                });
+
+            task?.ContinueWith(t => onError.Invoke(null, t.Exception.InnerException), TaskContinuationOptions.OnlyOnFaulted);
+
+            return task;
+        }
+
+        private void Finish()
+        {
+            isCanceled = true;
+            OnFinished?.Invoke(this, null);
         }
 
         private void Loop()
         {
-            Initialize(() => routine.Invoke(this, isCanceled), false);
+            var task = Execute(() => routine.Invoke(this, isCanceled), false);
 
-            if (isCanceled) return;
+            if (isCanceled || task == null) return;
 
-            resetEvent.WaitOne(timeout);
+            if (task.Result < 0) delta = Math.Abs(task.Result);
+
+            if (delta > 0) OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(delta, ticksPerSecond, timeout));
+
+            delta = 0;
+
+            resetEvent.WaitOne(Math.Max(0, task.Result));
 
             Loop();
         }

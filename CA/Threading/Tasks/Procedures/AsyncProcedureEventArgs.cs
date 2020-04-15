@@ -13,12 +13,13 @@ namespace CA.Threading.Tasks.Procedures
             TInput input,
             bool result
             ) : base()
+
+#pragma warning restore
+
         {
             Input = input;
             Result = result;
         }
-
-#pragma warning restore
 
         /// <summary>
         /// The input of <see cref="AsyncProcedure{TInput}"/> event.
