@@ -1,0 +1,2 @@
+dotnet .\Docpal.dll -out C:\Users\devwarlt\Desktop\Git\core-algorithms-docs -xml '.\bin\Release\Core Algorithms.xml' --mgtable --proptable  '.\bin\Release\Core Algorithms.dll'
+mkdocs gh-deploy -t readthedocs -d .\output
