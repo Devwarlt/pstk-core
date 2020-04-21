@@ -155,7 +155,7 @@ namespace CA.Threading.Tasks
 
             delta = Math.Max(0, result);
 
-            if (delta > 0) OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(delta, ticksPerSecond, timeout));
+            if (delta > timeout) OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(delta, ticksPerSecond, timeout));
 
             resetEvent.WaitOne(delta);
 
