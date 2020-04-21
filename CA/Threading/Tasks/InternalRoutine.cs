@@ -14,7 +14,7 @@ namespace CA.Threading.Tasks
     public sealed class InternalRoutine : IAttachedTask
     {
         private readonly ManualResetEvent resetEvent;
-        private readonly Action<InternalRoutine, bool> routine;
+        private readonly Action<int, bool> routine;
         private readonly int ticksPerSecond;
         private readonly int timeout;
 
@@ -22,17 +22,16 @@ namespace CA.Threading.Tasks
         private bool isCanceled = false;
 
 #pragma warning disable
-
         private CancellationToken token = default;
 
         public InternalRoutine(
             int timeout,
             Action routine
-            ) : this(timeout, (nternalRoutine) => routine(), null) { }
+            ) : this(timeout, (delta) => routine(), null) { }
 
         public InternalRoutine(
             int timeout,
-            Action<InternalRoutine> routine,
+            Action<int> routine,
             Action<string> errorLogger = null
             )
 
@@ -43,7 +42,7 @@ namespace CA.Threading.Tasks
             if (routine == null) throw new ArgumentNullException("routine");
 
             this.timeout = timeout;
-            this.routine = (instance, cancel) => { if (!cancel) routine.Invoke(instance); };
+            this.routine = (delta, cancel) => { if (!cancel) routine.Invoke(delta); };
 
             ticksPerSecond = 1000 / timeout;
             resetEvent = new ManualResetEvent(false);
@@ -148,17 +147,17 @@ namespace CA.Threading.Tasks
 
         private void Loop()
         {
-            var task = Execute(() => routine.Invoke(this, isCanceled), false);
+            var task = Execute(() => routine.Invoke(delta, isCanceled), false);
 
             if (isCanceled || task == null) return;
 
-            if (task.Result < 0) delta = Math.Abs(task.Result);
+            var result = task.Result < 0 ? 0 : task.Result;
+
+            delta = Math.Max(0, result);
 
             if (delta > 0) OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(delta, ticksPerSecond, timeout));
 
-            delta = 0;
-
-            resetEvent.WaitOne(Math.Max(0, task.Result));
+            resetEvent.WaitOne(delta);
 
             Loop();
         }
