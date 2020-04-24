@@ -9,6 +9,3 @@
 
 [license]: /LICENSE
 [license-badge]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-
-[devwarlt]: https://github.com/Devwarlt
-[slendergo]: https://github.com/Slendergo
