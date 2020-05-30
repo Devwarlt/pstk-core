@@ -264,7 +264,6 @@ namespace CA.SandBox
             var syncForced = new ManualResetEvent(false);
             var progressRoutine = new InternalRoutine(1000, progress);
             progressRoutine.AttachToParent(source.Token);
-            progressRoutine.OnInitializing += (s, e) => Info("[progressRoutine] Initializing progress routine...");
             progressRoutine.OnFinished += (s, e) =>
             {
                 Info("[progressRoutine] Stopping progress routine...");
@@ -285,17 +284,6 @@ namespace CA.SandBox
             if (isDeltaVariationEnabled)
                 incrementRoutine.OnDeltaVariation += (s, e) => Warn($"[incrementRoutine] Long execution detected! delta: {e.Delta} / tps: {e.TicksPerSecond} / timeout: {e.Timeout}ms");
 
-            incrementRoutine.OnInitializing += (s, e) =>
-            {
-                Info("[incrementRoutine] Initializing increment routine...");
-                Info(
-                    $"[incrementRoutine] Starting incrementing from {min} to {max} " +
-                    $"every {timeout} ms (ETA to finish this task: " +
-                    $"{(max * timeout / 1000f).ToString("##.00")}s)."
-                );
-
-                progressRoutine.Start();
-            };
             incrementRoutine.OnFinished += (s, e) =>
             {
                 Info("[incrementRoutine] Stopping increment routine...");
@@ -315,7 +303,13 @@ namespace CA.SandBox
             Breakline();
             Warn("Press ANY key to stop all internal routines...");
             Breakline();
-
+            Info("[incrementRoutine] Initializing increment routine...");
+            Info(
+                $"[incrementRoutine] Starting incrementing from {min} to {max} " +
+                $"every {timeout} ms (ETA to finish this task: " +
+                $"{(max * timeout / 1000f).ToString("##.00")}s)."
+            );
+            progressRoutine.Start();
             incrementRoutine.Start();
 
             Console.ReadKey(true);
@@ -400,9 +394,9 @@ namespace CA.SandBox
                             newInput++;
                         });
                         routine.AttachToParent(procedureSource.Token);
-                        routine.OnInitialized += (s, e) => initialized.Set();
                         routine.OnFinished += (s, e) => finished.Set();
                         routine.Start();
+                        initialized.Set();
 
                         initialized.WaitOne();
                         finished.WaitOne();
