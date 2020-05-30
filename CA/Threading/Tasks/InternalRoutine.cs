@@ -38,8 +38,11 @@ namespace CA.Threading.Tasks
 #pragma warning restore
 
         {
-            if (timeout <= 0) throw new ArgumentOutOfRangeException("timeout", "Only non-zero and non-negative values are permitted.");
-            if (routine == null) throw new ArgumentNullException("routine");
+            if (timeout <= 0)
+                throw new ArgumentOutOfRangeException("timeout", "Only non-zero and non-negative values are permitted.");
+
+            if (routine == null)
+                throw new ArgumentNullException("routine");
 
             this.timeout = timeout;
             this.routine = (delta, cancel) => { if (!cancel) routine.Invoke(delta); };
@@ -66,12 +69,12 @@ namespace CA.Threading.Tasks
         /// <summary>
         /// When routine is already initialized.
         /// </summary>
-        public event EventHandler OnInitialized;
+        [Obsolete("Not supported feature since version 3.4.2.", true)] public event EventHandler OnInitialized;
 
         /// <summary>
         /// When routine is preparing to initialize.
         /// </summary>
-        public event EventHandler OnInitializing;
+        [Obsolete("Not supported feature since version 3.4.2.", true)] public event EventHandler OnInitializing;
 
         private event EventHandler<Exception> onError;
 
@@ -89,9 +92,9 @@ namespace CA.Threading.Tasks
         /// <summary>
         /// Initialize and starts the core routine, to stop it must use <see cref="CancellationTokenSource.Cancel(bool)"/>.
         /// </summary>
-        public void Start() => Execute(Loop, true);
+        public void Start() => Execute(Loop);
 
-        private Task<int> Execute(Action method, bool isInitializing)
+        private Task<int> Execute(Action method)
         {
             Task<int> task = null;
 
@@ -104,15 +107,11 @@ namespace CA.Threading.Tasks
 
                     task = Task.Run(() =>
                     {
-                        if (isInitializing) OnInitializing?.Invoke(this, null);
-
                         var elapsedMs = Environment.TickCount;
 
                         method.Invoke();
 
                         var elapsedMsDelta = Environment.TickCount - elapsedMs;
-
-                        if (isInitializing) OnInitialized?.Invoke(this, null);
 
                         return timeout - elapsedMsDelta;
                     }, token);
@@ -121,15 +120,11 @@ namespace CA.Threading.Tasks
             else
                 task = Task.Run(() =>
                 {
-                    if (isInitializing) OnInitializing?.Invoke(this, null);
-
                     var elapsedMs = Environment.TickCount;
 
                     method.Invoke();
 
                     var elapsedMsDelta = Environment.TickCount - elapsedMs;
-
-                    if (isInitializing) OnInitialized?.Invoke(this, null);
 
                     return timeout - elapsedMsDelta;
                 });
@@ -147,15 +142,17 @@ namespace CA.Threading.Tasks
 
         private void Loop()
         {
-            var task = Execute(() => routine.Invoke(delta, isCanceled), false);
+            var task = Execute(() => routine.Invoke(delta, isCanceled));
 
-            if (isCanceled || task == null) return;
+            if (isCanceled || task == null)
+                return;
 
             var result = task.Result < 0 ? 0 : task.Result;
 
             delta = Math.Max(0, result);
 
-            if (delta > timeout) OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(delta, ticksPerSecond, timeout));
+            if (delta > timeout)
+                OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(delta, ticksPerSecond, timeout));
 
             resetEvent.WaitOne(delta);
 
