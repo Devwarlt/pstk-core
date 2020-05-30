@@ -11,56 +11,68 @@ namespace CA.SandBox
 {
     public class App
     {
+        private static int DEFAULT_WORKERTHREADS = -1;
+        private static int DEFAULT_PORTTHREADS = -1;
+
         private static readonly Dictionary<string, (string alias, string description, Action<string> action)> CommandList
             = new Dictionary<string, (string alias, string description, Action<string> action)>()
             {
-                { "--help", ("h", "Show a list of all commands.", (input) => HandleHelp()) },
-                { "--test", ("t", "Execute a specific test.", (input) => HandleTest(input)) }
+                ["--help"] = ("h", "Show a list of all commands.", (input) => HandleHelp()),
+                ["--test"] = ("t", "Execute a specific test.", (input) => HandleTest(input))
             };
 
         private static readonly Dictionary<string, (string description, Action<string[]> action)> TestCommandList
             = new Dictionary<string, (string description, Action<string[]> action)>()
             {
-                {
-                    "-c1",
-                    (
-                        "Execute a test for class 'InternalRoutine', for options:" +
-                        "\n\t[1].\ttimeout: 1000ms, total elapsed time: 100s" +
-                        "\n\t[2].\ttimeout: 500ms, total elapsed time: 50s" +
-                        "\n\t[3].\ttimeout: 250ms, total elapsed time: 25s" +
-                        "\n\t[4].\ttimeout: 125ms, total elapsed time: 12.5s" +
-                        "\n\t[5].\ttimeout: 200ms, total elapsed time: 20s [enable delta variation]",
-                        (args) => HandleTestC1Options(args, numRequiredArgs: 1)
-                    )
-                },
-                {
-                    "-c2",
-                    (
-                        "Execute a test for class 'AsyncProcedure' and 'AsyncProcedurePool', for options:" +
-                        "\n\t[1].\t2 async procedures in parallel" +
-                        "\n\t[2].\t4 async procedures in parallel" +
-                        "\n\t[3].\t8 async procedures in parallel" +
-                        "\n\t[4].\t16 async procedures in parallel" +
-                        "\n\t[5].\t32 async procedures in parallel" +
-                        "\n\t[6].\t64 async procedures in parallel" +
-                        "\n\t[7].\t128 async procedures in parallel" +
-                        "\n\t[8].\t256 async procedures in parallel",
-                        (args) => HandleTestC2Options(args, numRequiredArgs: 1)
-                    )
-                },
-                {
-                    "-c3",
-                    (
-                        "Execute a test for class 'AutomatedRestarter', for options:" +
-                        "\n\t[1].\t30 seconds" +
-                        "\n\t[2].\t1 minute" +
-                        "\n\t[3].\t2 minutes" +
-                        "\n\t[4].\t3 minutes" +
-                        "\n\t[5].\t4 minutes" +
-                        "\n\t[6].\t5 minutes",
-                        (args) => HandleTestC3Options(args, numRequiredArgs: 1)
-                    )
-                }
+                ["-c1"] = (
+                    "Execute a test for class 'InternalRoutine', for options:" +
+                    "\n\t[1].\ttimeout: 1000ms, total elapsed time: 100s" +
+                    "\n\t[2].\ttimeout: 500ms, total elapsed time: 50s" +
+                    "\n\t[3].\ttimeout: 250ms, total elapsed time: 25s" +
+                    "\n\t[4].\ttimeout: 125ms, total elapsed time: 12.5s" +
+                    "\n\t[5].\ttimeout: 200ms, total elapsed time: 20s [enable delta variation]",
+                    (args) => HandleTestC1Options(args, numRequiredArgs: 1)
+                ),
+                ["-c2"] =
+                (
+                    "Execute a test for class 'AsyncProcedure' and 'AsyncProcedurePool', for options:" +
+                    "\n\t[1].\t2 async procedures in parallel" +
+                    "\n\t[2].\t4 async procedures in parallel" +
+                    "\n\t[3].\t8 async procedures in parallel" +
+                    "\n\t[4].\t16 async procedures in parallel" +
+                    "\n\t[5].\t32 async procedures in parallel" +
+                    "\n\t[6].\t64 async procedures in parallel" +
+                    "\n\t[7].\t128 async procedures in parallel" +
+                    "\n\t[8].\t256 async procedures in parallel",
+                    (args) => HandleTestC2Options(args, numRequiredArgs: 1)
+                ),
+                ["-c3"] =
+                (
+                    "Execute a test for class 'AutomatedRestarter', for options:" +
+                    "\n\t[1].\t30 seconds" +
+                    "\n\t[2].\t1 minute" +
+                    "\n\t[3].\t2 minutes" +
+                    "\n\t[4].\t3 minutes" +
+                    "\n\t[5].\t4 minutes" +
+                    "\n\t[6].\t5 minutes",
+                    (args) => HandleTestC3Options(args, numRequiredArgs: 1)
+                ),
+                ["-c4"] =
+                (
+                    "Execute a test for threading performance feedback, for options:" +
+                    "\n\t[1].\t1 thread" +
+                    "\n\t[2].\t2 threads" +
+                    "\n\t[3].\t4 threads" +
+                    "\n\t[4].\t8 threads" +
+                    "\n\t[5].\t16 threads" +
+                    "\n\t[6].\t32 threads" +
+                    "\n\t[7].\t64 threads" +
+                    "\n\t[8].\t128 threads" +
+                    "\n\t[9].\t256 threads" +
+                    "\n\nEach thread scales a single operation that takes at least 50ms to execute and each thread runs in background with lowest priority. " +
+                    "Use param '-skip' to avoid threadpool scaling and let it running with default values.",
+                    (args) => HandleTestC4Options(args, numRequiredArgs: 1)
+                )
             };
 
         private static Dictionary<string, string> Commands = new Dictionary<string, string>();
@@ -526,6 +538,127 @@ namespace CA.SandBox
             }
         }
 
+        private static void HandleTestC4Options(string[] args, int numRequiredArgs)
+        {
+            if (args.Length < numRequiredArgs)
+            {
+                Error($"This command requires {numRequiredArgs} extra argument{(numRequiredArgs > 1 ? "s" : "")}.");
+                Tail();
+                return;
+            }
+
+            var option = args[0];
+            var skip = args.Contains("-skip");
+
+            int threads;
+
+            switch (option)
+            {
+                case "1": threads = 1; break;
+                case "2": threads = 2; break;
+                case "3": threads = 4; break;
+                case "4": threads = 8; break;
+                case "5": threads = 16; break;
+                case "6": threads = 32; break;
+                case "7": threads = 64; break;
+                case "8": threads = 128; break;
+                case "9": threads = 256; break;
+                default:
+                    Error($"Invalid option: {option}");
+                    Tail();
+                    return;
+            }
+
+            if (threads >= 64 && !skip)
+            {
+                var minThreads = 200;
+
+                if (threads == 64)
+                    minThreads = 100;
+                else if (threads == 128)
+                    minThreads = 200;
+                else
+                    minThreads = 300;
+
+                ThreadPool.GetMinThreads(out var workerThreads, out var completionPortThreads);
+
+                if (DEFAULT_WORKERTHREADS == -1 && DEFAULT_PORTTHREADS == -1)
+                {
+                    DEFAULT_WORKERTHREADS = workerThreads;
+                    DEFAULT_PORTTHREADS = completionPortThreads;
+                }
+
+                if (!ThreadPool.SetMinThreads(minThreads, completionPortThreads))
+                {
+                    Error(
+                        $"Current system cannot support setup for {minThreads} threads to handle a batch of {threads} threads! " +
+                        "Consider to use another option with lower amount of theads to execute this test."
+                    );
+                    Tail();
+                    return;
+                }
+
+                Warn($"Changed 'workerThreads' from {workerThreads} to {minThreads} to handle a batch of {threads} threads!");
+                Breakline();
+                Info("To continue this operation press ANY key...");
+                Breakline();
+                Console.ReadKey(true);
+            }
+            else
+            {
+                if (!skip && DEFAULT_WORKERTHREADS != -1 && DEFAULT_PORTTHREADS != -1)
+                    ThreadPool.SetMinThreads(DEFAULT_WORKERTHREADS, DEFAULT_PORTTHREADS);
+            }
+
+            Warn($"Creating a batch for {threads} threads...");
+
+            var batch = new Thread[threads];
+            var isCompleted = false;
+            var id = 0;
+
+            for (var i = 0; i < batch.Length; i++)
+                batch[i] = new Thread(async () =>
+                {
+                    var threadId = Interlocked.Increment(ref id);
+
+                    Warn($"[thread #{threadId}]: running!");
+
+                    var value = int.MinValue;
+
+                    do
+                    {
+                        Info($"[thread #{threadId}]: value -> {++value}");
+
+                        await Task.Delay(50);
+                    }
+                    while (!isCompleted);
+                })
+                { IsBackground = true, Priority = ThreadPriority.Lowest };
+
+            Warn("Success!");
+            Breakline();
+            Info("To run all threads press ANY key...");
+
+            Console.ReadKey(true);
+
+            Warn("To stop all running processes, press ANY key...");
+
+            for (var i = 0; i < batch.Length; i++)
+                batch[i].Start();
+
+            Console.ReadKey(true);
+
+            Warn("Stopping all running processes...");
+
+            isCompleted = true;
+
+            for (var i = 0; i < batch.Length; i++)
+                batch[i].Join();
+
+            Info("Success!");
+            Tail();
+        }
+
         #endregion "Command Handlers"
 
         private static void DisplayTitle()
@@ -538,7 +671,8 @@ namespace CA.SandBox
                   888           d88P  888
                   888    888   d88P   888
                   Y88b  d88P  d8888888888
-                    Y8888P  d88888  88888
+                    Y8888P  d888      888
+
                                 888 888
                                 888 888
 .d8888b   8888b.  88888b.   .d88888 88888b.   .d88b.  888  888
