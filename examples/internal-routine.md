@@ -22,6 +22,7 @@ public static void Main() {
   
   _mre.WaitOne();
   
+  Thread.Sleep(3000);
   Environment.Exit(0);
 }
 
