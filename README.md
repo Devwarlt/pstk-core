@@ -3,6 +3,9 @@
 
 **Core Algorithms**, also known with acronym CA, are a collection of features available in .NET framework that enhances PServer performance related to multithreading, parallel programming and concurrent programming scenarios. Can be ported to any MMO interface with properly adjusts and implementation. However, target is for any PServer server source.
 
+If you want to see how to use specific classes of this DLL, checkout these [**examples**][examples].
+
+[examples]: /examples
 [license]: /LICENSE
 [version]: /releases/latest
 
