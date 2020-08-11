@@ -6,6 +6,8 @@ namespace CA.Profiler
     /// <summary>
     /// Display total elapsed time of a procedure interval
     /// until <see cref="TimedProfiler"/> is disposed.
+    ///
+    /// Author: Slendergo
     /// </summary>
     public sealed class TimedProfiler : IDisposable
     {
