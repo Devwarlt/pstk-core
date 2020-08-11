@@ -53,6 +53,7 @@
     <Compile Include="Networking\InboundPacket.cs" />
     <Compile Include="Networking\InboundTraffic.cs" />
     <Compile Include="Networking\Utils\ConnectionUtils.cs" />
+    <Compile Include="Profiler\TimedProfiler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threading\Tasks\AutomatedRestarter.cs" />
     <Compile Include="Threading\Tasks\AutomatedRestarterFlag.cs" />
