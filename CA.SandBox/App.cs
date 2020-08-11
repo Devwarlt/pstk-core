@@ -1,6 +1,9 @@
-﻿using CA.Threading.Tasks;
+﻿using CA.Extensions.Concurrent;
+using CA.Profiler;
+using CA.Threading.Tasks;
 using CA.Threading.Tasks.Procedures;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -72,6 +75,11 @@ namespace CA.SandBox
                     "\n\nEach thread scales a single operation that takes at least 50ms to execute and each thread runs in background with lowest priority. " +
                     "Use param '-skip' to avoid threadpool scaling and let it running with default values.",
                     (args) => HandleTestC4Options(args, numRequiredArgs: 1)
+                ),
+                ["-c5"] =
+                (
+                    "Execute a test for concurrent dictionary ValueWhere and ValueWhereAsParallel to get a performance feedback.",
+                    (args) => HandleTestC5Options(args, numRequiredArgs: 0)
                 )
             };
 
@@ -656,6 +664,80 @@ namespace CA.SandBox
                 batch[i].Join();
 
             Info("Success!");
+            Tail();
+        }
+
+        private static async void HandleTestC5Options(string[] args, int numRequiredArgs)
+        {
+            var total = 10000; // total of entries
+            var count = 1000; // number of entries per task
+            var prev = 1;
+            var next = 0;
+            var random = new Random();
+            var dictionary = new ConcurrentDictionary<int, double>();
+            async Task createTask(int from, int to) => await Task.Run(() =>
+            {
+                for (var i = from; i <= to; i++)
+                    dictionary.TryAdd(i, random.NextDouble());
+            });
+            var workers = total / count;
+            var remains = total - workers * count;
+            if (remains > 0)
+                workers++;
+
+            var tasks = new Task[workers];
+            for (var i = 0; i < workers; i++)
+            {
+                if (i > 0)
+                    prev += count;
+
+                next += count;
+
+                if (next >= total)
+                    next = total - 1;
+
+                tasks[i] = createTask(prev, next);
+            }
+
+            Info($"Generating a collection of {total} entr{(total > 1 ? "ies" : "y")} with {workers} task{(workers > 1 ? "s" : "")}...");
+
+            using (var tp = new TimedProfiler("Test C5 [TASKS]", (txt) => Info(txt)))
+                await Task.WhenAll(tasks);
+
+            Breakline();
+
+            var threshold = 0.5d;
+            int amount = 0;
+            bool smallerThan(double val) => val <= threshold;
+            void notify(int i)
+            {
+                Info($"Found {i} entr{(i > 1 ? "ies" : "y")}");
+                Breakline();
+            };
+
+            using (var tp = new TimedProfiler("Test C5 [LINQ '.Where']", (txt) => Info(txt)))
+                amount = dictionary.Values.Where(smallerThan).ToArray().Length;
+
+            notify(amount);
+
+            using (var tp = new TimedProfiler("Test C5 [PLINQ '.Where']", (txt) => Info(txt)))
+                amount = dictionary.Values.AsParallel().Where(smallerThan).ToArray().Length;
+
+            notify(amount);
+
+            using (var tp = new TimedProfiler("Test C5 [CA '.ValueWhere']", (txt) => Info(txt)))
+                amount = dictionary.ValueWhere(smallerThan).Count();
+
+            notify(amount);
+
+            using (var tp = new TimedProfiler("Test C5 [CA '.ValueWhereAsParallel']", (txt) => Info(txt)))
+                amount = dictionary.ValueWhereAsParallel(smallerThan).Length;
+
+            notify(amount);
+
+            Console.ReadKey(true);
+
+            Breakline();
             Tail();
         }
 
