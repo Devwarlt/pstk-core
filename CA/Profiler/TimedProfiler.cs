@@ -12,17 +12,17 @@ namespace CA.Profiler
     public sealed class TimedProfiler : IDisposable
     {
 #pragma warning disable
-        private readonly Action<string> _action;
+        private readonly Action<string> _logger;
         private readonly string _message;
         private readonly Stopwatch _stopwatch;
 
         public TimedProfiler(string message) : this(message, null)
         { }
 
-        public TimedProfiler(string message, Action<string> action)
+        public TimedProfiler(string message, Action<string> logger)
         {
             _message = message;
-            _action = action;
+            _logger = logger;
             _stopwatch = Stopwatch.StartNew();
         }
 
@@ -34,8 +34,8 @@ namespace CA.Profiler
             var ms = _stopwatch.ElapsedMilliseconds;
             var info = $"{_message} - Elapsed: {time} ({ms}ms)";
 
-            if (_action != null)
-                _action.Invoke(info);
+            if (_logger != null)
+                _logger.Invoke(info);
             else
                 Console.WriteLine(info);
         }
