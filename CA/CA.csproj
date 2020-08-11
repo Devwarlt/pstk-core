@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\Concurrent\ConcurrentDictionaryExtensions.cs" />
     <Compile Include="Networking\ConnectionCentral.cs" />
     <Compile Include="Networking\ConnectionFlag.cs" />
     <Compile Include="Networking\ConnectionType.cs" />
