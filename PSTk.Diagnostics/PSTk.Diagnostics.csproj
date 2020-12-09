@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Description>Contains diagnostic utilities part of PSTk.Core toolkit.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <Authors>PSTk Core Team</Authors>
+    <Copyright>Copyright © PSTk Core Team 2020</Copyright>
+    <PackageProjectUrl>https://github.com/Devwarlt/pstk-core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Devwarlt/pstk-core</RepositoryUrl>
+    <PackageIcon>ICON.png</PackageIcon>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>dotnet;toolkit;game-tools;pserver</PackageTags>
+    <ApplicationIcon>ICON.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Optimize>false</Optimize>
+    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Diagnostic\PSTk.Diagnostics.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Diagnostic\PSTk.Diagnostics.xml</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="PSTk.Diagnostics.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\ICON.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
