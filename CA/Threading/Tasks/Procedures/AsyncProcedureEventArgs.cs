@@ -1,20 +1,18 @@
 ﻿using System;
 
-namespace CA.Threading.Tasks.Procedures
+namespace PSTk.Threading.Tasks.Procedures
 {
     /// <summary>
     /// Contains result of <see cref="AsyncProcedure{TInput}"/> event.
     /// </summary>
-    public class AsyncProcedureEventArgs<TInput> : EventArgs
+    public sealed class AsyncProcedureEventArgs<TInput> : EventArgs
     {
-#pragma warning disable
-
-        public AsyncProcedureEventArgs(
-            TInput input,
-            bool result
-            ) : base()
-
-#pragma warning restore
+        /// <summary>
+        /// Create a new instance of <see cref="AsyncProcedureEventArgs{TInput}"/>.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="result"></param>
+        public AsyncProcedureEventArgs(TInput input, bool result) : base()
 
         {
             Input = input;

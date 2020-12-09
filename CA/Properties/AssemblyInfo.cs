@@ -1,13 +1,13 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Core Algorithms")]
-[assembly: AssemblyDescription("Core Algorithms, also known with acronym CA, are a collection of features available in .NET framework that enhances PServer performance related to multithreading, parallel programming and concurrent programming scenarios.")]
+[assembly: AssemblyTitle("PServer Toolkit")]
+[assembly: AssemblyDescription("PSTk is a collection of features available in .NET framework that enhances your game server performance. This toolkit contains optimized code and utilities commonly used on game development.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Devwarlt")]
-[assembly: AssemblyProduct("Core Algorithms")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("PServer Toolkit")]
 [assembly: AssemblyCopyright("Copyright © Devwarlt & Slendergo 2020")]
-[assembly: AssemblyTrademark("Core Algorithms")]
+[assembly: AssemblyTrademark("PServer Toolkit")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("3414bd6f-0781-41f5-8253-a933408f6f35")]

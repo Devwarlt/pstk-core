@@ -1,23 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace CA.Profiler
+namespace PSTk.Profiler
 {
     /// <summary>
     /// Prints the total elapsed time in full and in milliseconds that it has taken to call Dispose
     /// until <see cref="TimedProfiler"/> is disposed.
-    /// Author: Slendergo
     /// </summary>
     public sealed class TimedProfiler : IDisposable
     {
-        private string Message { get; }
-        private Stopwatch Stopwatch { get; }
-        private Func<bool> Condition { get; }
-        private Action<string> Output { get; }
-
         /// <summary>
-        /// usage:
-        /// using timedProfiler = new TimedProfiler("SomeMethod()", () => SomeCondition, (output) => Logger.LogWarning(output));
+        /// Create a new instance of <see cref="TimedProfiler"/>.
         /// </summary>
         /// <param name="message"></param>
         /// <param name="condition"></param>
@@ -29,6 +22,11 @@ namespace CA.Profiler
             Condition = condition;
             Output = output;
         }
+
+        private Func<bool> Condition { get; }
+        private string Message { get; }
+        private Action<string> Output { get; }
+        private Stopwatch Stopwatch { get; }
 
         /// <summary>
         /// Called automatically at the end of the scope when used along side a using statment or explicitly called in the code

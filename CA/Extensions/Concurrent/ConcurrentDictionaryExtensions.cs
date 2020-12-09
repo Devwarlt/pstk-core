@@ -3,12 +3,12 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CA.Extensions.Concurrent
+namespace PSTk.Extensions.Concurrent
 {
-#pragma warning disable
-
+    /// <summary>
+    /// Contains <see cref="ConcurrentDictionary{TKey, TValue}"/> utilities.
+    /// </summary>
     public static class ConcurrentDictionaryExtensions
-#pragma warning restore
     {
         /// <summary>
         /// Provides a predicate check from all <see cref="ConcurrentDictionary{TKey, TValue}"/> entries,

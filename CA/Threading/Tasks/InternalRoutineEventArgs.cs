@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace CA.Threading.Tasks
+namespace PSTk.Threading.Tasks
 {
     /// <summary>
     /// Contains event arguments from <see cref="InternalRoutine.OnDeltaVariation"/> event.
     /// </summary>
     public class InternalRoutineEventArgs : EventArgs
     {
-#pragma warning disable
-
-        public InternalRoutineEventArgs(
-            int delta,
-            int ticksPerSecond,
-            int timeout
-            ) : base()
-
-#pragma warning restore
-
+        /// <summary>
+        /// Create a new instance of <see cref="InternalRoutineEventArgs"/>.
+        /// </summary>
+        /// <param name="delta"></param>
+        /// <param name="ticksPerSecond"></param>
+        /// <param name="timeout"></param>
+        public InternalRoutineEventArgs(int delta, int ticksPerSecond, int timeout)
+            : base()
         {
             Delta = delta;
             TicksPerSecond = ticksPerSecond;

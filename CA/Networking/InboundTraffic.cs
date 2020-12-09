@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 
-namespace CA.Networking
+namespace PSTk.Networking
 {
     /// <summary>
     /// Represents an inbound traffic from <see cref="InboundConnection"/>.

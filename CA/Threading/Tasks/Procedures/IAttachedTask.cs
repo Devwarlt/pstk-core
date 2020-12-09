@@ -1,12 +1,12 @@
 ﻿using System.Threading;
 
-namespace CA.Threading.Tasks.Procedures
+namespace PSTk.Threading.Tasks.Procedures
 {
 #pragma warning disable
 
     public interface IAttachedTask
     {
-        CancellationToken GetToken { get; }
+        CancellationToken Token { get; }
 
         void AttachToParent(CancellationToken token);
     }

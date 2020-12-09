@@ -1,4 +1,4 @@
-﻿using CA.Networking.Utils;
+﻿using PSTk.Networking.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CA.Networking
+namespace PSTk.Networking
 {
     /// <summary>
     /// Represents a local instance of server listener, using TCP protocol, that could be configured for any <see cref="ConnectionType"/>.

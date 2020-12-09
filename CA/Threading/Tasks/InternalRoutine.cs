@@ -1,9 +1,9 @@
-﻿using CA.Threading.Tasks.Procedures;
+﻿using PSTk.Threading.Tasks.Procedures;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CA.Threading.Tasks
+namespace PSTk.Threading.Tasks
 {
     /// <summary>
     /// Used for synchronous or asynchronous routine.
@@ -21,22 +21,21 @@ namespace CA.Threading.Tasks
         private int delta = 0;
         private bool isCanceled = false;
 
-#pragma warning disable
-        private CancellationToken token = default;
+        /// <summary>
+        /// Create a new instance of <see cref="InternalRoutine"/>. This is a lightweight version.
+        /// </summary>
+        /// <param name="timeout"></param>
+        /// <param name="routine"></param>
+        public InternalRoutine(int timeout, Action routine)
+            : this(timeout, (delta) => routine(), null) { }
 
-        public InternalRoutine(
-            int timeout,
-            Action routine
-            ) : this(timeout, (delta) => routine(), null) { }
-
-        public InternalRoutine(
-            int timeout,
-            Action<int> routine,
-            Action<string> errorLogger = null
-            )
-
-#pragma warning restore
-
+        /// <summary>
+        /// Create a new instance of <see cref="InternalRoutine"/>.
+        /// </summary>
+        /// <param name="timeout"></param>
+        /// <param name="routine"></param>
+        /// <param name="errorLogger"></param>
+        public InternalRoutine(int timeout, Action<int> routine, Action<string> errorLogger = null)
         {
             if (timeout <= 0)
                 throw new ArgumentOutOfRangeException("timeout", "Only non-zero and non-negative values are permitted.");
@@ -81,13 +80,13 @@ namespace CA.Threading.Tasks
         /// <summary>
         /// Get the <see cref="CancellationToken"/> of attached task.
         /// </summary>
-        public CancellationToken GetToken => token;
+        public CancellationToken Token { get; private set; } = default;
 
         /// <summary>
         /// Attach a process to parent in case of external task cancellation request.
         /// </summary>
         /// <param name="token"></param>
-        public void AttachToParent(CancellationToken token) => this.token = token;
+        public void AttachToParent(CancellationToken token) => this.Token = token;
 
         /// <summary>
         /// Initialize and starts the core routine, to stop it must use <see cref="CancellationTokenSource.Cancel(bool)"/>.
@@ -98,39 +97,30 @@ namespace CA.Threading.Tasks
         {
             Task<int> task = null;
 
-            if (token != default)
+            if (Token != default)
                 try
                 {
-                    isCanceled = token.IsCancellationRequested;
-
-                    token.ThrowIfCancellationRequested();
-
+                    isCanceled = Token.IsCancellationRequested;
+                    Token.ThrowIfCancellationRequested();
                     task = Task.Run(() =>
                     {
                         var elapsedMs = Environment.TickCount;
-
                         method.Invoke();
-
                         var elapsedMsDelta = Environment.TickCount - elapsedMs;
-
                         return timeout - elapsedMsDelta;
-                    }, token);
+                    }, Token);
                 }
                 catch (OperationCanceledException) { Finish(); }
             else
                 task = Task.Run(() =>
                 {
                     var elapsedMs = Environment.TickCount;
-
                     method.Invoke();
-
                     var elapsedMsDelta = Environment.TickCount - elapsedMs;
-
                     return timeout - elapsedMsDelta;
                 });
 
             task?.ContinueWith(t => onError.Invoke(null, t.Exception.InnerException), TaskContinuationOptions.OnlyOnFaulted);
-
             return task;
         }
 
@@ -143,12 +133,10 @@ namespace CA.Threading.Tasks
         private void Loop()
         {
             var task = Execute(() => routine.Invoke(delta, isCanceled));
-
             if (isCanceled || task == null)
                 return;
 
             var result = task.Result < 0 ? 0 : task.Result;
-
             delta = Math.Max(0, result);
 
             if (delta > timeout)

@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Sockets;
 
-namespace CA.Networking.Utils
+namespace PSTk.Networking.Utils
 {
     /// <summary>
     /// A collection of connection utils for <see cref="ConnectionCentral"/>.

@@ -1,5 +1,5 @@
-﻿using CA.Networking.Utils;
-using CA.Threading.Tasks.Procedures;
+﻿using PSTk.Networking.Utils;
+using PSTk.Threading.Tasks.Procedures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CA.Networking
+namespace PSTk.Networking
 {
     /// <summary>
     /// Represents an inbound connection type.
@@ -90,7 +90,7 @@ namespace CA.Networking
         /// <summary>
         /// Get the <see cref="CancellationToken"/> of attached task.
         /// </summary>
-        public CancellationToken GetToken => token;
+        public CancellationToken Token => token;
 
 #pragma warning disable
 
@@ -267,7 +267,7 @@ namespace CA.Networking
                         return new AsyncProcedureEventArgs<KeyValuePair<InboundConnection, TcpClient>>(input, true);
                     }
                 );
-                procedure.AttachToParent(GetToken);
+                procedure.AttachToParent(Token);
                 procedure.Execute();
             }
             else throw new SocketException((int)SocketError.NotConnected);

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CA.Threading.Tasks
+namespace PSTk.Threading.Tasks
 {
     /// <summary>
     /// Represents <see cref="AutomatedRestarter"/> listener entry pattern.

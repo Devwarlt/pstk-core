@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BBE3E4F4-7F54-461F-8314-DAD6CFD5F300}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CA.SandBox</RootNamespace>
-    <AssemblyName>CA.SandBox</AssemblyName>
+    <RootNamespace>PSTk.CLI</RootNamespace>
+    <AssemblyName>PSTk CLI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -58,9 +58,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ca\CA.csproj">
+    <ProjectReference Include="..\ca\PSTk.csproj">
       <Project>{3414bd6f-0781-41f5-8253-a933408f6f35}</Project>
-      <Name>CA</Name>
+      <Name>PSTk</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

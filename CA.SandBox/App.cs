@@ -1,7 +1,7 @@
-﻿using CA.Extensions.Concurrent;
-using CA.Profiler;
-using CA.Threading.Tasks;
-using CA.Threading.Tasks.Procedures;
+﻿using PSTk.Extensions.Concurrent;
+using PSTk.Profiler;
+using PSTk.Threading.Tasks;
+using PSTk.Threading.Tasks.Procedures;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CA.SandBox
+namespace PSTk.CLI
 {
     public class App
     {
@@ -426,7 +426,7 @@ namespace CA.SandBox
                     }
                 );
                 procedure.AttachToParent(source.Token);
-                procedure.OnCompleted += (s, e) => Warn($"[{((IAsyncProcedure)s).GetName}] Finished procedure with result '{e.Input}'.");
+                procedure.OnCompleted += (s, e) => Warn($"[{((IAsyncProcedure)s).Name}] Finished procedure with result '{e.Input}'.");
                 pool[i] = procedure;
             }
 
@@ -459,7 +459,7 @@ namespace CA.SandBox
                 Info("Displaying results:");
 
                 for (var i = 0; i < procedurePool.NumProcedures; i++)
-                    Info($"[name: {procedurePool[i].GetName}] Result: {(results[i] ? "success" : "failed")}");
+                    Info($"[name: {procedurePool[i].Name}] Result: {(results[i] ? "success" : "failed")}");
 
                 Tail();
             });

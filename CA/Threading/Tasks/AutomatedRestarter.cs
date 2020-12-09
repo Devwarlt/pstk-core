@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace CA.Threading.Tasks
+namespace PSTk.Threading.Tasks
 {
     /// <summary>
     /// Creates an <see cref="InternalRoutine"/> adapted to handle events and execute a process when threshold is achieved.
@@ -23,17 +23,13 @@ namespace CA.Threading.Tasks
         private InternalRoutine routine;
 
         /// <summary>
-        /// Creates a new instance of <see cref="AutomatedRestarter"/>.
+        /// Create a new instance of <see cref="AutomatedRestarter"/>.
         /// </summary>
         /// <param name="timeout"></param>
         /// <param name="routineMs"></param>
         /// <param name="errorLogger"></param>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        public AutomatedRestarter(
-            TimeSpan timeout,
-            int routineMs = 1000,
-            Action<string> errorLogger = null
-            )
+        public AutomatedRestarter(TimeSpan timeout, int routineMs = 1000, Action<string> errorLogger = null)
         {
             if (routineMs <= 0) throw new ArgumentOutOfRangeException("routineMs", "Only non-zero and non-negative values are permitted.");
 

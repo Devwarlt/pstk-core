@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace CA.Networking
+namespace PSTk.Networking
 {
     /// <summary>
     /// Represents a structure for inbound packet from <see cref="InboundTraffic"/>.

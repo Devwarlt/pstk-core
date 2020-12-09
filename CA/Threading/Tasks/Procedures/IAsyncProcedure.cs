@@ -1,10 +1,10 @@
-﻿namespace CA.Threading.Tasks.Procedures
+﻿namespace PSTk.Threading.Tasks.Procedures
 {
 #pragma warning disable
 
     public interface IAsyncProcedure : IAttachedTask
     {
-        string GetName { get; }
+        string Name { get; }
 
         bool Execute();
     }

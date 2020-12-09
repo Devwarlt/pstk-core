@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CA.Networking
+namespace PSTk.Networking
 {
     /// <summary>
     /// Represents current flag of connection routines.

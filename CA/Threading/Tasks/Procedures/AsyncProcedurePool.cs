@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CA.Threading.Tasks.Procedures
+namespace PSTk.Threading.Tasks.Procedures
 {
     /// <summary>
     /// Handle <see cref="AsyncProcedure{TInput}"/> instances into pool of synchronous or asynchronous routines.
@@ -16,48 +16,49 @@ namespace CA.Threading.Tasks.Procedures
         private readonly IAsyncProcedure[] pool;
         private readonly CancellationTokenSource source;
 
-#pragma warning disable
-
-        private CancellationToken token;
-
-        public AsyncProcedurePool(
-            IAsyncProcedure[] pool,
-            CancellationTokenSource source = null
-            )
-
-#pragma warning restore
+        /// <summary>
+        /// Create a new instance of <see cref="AsyncProcedurePool"/>.
+        /// </summary>
+        /// <param name="pool"></param>
+        /// <param name="source"></param>
+        public AsyncProcedurePool(IAsyncProcedure[] pool, CancellationTokenSource source = null)
 
         {
-            if (pool == null) throw new ArgumentNullException("pool");
-            if (pool.Length == 0) throw new ArgumentOutOfRangeException("pool", "Required at least 1 AsyncProcedure.");
+            if (pool == null)
+                throw new ArgumentNullException("pool");
+
+            if (pool.Length == 0)
+                throw new ArgumentOutOfRangeException("pool", "Required at least 1 AsyncProcedure.");
 
             this.pool = pool;
             this.source = source ?? new CancellationTokenSource();
 
-            token = this.source.Token;
+            Token = this.source.Token;
 
-            AttachPoolToContext(token);
+            AttachPoolToContext(Token);
         }
-
-        /// <summary>
-        /// Get the <see cref="CancellationToken"/> of attached task.
-        /// </summary>
-        public CancellationToken GetToken => token;
 
         /// <summary>
         /// Return number of <see cref="IAsyncProcedure"/> in pool.
         /// </summary>
         public int NumProcedures => pool.Length;
 
-#pragma warning disable
+        /// <summary>
+        /// Get the <see cref="CancellationToken"/> of attached task.
+        /// </summary>
+        public CancellationToken Token { get; private set; }
 
+        /// <summary>
+        /// Get or set <see cref="IAsyncProcedure"/> from <see cref="AsyncProcedurePool"/> collection
+        /// using index.
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public IAsyncProcedure this[int index]
         {
             get => pool[index];
             set => pool[index] = value;
         }
-
-#pragma warning restore
 
         /// <summary>
         /// Attach a process to parent in case of external task cancelation request.
@@ -65,9 +66,9 @@ namespace CA.Threading.Tasks.Procedures
         /// <param name="token"></param>
         public void AttachToParent(CancellationToken token)
         {
-            this.token = token;
+            this.Token = token;
 
-            AttachPoolToContext(this.token);
+            AttachPoolToContext(this.Token);
         }
 
         /// <summary>
@@ -98,14 +99,10 @@ namespace CA.Threading.Tasks.Procedures
             return Task.WhenAll(tasks).Result;
         }
 
-#pragma warning disable
-
         private void AttachPoolToContext(CancellationToken token)
         {
             for (var i = 0; i < pool.Length; i++)
                 pool[i].AttachToParent(token);
         }
-
-#pragma warning restore
     }
 }

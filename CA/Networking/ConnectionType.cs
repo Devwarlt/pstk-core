@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CA.Networking
+namespace PSTk.Networking
 {
     /// <summary>
     /// Represents the type of connection for <see cref="ConnectionCentral"/> instance.
