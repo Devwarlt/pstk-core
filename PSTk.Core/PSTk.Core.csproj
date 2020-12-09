@@ -40,11 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PSTk.Diagnostic\PSTk.Diagnostics.csproj">
-      <Private>true</Private>
-      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-    </ProjectReference>
+    <ProjectReference Include="..\PSTk.Diagnostics\PSTk.Diagnostics.csproj" />
     <ProjectReference Include="..\PSTk.Extensions\PSTk.Extensions.csproj">
       <Private>true</Private>
       <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
