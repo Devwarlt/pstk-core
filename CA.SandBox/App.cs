@@ -88,25 +88,26 @@ namespace CA.SandBox
 
         private static void Main(string[] args)
         {
-            var name = Assembly.GetExecutingAssembly().GetName().Name;
-            var version =
-                $"{Assembly.GetExecutingAssembly().GetName().Version}".Substring(0,
-                $"{Assembly.GetExecutingAssembly().GetName().Version}".Length - 2);
+            using (var t = new TimedProfiler("Main(string[] args"))
+            {
+                var name = Assembly.GetExecutingAssembly().GetName().Name;
+                var version = $"{Assembly.GetExecutingAssembly().GetName().Version}".Substring(0, $"{Assembly.GetExecutingAssembly().GetName().Version}".Length - 2);
 
-            Console.Title = $"{name} v{version} - The sandbox environment for Core Algorithms DLL tests.";
+                Console.Title = $"{name} v{version} - The sandbox environment for Core Algorithms DLL tests.";
 
-            var mre = new ManualResetEvent(false);
+                var mre = new ManualResetEvent(false);
 
-            Console.CancelKeyPress += delegate { mre.Set(); };
+                Console.CancelKeyPress += delegate { mre.Set(); };
 
-            Warn("Initializing...");
-            Breakline();
+                Warn("Initializing...");
+                Breakline();
 
-            Task.Factory.StartNew(() => Core(name), TaskCreationOptions.AttachedToParent);
+                Task.Factory.StartNew(() => Core(name), TaskCreationOptions.AttachedToParent);
 
-            mre.WaitOne();
+                mre.WaitOne();
 
-            Warn("Terminating...");
+                Warn("Terminating...");
+            }
 
             Thread.Sleep(500);
             Environment.Exit(0);
@@ -701,7 +702,7 @@ namespace CA.SandBox
 
             Info($"Generating a collection of {total} entr{(total > 1 ? "ies" : "y")} with {workers} task{(workers > 1 ? "s" : "")}...");
 
-            using (var tp = new TimedProfiler("Test C5 [TASKS]", (txt) => Info(txt)))
+            using (var tp = new TimedProfiler("Test C5 [TASKS]", output: (txt) => Info(txt)))
                 await Task.WhenAll(tasks);
 
             Breakline();
@@ -715,22 +716,22 @@ namespace CA.SandBox
                 Breakline();
             };
 
-            using (var tp = new TimedProfiler("Test C5 [LINQ '.Where']", (txt) => Info(txt)))
+            using (var tp = new TimedProfiler("Test C5 [LINQ '.Where']", output: (txt) => Info(txt)))
                 amount = dictionary.Values.Where(smallerThan).ToArray().Length;
 
             notify(amount);
 
-            using (var tp = new TimedProfiler("Test C5 [PLINQ '.Where']", (txt) => Info(txt)))
+            using (var tp = new TimedProfiler("Test C5 [PLINQ '.Where']", output: (txt) => Info(txt)))
                 amount = dictionary.Values.AsParallel().Where(smallerThan).ToArray().Length;
 
             notify(amount);
 
-            using (var tp = new TimedProfiler("Test C5 [CA '.ValueWhere']", (txt) => Info(txt)))
+            using (var tp = new TimedProfiler("Test C5 [CA '.ValueWhere']", output: (txt) => Info(txt)))
                 amount = dictionary.ValueWhere(smallerThan).Count();
 
             notify(amount);
 
-            using (var tp = new TimedProfiler("Test C5 [CA '.ValueWhereAsParallel']", (txt) => Info(txt)))
+            using (var tp = new TimedProfiler("Test C5 [CA '.ValueWhereAsParallel']", output: (txt) => Info(txt)))
                 amount = dictionary.ValueWhereAsParallel(smallerThan).Length;
 
             notify(amount);

@@ -4,42 +4,48 @@ using System.Diagnostics;
 namespace CA.Profiler
 {
     /// <summary>
-    /// Display total elapsed time of a procedure interval
+    /// Prints the total elapsed time in full and in milliseconds that it has taken to call Dispose
     /// until <see cref="TimedProfiler"/> is disposed.
-    ///
     /// Author: Slendergo
     /// </summary>
     public sealed class TimedProfiler : IDisposable
     {
-#pragma warning disable
-        private readonly Action<string> _logger;
-        private readonly string _message;
-        private readonly Stopwatch _stopwatch;
+        private string Message { get; }
+        private Stopwatch Stopwatch { get; }
+        private Func<bool> Condition { get; }
+        private Action<string> Output { get; }
 
-        public TimedProfiler(string message) : this(message, null)
-        { }
-
-        public TimedProfiler(string message, Action<string> logger)
+        /// <summary>
+        /// usage:
+        /// using timedProfiler = new TimedProfiler("SomeMethod()", () => SomeCondition, (output) => Logger.LogWarning(output));
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="condition"></param>
+        /// <param name="output"></param>
+        public TimedProfiler(string message, Func<bool> condition = null, Action<string> output = null)
         {
-            _message = message;
-            _logger = logger;
-            _stopwatch = Stopwatch.StartNew();
+            Message = message;
+            Stopwatch = Stopwatch.StartNew();
+            Condition = condition;
+            Output = output;
         }
 
+        /// <summary>
+        /// Called automatically at the end of the scope when used along side a using statment or explicitly called in the code
+        /// It will only print out the elapsed time when the condition is met if there is a condition to the desired output if set
+        /// otherwise it will log to the console
+        /// </summary>
         public void Dispose()
         {
-            _stopwatch.Stop();
+            if (Condition != null && !Condition.Invoke())
+                return;
 
-            var time = _stopwatch.Elapsed;
-            var ms = _stopwatch.ElapsedMilliseconds;
-            var info = $"{_message} - Elapsed: {time} ({ms}ms)";
+            Stopwatch.Stop();
 
-            if (_logger != null)
-                _logger.Invoke(info);
-            else
-                Console.WriteLine(info);
+            var result = $"{Message} | Elapsed: {Stopwatch.Elapsed} ({Stopwatch.ElapsedMilliseconds}ms)";
+            Output?.Invoke(result);
+            if (Output == null)
+                Console.WriteLine(result);
         }
-
-#pragma warning restore
     }
 }

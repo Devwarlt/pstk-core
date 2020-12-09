@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Devwarlt")]
 [assembly: AssemblyProduct("Core Algorithms")]
-[assembly: AssemblyCopyright("Copyright © Devwarlt 2020")]
+[assembly: AssemblyCopyright("Copyright © Devwarlt & Slendergo 2020")]
 [assembly: AssemblyTrademark("Core Algorithms")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
