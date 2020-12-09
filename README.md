@@ -1,13 +1,20 @@
-# Core Algorithms
+# PSTk - `PServer Toolkit`
 [![license-badge]][license] ![framework-badge] ![language-badge] [![version-badge]][version]
 
-**Core Algorithms**, also known with acronym CA, are a collection of features available in .NET framework that enhances game server performance using concepts of multithreading, parallel programming and concurrent programming. Can be ported to any other interface with properly adjusts and implementation. However, target is for any game server structure.
+**PServer Toolkit**, also known with acronym **PSTk** and former name **Core Algorithms**, is a collection of features available in .NET framework that enhances game server performance using .NET native implementations. Can be ported to any other interface with properly adjusts and implementation. However, target is for any game server structure.
 
-If you want to see how to use specific classes of this DLL, checkout these [**examples**][examples].
+If you want to see how to use specific classes of this toolkit, checkout these [**examples**][examples].
+
+### Contributors
+- [@Devwarlt][devwarlt-ref]
+- [@Slendergo][slendergo-ref]
+
+[devwarlt-ref]: https://github.com/Devwarlt
+[slendergo-ref]: https://github.com/Slendergo
 
 [examples]: /examples
 [license]: /LICENSE
-[version]: https://github.com/Devwarlt/core-algorithms/releases/latest
+[version]: https://github.com/Devwarlt/pstk/releases/latest
 
 [license-badge]: https://img.shields.io/badge/MIT-gray?style=for-the-badge
 [language-badge]: https://img.shields.io/badge/7.2-purple?logo=c-sharp&style=for-the-badge
