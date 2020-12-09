@@ -7,7 +7,7 @@ If you want to see how to use specific classes of this DLL, checkout these [**ex
 
 [examples]: /examples
 [license]: /LICENSE
-[version]: /releases/latest
+[version]: https://github.com/Devwarlt/core-algorithms/releases/latest
 
 [license-badge]: https://img.shields.io/badge/MIT-gray?style=for-the-badge
 [language-badge]: https://img.shields.io/badge/7.2-purple?logo=c-sharp&style=for-the-badge
