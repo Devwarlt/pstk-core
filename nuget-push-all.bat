@@ -22,7 +22,7 @@ SET THREADING_PKG_VERSION=1.0.0
 
 ECHO Packing all distributions...
 
-ECHO dotnet pack --configuration Release
+dotnet pack --configuration Release
 
 start nuget-push-package.bat PSTk.Core %CORE_PKG_VERSION% %SOURCE% %TOKEN%
 start nuget-push-package.bat PSTk.Diagnostics %DIAGNOSTICS_PKG_VERSION% %SOURCE% %TOKEN%

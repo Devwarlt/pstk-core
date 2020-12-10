@@ -15,7 +15,7 @@ ECHO Version: %VERSION%
 ECHO Source: %SOURCE%
 ECHO.
 
-ECHO dotnet nuget push "%DISTRIBUTION%\bin\Release\%DISTRIBUTION%.%VERSION%.nupkg" --source "%SOURCE%" --api-key %TOKEN%
+dotnet nuget push "%DISTRIBUTION%\bin\Release\%DISTRIBUTION%.%VERSION%.nupkg" --source "%SOURCE%" --api-key %TOKEN%
 ENDLOCAL
 
 TIMEOUT 30
