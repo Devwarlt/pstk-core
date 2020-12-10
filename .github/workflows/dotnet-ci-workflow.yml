@@ -6,6 +6,7 @@ on:
       - '**.xml'
       - '**.yml'
       - '**.md'
+      - '**.config'
       - '.github/**'
       - 'docs/**'
       - 'examples/**'
