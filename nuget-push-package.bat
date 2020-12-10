@@ -1,25 +1,23 @@
-﻿@echo off
+@ECHO OFF
 
-IF "%~4" == "" goto ERROR_REF
+IF "%~4"=="" EXIT 1
 
-set DISTRIBUTION = %1
-set VERSION = %2
-set SOURCE = %3
-set TOKEN = %4
+SETLOCAL
+SET DISTRIBUTION=%1
+SET VERSION=%2
+SET SOURCE=%3
+SET TOKEN=%4
 
-echo Preparing to deploy...
-echo Distribution: '%DISTRIBUTION%'
-echo Version: %VERSION%
+ECHO.
+ECHO Preparing to deploy...
+ECHO Distribution: %DISTRIBUTION%
+ECHO Version: %VERSION%
 ECHO Source: %SOURCE%
+ECHO.
 
-timeout 3
+ECHO dotnet nuget push "%DISTRIBUTION%\bin\Release\%DISTRIBUTION%.%VERSION%.nupkg" --source "%SOURCE%" --api-key %TOKEN%
+ENDLOCAL
 
-dotnet nuget push "%DISTRIBUTION%\bin\Release\%DISTRIBUTION%.%VERSION%.nupkg" --source "%SOURCE%" --api-key %TOKEN%
-goto SUCCESS
+TIMEOUT 30
 
-:ERROR_REF
-echo Usage: <script> distribution version source api-token
-echo Unable to perform this operation.
-goto SUCCESS
-
-:SUCCESS
+EXIT 0
