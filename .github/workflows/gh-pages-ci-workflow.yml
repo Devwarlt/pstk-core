@@ -9,7 +9,10 @@ on:
       - '**.config'
       - '.github/**'
     branches:
-      - master
+      - prod
+  pull_request:
+    branches:
+      - prod
 jobs:
   deploy:
     runs-on: ubuntu-latest

@@ -9,7 +9,10 @@ For more details, consider to check our [**API documentation**][api-docs].
 ![language-badge] ![framework-badge]
 
 ## Build status
-[![github-page-ci-badge]][github-page-ci] [![dotnet-ci-badge]][dotnet-ci]
+| Branch                      | .NET CI Status                       | GitHub Pages CI Status                         |
+| ----------------------------| ------------------------------------ | ---------------------------------------------- |
+| :wrench: [`dev`][dev-ref]   | [![dotnet-ci-dev-badge]][dotnet-ci]  | [![github-page-ci-dev-badge]][github-page-ci]  |
+| :rocket: [`prod`][prod-ref] | [![dotnet-ci-prod-badge]][dotnet-ci] | [![github-page-ci-prod-badge]][github-page-ci] |
 
 ## Distributions
 | Distribution           | NuGet                                               | Download                                                      |
@@ -23,6 +26,9 @@ For more details, consider to check our [**API documentation**][api-docs].
 ### Contributors
 - [@Devwarlt][devwarlt-ref]
 - [@Slendergo][slendergo-ref]
+
+[dev-ref]: /tree/dev
+[prod-ref]: /../..
 
 [devwarlt-ref]: https://github.com/Devwarlt
 [slendergo-ref]: https://github.com/Slendergo
@@ -38,10 +44,12 @@ For more details, consider to check our [**API documentation**][api-docs].
 [version-badge]: https://img.shields.io/github/release/Devwarlt/pstk-core?color=success&logo=github&style=plastic
 
 [github-page-ci]: https://github.com/Devwarlt/pstk-core/actions?query=workflow%3A"GitHub+Pages+CI"
-[github-page-ci-badge]: https://github.com/Devwarlt/pstk-core/workflows/GitHub%20Pages%20CI/badge.svg
+[github-page-ci-dev-badge]: https://github.com/Devwarlt/pstk-core/workflows/GitHub%20Pages%20CI/badge.svg?branch=dev
+[github-page-ci-prod-badge]: https://github.com/Devwarlt/pstk-core/workflows/GitHub%20Pages%20CI/badge.svg?branch=prod
 
 [dotnet-ci]: https://github.com/Devwarlt/pstk-core/actions?query=workflow%3A".NET+CI"
-[dotnet-ci-badge]: https://github.com/Devwarlt/pstk-core/workflows/.NET%20CI/badge.svg
+[dotnet-ci-dev-badge]: https://github.com/Devwarlt/pstk-core/workflows/.NET%20CI/badge.svg?branch=dev
+[dotnet-ci-prod-badge]: https://github.com/Devwarlt/pstk-core/workflows/.NET%20CI/badge.svg?branch=prod
 
 [pstk-core-badge]: https://img.shields.io/nuget/v/PSTk.Core.svg?logo=nuget&style=plastic
 [pstk-core-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Core.svg?logo=nuget&style=plastic

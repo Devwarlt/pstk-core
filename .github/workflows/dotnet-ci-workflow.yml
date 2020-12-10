@@ -10,10 +10,11 @@ on:
       - '.github/**'
       - 'docs/**'
     branches:
-      - master
+      - prod
+      - dev
   pull_request:
     branches:
-      - master
+      - prod
 jobs:
   build:
     runs-on: ubuntu-latest
