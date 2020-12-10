@@ -17,6 +17,6 @@ If you want to see how to use specific classes of this toolkit, checkout these [
 [version]: https://github.com/Devwarlt/pstk/releases/latest
 
 [license-badge]: https://img.shields.io/badge/MIT-gray?style=for-the-badge
-[language-badge]: https://img.shields.io/badge/7.2-purple?logo=c-sharp&style=for-the-badge
-[framework-badge]: https://img.shields.io/badge/4.7.2-purple?logo=.net&style=for-the-badge
-[version-badge]: https://img.shields.io/github/release/Devwarlt/core-algorithms?color=success&logo=github&style=for-the-badge
+[language-badge]: https://img.shields.io/badge/8.0-purple?logo=c-sharp&style=for-the-badge
+[framework-badge]: https://img.shields.io/badge/Core-3.1-purple?logo=.net&style=for-the-badge
+[version-badge]: https://img.shields.io/github/release/Devwarlt/pstk-core?color=success&logo=github&style=for-the-badge
