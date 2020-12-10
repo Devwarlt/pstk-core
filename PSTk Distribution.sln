@@ -13,6 +13,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Core", "PSTk.Core\PSTk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Diagnostics", "PSTk.Diagnostics\PSTk.Diagnostics.csproj", "{3023C538-B4F6-45C4-A683-923BF7AF2E09}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment Scripts", "Deployment Scripts", "{1997639B-2B34-41E3-B161-BF13219DF3F5}"
+	ProjectSection(SolutionItems) = preProject
+		nuget-push-all.bat = nuget-push-all.bat
+		nuget-push-core.bat = nuget-push-core.bat
+		nuget-push-diagnostics.bat = nuget-push-diagnostics.bat
+		nuget-push-distribution.bat = nuget-push-distribution.bat
+		nuget-push-extensions.bat = nuget-push-extensions.bat
+		nuget-push-networking.bat = nuget-push-networking.bat
+		nuget-push-package.bat = nuget-push-package.bat
+		nuget-push-threading.bat = nuget-push-threading.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
