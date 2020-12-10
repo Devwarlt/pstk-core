@@ -14,7 +14,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: DocFX Documentation (Metadata)
         uses: nikeee/docfx-action@v1.0.0
         with:
@@ -24,7 +24,7 @@ jobs:
         with:
           args: build ./docs/docfx.json
       - name: Deploy Documentation
-        uses: maxheld83/ghpages@master
+        uses: peaceiris/actions-gh-pages@v3.6.1
         with:
-          GH_PAT: ${{ secrets.GH_PAGES_SECRET }}
-          BUILD_DIR: ./docs/_site
+          github_token: ${{ secrets.GH_PAGES_SECRET }}
+          publish_dir: ./docs/_site
