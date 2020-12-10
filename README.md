@@ -5,8 +5,6 @@
 ## Documentation
 For more details, consider to check our [**API documentation**][api-docs].
 
-If you want to see how to use specific classes of this toolkit, checkout these [**examples**][examples].
-
 ## Language & Framework
 ![language-badge] ![framework-badge]
 
@@ -29,7 +27,6 @@ If you want to see how to use specific classes of this toolkit, checkout these [
 [devwarlt-ref]: https://github.com/Devwarlt
 [slendergo-ref]: https://github.com/Slendergo
 
-[examples]: /examples
 [license]: /LICENSE
 [latest]: https://github.com/Devwarlt/pstk/releases/latest
 
