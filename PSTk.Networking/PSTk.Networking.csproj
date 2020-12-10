@@ -20,18 +20,14 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Networking\PSTk.Networking.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp3.1\PSTk.Networking.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>x64</PlatformTarget>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Networking\PSTk.Networking.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp3.1\PSTk.Networking.xml</DocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="PSTk.Networking.xml" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\ICON.png">

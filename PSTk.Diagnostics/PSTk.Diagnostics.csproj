@@ -21,18 +21,14 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <Optimize>false</Optimize>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Diagnostics\PSTk.Diagnostics.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp3.1\PSTk.Diagnostics.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Diagnostics\PSTk.Diagnostics.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp3.1\PSTk.Diagnostics.xml</DocumentationFile>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="PSTk.Diagnostics.xml" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\ICON.png">

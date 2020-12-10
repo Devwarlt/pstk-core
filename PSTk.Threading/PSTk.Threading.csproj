@@ -20,13 +20,13 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Threading\PSTk.Threading.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp3.1\PSTk.Threading.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PlatformTarget>x64</PlatformTarget>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Threading\PSTk.Threading.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp3.1\PSTk.Threading.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

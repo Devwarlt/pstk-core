@@ -20,18 +20,14 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Extensions\PSTk.Extensions.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp3.1\PSTk.Extensions.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\core-algorithms\PSTk.Extensions\PSTk.Extensions.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp3.1\PSTk.Extensions.xml</DocumentationFile>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="PSTk.Extensions.xml" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\ICON.png">
