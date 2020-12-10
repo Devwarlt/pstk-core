@@ -24,9 +24,9 @@ ECHO Packing all distributions...
 
 dotnet pack --configuration Release
 
-start nuget-push-package.bat PSTk.Core %CORE_PKG_VERSION% %SOURCE% %TOKEN%
-start nuget-push-package.bat PSTk.Diagnostics %DIAGNOSTICS_PKG_VERSION% %SOURCE% %TOKEN%
-start nuget-push-package.bat PSTk.Extensions %EXTENSIONS_PKG_VERSION% %SOURCE% %TOKEN%
-start nuget-push-package.bat PSTk.Networking %NETWORKING_PKG_VERSION% %SOURCE% %TOKEN%
-start nuget-push-package.bat PSTk.Threading %THREADING_PKG_VERSION% %SOURCE% %TOKEN%
+START nuget-push-package.bat PSTk.Core %CORE_PKG_VERSION% %SOURCE% %TOKEN%
+START nuget-push-package.bat PSTk.Diagnostics %DIAGNOSTICS_PKG_VERSION% %SOURCE% %TOKEN%
+START nuget-push-package.bat PSTk.Extensions %EXTENSIONS_PKG_VERSION% %SOURCE% %TOKEN%
+START nuget-push-package.bat PSTk.Networking %NETWORKING_PKG_VERSION% %SOURCE% %TOKEN%
+START nuget-push-package.bat PSTk.Threading %THREADING_PKG_VERSION% %SOURCE% %TOKEN%
 ENDLOCAL
