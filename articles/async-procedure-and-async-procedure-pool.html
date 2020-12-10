@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Async Procedure | PSTk - PServer Toolkit </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Async Procedure | PSTk - PServer Toolkit ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="async-procedure"><a href="/CA/Threading/Tasks/Procedures/AsyncProcedure.cs">Async Procedure</a></h1>
+
+<blockquote>
+<p>Used for situations that require dependency between other procedure. Recommended to use it with <strong><code>AsyncProcedurePool</code></strong>.</p>
+</blockquote>
+<h1 id="async-procedure-pool"><a href="/CA/Threading/Tasks/Procedures/AsyncProcedurePool.cs">Async Procedure Pool</a></h1>
+<blockquote>
+</blockquote>
+<h2 id="handle-asyncproceduretinput-instances-into-pool-of-synchronous-or-asynchronous-routines">Handle <strong><code>AsyncProcedure(TInput)</code></strong> instances into pool of synchronous or asynchronous routines.</h2>
+<p><strong><code>Async Procedure</code></strong> can be used for procedures that require various operations (complex ones) and requires the output of all pending procedures to finish together. If a procedure breaks or stop working due an error then <strong><code>Async Procedure Pool</code></strong> will be set as invalid response flag type. See example below:</p>
+<pre><code class="lang-csharp">public static void Main() {
+  var procedures = new IAsyncProcedure[] {
+    new AsyncProcedure&lt;int&gt;(&quot;proc::int&quot;, 1, OnProcedureExecute, OnProcedureError),
+    new AsyncProcedure&lt;float&gt;(&quot;proc::float&quot;, 1.2f, OnProcedureExecute, OnProcedureError),
+    new AsyncProcedure&lt;double&gt;(&quot;proc::double&quot;, 1.23d, OnProcedureExecute, OnProcedureError),
+    new AsyncProcedure&lt;DateTime&gt;(&quot;proc::datetime&quot;, DateTime.UtcNow, OnProcedureExecute, OnProcedureError),
+    new AsyncProcedure&lt;object&gt;(&quot;proc::object&quot;, new { unknown = 123 }, OnProcedureExecute, OnProcedureError)
+  };
+  var pool = new AsyncProcedurePool(procedures);
+  var numProc = pool.NumProcedures;
+  
+  Console.WriteLine($&quot;Executing {numProc} procedure{(numProc &gt; 1 ? &quot;s&quot; : &quot;&quot;)}...&quot;);
+ 
+  var result = pool.ExecuteAllAsParallel();
+  for (var i = 0; i &lt; result.Length; i++)
+    Console.WriteLine($&quot;'{pool[i].GetName}' procedure -&gt; result: {result[i]}&quot;);
+  
+  Console.ReadKey();
+  Environment.Exit(0);
+}
+
+private static AsyncProcedureEventArgs&lt;TInput&gt; OnProcedureExecute(AsyncProcedure&lt;TInput&gt; procedure, string name, TInput input) {
+  var timeout = 0;
+  if (typeof(TInput) == typeof(int))
+    timeout = 50;
+  else if (typeof(TInput) == typeof(float))
+    timeout = 100;
+  else if (typeof(TInput) == typeof(double))
+    timeout = 200;
+  else if (typeof(TInput) == typeof(DateTime))
+    timeout = 300;
+  else {
+    OnProcedureError(&quot;Not supported type! -&gt; input: {input}, type: {typeof(input)}&quot;);
+    return new AsyncProcedureEventArgs&lt;TInput&gt;(false, input);
+  }
+  
+  Console.WriteLine($&quot;Executing procedure '{name}'! -&gt; input: {input}, type: {typeof(input)}, timeout: {timeout}ms&quot;);
+  Thread.Sleep(timeout);
+  return new AsyncProcedureEventArgs&lt;TInput&gt;(true, input);
+}
+
+private static void OnProcedureError(string message) =&gt; Console.WriteLine($&quot;An error occurred! -&gt; message: {message}&quot;);
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Devwarlt/pstk-core/blob/master/docs/articles/async-procedure-and-async-procedure-pool.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; PSTk Core Team.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

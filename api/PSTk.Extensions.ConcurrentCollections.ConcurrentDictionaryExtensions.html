@@ -1,0 +1,942 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ConcurrentDictionaryExtensions
+   | PSTk - PServer Toolkit </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ConcurrentDictionaryExtensions
+   | PSTk - PServer Toolkit ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions">
+  
+  
+  <h1 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions" class="text-break">Class ConcurrentDictionaryExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Contains <see cref="!:ConcurrentDictionary&lt;TKey, TValue>"></see> utilities.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ConcurrentDictionaryExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PSTk.Extensions.ConcurrentCollections.html">PSTk.Extensions.ConcurrentCollections</a></h6>
+  <h6><strong>Assembly</strong>: PSTk.Extensions.dll</h6>
+  <h5 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ConcurrentDictionaryExtensions : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhere__2_ConcurrentDictionary___0___1__Func_KeyValuePair___0___1__System_Boolean__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CFunc%7BKeyValuePair%7B%60%600%2C%60%601%7D%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L23">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhere_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhere__2_ConcurrentDictionary___0___1__Func_KeyValuePair___0___1__System_Boolean__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})">EntryWhere&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Func&lt;KeyValuePair&lt;TKey, TValue&gt;, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Provides a predicate check from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>"></see> entries,
+but rather than create a new collection, it'll do a loop through exist entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; EntryWhere&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Func&lt;KeyValuePair&lt;TKey, TValue&gt;, bool&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">KeyValuePair</span>&lt;TKey, TValue&gt;, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhereAsParallel__2_ConcurrentDictionary___0___1__Func_KeyValuePair___0___1__System_Boolean__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CFunc%7BKeyValuePair%7B%60%600%2C%60%601%7D%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L44">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhereAsParallel_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhereAsParallel__2_ConcurrentDictionary___0___1__Func_KeyValuePair___0___1__System_Boolean__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})">EntryWhereAsParallel&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Func&lt;KeyValuePair&lt;TKey, TValue&gt;, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Provides a predicate check from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>"></see> entries,
+but rather than create a new collection, it'll do a loop through exist entries in parallel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyValuePair&lt;TKey, TValue&gt;[] EntryWhereAsParallel&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Func&lt;KeyValuePair&lt;TKey, TValue&gt;, bool&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">KeyValuePair</span>&lt;TKey, TValue&gt;, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyValuePair</span>&lt;TKey, TValue&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyFromValueWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CPredicate%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L61">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyFromValueWhereAsParallel_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyFromValueWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})">KeyFromValueWhereAsParallel&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Predicate&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Try to get all occurrency values from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Keys"></see> entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TKey[] KeyFromValueWhereAsParallel&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Predicate&lt;TValue&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TValue&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TKey[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhere__2_ConcurrentDictionary___0___1__Predicate___0__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CPredicate%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L83">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhere_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhere__2_ConcurrentDictionary___0___1__Predicate___0__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere``2(ConcurrentDictionary{``0,``1},Predicate{``0})">KeyWhere&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Predicate&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Provides a predicate check from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Keys"></see> entries,
+but rather than create a new collection, it'll do a loop through exist keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TKey&gt; KeyWhere&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Predicate&lt;TKey&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TKey&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TKey&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___0__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CPredicate%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L104">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhereAsParallel_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___0__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``0})">KeyWhereAsParallel&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Predicate&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Provides a predicate check from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Keys"></see> entries,
+but rather than create a new collection, it'll do a loop through exist keys in parallel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TKey[] KeyWhereAsParallel&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Predicate&lt;TKey&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TKey&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TKey[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetKeySingle__2_ConcurrentDictionary___0___1__Predicate___1____0__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CPredicate%7B%60%601%7D%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L122">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetKeySingle_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetKeySingle__2_ConcurrentDictionary___0___1__Predicate___1____0__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle``2(ConcurrentDictionary{``0,``1},Predicate{``1},``0@)">TryGetKeySingle&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Predicate&lt;TValue&gt;, out TKey)</h4>
+  <div class="markdown level1 summary"><p>Try to get a first and single occurrency key from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Keys"></see> entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetKeySingle&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Predicate&lt;TValue&gt; predicate, out TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TValue&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetValueSingle__2_ConcurrentDictionary___0___1__Predicate___0____1__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CPredicate%7B%60%600%7D%2C%60%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L148">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetValueSingle_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetValueSingle__2_ConcurrentDictionary___0___1__Predicate___0____1__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle``2(ConcurrentDictionary{``0,``1},Predicate{``0},``1@)">TryGetValueSingle&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Predicate&lt;TKey&gt;, out TValue)</h4>
+  <div class="markdown level1 summary"><p>Try to get a first and single occurrency value from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Values"></see> entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetValueSingle&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Predicate&lt;TKey&gt; predicate, out TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TKey&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryRemoveRange__2_ConcurrentDictionary___0___1____0___.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2C%60%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L171">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryRemoveRange_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryRemoveRange__2_ConcurrentDictionary___0___1____0___" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange``2(ConcurrentDictionary{``0,``1},``0[])">TryRemoveRange&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, TKey[])</h4>
+  <div class="markdown level1 summary"><p>Try to remove all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Values"></see> using <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.TryRemove(TKey, out TValue)"></see>
+iteration loop for each key in <code data-dev-comment-type="paramref" class="paramref">collection</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;bool&gt; TryRemoveRange&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, TKey[] keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>TKey[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueFromKeyWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CPredicate%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L189">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueFromKeyWhereAsParallel_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueFromKeyWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})">ValueFromKeyWhereAsParallel&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Predicate&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Try to get all occurrency values from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Values"></see> entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue[] ValueFromKeyWhereAsParallel&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Predicate&lt;TValue&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TValue&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TValue[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhere__2_ConcurrentDictionary___0___1__Predicate___1__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CPredicate%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L211">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhere_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhere__2_ConcurrentDictionary___0___1__Predicate___1__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere``2(ConcurrentDictionary{``0,``1},Predicate{``1})">ValueWhere&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Predicate&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Provides a predicate check from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Values"></see> entries,
+but rather than create a new collection, it'll do a loop through exist values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TValue&gt; ValueWhere&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Predicate&lt;TValue&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TValue&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel%60%602(ConcurrentDictionary%7B%60%600%2C%60%601%7D%2CPredicate%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L232">View Source</a>
+  </span>
+  <a id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhereAsParallel_" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel*"></a>
+  <h4 id="PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__" data-uid="PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})">ValueWhereAsParallel&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Predicate&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Provides a predicate check from all <see cref="!:ConcurrentDictionary&lt;TKey, TValue>.Values"></see> entries,
+but rather than create a new collection, it'll do a loop through exist values in parallel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue[] ValueWhereAsParallel&lt;TKey, TValue&gt;(this ConcurrentDictionary&lt;TKey, TValue&gt; collection, Predicate&lt;TValue&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TValue&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TValue[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions.md&amp;value=---%0Auid%3A%20PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright &copy; PSTk Core Team.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
