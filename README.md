@@ -1,4 +1,4 @@
-# PSTk - `PServer Toolkit`
+# PSTk - `PServer Toolkit` ![GitHub Pages CI](https://github.com/Devwarlt/pstk-core/workflows/GitHub%20Pages%20CI/badge.svg) ![.NET CI](https://github.com/Devwarlt/pstk-core/workflows/.NET%20CI/badge.svg)
 [![license-badge]][license] ![framework-badge] ![language-badge] [![version-badge]][version]
 
 **PServer Toolkit**, also known with acronym **PSTk** and former name **Core Algorithms**, is a collection of features available in .NET framework that enhances game server performance using .NET native implementations. Can be ported to any other .NET environment with properly adjusts and implementation. However, target is for any game server structure.
