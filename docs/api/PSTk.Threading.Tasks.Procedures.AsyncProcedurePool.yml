@@ -1,0 +1,979 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  commentId: T:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  id: AsyncProcedurePool
+  parent: PSTk.Threading.Tasks.Procedures
+  children:
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor(PSTk.Threading.Tasks.Procedures.IAsyncProcedure[],System.Threading.CancellationTokenSource)
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AttachToParent(System.Threading.CancellationToken)
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.CancelAll
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAll
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAllAsParallel
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item(System.Int32)
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Token
+  langs:
+  - csharp
+  - vb
+  name: AsyncProcedurePool
+  nameWithType: AsyncProcedurePool
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  type: Class
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: AsyncProcedurePool
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 13
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nHandle <xref href=\"PSTk.Threading.Tasks.Procedures.AsyncProcedure%601\" data-throw-if-not-resolved=\"false\"></xref> instances into pool of synchronous or asynchronous routines.\n"
+  example: []
+  syntax:
+    content: 'public sealed class AsyncProcedurePool : IAttachedTask'
+    content.vb: >-
+      Public NotInheritable Class AsyncProcedurePool
+
+          Implements IAttachedTask
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+  inheritance:
+  - System.Object
+  implements:
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor(PSTk.Threading.Tasks.Procedures.IAsyncProcedure[],System.Threading.CancellationTokenSource)
+  commentId: M:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor(PSTk.Threading.Tasks.Procedures.IAsyncProcedure[],System.Threading.CancellationTokenSource)
+  id: '#ctor(PSTk.Threading.Tasks.Procedures.IAsyncProcedure[],System.Threading.CancellationTokenSource)'
+  parent: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  langs:
+  - csharp
+  - vb
+  name: AsyncProcedurePool(IAsyncProcedure[], CancellationTokenSource)
+  nameWithType: AsyncProcedurePool.AsyncProcedurePool(IAsyncProcedure[], CancellationTokenSource)
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AsyncProcedurePool(PSTk.Threading.Tasks.Procedures.IAsyncProcedure[], System.Threading.CancellationTokenSource)
+  type: Constructor
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: .ctor
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 23
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nCreate a new instance of <xref href=\"PSTk.Threading.Tasks.Procedures.AsyncProcedurePool\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public AsyncProcedurePool(IAsyncProcedure[] pool, CancellationTokenSource source = null)
+    parameters:
+    - id: pool
+      type: PSTk.Threading.Tasks.Procedures.IAsyncProcedure[]
+      description: ''
+    - id: source
+      type: System.Threading.CancellationTokenSource
+      description: ''
+    content.vb: Public Sub New(pool As IAsyncProcedure(), source As CancellationTokenSource = Nothing)
+  overload: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor*
+  nameWithType.vb: AsyncProcedurePool.AsyncProcedurePool(IAsyncProcedure(), CancellationTokenSource)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AsyncProcedurePool(PSTk.Threading.Tasks.Procedures.IAsyncProcedure(), System.Threading.CancellationTokenSource)
+  name.vb: AsyncProcedurePool(IAsyncProcedure(), CancellationTokenSource)
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures
+  commentId: P:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures
+  id: NumProcedures
+  parent: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  langs:
+  - csharp
+  - vb
+  name: NumProcedures
+  nameWithType: AsyncProcedurePool.NumProcedures
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: NumProcedures
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 43
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nReturn number of <xref href=\"PSTk.Threading.Tasks.Procedures.IAsyncProcedure\" data-throw-if-not-resolved=\"false\"></xref> in pool.\n"
+  example: []
+  syntax:
+    content: public int NumProcedures { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NumProcedures As Integer
+  overload: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Token
+  commentId: P:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Token
+  id: Token
+  parent: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  langs:
+  - csharp
+  - vb
+  name: Token
+  nameWithType: AsyncProcedurePool.Token
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Token
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Token
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 48
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nGet the <xref href=\"System.Threading.CancellationToken\" data-throw-if-not-resolved=\"false\"></xref> of attached task.\n"
+  example: []
+  syntax:
+    content: public CancellationToken Token { get; }
+    parameters: []
+    return:
+      type: System.Threading.CancellationToken
+    content.vb: Public ReadOnly Property Token As CancellationToken
+  overload: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Token*
+  implements:
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item(System.Int32)
+  commentId: P:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: AsyncProcedurePool.Item[Int32]
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item[System.Int32]
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: this[]
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 56
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nGet or set <xref href=\"PSTk.Threading.Tasks.Procedures.IAsyncProcedure\" data-throw-if-not-resolved=\"false\"></xref> from <xref href=\"PSTk.Threading.Tasks.Procedures.AsyncProcedurePool\" data-throw-if-not-resolved=\"false\"></xref> collection\nusing index.\n"
+  example: []
+  syntax:
+    content: public IAsyncProcedure this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+      description: ''
+    return:
+      type: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+      description: ''
+    content.vb: Public Property Item(index As Integer) As IAsyncProcedure
+  overload: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item*
+  nameWithType.vb: AsyncProcedurePool.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AttachToParent(System.Threading.CancellationToken)
+  commentId: M:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AttachToParent(System.Threading.CancellationToken)
+  id: AttachToParent(System.Threading.CancellationToken)
+  parent: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  langs:
+  - csharp
+  - vb
+  name: AttachToParent(CancellationToken)
+  nameWithType: AsyncProcedurePool.AttachToParent(CancellationToken)
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AttachToParent(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: AttachToParent
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 66
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nAttach a process to parent in case of external task cancelation request.\n"
+  example: []
+  syntax:
+    content: public void AttachToParent(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+      description: ''
+    content.vb: Public Sub AttachToParent(token As CancellationToken)
+  overload: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AttachToParent*
+  implements:
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.CancelAll
+  commentId: M:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.CancelAll
+  id: CancelAll
+  parent: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  langs:
+  - csharp
+  - vb
+  name: CancelAll()
+  nameWithType: AsyncProcedurePool.CancelAll()
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.CancelAll()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: CancelAll
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 76
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nCancel all routines whose are running.\n"
+  example: []
+  syntax:
+    content: public void CancelAll()
+    content.vb: Public Sub CancelAll
+  overload: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.CancelAll*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAll
+  commentId: M:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAll
+  id: ExecuteAll
+  parent: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAll()
+  nameWithType: AsyncProcedurePool.ExecuteAll()
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAll()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ExecuteAll
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 82
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nExecute the pool of routines.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<bool> ExecuteAll()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Boolean}
+      description: ''
+    content.vb: Public Function ExecuteAll As IEnumerable(Of Boolean)
+  overload: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAll*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAllAsParallel
+  commentId: M:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAllAsParallel
+  id: ExecuteAllAsParallel
+  parent: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAllAsParallel()
+  nameWithType: AsyncProcedurePool.ExecuteAllAsParallel()
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAllAsParallel()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ExecuteAllAsParallel
+    path: ../PSTk.Threading/Tasks/Procedures/AsyncProcedurePool.cs
+    startLine: 92
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  summary: "\nExecute the <xref href=\"PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.pool\" data-throw-if-not-resolved=\"false\"></xref> of routines in parallel.\n"
+  example: []
+  syntax:
+    content: public bool[] ExecuteAllAsParallel()
+    return:
+      type: System.Boolean[]
+      description: ''
+    content.vb: Public Function ExecuteAllAsParallel As Boolean()
+  overload: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAllAsParallel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+  commentId: T:PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+  name: AsyncProcedure<TInput>
+  nameWithType: AsyncProcedure<TInput>
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedure<TInput>
+  nameWithType.vb: AsyncProcedure(Of TInput)
+  fullName.vb: PSTk.Threading.Tasks.Procedures.AsyncProcedure(Of TInput)
+  name.vb: AsyncProcedure(Of TInput)
+  spec.csharp:
+  - uid: PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+    name: AsyncProcedure
+    nameWithType: AsyncProcedure
+    fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedure
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TInput
+    nameWithType: TInput
+    fullName: TInput
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+    name: AsyncProcedure
+    nameWithType: AsyncProcedure
+    fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedure
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TInput
+    nameWithType: TInput
+    fullName: TInput
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+- uid: PSTk.Threading.Tasks.Procedures
+  commentId: N:PSTk.Threading.Tasks.Procedures
+  name: PSTk.Threading.Tasks.Procedures
+  nameWithType: PSTk.Threading.Tasks.Procedures
+  fullName: PSTk.Threading.Tasks.Procedures
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  commentId: T:PSTk.Threading.Tasks.Procedures.IAttachedTask
+  parent: PSTk.Threading.Tasks.Procedures
+  name: IAttachedTask
+  nameWithType: IAttachedTask
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  commentId: T:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  name: AsyncProcedurePool
+  nameWithType: AsyncProcedurePool
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor
+  name: AsyncProcedurePool
+  nameWithType: AsyncProcedurePool.AsyncProcedurePool
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AsyncProcedurePool
+- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure[]
+  isExternal: true
+  name: IAsyncProcedure[]
+  nameWithType: IAsyncProcedure[]
+  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure[]
+  nameWithType.vb: IAsyncProcedure()
+  fullName.vb: PSTk.Threading.Tasks.Procedures.IAsyncProcedure()
+  name.vb: IAsyncProcedure()
+  spec.csharp:
+  - uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+    name: IAsyncProcedure
+    nameWithType: IAsyncProcedure
+    fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+    name: IAsyncProcedure
+    nameWithType: IAsyncProcedure
+    fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Threading.CancellationTokenSource
+  commentId: T:System.Threading.CancellationTokenSource
+  parent: System.Threading
+  isExternal: true
+  name: CancellationTokenSource
+  nameWithType: CancellationTokenSource
+  fullName: System.Threading.CancellationTokenSource
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  commentId: T:PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  parent: PSTk.Threading.Tasks.Procedures
+  name: IAsyncProcedure
+  nameWithType: IAsyncProcedure
+  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures
+  name: NumProcedures
+  nameWithType: AsyncProcedurePool.NumProcedures
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Token*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Token
+  name: Token
+  nameWithType: AsyncProcedurePool.Token
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Token
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  commentId: P:PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  parent: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  name: Token
+  nameWithType: IAttachedTask.Token
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item
+  name: Item
+  nameWithType: AsyncProcedurePool.Item
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AttachToParent*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AttachToParent
+  name: AttachToParent
+  nameWithType: AsyncProcedurePool.AttachToParent
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AttachToParent
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  commentId: M:PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  parent: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  isExternal: true
+  name: AttachToParent(CancellationToken)
+  nameWithType: IAttachedTask.AttachToParent(CancellationToken)
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+    name: AttachToParent
+    nameWithType: IAttachedTask.AttachToParent
+    fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+    name: AttachToParent
+    nameWithType: IAttachedTask.AttachToParent
+    fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.CancelAll*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.CancelAll
+  name: CancelAll
+  nameWithType: AsyncProcedurePool.CancelAll
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.CancelAll
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAll*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAll
+  name: ExecuteAll
+  nameWithType: AsyncProcedurePool.ExecuteAll
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAll
+- uid: System.Collections.Generic.IEnumerable{System.Boolean}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Boolean}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Boolean>
+  nameWithType: IEnumerable<Boolean>
+  fullName: System.Collections.Generic.IEnumerable<System.Boolean>
+  nameWithType.vb: IEnumerable(Of Boolean)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Boolean)
+  name.vb: IEnumerable(Of Boolean)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.pool
+  commentId: F:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.pool
+  isExternal: true
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAllAsParallel*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAllAsParallel
+  name: ExecuteAllAsParallel
+  nameWithType: AsyncProcedurePool.ExecuteAllAsParallel
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.ExecuteAllAsParallel
+- uid: System.Boolean[]
+  isExternal: true
+  name: Boolean[]
+  nameWithType: Boolean[]
+  fullName: System.Boolean[]
+  nameWithType.vb: Boolean()
+  fullName.vb: System.Boolean()
+  name.vb: Boolean()
+  spec.csharp:
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

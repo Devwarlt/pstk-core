@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Threading.Tasks
+  commentId: N:PSTk.Threading.Tasks
+  id: PSTk.Threading.Tasks
+  children:
+  - PSTk.Threading.Tasks.AutomatedRestarter
+  - PSTk.Threading.Tasks.AutomatedRestarterFlag
+  - PSTk.Threading.Tasks.AutomatedRestarterListener
+  - PSTk.Threading.Tasks.InternalRoutine
+  - PSTk.Threading.Tasks.InternalRoutineEventArgs
+  langs:
+  - csharp
+  - vb
+  name: PSTk.Threading.Tasks
+  nameWithType: PSTk.Threading.Tasks
+  fullName: PSTk.Threading.Tasks
+  type: Namespace
+  assemblies:
+  - PSTk.Threading
+references:
+- uid: PSTk.Threading.Tasks.AutomatedRestarter
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarter
+  name: AutomatedRestarter
+  nameWithType: AutomatedRestarter
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter
+- uid: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarterFlag
+  parent: PSTk.Threading.Tasks
+  name: AutomatedRestarterFlag
+  nameWithType: AutomatedRestarterFlag
+  fullName: PSTk.Threading.Tasks.AutomatedRestarterFlag
+- uid: PSTk.Threading.Tasks.AutomatedRestarterListener
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarterListener
+  name: AutomatedRestarterListener
+  nameWithType: AutomatedRestarterListener
+  fullName: PSTk.Threading.Tasks.AutomatedRestarterListener
+- uid: PSTk.Threading.Tasks.InternalRoutine
+  commentId: T:PSTk.Threading.Tasks.InternalRoutine
+  name: InternalRoutine
+  nameWithType: InternalRoutine
+  fullName: PSTk.Threading.Tasks.InternalRoutine
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs
+  commentId: T:PSTk.Threading.Tasks.InternalRoutineEventArgs
+  name: InternalRoutineEventArgs
+  nameWithType: InternalRoutineEventArgs
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs
+- uid: PSTk.Threading.Tasks
+  commentId: N:PSTk.Threading.Tasks
+  name: PSTk.Threading.Tasks
+  nameWithType: PSTk.Threading.Tasks
+  fullName: PSTk.Threading.Tasks

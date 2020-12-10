@@ -1,0 +1,464 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/devwarlt/Desktop/Git/pstk-core/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Diagnostics.TimedProfiler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Diagnostics.TimedProfiler.html",
+          "hash": "xGUfphgwvF1oSLg6f8kSlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Diagnostics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Diagnostics.html",
+          "hash": "8O0pK1Tk9Y8YfV83bUHRCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html",
+          "hash": "V3ffoFeOvG30DZF8FqlfKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.ConcurrentCollections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.ConcurrentCollections.html",
+          "hash": "y8iFJgeMktABy84XBBNjnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.ConnectionCentral.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.ConnectionCentral.html",
+          "hash": "697KuuCO7uqVjTSJy25qQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.ConnectionFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.ConnectionFlag.html",
+          "hash": "rrD/soyeFnllT9QFUXOlyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.ConnectionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.ConnectionType.html",
+          "hash": "TXZt2pUy+XLrY4Fr8k+AOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.InboundConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.InboundConnection.html",
+          "hash": "FtXYthiwkPooP+TMwGKFbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.InboundPacket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.InboundPacket.html",
+          "hash": "Y7Rvv4hLtMmthQzbDwXcGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.InboundTraffic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.InboundTraffic.html",
+          "hash": "bklQ5ws9DJtGtIsJHccAuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.Utils.ConnectionUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.Utils.ConnectionUtils.html",
+          "hash": "PqT9a6p3VbZ528EQY3jz1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.Utils.html",
+          "hash": "aNHkydEx04/wKuP9iiXG4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Networking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Networking.html",
+          "hash": "397wYywiFk3iT/sxQ9LQXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarter.html",
+          "hash": "H8/avhcNhCqUJN91Mezvng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarterFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarterFlag.html",
+          "hash": "04ljSd6ex+9zsLBNuoI6UA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarterListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarterListener.html",
+          "hash": "JbGX57YXD+UbH5OFf3aCwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.InternalRoutine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.InternalRoutine.html",
+          "hash": "tXJcZ1l9ADJItasLk8fgyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.InternalRoutineEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html",
+          "hash": "PGjgYApYgrKOpsd5jhIL1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedure-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedure-1.html",
+          "hash": "e62+NYOV6v6P2fJRFc9zBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs-1.html",
+          "hash": "oJvVAGgz/mpNtFheFLMZmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html",
+          "hash": "S1xxcTblYXSjOo4lj7W7zQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.Procedures.IAsyncProcedure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.Procedures.IAsyncProcedure.html",
+          "hash": "iWSmdX/Z3Rq/kr+VNQMJCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.Procedures.IAttachedTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.Procedures.IAttachedTask.html",
+          "hash": "A1m+cAGbqUldc2bmLTaXYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.Procedures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.Procedures.html",
+          "hash": "ZqCRdR+8qnwCA5R7GTgpZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Threading.Tasks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Threading.Tasks.html",
+          "hash": "GhHtHl9PB2UXQvANqpbxZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "rA8miDDrNDsDY2nMX2mjAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "sEq7s9gTaygveE1QwAKDhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/async-procedure-and-async-procedure-pool.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/async-procedure-and-async-procedure-pool.html",
+          "hash": "gsuSLL7Ye91OL4A4KjVrMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/automated-restarter.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/automated-restarter.html",
+          "hash": "P377TQWirPwEsDrGYnLrjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/internal-routine.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/internal-routine.html",
+          "hash": "7Hy0urUu6C17XooQ+ZjJiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "wY8FefUNbf+tsjiu5J6HrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "xPt/cgKgZpYdcS0Veaoqfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 25,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

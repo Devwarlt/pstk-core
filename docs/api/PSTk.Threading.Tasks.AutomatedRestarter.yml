@@ -1,0 +1,880 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Threading.Tasks.AutomatedRestarter
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarter
+  id: AutomatedRestarter
+  parent: PSTk.Threading.Tasks
+  children:
+  - PSTk.Threading.Tasks.AutomatedRestarter.#ctor(System.TimeSpan,System.Int32,System.Action{System.String})
+  - PSTk.Threading.Tasks.AutomatedRestarter.AddEventListener(System.TimeSpan,System.Action)
+  - PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners(System.Collections.Generic.KeyValuePair{System.TimeSpan,System.Action}[])
+  - PSTk.Threading.Tasks.AutomatedRestarter.GetFlag
+  - PSTk.Threading.Tasks.AutomatedRestarter.OnFinished
+  - PSTk.Threading.Tasks.AutomatedRestarter.Start
+  - PSTk.Threading.Tasks.AutomatedRestarter.Stop(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: AutomatedRestarter
+  nameWithType: AutomatedRestarter
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter
+  type: Class
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarter.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: AutomatedRestarter
+    path: ../PSTk.Threading/Tasks/AutomatedRestarter.cs
+    startLine: 13
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nCreates an <xref href=\"PSTk.Threading.Tasks.InternalRoutine\" data-throw-if-not-resolved=\"false\"></xref> adapted to handle events and execute a process when threshold is achieved.\n"
+  example: []
+  syntax:
+    content: public sealed class AutomatedRestarter
+    content.vb: Public NotInheritable Class AutomatedRestarter
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.#ctor(System.TimeSpan,System.Int32,System.Action{System.String})
+  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.#ctor(System.TimeSpan,System.Int32,System.Action{System.String})
+  id: '#ctor(System.TimeSpan,System.Int32,System.Action{System.String})'
+  parent: PSTk.Threading.Tasks.AutomatedRestarter
+  langs:
+  - csharp
+  - vb
+  name: AutomatedRestarter(TimeSpan, Int32, Action<String>)
+  nameWithType: AutomatedRestarter.AutomatedRestarter(TimeSpan, Int32, Action<String>)
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.AutomatedRestarter(System.TimeSpan, System.Int32, System.Action<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarter.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: .ctor
+    path: ../PSTk.Threading/Tasks/AutomatedRestarter.cs
+    startLine: 31
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nCreate a new instance of <xref href=\"PSTk.Threading.Tasks.AutomatedRestarter\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public AutomatedRestarter(TimeSpan timeout, int routineMs = 1000, Action<string> errorLogger = null)
+    parameters:
+    - id: timeout
+      type: System.TimeSpan
+      description: ''
+    - id: routineMs
+      type: System.Int32
+      description: ''
+    - id: errorLogger
+      type: System.Action{System.String}
+      description: ''
+    content.vb: Public Sub New(timeout As TimeSpan, routineMs As Integer = 1000, errorLogger As Action(Of String) = Nothing)
+  overload: PSTk.Threading.Tasks.AutomatedRestarter.#ctor*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+  nameWithType.vb: AutomatedRestarter.AutomatedRestarter(TimeSpan, Int32, Action(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PSTk.Threading.Tasks.AutomatedRestarter.AutomatedRestarter(System.TimeSpan, System.Int32, System.Action(Of System.String))
+  name.vb: AutomatedRestarter(TimeSpan, Int32, Action(Of String))
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.OnFinished
+  commentId: E:PSTk.Threading.Tasks.AutomatedRestarter.OnFinished
+  id: OnFinished
+  parent: PSTk.Threading.Tasks.AutomatedRestarter
+  langs:
+  - csharp
+  - vb
+  name: OnFinished
+  nameWithType: AutomatedRestarter.OnFinished
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.OnFinished
+  type: Event
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarter.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: OnFinished
+    path: ../PSTk.Threading/Tasks/AutomatedRestarter.cs
+    startLine: 48
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nWhen routine finished its task.\n"
+  example: []
+  syntax:
+    content: public event EventHandler OnFinished
+    return:
+      type: System.EventHandler
+    content.vb: Public Event OnFinished As EventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.GetFlag
+  commentId: P:PSTk.Threading.Tasks.AutomatedRestarter.GetFlag
+  id: GetFlag
+  parent: PSTk.Threading.Tasks.AutomatedRestarter
+  langs:
+  - csharp
+  - vb
+  name: GetFlag
+  nameWithType: AutomatedRestarter.GetFlag
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.GetFlag
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarter.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: GetFlag
+    path: ../PSTk.Threading/Tasks/AutomatedRestarter.cs
+    startLine: 55
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nGet the current <xref href=\"PSTk.Threading.Tasks.AutomatedRestarter\" data-throw-if-not-resolved=\"false\"></xref> flag.\n"
+  example: []
+  syntax:
+    content: public AutomatedRestarterFlag GetFlag { get; }
+    parameters: []
+    return:
+      type: PSTk.Threading.Tasks.AutomatedRestarterFlag
+    content.vb: Public ReadOnly Property GetFlag As AutomatedRestarterFlag
+  overload: PSTk.Threading.Tasks.AutomatedRestarter.GetFlag*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListener(System.TimeSpan,System.Action)
+  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.AddEventListener(System.TimeSpan,System.Action)
+  id: AddEventListener(System.TimeSpan,System.Action)
+  parent: PSTk.Threading.Tasks.AutomatedRestarter
+  langs:
+  - csharp
+  - vb
+  name: AddEventListener(TimeSpan, Action)
+  nameWithType: AutomatedRestarter.AddEventListener(TimeSpan, Action)
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListener(System.TimeSpan, System.Action)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarter.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: AddEventListener
+    path: ../PSTk.Threading/Tasks/AutomatedRestarter.cs
+    startLine: 65
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nAdds a new event into listeners.\n"
+  example: []
+  syntax:
+    content: public void AddEventListener(TimeSpan timeout, Action action)
+    parameters:
+    - id: timeout
+      type: System.TimeSpan
+      description: ''
+    - id: action
+      type: System.Action
+      description: ''
+    content.vb: Public Sub AddEventListener(timeout As TimeSpan, action As Action)
+  overload: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListener*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners(System.Collections.Generic.KeyValuePair{System.TimeSpan,System.Action}[])
+  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners(System.Collections.Generic.KeyValuePair{System.TimeSpan,System.Action}[])
+  id: AddEventListeners(System.Collections.Generic.KeyValuePair{System.TimeSpan,System.Action}[])
+  parent: PSTk.Threading.Tasks.AutomatedRestarter
+  langs:
+  - csharp
+  - vb
+  name: AddEventListeners(KeyValuePair<TimeSpan, Action>[])
+  nameWithType: AutomatedRestarter.AddEventListeners(KeyValuePair<TimeSpan, Action>[])
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners(System.Collections.Generic.KeyValuePair<System.TimeSpan, System.Action>[])
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarter.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: AddEventListeners
+    path: ../PSTk.Threading/Tasks/AutomatedRestarter.cs
+    startLine: 86
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nAdds a collection of events into listeners.\n"
+  example: []
+  syntax:
+    content: public void AddEventListeners(KeyValuePair<TimeSpan, Action>[] listeners)
+    parameters:
+    - id: listeners
+      type: System.Collections.Generic.KeyValuePair{System.TimeSpan,System.Action}[]
+      description: ''
+    content.vb: Public Sub AddEventListeners(listeners As KeyValuePair(Of TimeSpan, Action)())
+  overload: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: AutomatedRestarter.AddEventListeners(KeyValuePair(Of TimeSpan, Action)())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners(System.Collections.Generic.KeyValuePair(Of System.TimeSpan, System.Action)())
+  name.vb: AddEventListeners(KeyValuePair(Of TimeSpan, Action)())
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.Start
+  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.Start
+  id: Start
+  parent: PSTk.Threading.Tasks.AutomatedRestarter
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: AutomatedRestarter.Start()
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.Start()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarter.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Start
+    path: ../PSTk.Threading/Tasks/AutomatedRestarter.cs
+    startLine: 114
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nStart the core routine.\n"
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: PSTk.Threading.Tasks.AutomatedRestarter.Start*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.Stop(System.Boolean)
+  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.Stop(System.Boolean)
+  id: Stop(System.Boolean)
+  parent: PSTk.Threading.Tasks.AutomatedRestarter
+  langs:
+  - csharp
+  - vb
+  name: Stop(Boolean)
+  nameWithType: AutomatedRestarter.Stop(Boolean)
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.Stop(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarter.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Stop
+    path: ../PSTk.Threading/Tasks/AutomatedRestarter.cs
+    startLine: 172
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nStop the core routine, make sure <code data-dev-comment-type=\"paramref\" class=\"paramref\">isFinished</code> is used internally to invoke event <xref href=\"PSTk.Threading.Tasks.AutomatedRestarter.OnFinished\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public void Stop(bool isFinished = false)
+    parameters:
+    - id: isFinished
+      type: System.Boolean
+      description: ''
+    content.vb: Public Sub Stop(isFinished As Boolean = False)
+  overload: PSTk.Threading.Tasks.AutomatedRestarter.Stop*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PSTk.Threading.Tasks.InternalRoutine
+  commentId: T:PSTk.Threading.Tasks.InternalRoutine
+  name: InternalRoutine
+  nameWithType: InternalRoutine
+  fullName: PSTk.Threading.Tasks.InternalRoutine
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+- uid: PSTk.Threading.Tasks
+  commentId: N:PSTk.Threading.Tasks
+  name: PSTk.Threading.Tasks
+  nameWithType: PSTk.Threading.Tasks
+  fullName: PSTk.Threading.Tasks
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PSTk.Threading.Tasks.AutomatedRestarter
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarter
+  name: AutomatedRestarter
+  nameWithType: AutomatedRestarter
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.#ctor*
+  commentId: Overload:PSTk.Threading.Tasks.AutomatedRestarter.#ctor
+  name: AutomatedRestarter
+  nameWithType: AutomatedRestarter.AutomatedRestarter
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.AutomatedRestarter
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  name: Action<String>
+  nameWithType: Action<String>
+  fullName: System.Action<System.String>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of System.String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.GetFlag*
+  commentId: Overload:PSTk.Threading.Tasks.AutomatedRestarter.GetFlag
+  name: GetFlag
+  nameWithType: AutomatedRestarter.GetFlag
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.GetFlag
+- uid: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarterFlag
+  parent: PSTk.Threading.Tasks
+  name: AutomatedRestarterFlag
+  nameWithType: AutomatedRestarterFlag
+  fullName: PSTk.Threading.Tasks.AutomatedRestarterFlag
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListener*
+  commentId: Overload:PSTk.Threading.Tasks.AutomatedRestarter.AddEventListener
+  name: AddEventListener
+  nameWithType: AutomatedRestarter.AddEventListener
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListener
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners*
+  commentId: Overload:PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners
+  name: AddEventListeners
+  nameWithType: AutomatedRestarter.AddEventListeners
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.AddEventListeners
+- uid: System.Collections.Generic.KeyValuePair{System.TimeSpan,System.Action}[]
+  isExternal: true
+  name: KeyValuePair<TimeSpan, Action>[]
+  nameWithType: KeyValuePair<TimeSpan, Action>[]
+  fullName: System.Collections.Generic.KeyValuePair<System.TimeSpan, System.Action>[]
+  nameWithType.vb: KeyValuePair(Of TimeSpan, Action)()
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of System.TimeSpan, System.Action)()
+  name.vb: KeyValuePair(Of TimeSpan, Action)()
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Action
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.Start*
+  commentId: Overload:PSTk.Threading.Tasks.AutomatedRestarter.Start
+  name: Start
+  nameWithType: AutomatedRestarter.Start
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.Start
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.OnFinished
+  commentId: E:PSTk.Threading.Tasks.AutomatedRestarter.OnFinished
+  isExternal: true
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.Stop*
+  commentId: Overload:PSTk.Threading.Tasks.AutomatedRestarter.Stop
+  name: Stop
+  nameWithType: AutomatedRestarter.Stop
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.Stop
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

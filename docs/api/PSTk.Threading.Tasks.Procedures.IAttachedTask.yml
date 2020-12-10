@@ -1,0 +1,127 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  commentId: T:PSTk.Threading.Tasks.Procedures.IAttachedTask
+  id: IAttachedTask
+  parent: PSTk.Threading.Tasks.Procedures
+  children:
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  langs:
+  - csharp
+  - vb
+  name: IAttachedTask
+  nameWithType: IAttachedTask
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  type: Interface
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/IAttachedTask.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: IAttachedTask
+    path: ../PSTk.Threading/Tasks/Procedures/IAttachedTask.cs
+    startLine: 6
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  syntax:
+    content: public interface IAttachedTask
+    content.vb: Public Interface IAttachedTask
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  commentId: P:PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  id: Token
+  parent: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  langs:
+  - csharp
+  - vb
+  name: Token
+  nameWithType: IAttachedTask.Token
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/IAttachedTask.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Token
+    path: ../PSTk.Threading/Tasks/Procedures/IAttachedTask.cs
+    startLine: 8
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  syntax:
+    content: CancellationToken Token { get; }
+    parameters: []
+    return:
+      type: System.Threading.CancellationToken
+    content.vb: ReadOnly Property Token As CancellationToken
+  overload: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  commentId: M:PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  id: AttachToParent(System.Threading.CancellationToken)
+  parent: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  langs:
+  - csharp
+  - vb
+  name: AttachToParent(CancellationToken)
+  nameWithType: IAttachedTask.AttachToParent(CancellationToken)
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/IAttachedTask.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: AttachToParent
+    path: ../PSTk.Threading/Tasks/Procedures/IAttachedTask.cs
+    startLine: 10
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  syntax:
+    content: void AttachToParent(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+    content.vb: Sub AttachToParent(token As CancellationToken)
+  overload: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent*
+references:
+- uid: PSTk.Threading.Tasks.Procedures
+  commentId: N:PSTk.Threading.Tasks.Procedures
+  name: PSTk.Threading.Tasks.Procedures
+  nameWithType: PSTk.Threading.Tasks.Procedures
+  fullName: PSTk.Threading.Tasks.Procedures
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  name: Token
+  nameWithType: IAttachedTask.Token
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent
+  name: AttachToParent
+  nameWithType: IAttachedTask.AttachToParent
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent

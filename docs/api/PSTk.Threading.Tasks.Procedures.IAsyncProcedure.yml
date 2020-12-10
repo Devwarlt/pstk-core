@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  commentId: T:PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  id: IAsyncProcedure
+  parent: PSTk.Threading.Tasks.Procedures
+  children:
+  - PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute
+  - PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
+  langs:
+  - csharp
+  - vb
+  name: IAsyncProcedure
+  nameWithType: IAsyncProcedure
+  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  type: Interface
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/IAsyncProcedure.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: IAsyncProcedure
+    path: ../PSTk.Threading/Tasks/Procedures/IAsyncProcedure.cs
+    startLine: 4
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  syntax:
+    content: 'public interface IAsyncProcedure : IAttachedTask'
+    content.vb: >-
+      Public Interface IAsyncProcedure
+
+          Inherits IAttachedTask
+  inheritedMembers:
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
+  commentId: P:PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
+  id: Name
+  parent: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IAsyncProcedure.Name
+  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/IAsyncProcedure.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Name
+    path: ../PSTk.Threading/Tasks/Procedures/IAsyncProcedure.cs
+    startLine: 6
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute
+  commentId: M:PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute
+  id: Execute
+  parent: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: IAsyncProcedure.Execute()
+  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/Procedures/IAsyncProcedure.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Execute
+    path: ../PSTk.Threading/Tasks/Procedures/IAsyncProcedure.cs
+    startLine: 8
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks.Procedures
+  syntax:
+    content: bool Execute()
+    return:
+      type: System.Boolean
+    content.vb: Function Execute As Boolean
+  overload: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute*
+references:
+- uid: PSTk.Threading.Tasks.Procedures
+  commentId: N:PSTk.Threading.Tasks.Procedures
+  name: PSTk.Threading.Tasks.Procedures
+  nameWithType: PSTk.Threading.Tasks.Procedures
+  fullName: PSTk.Threading.Tasks.Procedures
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  commentId: P:PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  parent: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  name: Token
+  nameWithType: IAttachedTask.Token
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  commentId: M:PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  parent: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  isExternal: true
+  name: AttachToParent(CancellationToken)
+  nameWithType: IAttachedTask.AttachToParent(CancellationToken)
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+    name: AttachToParent
+    nameWithType: IAttachedTask.AttachToParent
+    fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+    name: AttachToParent
+    nameWithType: IAttachedTask.AttachToParent
+    fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  commentId: T:PSTk.Threading.Tasks.Procedures.IAttachedTask
+  parent: PSTk.Threading.Tasks.Procedures
+  name: IAttachedTask
+  nameWithType: IAttachedTask
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask
+- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
+  name: Name
+  nameWithType: IAsyncProcedure.Name
+  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute*
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute
+  name: Execute
+  nameWithType: IAsyncProcedure.Execute
+  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

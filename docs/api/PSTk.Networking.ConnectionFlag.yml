@@ -1,0 +1,170 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Networking.ConnectionFlag
+  commentId: T:PSTk.Networking.ConnectionFlag
+  id: ConnectionFlag
+  parent: PSTk.Networking
+  children:
+  - PSTk.Networking.ConnectionFlag.Aborted
+  - PSTk.Networking.ConnectionFlag.Idle
+  - PSTk.Networking.ConnectionFlag.Listening
+  langs:
+  - csharp
+  - vb
+  name: ConnectionFlag
+  nameWithType: ConnectionFlag
+  fullName: PSTk.Networking.ConnectionFlag
+  type: Enum
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionFlag.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ConnectionFlag
+    path: ../PSTk.Networking/ConnectionFlag.cs
+    startLine: 7
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRepresents current flag of connection routines.\n"
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      [Obsolete]
+
+      public enum ConnectionFlag
+    content.vb: >-
+      <Flags>
+
+      <Obsolete>
+
+      Public Enum ConnectionFlag
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PSTk.Networking.ConnectionFlag.Idle
+  commentId: F:PSTk.Networking.ConnectionFlag.Idle
+  id: Idle
+  parent: PSTk.Networking.ConnectionFlag
+  langs:
+  - csharp
+  - vb
+  name: Idle
+  nameWithType: ConnectionFlag.Idle
+  fullName: PSTk.Networking.ConnectionFlag.Idle
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionFlag.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Idle
+    path: ../PSTk.Networking/ConnectionFlag.cs
+    startLine: 13
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nWhen not listening for inbound connections.\n"
+  example: []
+  syntax:
+    content: Idle = 0
+    return:
+      type: PSTk.Networking.ConnectionFlag
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Networking.ConnectionFlag.Listening
+  commentId: F:PSTk.Networking.ConnectionFlag.Listening
+  id: Listening
+  parent: PSTk.Networking.ConnectionFlag
+  langs:
+  - csharp
+  - vb
+  name: Listening
+  nameWithType: ConnectionFlag.Listening
+  fullName: PSTk.Networking.ConnectionFlag.Listening
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionFlag.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Listening
+    path: ../PSTk.Networking/ConnectionFlag.cs
+    startLine: 18
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nWhen listening for inbound traffic.\n"
+  example: []
+  syntax:
+    content: Listening = 1
+    return:
+      type: PSTk.Networking.ConnectionFlag
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Networking.ConnectionFlag.Aborted
+  commentId: F:PSTk.Networking.ConnectionFlag.Aborted
+  id: Aborted
+  parent: PSTk.Networking.ConnectionFlag
+  langs:
+  - csharp
+  - vb
+  name: Aborted
+  nameWithType: ConnectionFlag.Aborted
+  fullName: PSTk.Networking.ConnectionFlag.Aborted
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionFlag.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Aborted
+    path: ../PSTk.Networking/ConnectionFlag.cs
+    startLine: 23
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nWhen listener aborted and no new connection is stablished along inbound traffic.\n"
+  example: []
+  syntax:
+    content: Aborted = 2
+    return:
+      type: PSTk.Networking.ConnectionFlag
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PSTk.Networking
+  commentId: N:PSTk.Networking
+  name: PSTk.Networking
+  nameWithType: PSTk.Networking
+  fullName: PSTk.Networking
+- uid: PSTk.Networking.ConnectionFlag
+  commentId: T:PSTk.Networking.ConnectionFlag
+  parent: PSTk.Networking
+  name: ConnectionFlag
+  nameWithType: ConnectionFlag
+  fullName: PSTk.Networking.ConnectionFlag

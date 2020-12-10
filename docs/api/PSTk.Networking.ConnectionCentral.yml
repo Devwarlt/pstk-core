@@ -1,0 +1,840 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Networking.ConnectionCentral
+  commentId: T:PSTk.Networking.ConnectionCentral
+  id: ConnectionCentral
+  parent: PSTk.Networking
+  children:
+  - PSTk.Networking.ConnectionCentral.#ctor(System.Int32,System.UInt16,System.UInt16,System.Int32)
+  - PSTk.Networking.ConnectionCentral.#ctor(System.Int32,System.UInt16,System.UInt16,System.Int32,PSTk.Networking.ConnectionType,System.Action{System.String})
+  - PSTk.Networking.ConnectionCentral.GetAllInboundPackets
+  - PSTk.Networking.ConnectionCentral.GetFlag
+  - PSTk.Networking.ConnectionCentral.MaxInboundConnectionsByIp
+  - PSTk.Networking.ConnectionCentral.Start
+  - PSTk.Networking.ConnectionCentral.Stop
+  langs:
+  - csharp
+  - vb
+  name: ConnectionCentral
+  nameWithType: ConnectionCentral
+  fullName: PSTk.Networking.ConnectionCentral
+  type: Class
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionCentral.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ConnectionCentral
+    path: ../PSTk.Networking/ConnectionCentral.cs
+    startLine: 17
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRepresents a local instance of server listener, using TCP protocol, that could be configured for any <xref href=\"PSTk.Networking.ConnectionType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This feature isn't completed, avoid use it for your projects. No test was made within its development period.", true)]
+
+      public sealed class ConnectionCentral
+    content.vb: >-
+      <Obsolete("This feature isn't completed, avoid use it for your projects. No test was made within its development period.", True)>
+
+      Public NotInheritable Class ConnectionCentral
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: This feature isn't completed, avoid use it for your projects. No test was made within its development period.
+    - type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: PSTk.Networking.ConnectionCentral.#ctor(System.Int32,System.UInt16,System.UInt16,System.Int32)
+  commentId: M:PSTk.Networking.ConnectionCentral.#ctor(System.Int32,System.UInt16,System.UInt16,System.Int32)
+  id: '#ctor(System.Int32,System.UInt16,System.UInt16,System.Int32)'
+  parent: PSTk.Networking.ConnectionCentral
+  langs:
+  - csharp
+  - vb
+  name: ConnectionCentral(Int32, UInt16, UInt16, Int32)
+  nameWithType: ConnectionCentral.ConnectionCentral(Int32, UInt16, UInt16, Int32)
+  fullName: PSTk.Networking.ConnectionCentral.ConnectionCentral(System.Int32, System.UInt16, System.UInt16, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionCentral.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: .ctor
+    path: ../PSTk.Networking/ConnectionCentral.cs
+    startLine: 28
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  syntax:
+    content: public ConnectionCentral(int port, ushort maxConnections, ushort maxPacketsPerEndPoint, int bufferSize)
+    parameters:
+    - id: port
+      type: System.Int32
+    - id: maxConnections
+      type: System.UInt16
+    - id: maxPacketsPerEndPoint
+      type: System.UInt16
+    - id: bufferSize
+      type: System.Int32
+    content.vb: Public Sub New(port As Integer, maxConnections As UShort, maxPacketsPerEndPoint As UShort, bufferSize As Integer)
+  overload: PSTk.Networking.ConnectionCentral.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.ConnectionCentral.#ctor(System.Int32,System.UInt16,System.UInt16,System.Int32,PSTk.Networking.ConnectionType,System.Action{System.String})
+  commentId: M:PSTk.Networking.ConnectionCentral.#ctor(System.Int32,System.UInt16,System.UInt16,System.Int32,PSTk.Networking.ConnectionType,System.Action{System.String})
+  id: '#ctor(System.Int32,System.UInt16,System.UInt16,System.Int32,PSTk.Networking.ConnectionType,System.Action{System.String})'
+  parent: PSTk.Networking.ConnectionCentral
+  langs:
+  - csharp
+  - vb
+  name: ConnectionCentral(Int32, UInt16, UInt16, Int32, ConnectionType, Action<String>)
+  nameWithType: ConnectionCentral.ConnectionCentral(Int32, UInt16, UInt16, Int32, ConnectionType, Action<String>)
+  fullName: PSTk.Networking.ConnectionCentral.ConnectionCentral(System.Int32, System.UInt16, System.UInt16, System.Int32, PSTk.Networking.ConnectionType, System.Action<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionCentral.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: .ctor
+    path: ../PSTk.Networking/ConnectionCentral.cs
+    startLine: 31
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  syntax:
+    content: public ConnectionCentral(int port, ushort maxConnections, ushort maxPacketsPerEndPoint, int bufferSize, ConnectionType type, Action<string> errorLogger = null)
+    parameters:
+    - id: port
+      type: System.Int32
+    - id: maxConnections
+      type: System.UInt16
+    - id: maxPacketsPerEndPoint
+      type: System.UInt16
+    - id: bufferSize
+      type: System.Int32
+    - id: type
+      type: PSTk.Networking.ConnectionType
+    - id: errorLogger
+      type: System.Action{System.String}
+    content.vb: Public Sub New(port As Integer, maxConnections As UShort, maxPacketsPerEndPoint As UShort, bufferSize As Integer, type As ConnectionType, errorLogger As Action(Of String) = Nothing)
+  overload: PSTk.Networking.ConnectionCentral.#ctor*
+  nameWithType.vb: ConnectionCentral.ConnectionCentral(Int32, UInt16, UInt16, Int32, ConnectionType, Action(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PSTk.Networking.ConnectionCentral.ConnectionCentral(System.Int32, System.UInt16, System.UInt16, System.Int32, PSTk.Networking.ConnectionType, System.Action(Of System.String))
+  name.vb: ConnectionCentral(Int32, UInt16, UInt16, Int32, ConnectionType, Action(Of String))
+- uid: PSTk.Networking.ConnectionCentral.GetFlag
+  commentId: P:PSTk.Networking.ConnectionCentral.GetFlag
+  id: GetFlag
+  parent: PSTk.Networking.ConnectionCentral
+  langs:
+  - csharp
+  - vb
+  name: GetFlag
+  nameWithType: ConnectionCentral.GetFlag
+  fullName: PSTk.Networking.ConnectionCentral.GetFlag
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionCentral.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: GetFlag
+    path: ../PSTk.Networking/ConnectionCentral.cs
+    startLine: 64
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGet the current <xref href=\"PSTk.Networking.ConnectionFlag\" data-throw-if-not-resolved=\"false\"></xref> flag.\n"
+  example: []
+  syntax:
+    content: public ConnectionFlag GetFlag { get; }
+    parameters: []
+    return:
+      type: PSTk.Networking.ConnectionFlag
+    content.vb: Public ReadOnly Property GetFlag As ConnectionFlag
+  overload: PSTk.Networking.ConnectionCentral.GetFlag*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.ConnectionCentral.MaxInboundConnectionsByIp
+  commentId: P:PSTk.Networking.ConnectionCentral.MaxInboundConnectionsByIp
+  id: MaxInboundConnectionsByIp
+  parent: PSTk.Networking.ConnectionCentral
+  langs:
+  - csharp
+  - vb
+  name: MaxInboundConnectionsByIp
+  nameWithType: ConnectionCentral.MaxInboundConnectionsByIp
+  fullName: PSTk.Networking.ConnectionCentral.MaxInboundConnectionsByIp
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionCentral.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: MaxInboundConnectionsByIp
+    path: ../PSTk.Networking/ConnectionCentral.cs
+    startLine: 69
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGet the maximum number of <xref href=\"PSTk.Networking.InboundConnection\" data-throw-if-not-resolved=\"false\"></xref> associated per <xref href=\"System.Net.IPAddress\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int MaxInboundConnectionsByIp { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxInboundConnectionsByIp As Integer
+  overload: PSTk.Networking.ConnectionCentral.MaxInboundConnectionsByIp*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.ConnectionCentral.GetAllInboundPackets
+  commentId: M:PSTk.Networking.ConnectionCentral.GetAllInboundPackets
+  id: GetAllInboundPackets
+  parent: PSTk.Networking.ConnectionCentral
+  langs:
+  - csharp
+  - vb
+  name: GetAllInboundPackets()
+  nameWithType: ConnectionCentral.GetAllInboundPackets()
+  fullName: PSTk.Networking.ConnectionCentral.GetAllInboundPackets()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionCentral.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: GetAllInboundPackets
+    path: ../PSTk.Networking/ConnectionCentral.cs
+    startLine: 75
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGets a matrix of all <xref href=\"PSTk.Networking.InboundPacket\" data-throw-if-not-resolved=\"false\"></xref> from all <xref href=\"PSTk.Networking.InboundConnection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public InboundPacket[][] GetAllInboundPackets()
+    return:
+      type: PSTk.Networking.InboundPacket[][]
+      description: ''
+    content.vb: Public Function GetAllInboundPackets As InboundPacket()()
+  overload: PSTk.Networking.ConnectionCentral.GetAllInboundPackets*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.ConnectionCentral.Start
+  commentId: M:PSTk.Networking.ConnectionCentral.Start
+  id: Start
+  parent: PSTk.Networking.ConnectionCentral
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ConnectionCentral.Start()
+  fullName: PSTk.Networking.ConnectionCentral.Start()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionCentral.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Start
+    path: ../PSTk.Networking/ConnectionCentral.cs
+    startLine: 96
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nStart listening for new clients.\n"
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: PSTk.Networking.ConnectionCentral.Start*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.ConnectionCentral.Stop
+  commentId: M:PSTk.Networking.ConnectionCentral.Stop
+  id: Stop
+  parent: PSTk.Networking.ConnectionCentral
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: ConnectionCentral.Stop()
+  fullName: PSTk.Networking.ConnectionCentral.Stop()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionCentral.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Stop
+    path: ../PSTk.Networking/ConnectionCentral.cs
+    startLine: 114
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nStop listening for new clients.\n"
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: PSTk.Networking.ConnectionCentral.Stop*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PSTk.Networking.ConnectionType
+  commentId: T:PSTk.Networking.ConnectionType
+  parent: PSTk.Networking
+  name: ConnectionType
+  nameWithType: ConnectionType
+  fullName: PSTk.Networking.ConnectionType
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+- uid: PSTk.Networking
+  commentId: N:PSTk.Networking
+  name: PSTk.Networking
+  nameWithType: PSTk.Networking
+  fullName: PSTk.Networking
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PSTk.Networking.ConnectionCentral.#ctor*
+  commentId: Overload:PSTk.Networking.ConnectionCentral.#ctor
+  name: ConnectionCentral
+  nameWithType: ConnectionCentral.ConnectionCentral
+  fullName: PSTk.Networking.ConnectionCentral.ConnectionCentral
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  name: Action<String>
+  nameWithType: Action<String>
+  fullName: System.Action<System.String>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of System.String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Networking.ConnectionFlag
+  commentId: T:PSTk.Networking.ConnectionFlag
+  parent: PSTk.Networking
+  name: ConnectionFlag
+  nameWithType: ConnectionFlag
+  fullName: PSTk.Networking.ConnectionFlag
+- uid: PSTk.Networking.ConnectionCentral.GetFlag*
+  commentId: Overload:PSTk.Networking.ConnectionCentral.GetFlag
+  name: GetFlag
+  nameWithType: ConnectionCentral.GetFlag
+  fullName: PSTk.Networking.ConnectionCentral.GetFlag
+- uid: PSTk.Networking.InboundConnection
+  commentId: T:PSTk.Networking.InboundConnection
+  parent: PSTk.Networking
+  name: InboundConnection
+  nameWithType: InboundConnection
+  fullName: PSTk.Networking.InboundConnection
+- uid: System.Net.IPAddress
+  commentId: T:System.Net.IPAddress
+  parent: System.Net
+  isExternal: true
+  name: IPAddress
+  nameWithType: IPAddress
+  fullName: System.Net.IPAddress
+- uid: PSTk.Networking.ConnectionCentral.MaxInboundConnectionsByIp*
+  commentId: Overload:PSTk.Networking.ConnectionCentral.MaxInboundConnectionsByIp
+  name: MaxInboundConnectionsByIp
+  nameWithType: ConnectionCentral.MaxInboundConnectionsByIp
+  fullName: PSTk.Networking.ConnectionCentral.MaxInboundConnectionsByIp
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: PSTk.Networking.InboundPacket
+  commentId: T:PSTk.Networking.InboundPacket
+  name: InboundPacket
+  nameWithType: InboundPacket
+  fullName: PSTk.Networking.InboundPacket
+- uid: PSTk.Networking.ConnectionCentral.GetAllInboundPackets*
+  commentId: Overload:PSTk.Networking.ConnectionCentral.GetAllInboundPackets
+  name: GetAllInboundPackets
+  nameWithType: ConnectionCentral.GetAllInboundPackets
+  fullName: PSTk.Networking.ConnectionCentral.GetAllInboundPackets
+- uid: PSTk.Networking.InboundPacket[][]
+  isExternal: true
+  name: InboundPacket[][]
+  nameWithType: InboundPacket[][]
+  fullName: PSTk.Networking.InboundPacket[][]
+  nameWithType.vb: InboundPacket()()
+  fullName.vb: PSTk.Networking.InboundPacket()()
+  name.vb: InboundPacket()()
+  spec.csharp:
+  - uid: PSTk.Networking.InboundPacket
+    name: InboundPacket
+    nameWithType: InboundPacket
+    fullName: PSTk.Networking.InboundPacket
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: PSTk.Networking.InboundPacket
+    name: InboundPacket
+    nameWithType: InboundPacket
+    fullName: PSTk.Networking.InboundPacket
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: PSTk.Networking.ConnectionCentral.Start*
+  commentId: Overload:PSTk.Networking.ConnectionCentral.Start
+  name: Start
+  nameWithType: ConnectionCentral.Start
+  fullName: PSTk.Networking.ConnectionCentral.Start
+- uid: PSTk.Networking.ConnectionCentral.Stop*
+  commentId: Overload:PSTk.Networking.ConnectionCentral.Stop
+  name: Stop
+  nameWithType: ConnectionCentral.Stop
+  fullName: PSTk.Networking.ConnectionCentral.Stop

@@ -1,0 +1,604 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Networking.InboundTraffic
+  commentId: T:PSTk.Networking.InboundTraffic
+  id: InboundTraffic
+  parent: PSTk.Networking
+  children:
+  - PSTk.Networking.InboundTraffic.#ctor(System.Net.EndPoint,System.UInt16)
+  - PSTk.Networking.InboundTraffic.Dequeue
+  - PSTk.Networking.InboundTraffic.EndPoint
+  - PSTk.Networking.InboundTraffic.Enqueue(System.Int32)
+  - PSTk.Networking.InboundTraffic.HasPackets
+  langs:
+  - csharp
+  - vb
+  name: InboundTraffic
+  nameWithType: InboundTraffic
+  fullName: PSTk.Networking.InboundTraffic
+  type: Class
+  source:
+    remote:
+      path: PSTk.Networking/InboundTraffic.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: InboundTraffic
+    path: ../PSTk.Networking/InboundTraffic.cs
+    startLine: 9
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRepresents an inbound traffic from <xref href=\"PSTk.Networking.InboundConnection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete]
+
+      public class InboundTraffic
+    content.vb: >-
+      <Obsolete>
+
+      Public Class InboundTraffic
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PSTk.Networking.InboundTraffic.#ctor(System.Net.EndPoint,System.UInt16)
+  commentId: M:PSTk.Networking.InboundTraffic.#ctor(System.Net.EndPoint,System.UInt16)
+  id: '#ctor(System.Net.EndPoint,System.UInt16)'
+  parent: PSTk.Networking.InboundTraffic
+  langs:
+  - csharp
+  - vb
+  name: InboundTraffic(EndPoint, UInt16)
+  nameWithType: InboundTraffic.InboundTraffic(EndPoint, UInt16)
+  fullName: PSTk.Networking.InboundTraffic.InboundTraffic(System.Net.EndPoint, System.UInt16)
+  type: Constructor
+  source:
+    remote:
+      path: PSTk.Networking/InboundTraffic.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: .ctor
+    path: ../PSTk.Networking/InboundTraffic.cs
+    startLine: 18
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  syntax:
+    content: public InboundTraffic(EndPoint endPoint, ushort maxPackets)
+    parameters:
+    - id: endPoint
+      type: System.Net.EndPoint
+    - id: maxPackets
+      type: System.UInt16
+    content.vb: Public Sub New(endPoint As EndPoint, maxPackets As UShort)
+  overload: PSTk.Networking.InboundTraffic.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.InboundTraffic.EndPoint
+  commentId: P:PSTk.Networking.InboundTraffic.EndPoint
+  id: EndPoint
+  parent: PSTk.Networking.InboundTraffic
+  langs:
+  - csharp
+  - vb
+  name: EndPoint
+  nameWithType: InboundTraffic.EndPoint
+  fullName: PSTk.Networking.InboundTraffic.EndPoint
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/InboundTraffic.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: EndPoint
+    path: ../PSTk.Networking/InboundTraffic.cs
+    startLine: 37
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGets the network address of <xref href=\"PSTk.Networking.InboundConnection\" data-throw-if-not-resolved=\"false\"></xref> traffic.\n"
+  example: []
+  syntax:
+    content: public EndPoint EndPoint { get; }
+    parameters: []
+    return:
+      type: System.Net.EndPoint
+    content.vb: Public ReadOnly Property EndPoint As EndPoint
+  overload: PSTk.Networking.InboundTraffic.EndPoint*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.InboundTraffic.HasPackets
+  commentId: P:PSTk.Networking.InboundTraffic.HasPackets
+  id: HasPackets
+  parent: PSTk.Networking.InboundTraffic
+  langs:
+  - csharp
+  - vb
+  name: HasPackets
+  nameWithType: InboundTraffic.HasPackets
+  fullName: PSTk.Networking.InboundTraffic.HasPackets
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/InboundTraffic.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: HasPackets
+    path: ../PSTk.Networking/InboundTraffic.cs
+    startLine: 42
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nCheck if contains pending packets.\n"
+  example: []
+  syntax:
+    content: public bool HasPackets { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasPackets As Boolean
+  overload: PSTk.Networking.InboundTraffic.HasPackets*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.InboundTraffic.Dequeue
+  commentId: M:PSTk.Networking.InboundTraffic.Dequeue
+  id: Dequeue
+  parent: PSTk.Networking.InboundTraffic
+  langs:
+  - csharp
+  - vb
+  name: Dequeue()
+  nameWithType: InboundTraffic.Dequeue()
+  fullName: PSTk.Networking.InboundTraffic.Dequeue()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundTraffic.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Dequeue
+    path: ../PSTk.Networking/InboundTraffic.cs
+    startLine: 48
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nDequeue a pending packet data from <xref href=\"PSTk.Networking.InboundConnection\" data-throw-if-not-resolved=\"false\"></xref> traffic.\n"
+  example: []
+  syntax:
+    content: public int Dequeue()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Function Dequeue As Integer
+  overload: PSTk.Networking.InboundTraffic.Dequeue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.InboundTraffic.Enqueue(System.Int32)
+  commentId: M:PSTk.Networking.InboundTraffic.Enqueue(System.Int32)
+  id: Enqueue(System.Int32)
+  parent: PSTk.Networking.InboundTraffic
+  langs:
+  - csharp
+  - vb
+  name: Enqueue(Int32)
+  nameWithType: InboundTraffic.Enqueue(Int32)
+  fullName: PSTk.Networking.InboundTraffic.Enqueue(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundTraffic.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Enqueue
+    path: ../PSTk.Networking/InboundTraffic.cs
+    startLine: 54
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nEnqueue to pending packet datas of <xref href=\"PSTk.Networking.InboundConnection\" data-throw-if-not-resolved=\"false\"></xref> traffic.\n"
+  example: []
+  syntax:
+    content: public void Enqueue(int packetData)
+    parameters:
+    - id: packetData
+      type: System.Int32
+      description: ''
+    content.vb: Public Sub Enqueue(packetData As Integer)
+  overload: PSTk.Networking.InboundTraffic.Enqueue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PSTk.Networking.InboundConnection
+  commentId: T:PSTk.Networking.InboundConnection
+  parent: PSTk.Networking
+  name: InboundConnection
+  nameWithType: InboundConnection
+  fullName: PSTk.Networking.InboundConnection
+- uid: PSTk.Networking
+  commentId: N:PSTk.Networking
+  name: PSTk.Networking
+  nameWithType: PSTk.Networking
+  fullName: PSTk.Networking
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PSTk.Networking.InboundTraffic.#ctor*
+  commentId: Overload:PSTk.Networking.InboundTraffic.#ctor
+  name: InboundTraffic
+  nameWithType: InboundTraffic.InboundTraffic
+  fullName: PSTk.Networking.InboundTraffic.InboundTraffic
+- uid: System.Net.EndPoint
+  commentId: T:System.Net.EndPoint
+  parent: System.Net
+  isExternal: true
+  name: EndPoint
+  nameWithType: EndPoint
+  fullName: System.Net.EndPoint
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: PSTk.Networking.InboundTraffic.EndPoint*
+  commentId: Overload:PSTk.Networking.InboundTraffic.EndPoint
+  name: EndPoint
+  nameWithType: InboundTraffic.EndPoint
+  fullName: PSTk.Networking.InboundTraffic.EndPoint
+- uid: PSTk.Networking.InboundTraffic.HasPackets*
+  commentId: Overload:PSTk.Networking.InboundTraffic.HasPackets
+  name: HasPackets
+  nameWithType: InboundTraffic.HasPackets
+  fullName: PSTk.Networking.InboundTraffic.HasPackets
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PSTk.Networking.InboundTraffic.Dequeue*
+  commentId: Overload:PSTk.Networking.InboundTraffic.Dequeue
+  name: Dequeue
+  nameWithType: InboundTraffic.Dequeue
+  fullName: PSTk.Networking.InboundTraffic.Dequeue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PSTk.Networking.InboundTraffic.Enqueue*
+  commentId: Overload:PSTk.Networking.InboundTraffic.Enqueue
+  name: Enqueue
+  nameWithType: InboundTraffic.Enqueue
+  fullName: PSTk.Networking.InboundTraffic.Enqueue

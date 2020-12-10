@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Networking.Utils
+  commentId: N:PSTk.Networking.Utils
+  id: PSTk.Networking.Utils
+  children:
+  - PSTk.Networking.Utils.ConnectionUtils
+  langs:
+  - csharp
+  - vb
+  name: PSTk.Networking.Utils
+  nameWithType: PSTk.Networking.Utils
+  fullName: PSTk.Networking.Utils
+  type: Namespace
+  assemblies:
+  - PSTk.Networking
+references:
+- uid: PSTk.Networking.Utils.ConnectionUtils
+  commentId: T:PSTk.Networking.Utils.ConnectionUtils
+  name: ConnectionUtils
+  nameWithType: ConnectionUtils
+  fullName: PSTk.Networking.Utils.ConnectionUtils

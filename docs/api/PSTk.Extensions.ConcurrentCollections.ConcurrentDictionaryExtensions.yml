@@ -1,0 +1,1819 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  commentId: T:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  id: ConcurrentDictionaryExtensions
+  parent: PSTk.Extensions.ConcurrentCollections
+  children:
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0})
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0})
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1},``0@)
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0},``1@)
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0[])
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  langs:
+  - csharp
+  - vb
+  name: ConcurrentDictionaryExtensions
+  nameWithType: ConcurrentDictionaryExtensions
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  type: Class
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ConcurrentDictionaryExtensions
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 10
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nContains <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602\" data-throw-if-not-resolved=\"false\"></xref> utilities.\n"
+  example: []
+  syntax:
+    content: public static class ConcurrentDictionaryExtensions
+    content.vb: Public Module ConcurrentDictionaryExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})
+  id: EntryWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: EntryWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, Boolean>)
+  nameWithType: ConcurrentDictionaryExtensions.EntryWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, Boolean>)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Func<System.Collections.Generic.KeyValuePair<TKey, TValue>, System.Boolean>)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: EntryWhere
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 22
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nProvides a predicate check from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602\" data-throw-if-not-resolved=\"false\"></xref> entries,\nbut rather than create a new collection, it&apos;ll do a loop through exist entries.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<KeyValuePair<TKey, TValue>> EntryWhere<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Func<KeyValuePair<TKey, TValue>, bool> predicate)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Func{System.Collections.Generic.KeyValuePair{{TKey},{TValue}},System.Boolean}
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function EntryWhere(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Func(Of KeyValuePair(Of TKey, TValue), Boolean)) As IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.EntryWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), Boolean))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Func(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue), System.Boolean))
+  name.vb: EntryWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), Boolean))
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})
+  id: EntryWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean})
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: EntryWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, Boolean>)
+  nameWithType: ConcurrentDictionaryExtensions.EntryWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, Boolean>)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Func<System.Collections.Generic.KeyValuePair<TKey, TValue>, System.Boolean>)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: EntryWhereAsParallel
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 43
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nProvides a predicate check from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602\" data-throw-if-not-resolved=\"false\"></xref> entries,\nbut rather than create a new collection, it&apos;ll do a loop through exist entries in parallel.\n"
+  example: []
+  syntax:
+    content: public static KeyValuePair<TKey, TValue>[] EntryWhereAsParallel<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Func<KeyValuePair<TKey, TValue>, bool> predicate)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Func{System.Collections.Generic.KeyValuePair{{TKey},{TValue}},System.Boolean}
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}[]
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function EntryWhereAsParallel(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Func(Of KeyValuePair(Of TKey, TValue), Boolean)) As KeyValuePair(Of TKey, TValue)()
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.EntryWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), Boolean))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Func(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue), System.Boolean))
+  name.vb: EntryWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), Boolean))
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  id: KeyFromValueWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: KeyFromValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  nameWithType: ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Predicate<TValue>)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: KeyFromValueWhereAsParallel
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 60
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nTry to get all occurrency values from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Keys\" data-throw-if-not-resolved=\"false\"></xref> entries.\n"
+  example: []
+  syntax:
+    content: public static TKey[] KeyFromValueWhereAsParallel<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Predicate<TValue> predicate)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Predicate{{TValue}}
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: '{TKey}[]'
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function KeyFromValueWhereAsParallel(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Predicate(Of TValue)) As TKey()
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Predicate(Of TValue))
+  name.vb: KeyFromValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0})
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0})
+  id: KeyWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0})
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: KeyWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
+  nameWithType: ConcurrentDictionaryExtensions.KeyWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Predicate<TKey>)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: KeyWhere
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 82
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nProvides a predicate check from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Keys\" data-throw-if-not-resolved=\"false\"></xref> entries,\nbut rather than create a new collection, it&apos;ll do a loop through exist keys.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<TKey> KeyWhere<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Predicate<TKey> predicate)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Predicate{{TKey}}
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: System.Collections.Generic.IEnumerable{{TKey}}
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function KeyWhere(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Predicate(Of TKey)) As IEnumerable(Of TKey)
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.KeyWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Predicate(Of TKey))
+  name.vb: KeyWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0})
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0})
+  id: KeyWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0})
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: KeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
+  nameWithType: ConcurrentDictionaryExtensions.KeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Predicate<TKey>)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: KeyWhereAsParallel
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 103
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nProvides a predicate check from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Keys\" data-throw-if-not-resolved=\"false\"></xref> entries,\nbut rather than create a new collection, it&apos;ll do a loop through exist keys in parallel.\n"
+  example: []
+  syntax:
+    content: public static TKey[] KeyWhereAsParallel<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Predicate<TKey> predicate)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Predicate{{TKey}}
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: '{TKey}[]'
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function KeyWhereAsParallel(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Predicate(Of TKey)) As TKey()
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.KeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Predicate(Of TKey))
+  name.vb: KeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1},``0@)
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1},``0@)
+  id: TryGetKeySingle``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1},``0@)
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetKeySingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>, out TKey)
+  nameWithType: ConcurrentDictionaryExtensions.TryGetKeySingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>, out TKey)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Predicate<TValue>, out TKey)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: TryGetKeySingle
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 121
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nTry to get a first and single occurrency key from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Keys\" data-throw-if-not-resolved=\"false\"></xref> entries.\n"
+  example: []
+  syntax:
+    content: public static bool TryGetKeySingle<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Predicate<TValue> predicate, out TKey key)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Predicate{{TValue}}
+      description: ''
+    - id: key
+      type: '{TKey}'
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function TryGetKeySingle(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Predicate(Of TValue), ByRef key As TKey) As Boolean
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.TryGetKeySingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue), ByRef TKey)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Predicate(Of TValue), ByRef TKey)
+  name.vb: TryGetKeySingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue), ByRef TKey)
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0},``1@)
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0},``1@)
+  id: TryGetValueSingle``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``0},``1@)
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetValueSingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>, out TValue)
+  nameWithType: ConcurrentDictionaryExtensions.TryGetValueSingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>, out TValue)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Predicate<TKey>, out TValue)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: TryGetValueSingle
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 147
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nTry to get a first and single occurrency value from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Values\" data-throw-if-not-resolved=\"false\"></xref> entries.\n"
+  example: []
+  syntax:
+    content: public static bool TryGetValueSingle<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Predicate<TKey> predicate, out TValue value)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Predicate{{TKey}}
+      description: ''
+    - id: value
+      type: '{TValue}'
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function TryGetValueSingle(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Predicate(Of TKey), ByRef value As TValue) As Boolean
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.TryGetValueSingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey), ByRef TValue)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Predicate(Of TKey), ByRef TValue)
+  name.vb: TryGetValueSingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey), ByRef TValue)
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0[])
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0[])
+  id: TryRemoveRange``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0[])
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryRemoveRange<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, TKey[])
+  nameWithType: ConcurrentDictionaryExtensions.TryRemoveRange<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, TKey[])
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, TKey[])
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: TryRemoveRange
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 170
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nTry to remove all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Values\" data-throw-if-not-resolved=\"false\"></xref> using <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove(%600%2c%601%40)\" data-throw-if-not-resolved=\"false\"></xref>\niteration loop for each key in <code data-dev-comment-type=\"paramref\" class=\"paramref\">collection</code>.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<bool> TryRemoveRange<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, TKey[] keys)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: keys
+      type: '{TKey}[]'
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Boolean}
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function TryRemoveRange(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), keys As TKey()) As IEnumerable(Of Boolean)
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.TryRemoveRange(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), TKey())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), TKey())
+  name.vb: TryRemoveRange(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), TKey())
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  id: ValueFromKeyWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: ValueFromKeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  nameWithType: ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Predicate<TValue>)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ValueFromKeyWhereAsParallel
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 188
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nTry to get all occurrency values from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Values\" data-throw-if-not-resolved=\"false\"></xref> entries.\n"
+  example: []
+  syntax:
+    content: public static TValue[] ValueFromKeyWhereAsParallel<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Predicate<TValue> predicate)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Predicate{{TValue}}
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: '{TValue}[]'
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ValueFromKeyWhereAsParallel(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Predicate(Of TValue)) As TValue()
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Predicate(Of TValue))
+  name.vb: ValueFromKeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  id: ValueWhere``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: ValueWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  nameWithType: ConcurrentDictionaryExtensions.ValueWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Predicate<TValue>)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ValueWhere
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 210
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nProvides a predicate check from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Values\" data-throw-if-not-resolved=\"false\"></xref> entries,\nbut rather than create a new collection, it&apos;ll do a loop through exist values.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<TValue> ValueWhere<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Predicate<TValue> predicate)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Predicate{{TValue}}
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: System.Collections.Generic.IEnumerable{{TValue}}
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ValueWhere(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Predicate(Of TValue)) As IEnumerable(Of TValue)
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.ValueWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Predicate(Of TValue))
+  name.vb: ValueWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  id: ValueWhereAsParallel``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Predicate{``1})
+  isExtensionMethod: true
+  parent: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: ValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  nameWithType: ConcurrentDictionaryExtensions.ValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Predicate<TValue>)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ValueWhereAsParallel
+    path: ../PSTk.Extensions/ConcurrentCollections/ConcurrentDictionaryExtensions.cs
+    startLine: 231
+  assemblies:
+  - PSTk.Extensions
+  namespace: PSTk.Extensions.ConcurrentCollections
+  summary: "\nProvides a predicate check from all <xref href=\"System.Collections.Concurrent.ConcurrentDictionary%602.Values\" data-throw-if-not-resolved=\"false\"></xref> entries,\nbut rather than create a new collection, it&apos;ll do a loop through exist values in parallel.\n"
+  example: []
+  syntax:
+    content: public static TValue[] ValueWhereAsParallel<TKey, TValue>(this ConcurrentDictionary<TKey, TValue> collection, Predicate<TValue> predicate)
+    parameters:
+    - id: collection
+      type: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+      description: ''
+    - id: predicate
+      type: System.Predicate{{TValue}}
+      description: ''
+    typeParameters:
+    - id: TKey
+      description: ''
+    - id: TValue
+      description: ''
+    return:
+      type: '{TValue}[]'
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ValueWhereAsParallel(Of TKey, TValue)(collection As ConcurrentDictionary(Of TKey, TValue), predicate As Predicate(Of TValue)) As TValue()
+  overload: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  nameWithType.vb: ConcurrentDictionaryExtensions.ValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Predicate(Of TValue))
+  name.vb: ValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+references:
+- uid: System.Collections.Concurrent.ConcurrentDictionary`2
+  commentId: T:System.Collections.Concurrent.ConcurrentDictionary`2
+  isExternal: true
+  name: ConcurrentDictionary<TKey, TValue>
+  nameWithType: ConcurrentDictionary<TKey, TValue>
+  fullName: System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>
+  nameWithType.vb: ConcurrentDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue)
+  name.vb: ConcurrentDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    nameWithType: ConcurrentDictionary
+    fullName: System.Collections.Concurrent.ConcurrentDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    nameWithType: ConcurrentDictionary
+    fullName: System.Collections.Concurrent.ConcurrentDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Extensions.ConcurrentCollections
+  commentId: N:PSTk.Extensions.ConcurrentCollections
+  name: PSTk.Extensions.ConcurrentCollections
+  nameWithType: PSTk.Extensions.ConcurrentCollections
+  fullName: PSTk.Extensions.ConcurrentCollections
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere
+  name: EntryWhere
+  nameWithType: ConcurrentDictionaryExtensions.EntryWhere
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere
+- uid: System.Collections.Concurrent.ConcurrentDictionary{{TKey},{TValue}}
+  commentId: T:System.Collections.Concurrent.ConcurrentDictionary{``0,``1}
+  parent: System.Collections.Concurrent
+  definition: System.Collections.Concurrent.ConcurrentDictionary`2
+  name: ConcurrentDictionary<TKey, TValue>
+  nameWithType: ConcurrentDictionary<TKey, TValue>
+  fullName: System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>
+  nameWithType.vb: ConcurrentDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue)
+  name.vb: ConcurrentDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    nameWithType: ConcurrentDictionary
+    fullName: System.Collections.Concurrent.ConcurrentDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    nameWithType: ConcurrentDictionary
+    fullName: System.Collections.Concurrent.ConcurrentDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func{System.Collections.Generic.KeyValuePair{{TKey},{TValue}},System.Boolean}
+  commentId: T:System.Func{System.Collections.Generic.KeyValuePair{``0,``1},System.Boolean}
+  parent: System
+  definition: System.Func`2
+  name: Func<KeyValuePair<TKey, TValue>, Boolean>
+  nameWithType: Func<KeyValuePair<TKey, TValue>, Boolean>
+  fullName: System.Func<System.Collections.Generic.KeyValuePair<TKey, TValue>, System.Boolean>
+  nameWithType.vb: Func(Of KeyValuePair(Of TKey, TValue), Boolean)
+  fullName.vb: System.Func(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue), System.Boolean)
+  name.vb: Func(Of KeyValuePair(Of TKey, TValue), Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{{TKey},{TValue}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<KeyValuePair<TKey, TValue>>
+  nameWithType: IEnumerable<KeyValuePair<TKey, TValue>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey, TValue>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of TKey, TValue))
+  name.vb: IEnumerable(Of KeyValuePair(Of TKey, TValue))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Concurrent
+  commentId: N:System.Collections.Concurrent
+  isExternal: true
+  name: System.Collections.Concurrent
+  nameWithType: System.Collections.Concurrent
+  fullName: System.Collections.Concurrent
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel
+  name: EntryWhereAsParallel
+  nameWithType: ConcurrentDictionaryExtensions.EntryWhereAsParallel
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel
+- uid: System.Collections.Generic.KeyValuePair{{TKey},{TValue}}[]
+  isExternal: true
+  name: KeyValuePair<TKey, TValue>[]
+  nameWithType: KeyValuePair<TKey, TValue>[]
+  fullName: System.Collections.Generic.KeyValuePair<TKey, TValue>[]
+  nameWithType.vb: KeyValuePair(Of TKey, TValue)()
+  fullName.vb: System.Collections.Generic.KeyValuePair(Of TKey, TValue)()
+  name.vb: KeyValuePair(Of TKey, TValue)()
+  spec.csharp:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Collections.Concurrent.ConcurrentDictionary`2.Keys
+  commentId: P:System.Collections.Concurrent.ConcurrentDictionary`2.Keys
+  isExternal: true
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel
+  name: KeyFromValueWhereAsParallel
+  nameWithType: ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel
+- uid: System.Predicate{{TValue}}
+  commentId: T:System.Predicate{``1}
+  parent: System
+  definition: System.Predicate`1
+  name: Predicate<TValue>
+  nameWithType: Predicate<TValue>
+  fullName: System.Predicate<TValue>
+  nameWithType.vb: Predicate(Of TValue)
+  fullName.vb: System.Predicate(Of TValue)
+  name.vb: Predicate(Of TValue)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    nameWithType: Predicate
+    fullName: System.Predicate
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    nameWithType: Predicate
+    fullName: System.Predicate
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TKey}[]'
+  isExternal: true
+  name: TKey[]
+  nameWithType: TKey[]
+  fullName: TKey[]
+  nameWithType.vb: TKey()
+  fullName.vb: TKey()
+  name.vb: TKey()
+  spec.csharp:
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Predicate`1
+  commentId: T:System.Predicate`1
+  isExternal: true
+  name: Predicate<T>
+  nameWithType: Predicate<T>
+  fullName: System.Predicate<T>
+  nameWithType.vb: Predicate(Of T)
+  fullName.vb: System.Predicate(Of T)
+  name.vb: Predicate(Of T)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    nameWithType: Predicate
+    fullName: System.Predicate
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    nameWithType: Predicate
+    fullName: System.Predicate
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere
+  name: KeyWhere
+  nameWithType: ConcurrentDictionaryExtensions.KeyWhere
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere
+- uid: System.Predicate{{TKey}}
+  commentId: T:System.Predicate{``0}
+  parent: System
+  definition: System.Predicate`1
+  name: Predicate<TKey>
+  nameWithType: Predicate<TKey>
+  fullName: System.Predicate<TKey>
+  nameWithType.vb: Predicate(Of TKey)
+  fullName.vb: System.Predicate(Of TKey)
+  name.vb: Predicate(Of TKey)
+  spec.csharp:
+  - uid: System.Predicate`1
+    name: Predicate
+    nameWithType: Predicate
+    fullName: System.Predicate
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Predicate`1
+    name: Predicate
+    nameWithType: Predicate
+    fullName: System.Predicate
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{{TKey}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TKey>
+  nameWithType: IEnumerable<TKey>
+  fullName: System.Collections.Generic.IEnumerable<TKey>
+  nameWithType.vb: IEnumerable(Of TKey)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TKey)
+  name.vb: IEnumerable(Of TKey)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel
+  name: KeyWhereAsParallel
+  nameWithType: ConcurrentDictionaryExtensions.KeyWhereAsParallel
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle
+  name: TryGetKeySingle
+  nameWithType: ConcurrentDictionaryExtensions.TryGetKeySingle
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle
+- uid: '{TKey}'
+  commentId: '!:TKey'
+  definition: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TKey
+  commentId: '!:TKey'
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: System.Collections.Concurrent.ConcurrentDictionary`2.Values
+  commentId: P:System.Collections.Concurrent.ConcurrentDictionary`2.Values
+  isExternal: true
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle
+  name: TryGetValueSingle
+  nameWithType: ConcurrentDictionaryExtensions.TryGetValueSingle
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle
+- uid: '{TValue}'
+  commentId: '!:TValue'
+  definition: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: TValue
+  commentId: '!:TValue'
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: System.Collections.Concurrent.ConcurrentDictionary`2.TryRemove(`0,`1@)
+  commentId: M:System.Collections.Concurrent.ConcurrentDictionary`2.TryRemove(`0,`1@)
+  isExternal: true
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange
+  name: TryRemoveRange
+  nameWithType: ConcurrentDictionaryExtensions.TryRemoveRange
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange
+- uid: System.Collections.Generic.IEnumerable{System.Boolean}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Boolean}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Boolean>
+  nameWithType: IEnumerable<Boolean>
+  fullName: System.Collections.Generic.IEnumerable<System.Boolean>
+  nameWithType.vb: IEnumerable(Of Boolean)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Boolean)
+  name.vb: IEnumerable(Of Boolean)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel
+  name: ValueFromKeyWhereAsParallel
+  nameWithType: ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel
+- uid: '{TValue}[]'
+  isExternal: true
+  name: TValue[]
+  nameWithType: TValue[]
+  fullName: TValue[]
+  nameWithType.vb: TValue()
+  fullName.vb: TValue()
+  name.vb: TValue()
+  spec.csharp:
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere
+  name: ValueWhere
+  nameWithType: ConcurrentDictionaryExtensions.ValueWhere
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere
+- uid: System.Collections.Generic.IEnumerable{{TValue}}
+  commentId: T:System.Collections.Generic.IEnumerable{``1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TValue>
+  nameWithType: IEnumerable<TValue>
+  fullName: System.Collections.Generic.IEnumerable<TValue>
+  nameWithType.vb: IEnumerable(Of TValue)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TValue)
+  name.vb: IEnumerable(Of TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel*
+  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel
+  name: ValueWhereAsParallel
+  nameWithType: ConcurrentDictionaryExtensions.ValueWhereAsParallel
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel

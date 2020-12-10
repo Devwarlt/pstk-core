@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Diagnostics
+  commentId: N:PSTk.Diagnostics
+  id: PSTk.Diagnostics
+  children:
+  - PSTk.Diagnostics.TimedProfiler
+  langs:
+  - csharp
+  - vb
+  name: PSTk.Diagnostics
+  nameWithType: PSTk.Diagnostics
+  fullName: PSTk.Diagnostics
+  type: Namespace
+  assemblies:
+  - PSTk.Diagnostics
+references:
+- uid: PSTk.Diagnostics.TimedProfiler
+  commentId: T:PSTk.Diagnostics.TimedProfiler
+  name: TimedProfiler
+  nameWithType: TimedProfiler
+  fullName: PSTk.Diagnostics.TimedProfiler

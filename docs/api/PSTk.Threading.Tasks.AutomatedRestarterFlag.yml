@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarterFlag
+  id: AutomatedRestarterFlag
+  parent: PSTk.Threading.Tasks
+  children:
+  - PSTk.Threading.Tasks.AutomatedRestarterFlag.Idle
+  - PSTk.Threading.Tasks.AutomatedRestarterFlag.Running
+  - PSTk.Threading.Tasks.AutomatedRestarterFlag.Stopped
+  langs:
+  - csharp
+  - vb
+  name: AutomatedRestarterFlag
+  nameWithType: AutomatedRestarterFlag
+  fullName: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  type: Enum
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarterFlag.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: AutomatedRestarterFlag
+    path: ../PSTk.Threading/Tasks/AutomatedRestarterFlag.cs
+    startLine: 7
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nRepresents current flag of <xref href=\"PSTk.Threading.Tasks.AutomatedRestarter\" data-throw-if-not-resolved=\"false\"></xref> routine.\n"
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum AutomatedRestarterFlag
+    content.vb: >-
+      <Flags>
+
+      Public Enum AutomatedRestarterFlag
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PSTk.Threading.Tasks.AutomatedRestarterFlag.Idle
+  commentId: F:PSTk.Threading.Tasks.AutomatedRestarterFlag.Idle
+  id: Idle
+  parent: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  langs:
+  - csharp
+  - vb
+  name: Idle
+  nameWithType: AutomatedRestarterFlag.Idle
+  fullName: PSTk.Threading.Tasks.AutomatedRestarterFlag.Idle
+  type: Field
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarterFlag.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Idle
+    path: ../PSTk.Threading/Tasks/AutomatedRestarterFlag.cs
+    startLine: 13
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nWhen routine is idle.\n"
+  example: []
+  syntax:
+    content: Idle = 0
+    return:
+      type: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Threading.Tasks.AutomatedRestarterFlag.Running
+  commentId: F:PSTk.Threading.Tasks.AutomatedRestarterFlag.Running
+  id: Running
+  parent: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  langs:
+  - csharp
+  - vb
+  name: Running
+  nameWithType: AutomatedRestarterFlag.Running
+  fullName: PSTk.Threading.Tasks.AutomatedRestarterFlag.Running
+  type: Field
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarterFlag.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Running
+    path: ../PSTk.Threading/Tasks/AutomatedRestarterFlag.cs
+    startLine: 18
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nWhen routine invoked <xref href=\"PSTk.Threading.Tasks.AutomatedRestarter.Start\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Running = 1
+    return:
+      type: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Threading.Tasks.AutomatedRestarterFlag.Stopped
+  commentId: F:PSTk.Threading.Tasks.AutomatedRestarterFlag.Stopped
+  id: Stopped
+  parent: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  langs:
+  - csharp
+  - vb
+  name: Stopped
+  nameWithType: AutomatedRestarterFlag.Stopped
+  fullName: PSTk.Threading.Tasks.AutomatedRestarterFlag.Stopped
+  type: Field
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/AutomatedRestarterFlag.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Stopped
+    path: ../PSTk.Threading/Tasks/AutomatedRestarterFlag.cs
+    startLine: 23
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nWhen routine invoked <xref href=\"PSTk.Threading.Tasks.AutomatedRestarter.Stop(System.Boolean)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Stopped = 2
+    return:
+      type: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PSTk.Threading.Tasks.AutomatedRestarter
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarter
+  name: AutomatedRestarter
+  nameWithType: AutomatedRestarter
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter
+- uid: PSTk.Threading.Tasks
+  commentId: N:PSTk.Threading.Tasks
+  name: PSTk.Threading.Tasks
+  nameWithType: PSTk.Threading.Tasks
+  fullName: PSTk.Threading.Tasks
+- uid: PSTk.Threading.Tasks.AutomatedRestarterFlag
+  commentId: T:PSTk.Threading.Tasks.AutomatedRestarterFlag
+  parent: PSTk.Threading.Tasks
+  name: AutomatedRestarterFlag
+  nameWithType: AutomatedRestarterFlag
+  fullName: PSTk.Threading.Tasks.AutomatedRestarterFlag
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.Start
+  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.Start
+  isExternal: true
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.Stop(System.Boolean)
+  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.Stop(System.Boolean)
+  isExternal: true

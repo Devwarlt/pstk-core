@@ -1,0 +1,561 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs
+  commentId: T:PSTk.Threading.Tasks.InternalRoutineEventArgs
+  id: InternalRoutineEventArgs
+  parent: PSTk.Threading.Tasks
+  children:
+  - PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int32,System.Int32,System.Int32)
+  - PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta
+  - PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond
+  - PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout
+  langs:
+  - csharp
+  - vb
+  name: InternalRoutineEventArgs
+  nameWithType: InternalRoutineEventArgs
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs
+  type: Class
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: InternalRoutineEventArgs
+    path: ../PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+    startLine: 8
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nContains event arguments from <xref href=\"PSTk.Threading.Tasks.InternalRoutine.OnDeltaVariation\" data-throw-if-not-resolved=\"false\"></xref> event.\n"
+  example: []
+  syntax:
+    content: 'public class InternalRoutineEventArgs : EventArgs'
+    content.vb: >-
+      Public Class InternalRoutineEventArgs
+
+          Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int32,System.Int32,System.Int32)
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32)'
+  parent: PSTk.Threading.Tasks.InternalRoutineEventArgs
+  langs:
+  - csharp
+  - vb
+  name: InternalRoutineEventArgs(Int32, Int32, Int32)
+  nameWithType: InternalRoutineEventArgs.InternalRoutineEventArgs(Int32, Int32, Int32)
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.InternalRoutineEventArgs(System.Int32, System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: .ctor
+    path: ../PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+    startLine: 16
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nCreate a new instance of <xref href=\"PSTk.Threading.Tasks.InternalRoutineEventArgs\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public InternalRoutineEventArgs(int delta, int ticksPerSecond, int timeout)
+    parameters:
+    - id: delta
+      type: System.Int32
+      description: ''
+    - id: ticksPerSecond
+      type: System.Int32
+      description: ''
+    - id: timeout
+      type: System.Int32
+      description: ''
+    content.vb: Public Sub New(delta As Integer, ticksPerSecond As Integer, timeout As Integer)
+  overload: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta
+  id: Delta
+  parent: PSTk.Threading.Tasks.InternalRoutineEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Delta
+  nameWithType: InternalRoutineEventArgs.Delta
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Delta
+    path: ../PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+    startLine: 27
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nDelta variation of <xref href=\"PSTk.Threading.Tasks.InternalRoutine.routine\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int Delta { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Delta As Integer
+  overload: PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond
+  id: TicksPerSecond
+  parent: PSTk.Threading.Tasks.InternalRoutineEventArgs
+  langs:
+  - csharp
+  - vb
+  name: TicksPerSecond
+  nameWithType: InternalRoutineEventArgs.TicksPerSecond
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: TicksPerSecond
+    path: ../PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+    startLine: 32
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nTicks per second for <xref href=\"PSTk.Threading.Tasks.InternalRoutine.routine\" data-throw-if-not-resolved=\"false\"></xref> invoke on <xref href=\"System.Threading.Tasks.TaskScheduler\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int TicksPerSecond { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TicksPerSecond As Integer
+  overload: PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout
+  id: Timeout
+  parent: PSTk.Threading.Tasks.InternalRoutineEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: InternalRoutineEventArgs.Timeout
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout
+  type: Property
+  source:
+    remote:
+      path: PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Timeout
+    path: ../PSTk.Threading/Tasks/InternalRoutineEventArgs.cs
+    startLine: 37
+  assemblies:
+  - PSTk.Threading
+  namespace: PSTk.Threading.Tasks
+  summary: "\nTimeout in milliseconds for <xref href=\"PSTk.Threading.Tasks.InternalRoutine.routine\" data-throw-if-not-resolved=\"false\"></xref> invoke on <xref href=\"System.Threading.Tasks.TaskScheduler\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int Timeout { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Timeout As Integer
+  overload: PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: PSTk.Threading.Tasks.InternalRoutine.OnDeltaVariation
+  commentId: E:PSTk.Threading.Tasks.InternalRoutine.OnDeltaVariation
+  isExternal: true
+- uid: PSTk.Threading.Tasks
+  commentId: N:PSTk.Threading.Tasks
+  name: PSTk.Threading.Tasks
+  nameWithType: PSTk.Threading.Tasks
+  fullName: PSTk.Threading.Tasks
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs
+  commentId: T:PSTk.Threading.Tasks.InternalRoutineEventArgs
+  name: InternalRoutineEventArgs
+  nameWithType: InternalRoutineEventArgs
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor*
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor
+  name: InternalRoutineEventArgs
+  nameWithType: InternalRoutineEventArgs.InternalRoutineEventArgs
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.InternalRoutineEventArgs
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PSTk.Threading.Tasks.InternalRoutine.routine
+  commentId: F:PSTk.Threading.Tasks.InternalRoutine.routine
+  isExternal: true
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta*
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta
+  name: Delta
+  nameWithType: InternalRoutineEventArgs.Delta
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta
+- uid: System.Threading.Tasks.TaskScheduler
+  commentId: T:System.Threading.Tasks.TaskScheduler
+  isExternal: true
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond*
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond
+  name: TicksPerSecond
+  nameWithType: InternalRoutineEventArgs.TicksPerSecond
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout*
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout
+  name: Timeout
+  nameWithType: InternalRoutineEventArgs.Timeout
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout

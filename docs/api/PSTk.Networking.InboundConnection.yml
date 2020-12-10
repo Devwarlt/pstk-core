@@ -1,0 +1,1403 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Networking.InboundConnection
+  commentId: T:PSTk.Networking.InboundConnection
+  id: InboundConnection
+  parent: PSTk.Networking
+  children:
+  - PSTk.Networking.InboundConnection.#ctor(PSTk.Networking.ConnectionCentral,System.Int32,System.UInt16)
+  - PSTk.Networking.InboundConnection.Add(System.Net.Sockets.TcpClient)
+  - PSTk.Networking.InboundConnection.AttachToParent(System.Threading.CancellationToken)
+  - PSTk.Networking.InboundConnection.Clients
+  - PSTk.Networking.InboundConnection.Equals(System.Object)
+  - PSTk.Networking.InboundConnection.GetConnections
+  - PSTk.Networking.InboundConnection.GetEndPointPackets
+  - PSTk.Networking.InboundConnection.GetFlag
+  - PSTk.Networking.InboundConnection.GetHashCode
+  - PSTk.Networking.InboundConnection.GetIPAddress
+  - PSTk.Networking.InboundConnection.op_Equality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
+  - PSTk.Networking.InboundConnection.op_Inequality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
+  - PSTk.Networking.InboundConnection.Remove(System.Net.Sockets.TcpClient)
+  - PSTk.Networking.InboundConnection.Start
+  - PSTk.Networking.InboundConnection.Stop
+  - PSTk.Networking.InboundConnection.Token
+  langs:
+  - csharp
+  - vb
+  name: InboundConnection
+  nameWithType: InboundConnection
+  fullName: PSTk.Networking.InboundConnection
+  type: Class
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: InboundConnection
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 19
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRepresents an inbound connection type.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This feature isn't completed, avoid use it for your projects. No test was made within its development period.", true)]
+
+      public class InboundConnection : IAttachedTask
+    content.vb: >-
+      <Obsolete("This feature isn't completed, avoid use it for your projects. No test was made within its development period.", True)>
+
+      Public Class InboundConnection
+
+          Implements IAttachedTask
+  exceptions:
+  - type: System.InvalidCastException
+    commentId: T:System.InvalidCastException
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  - type: System.OperationCanceledException
+    commentId: T:System.OperationCanceledException
+  - type: System.Net.Sockets.SocketException
+    commentId: T:System.Net.Sockets.SocketException
+  inheritance:
+  - System.Object
+  implements:
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: This feature isn't completed, avoid use it for your projects. No test was made within its development period.
+    - type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PSTk.Networking.InboundConnection.#ctor(PSTk.Networking.ConnectionCentral,System.Int32,System.UInt16)
+  commentId: M:PSTk.Networking.InboundConnection.#ctor(PSTk.Networking.ConnectionCentral,System.Int32,System.UInt16)
+  id: '#ctor(PSTk.Networking.ConnectionCentral,System.Int32,System.UInt16)'
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: InboundConnection(ConnectionCentral, Int32, UInt16)
+  nameWithType: InboundConnection.InboundConnection(ConnectionCentral, Int32, UInt16)
+  fullName: PSTk.Networking.InboundConnection.InboundConnection(PSTk.Networking.ConnectionCentral, System.Int32, System.UInt16)
+  type: Constructor
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: .ctor
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 32
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  syntax:
+    content: public InboundConnection(ConnectionCentral central, int bufferSize, ushort maxPacketsPerEndPoint)
+    parameters:
+    - id: central
+      type: PSTk.Networking.ConnectionCentral
+    - id: bufferSize
+      type: System.Int32
+    - id: maxPacketsPerEndPoint
+      type: System.UInt16
+    content.vb: Public Sub New(central As ConnectionCentral, bufferSize As Integer, maxPacketsPerEndPoint As UShort)
+  overload: PSTk.Networking.InboundConnection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.InboundConnection.Clients
+  commentId: P:PSTk.Networking.InboundConnection.Clients
+  id: Clients
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Clients
+  nameWithType: InboundConnection.Clients
+  fullName: PSTk.Networking.InboundConnection.Clients
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Clients
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 55
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGet a list of all sockets associated to <xref href=\"System.Net.IPAddress\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public List<TcpClient> Clients { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Net.Sockets.TcpClient}
+    content.vb: Public ReadOnly Property Clients As List(Of TcpClient)
+  overload: PSTk.Networking.InboundConnection.Clients*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.InboundConnection.GetConnections
+  commentId: P:PSTk.Networking.InboundConnection.GetConnections
+  id: GetConnections
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: GetConnections
+  nameWithType: InboundConnection.GetConnections
+  fullName: PSTk.Networking.InboundConnection.GetConnections
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: GetConnections
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 60
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGet number of connections associated to <xref href=\"PSTk.Networking.InboundConnection.Clients\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int GetConnections { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property GetConnections As Integer
+  overload: PSTk.Networking.InboundConnection.GetConnections*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.InboundConnection.GetFlag
+  commentId: P:PSTk.Networking.InboundConnection.GetFlag
+  id: GetFlag
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: GetFlag
+  nameWithType: InboundConnection.GetFlag
+  fullName: PSTk.Networking.InboundConnection.GetFlag
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: GetFlag
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 65
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGet the current <xref href=\"PSTk.Networking.ConnectionFlag\" data-throw-if-not-resolved=\"false\"></xref> flag.\n"
+  example: []
+  syntax:
+    content: public ConnectionFlag GetFlag { get; }
+    parameters: []
+    return:
+      type: PSTk.Networking.ConnectionFlag
+    content.vb: Public ReadOnly Property GetFlag As ConnectionFlag
+  overload: PSTk.Networking.InboundConnection.GetFlag*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.InboundConnection.GetIPAddress
+  commentId: P:PSTk.Networking.InboundConnection.GetIPAddress
+  id: GetIPAddress
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: GetIPAddress
+  nameWithType: InboundConnection.GetIPAddress
+  fullName: PSTk.Networking.InboundConnection.GetIPAddress
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: GetIPAddress
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 70
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nReturns the <xref href=\"System.Net.IPAddress\" data-throw-if-not-resolved=\"false\"></xref> from remote associated <xref href=\"PSTk.Networking.InboundConnection.Clients\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public IPAddress GetIPAddress { get; }
+    parameters: []
+    return:
+      type: System.Net.IPAddress
+    content.vb: Public ReadOnly Property GetIPAddress As IPAddress
+  overload: PSTk.Networking.InboundConnection.GetIPAddress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.InboundConnection.Token
+  commentId: P:PSTk.Networking.InboundConnection.Token
+  id: Token
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Token
+  nameWithType: InboundConnection.Token
+  fullName: PSTk.Networking.InboundConnection.Token
+  type: Property
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Token
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 85
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGet the <xref href=\"System.Threading.CancellationToken\" data-throw-if-not-resolved=\"false\"></xref> of attached task.\n"
+  example: []
+  syntax:
+    content: public CancellationToken Token { get; }
+    parameters: []
+    return:
+      type: System.Threading.CancellationToken
+    content.vb: Public ReadOnly Property Token As CancellationToken
+  overload: PSTk.Networking.InboundConnection.Token*
+  implements:
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PSTk.Networking.InboundConnection.op_Inequality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
+  commentId: M:PSTk.Networking.InboundConnection.op_Inequality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
+  id: op_Inequality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Inequality(InboundConnection, InboundConnection)
+  nameWithType: InboundConnection.Inequality(InboundConnection, InboundConnection)
+  fullName: PSTk.Networking.InboundConnection.Inequality(PSTk.Networking.InboundConnection, PSTk.Networking.InboundConnection)
+  type: Operator
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: op_Inequality
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 89
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  syntax:
+    content: public static bool operator !=(InboundConnection a, InboundConnection b)
+    parameters:
+    - id: a
+      type: PSTk.Networking.InboundConnection
+    - id: b
+      type: PSTk.Networking.InboundConnection
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(a As InboundConnection, b As InboundConnection) As Boolean
+  overload: PSTk.Networking.InboundConnection.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PSTk.Networking.InboundConnection.op_Equality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
+  commentId: M:PSTk.Networking.InboundConnection.op_Equality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
+  id: op_Equality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Equality(InboundConnection, InboundConnection)
+  nameWithType: InboundConnection.Equality(InboundConnection, InboundConnection)
+  fullName: PSTk.Networking.InboundConnection.Equality(PSTk.Networking.InboundConnection, PSTk.Networking.InboundConnection)
+  type: Operator
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: op_Equality
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 91
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  syntax:
+    content: public static bool operator ==(InboundConnection a, InboundConnection b)
+    parameters:
+    - id: a
+      type: PSTk.Networking.InboundConnection
+    - id: b
+      type: PSTk.Networking.InboundConnection
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(a As InboundConnection, b As InboundConnection) As Boolean
+  overload: PSTk.Networking.InboundConnection.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PSTk.Networking.InboundConnection.Add(System.Net.Sockets.TcpClient)
+  commentId: M:PSTk.Networking.InboundConnection.Add(System.Net.Sockets.TcpClient)
+  id: Add(System.Net.Sockets.TcpClient)
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Add(TcpClient)
+  nameWithType: InboundConnection.Add(TcpClient)
+  fullName: PSTk.Networking.InboundConnection.Add(System.Net.Sockets.TcpClient)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Add
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 100
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nAdd <xref href=\"System.Net.Sockets.TcpClient\" data-throw-if-not-resolved=\"false\"></xref> to current inbound connection of current thread.\n"
+  example: []
+  syntax:
+    content: public void Add(TcpClient tcpClient)
+    parameters:
+    - id: tcpClient
+      type: System.Net.Sockets.TcpClient
+      description: ''
+    content.vb: Public Sub Add(tcpClient As TcpClient)
+  overload: PSTk.Networking.InboundConnection.Add*
+  exceptions:
+  - type: System.InvalidCastException
+    commentId: T:System.InvalidCastException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.InboundConnection.AttachToParent(System.Threading.CancellationToken)
+  commentId: M:PSTk.Networking.InboundConnection.AttachToParent(System.Threading.CancellationToken)
+  id: AttachToParent(System.Threading.CancellationToken)
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: AttachToParent(CancellationToken)
+  nameWithType: InboundConnection.AttachToParent(CancellationToken)
+  fullName: PSTk.Networking.InboundConnection.AttachToParent(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: AttachToParent
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 115
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nAttach a process to parent in case of external task cancellation request.\n"
+  example: []
+  syntax:
+    content: public void AttachToParent(CancellationToken token)
+    parameters:
+    - id: token
+      type: System.Threading.CancellationToken
+      description: ''
+    content.vb: Public Sub AttachToParent(token As CancellationToken)
+  overload: PSTk.Networking.InboundConnection.AttachToParent*
+  implements:
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.InboundConnection.Equals(System.Object)
+  commentId: M:PSTk.Networking.InboundConnection.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: InboundConnection.Equals(Object)
+  fullName: PSTk.Networking.InboundConnection.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Equals
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 122
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nCompare two <xref href=\"PSTk.Networking.InboundConnection\" data-throw-if-not-resolved=\"false\"></xref> by <xref href=\"System.Net.IPAddress\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: PSTk.Networking.InboundConnection.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: PSTk.Networking.InboundConnection.GetEndPointPackets
+  commentId: M:PSTk.Networking.InboundConnection.GetEndPointPackets
+  id: GetEndPointPackets
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: GetEndPointPackets()
+  nameWithType: InboundConnection.GetEndPointPackets()
+  fullName: PSTk.Networking.InboundConnection.GetEndPointPackets()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: GetEndPointPackets
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 136
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nGet an enumerable of <xref href=\"PSTk.Networking.InboundPacket\" data-throw-if-not-resolved=\"false\"></xref> from <xref href=\"PSTk.Networking.InboundTraffic\" data-throw-if-not-resolved=\"false\"></xref>.\nAll pending packets are enqueued into <xref href=\"PSTk.Networking.InboundConnection\" data-throw-if-not-resolved=\"false\"></xref> for each <xref href=\"System.Net.EndPoint\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<InboundPacket> GetEndPointPackets()
+    return:
+      type: System.Collections.Generic.IEnumerable{PSTk.Networking.InboundPacket}
+      description: ''
+    content.vb: Public Function GetEndPointPackets As IEnumerable(Of InboundPacket)
+  overload: PSTk.Networking.InboundConnection.GetEndPointPackets*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.InboundConnection.GetHashCode
+  commentId: M:PSTk.Networking.InboundConnection.GetHashCode
+  id: GetHashCode
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: InboundConnection.GetHashCode()
+  fullName: PSTk.Networking.InboundConnection.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: GetHashCode
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 154
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: PSTk.Networking.InboundConnection.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: PSTk.Networking.InboundConnection.Remove(System.Net.Sockets.TcpClient)
+  commentId: M:PSTk.Networking.InboundConnection.Remove(System.Net.Sockets.TcpClient)
+  id: Remove(System.Net.Sockets.TcpClient)
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Remove(TcpClient)
+  nameWithType: InboundConnection.Remove(TcpClient)
+  fullName: PSTk.Networking.InboundConnection.Remove(System.Net.Sockets.TcpClient)
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Remove
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 164
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRemove <xref href=\"System.Net.Sockets.TcpClient\" data-throw-if-not-resolved=\"false\"></xref> to current inbound connection of current thread.\n"
+  example: []
+  syntax:
+    content: public void Remove(TcpClient tcpClient)
+    parameters:
+    - id: tcpClient
+      type: System.Net.Sockets.TcpClient
+      description: ''
+    content.vb: Public Sub Remove(tcpClient As TcpClient)
+  overload: PSTk.Networking.InboundConnection.Remove*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  - type: System.Net.Sockets.SocketException
+    commentId: T:System.Net.Sockets.SocketException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.InboundConnection.Start
+  commentId: M:PSTk.Networking.InboundConnection.Start
+  id: Start
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: InboundConnection.Start()
+  fullName: PSTk.Networking.InboundConnection.Start()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Start
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 181
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nStart listening for inbound traffic.\n"
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start
+  overload: PSTk.Networking.InboundConnection.Start*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PSTk.Networking.InboundConnection.Stop
+  commentId: M:PSTk.Networking.InboundConnection.Stop
+  id: Stop
+  parent: PSTk.Networking.InboundConnection
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: InboundConnection.Stop()
+  fullName: PSTk.Networking.InboundConnection.Stop()
+  type: Method
+  source:
+    remote:
+      path: PSTk.Networking/InboundConnection.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Stop
+    path: ../PSTk.Networking/InboundConnection.cs
+    startLine: 197
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nStop listening for inbound traffic.\n"
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: PSTk.Networking.InboundConnection.Stop*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: System.InvalidCastException
+  commentId: T:System.InvalidCastException
+  isExternal: true
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+- uid: System.OperationCanceledException
+  commentId: T:System.OperationCanceledException
+  isExternal: true
+- uid: System.Net.Sockets.SocketException
+  commentId: T:System.Net.Sockets.SocketException
+  isExternal: true
+- uid: PSTk.Networking
+  commentId: N:PSTk.Networking
+  name: PSTk.Networking
+  nameWithType: PSTk.Networking
+  fullName: PSTk.Networking
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  commentId: T:PSTk.Threading.Tasks.Procedures.IAttachedTask
+  parent: PSTk.Threading.Tasks.Procedures
+  name: IAttachedTask
+  nameWithType: IAttachedTask
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PSTk.Threading.Tasks.Procedures
+  commentId: N:PSTk.Threading.Tasks.Procedures
+  name: PSTk.Threading.Tasks.Procedures
+  nameWithType: PSTk.Threading.Tasks.Procedures
+  fullName: PSTk.Threading.Tasks.Procedures
+- uid: PSTk.Networking.InboundConnection.#ctor*
+  commentId: Overload:PSTk.Networking.InboundConnection.#ctor
+  name: InboundConnection
+  nameWithType: InboundConnection.InboundConnection
+  fullName: PSTk.Networking.InboundConnection.InboundConnection
+- uid: PSTk.Networking.ConnectionCentral
+  commentId: T:PSTk.Networking.ConnectionCentral
+  parent: PSTk.Networking
+  name: ConnectionCentral
+  nameWithType: ConnectionCentral
+  fullName: PSTk.Networking.ConnectionCentral
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: System.Net.IPAddress
+  commentId: T:System.Net.IPAddress
+  parent: System.Net
+  isExternal: true
+  name: IPAddress
+  nameWithType: IPAddress
+  fullName: System.Net.IPAddress
+- uid: PSTk.Networking.InboundConnection.Clients*
+  commentId: Overload:PSTk.Networking.InboundConnection.Clients
+  name: Clients
+  nameWithType: InboundConnection.Clients
+  fullName: PSTk.Networking.InboundConnection.Clients
+- uid: System.Collections.Generic.List{System.Net.Sockets.TcpClient}
+  commentId: T:System.Collections.Generic.List{System.Net.Sockets.TcpClient}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TcpClient>
+  nameWithType: List<TcpClient>
+  fullName: System.Collections.Generic.List<System.Net.Sockets.TcpClient>
+  nameWithType.vb: List(Of TcpClient)
+  fullName.vb: System.Collections.Generic.List(Of System.Net.Sockets.TcpClient)
+  name.vb: List(Of TcpClient)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Net.Sockets.TcpClient
+    name: TcpClient
+    nameWithType: TcpClient
+    fullName: System.Net.Sockets.TcpClient
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Net.Sockets.TcpClient
+    name: TcpClient
+    nameWithType: TcpClient
+    fullName: System.Net.Sockets.TcpClient
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PSTk.Networking.InboundConnection.Clients
+  commentId: P:PSTk.Networking.InboundConnection.Clients
+  isExternal: true
+- uid: PSTk.Networking.InboundConnection.GetConnections*
+  commentId: Overload:PSTk.Networking.InboundConnection.GetConnections
+  name: GetConnections
+  nameWithType: InboundConnection.GetConnections
+  fullName: PSTk.Networking.InboundConnection.GetConnections
+- uid: PSTk.Networking.ConnectionFlag
+  commentId: T:PSTk.Networking.ConnectionFlag
+  parent: PSTk.Networking
+  name: ConnectionFlag
+  nameWithType: ConnectionFlag
+  fullName: PSTk.Networking.ConnectionFlag
+- uid: PSTk.Networking.InboundConnection.GetFlag*
+  commentId: Overload:PSTk.Networking.InboundConnection.GetFlag
+  name: GetFlag
+  nameWithType: InboundConnection.GetFlag
+  fullName: PSTk.Networking.InboundConnection.GetFlag
+- uid: PSTk.Networking.InboundConnection.GetIPAddress*
+  commentId: Overload:PSTk.Networking.InboundConnection.GetIPAddress
+  name: GetIPAddress
+  nameWithType: InboundConnection.GetIPAddress
+  fullName: PSTk.Networking.InboundConnection.GetIPAddress
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: PSTk.Networking.InboundConnection.Token*
+  commentId: Overload:PSTk.Networking.InboundConnection.Token
+  name: Token
+  nameWithType: InboundConnection.Token
+  fullName: PSTk.Networking.InboundConnection.Token
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  commentId: P:PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+  parent: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  name: Token
+  nameWithType: IAttachedTask.Token
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: PSTk.Networking.InboundConnection.op_Inequality*
+  commentId: Overload:PSTk.Networking.InboundConnection.op_Inequality
+  name: Inequality
+  nameWithType: InboundConnection.Inequality
+  fullName: PSTk.Networking.InboundConnection.Inequality
+- uid: PSTk.Networking.InboundConnection
+  commentId: T:PSTk.Networking.InboundConnection
+  parent: PSTk.Networking
+  name: InboundConnection
+  nameWithType: InboundConnection
+  fullName: PSTk.Networking.InboundConnection
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PSTk.Networking.InboundConnection.op_Equality*
+  commentId: Overload:PSTk.Networking.InboundConnection.op_Equality
+  name: Equality
+  nameWithType: InboundConnection.Equality
+  fullName: PSTk.Networking.InboundConnection.Equality
+- uid: System.Net.Sockets.TcpClient
+  commentId: T:System.Net.Sockets.TcpClient
+  parent: System.Net.Sockets
+  isExternal: true
+  name: TcpClient
+  nameWithType: TcpClient
+  fullName: System.Net.Sockets.TcpClient
+- uid: PSTk.Networking.InboundConnection.Add*
+  commentId: Overload:PSTk.Networking.InboundConnection.Add
+  name: Add
+  nameWithType: InboundConnection.Add
+  fullName: PSTk.Networking.InboundConnection.Add
+- uid: System.Net.Sockets
+  commentId: N:System.Net.Sockets
+  isExternal: true
+  name: System.Net.Sockets
+  nameWithType: System.Net.Sockets
+  fullName: System.Net.Sockets
+- uid: PSTk.Networking.InboundConnection.AttachToParent*
+  commentId: Overload:PSTk.Networking.InboundConnection.AttachToParent
+  name: AttachToParent
+  nameWithType: InboundConnection.AttachToParent
+  fullName: PSTk.Networking.InboundConnection.AttachToParent
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  commentId: M:PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  parent: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  isExternal: true
+  name: AttachToParent(CancellationToken)
+  nameWithType: IAttachedTask.AttachToParent(CancellationToken)
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+    name: AttachToParent
+    nameWithType: IAttachedTask.AttachToParent
+    fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent(System.Threading.CancellationToken)
+    name: AttachToParent
+    nameWithType: IAttachedTask.AttachToParent
+    fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Networking.InboundConnection.Equals*
+  commentId: Overload:PSTk.Networking.InboundConnection.Equals
+  name: Equals
+  nameWithType: InboundConnection.Equals
+  fullName: PSTk.Networking.InboundConnection.Equals
+- uid: PSTk.Networking.InboundPacket
+  commentId: T:PSTk.Networking.InboundPacket
+  name: InboundPacket
+  nameWithType: InboundPacket
+  fullName: PSTk.Networking.InboundPacket
+- uid: PSTk.Networking.InboundTraffic
+  commentId: T:PSTk.Networking.InboundTraffic
+  name: InboundTraffic
+  nameWithType: InboundTraffic
+  fullName: PSTk.Networking.InboundTraffic
+- uid: System.Net.EndPoint
+  commentId: T:System.Net.EndPoint
+  parent: System.Net
+  isExternal: true
+  name: EndPoint
+  nameWithType: EndPoint
+  fullName: System.Net.EndPoint
+- uid: PSTk.Networking.InboundConnection.GetEndPointPackets*
+  commentId: Overload:PSTk.Networking.InboundConnection.GetEndPointPackets
+  name: GetEndPointPackets
+  nameWithType: InboundConnection.GetEndPointPackets
+  fullName: PSTk.Networking.InboundConnection.GetEndPointPackets
+- uid: System.Collections.Generic.IEnumerable{PSTk.Networking.InboundPacket}
+  commentId: T:System.Collections.Generic.IEnumerable{PSTk.Networking.InboundPacket}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<InboundPacket>
+  nameWithType: IEnumerable<InboundPacket>
+  fullName: System.Collections.Generic.IEnumerable<PSTk.Networking.InboundPacket>
+  nameWithType.vb: IEnumerable(Of InboundPacket)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of PSTk.Networking.InboundPacket)
+  name.vb: IEnumerable(Of InboundPacket)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PSTk.Networking.InboundPacket
+    name: InboundPacket
+    nameWithType: InboundPacket
+    fullName: PSTk.Networking.InboundPacket
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PSTk.Networking.InboundPacket
+    name: InboundPacket
+    nameWithType: InboundPacket
+    fullName: PSTk.Networking.InboundPacket
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Networking.InboundConnection.GetHashCode*
+  commentId: Overload:PSTk.Networking.InboundConnection.GetHashCode
+  name: GetHashCode
+  nameWithType: InboundConnection.GetHashCode
+  fullName: PSTk.Networking.InboundConnection.GetHashCode
+- uid: PSTk.Networking.InboundConnection.Remove*
+  commentId: Overload:PSTk.Networking.InboundConnection.Remove
+  name: Remove
+  nameWithType: InboundConnection.Remove
+  fullName: PSTk.Networking.InboundConnection.Remove
+- uid: PSTk.Networking.InboundConnection.Start*
+  commentId: Overload:PSTk.Networking.InboundConnection.Start
+  name: Start
+  nameWithType: InboundConnection.Start
+  fullName: PSTk.Networking.InboundConnection.Start
+- uid: PSTk.Networking.InboundConnection.Stop*
+  commentId: Overload:PSTk.Networking.InboundConnection.Stop
+  name: Stop
+  nameWithType: InboundConnection.Stop
+  fullName: PSTk.Networking.InboundConnection.Stop

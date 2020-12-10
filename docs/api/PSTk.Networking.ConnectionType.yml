@@ -1,0 +1,281 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Networking.ConnectionType
+  commentId: T:PSTk.Networking.ConnectionType
+  id: ConnectionType
+  parent: PSTk.Networking
+  children:
+  - PSTk.Networking.ConnectionType.Continental
+  - PSTk.Networking.ConnectionType.Intranet
+  - PSTk.Networking.ConnectionType.Local
+  - PSTk.Networking.ConnectionType.Regional
+  - PSTk.Networking.ConnectionType.Subnet
+  - PSTk.Networking.ConnectionType.World
+  langs:
+  - csharp
+  - vb
+  name: ConnectionType
+  nameWithType: ConnectionType
+  fullName: PSTk.Networking.ConnectionType
+  type: Enum
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionType.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: ConnectionType
+    path: ../PSTk.Networking/ConnectionType.cs
+    startLine: 7
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRepresents the type of connection for <xref href=\"PSTk.Networking.ConnectionCentral\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      [Obsolete]
+
+      public enum ConnectionType : short
+    content.vb: >-
+      <Flags>
+
+      <Obsolete>
+
+      Public Enum ConnectionType As Short
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PSTk.Networking.ConnectionType.Local
+  commentId: F:PSTk.Networking.ConnectionType.Local
+  id: Local
+  parent: PSTk.Networking.ConnectionType
+  langs:
+  - csharp
+  - vb
+  name: Local
+  nameWithType: ConnectionType.Local
+  fullName: PSTk.Networking.ConnectionType.Local
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionType.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Local
+    path: ../PSTk.Networking/ConnectionType.cs
+    startLine: 13
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRestricted to the same host.\n"
+  example: []
+  syntax:
+    content: Local = 0
+    return:
+      type: PSTk.Networking.ConnectionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Networking.ConnectionType.Subnet
+  commentId: F:PSTk.Networking.ConnectionType.Subnet
+  id: Subnet
+  parent: PSTk.Networking.ConnectionType
+  langs:
+  - csharp
+  - vb
+  name: Subnet
+  nameWithType: ConnectionType.Subnet
+  fullName: PSTk.Networking.ConnectionType.Subnet
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionType.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Subnet
+    path: ../PSTk.Networking/ConnectionType.cs
+    startLine: 18
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRestricted to the same subnet.\n"
+  example: []
+  syntax:
+    content: Subnet = 1
+    return:
+      type: PSTk.Networking.ConnectionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Networking.ConnectionType.Intranet
+  commentId: F:PSTk.Networking.ConnectionType.Intranet
+  id: Intranet
+  parent: PSTk.Networking.ConnectionType
+  langs:
+  - csharp
+  - vb
+  name: Intranet
+  nameWithType: ConnectionType.Intranet
+  fullName: PSTk.Networking.ConnectionType.Intranet
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionType.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Intranet
+    path: ../PSTk.Networking/ConnectionType.cs
+    startLine: 23
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRestricted to the same site.\n"
+  example: []
+  syntax:
+    content: Intranet = 32
+    return:
+      type: PSTk.Networking.ConnectionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Networking.ConnectionType.Regional
+  commentId: F:PSTk.Networking.ConnectionType.Regional
+  id: Regional
+  parent: PSTk.Networking.ConnectionType
+  langs:
+  - csharp
+  - vb
+  name: Regional
+  nameWithType: ConnectionType.Regional
+  fullName: PSTk.Networking.ConnectionType.Regional
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionType.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Regional
+    path: ../PSTk.Networking/ConnectionType.cs
+    startLine: 28
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRestricted to the same region.\n"
+  example: []
+  syntax:
+    content: Regional = 64
+    return:
+      type: PSTk.Networking.ConnectionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Networking.ConnectionType.Continental
+  commentId: F:PSTk.Networking.ConnectionType.Continental
+  id: Continental
+  parent: PSTk.Networking.ConnectionType
+  langs:
+  - csharp
+  - vb
+  name: Continental
+  nameWithType: ConnectionType.Continental
+  fullName: PSTk.Networking.ConnectionType.Continental
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionType.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: Continental
+    path: ../PSTk.Networking/ConnectionType.cs
+    startLine: 33
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nRestricted to the same continent.\n"
+  example: []
+  syntax:
+    content: Continental = 128
+    return:
+      type: PSTk.Networking.ConnectionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PSTk.Networking.ConnectionType.World
+  commentId: F:PSTk.Networking.ConnectionType.World
+  id: World
+  parent: PSTk.Networking.ConnectionType
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: ConnectionType.World
+  fullName: PSTk.Networking.ConnectionType.World
+  type: Field
+  source:
+    remote:
+      path: PSTk.Networking/ConnectionType.cs
+      branch: master
+      repo: https://github.com/Devwarlt/pstk-core.git
+    id: World
+    path: ../PSTk.Networking/ConnectionType.cs
+    startLine: 38
+  assemblies:
+  - PSTk.Networking
+  namespace: PSTk.Networking
+  summary: "\nUnrestricted.\n"
+  example: []
+  syntax:
+    content: World = 255
+    return:
+      type: PSTk.Networking.ConnectionType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PSTk.Networking.ConnectionCentral
+  commentId: T:PSTk.Networking.ConnectionCentral
+  parent: PSTk.Networking
+  name: ConnectionCentral
+  nameWithType: ConnectionCentral
+  fullName: PSTk.Networking.ConnectionCentral
+- uid: PSTk.Networking
+  commentId: N:PSTk.Networking
+  name: PSTk.Networking
+  nameWithType: PSTk.Networking
+  fullName: PSTk.Networking
+- uid: PSTk.Networking.ConnectionType
+  commentId: T:PSTk.Networking.ConnectionType
+  parent: PSTk.Networking
+  name: ConnectionType
+  nameWithType: ConnectionType
+  fullName: PSTk.Networking.ConnectionType

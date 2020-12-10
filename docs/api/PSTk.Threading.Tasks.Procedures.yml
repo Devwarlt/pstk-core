@@ -1,0 +1,115 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Threading.Tasks.Procedures
+  commentId: N:PSTk.Threading.Tasks.Procedures
+  id: PSTk.Threading.Tasks.Procedures
+  children:
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs`1
+  - PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  - PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  - PSTk.Threading.Tasks.Procedures.IAttachedTask
+  langs:
+  - csharp
+  - vb
+  name: PSTk.Threading.Tasks.Procedures
+  nameWithType: PSTk.Threading.Tasks.Procedures
+  fullName: PSTk.Threading.Tasks.Procedures
+  type: Namespace
+  assemblies:
+  - PSTk.Threading
+references:
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+  commentId: T:PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+  name: AsyncProcedure<TInput>
+  nameWithType: AsyncProcedure<TInput>
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedure<TInput>
+  nameWithType.vb: AsyncProcedure(Of TInput)
+  fullName.vb: PSTk.Threading.Tasks.Procedures.AsyncProcedure(Of TInput)
+  name.vb: AsyncProcedure(Of TInput)
+  spec.csharp:
+  - uid: PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+    name: AsyncProcedure
+    nameWithType: AsyncProcedure
+    fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedure
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TInput
+    nameWithType: TInput
+    fullName: TInput
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PSTk.Threading.Tasks.Procedures.AsyncProcedure`1
+    name: AsyncProcedure
+    nameWithType: AsyncProcedure
+    fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedure
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TInput
+    nameWithType: TInput
+    fullName: TInput
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs`1
+  commentId: T:PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs`1
+  name: AsyncProcedureEventArgs<TInput>
+  nameWithType: AsyncProcedureEventArgs<TInput>
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs<TInput>
+  nameWithType.vb: AsyncProcedureEventArgs(Of TInput)
+  fullName.vb: PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs(Of TInput)
+  name.vb: AsyncProcedureEventArgs(Of TInput)
+  spec.csharp:
+  - uid: PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs`1
+    name: AsyncProcedureEventArgs
+    nameWithType: AsyncProcedureEventArgs
+    fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TInput
+    nameWithType: TInput
+    fullName: TInput
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs`1
+    name: AsyncProcedureEventArgs
+    nameWithType: AsyncProcedureEventArgs
+    fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TInput
+    nameWithType: TInput
+    fullName: TInput
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  commentId: T:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+  name: AsyncProcedurePool
+  nameWithType: AsyncProcedurePool
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
+- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  commentId: T:PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+  parent: PSTk.Threading.Tasks.Procedures
+  name: IAsyncProcedure
+  nameWithType: IAsyncProcedure
+  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask
+  commentId: T:PSTk.Threading.Tasks.Procedures.IAttachedTask
+  parent: PSTk.Threading.Tasks.Procedures
+  name: IAttachedTask
+  nameWithType: IAttachedTask
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask
+- uid: PSTk.Threading.Tasks.Procedures
+  commentId: N:PSTk.Threading.Tasks.Procedures
+  name: PSTk.Threading.Tasks.Procedures
+  nameWithType: PSTk.Threading.Tasks.Procedures
+  fullName: PSTk.Threading.Tasks.Procedures

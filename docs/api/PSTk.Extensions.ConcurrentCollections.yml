@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: PSTk.Extensions.ConcurrentCollections
+  commentId: N:PSTk.Extensions.ConcurrentCollections
+  id: PSTk.Extensions.ConcurrentCollections
+  children:
+  - PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: PSTk.Extensions.ConcurrentCollections
+  nameWithType: PSTk.Extensions.ConcurrentCollections
+  fullName: PSTk.Extensions.ConcurrentCollections
+  type: Namespace
+  assemblies:
+  - PSTk.Extensions
+references:
+- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  commentId: T:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
+  name: ConcurrentDictionaryExtensions
+  nameWithType: ConcurrentDictionaryExtensions
+  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
