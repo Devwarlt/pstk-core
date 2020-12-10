@@ -8,8 +8,6 @@ on:
       - '**.md'
       - '**.config'
       - '.github/**'
-      - 'docs/**'
-      - 'examples/**'
     branches:
       - master
 jobs:

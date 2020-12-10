@@ -9,7 +9,6 @@ on:
       - '**.config'
       - '.github/**'
       - 'docs/**'
-      - 'examples/**'
     branches:
       - master
   pull_request:
