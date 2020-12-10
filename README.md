@@ -43,22 +43,22 @@ For more details, consider to check our [**API documentation**][api-docs].
 [dotnet-ci]: https://github.com/Devwarlt/pstk-core/actions?query=workflow%3A".NET+CI"
 [dotnet-ci-badge]: https://github.com/Devwarlt/pstk-core/workflows/.NET%20CI/badge.svg
 
-[pstk-core-badge]: https://img.shields.io/nuget/v/PSTk.Core.svg
-[pstk-core-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Core.svg
+[pstk-core-badge]: https://img.shields.io/nuget/v/PSTk.Core.svg?logo=nuget&style=plastic
+[pstk-core-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Core.svg?logo=nuget&style=plastic
 [pstk-core-nuget]: https://www.nuget.org/packages/PSTk.Core/
 
-[pstk-diagnostics-badge]: https://img.shields.io/nuget/v/PSTk.Diagnostics.svg
-[pstk-diagnostics-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Diagnostics.svg
+[pstk-diagnostics-badge]: https://img.shields.io/nuget/v/PSTk.Diagnostics.svg?logo=nuget&style=plastic
+[pstk-diagnostics-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Diagnostics.svg?logo=nuget&style=plastic
 [pstk-diagnostics-nuget]: https://www.nuget.org/packages/PSTk.Diagnostics/
 
-[pstk-extensions-badge]: https://img.shields.io/nuget/v/PSTk.Extensions.svg
-[pstk-extensions-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Extensions.svg
+[pstk-extensions-badge]: https://img.shields.io/nuget/v/PSTk.Extensions.svg?logo=nuget&style=plastic
+[pstk-extensions-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Extensions.svg?logo=nuget&style=plastic
 [pstk-extensions-nuget]: https://www.nuget.org/packages/PSTk.Extensions/
 
-[pstk-networking-badge]: https://img.shields.io/nuget/v/PSTk.Networking.svg
-[pstk-networking-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Networking.svg
+[pstk-networking-badge]: https://img.shields.io/nuget/v/PSTk.Networking.svg?logo=nuget&style=plastic
+[pstk-networking-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Networking.svg?logo=nuget&style=plastic
 [pstk-networking-nuget]: https://www.nuget.org/packages/PSTk.Networking/
 
-[pstk-threading-badge]: https://img.shields.io/nuget/v/PSTk.Threading.svg
-[pstk-threading-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Threading.svg
+[pstk-threading-badge]: https://img.shields.io/nuget/v/PSTk.Threading.svg?logo=nuget&style=plastic
+[pstk-threading-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Threading.svg?logo=nuget&style=plastic
 [pstk-threading-nuget]: https://www.nuget.org/packages/PSTk.Threading/
