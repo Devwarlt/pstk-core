@@ -13,7 +13,7 @@ ECHO    Step 3) Enter source: specify what is the deployment cloud on this packa
 ECHO    Step 4) Enter API token: OAuth token used on deployment.
 ECHO.
 
-IF "%~1"=="" (SET /P VERSION="Enter package: ")
+IF "%~1"=="" (SET /P DISTRIBUTION="Enter package: ")
 IF "%~2"=="" (SET /P VERSION="Enter version: ")
 IF "%~3"=="" (SET /P SOURCE="Enter source: ")
 IF "%~4"=="" (SET /P TOKEN="Enter API token: ")
