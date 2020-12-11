@@ -67,15 +67,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="async-procedure"><a href="/CA/Threading/Tasks/Procedures/AsyncProcedure.cs">Async Procedure</a></h1>
+<h1 id="async-procedure">Async Procedure</h1>
 
 <blockquote>
 <p>Used for situations that require dependency between other procedure. Recommended to use it with <strong><code>AsyncProcedurePool</code></strong>.</p>
 </blockquote>
-<h1 id="async-procedure-pool"><a href="/CA/Threading/Tasks/Procedures/AsyncProcedurePool.cs">Async Procedure Pool</a></h1>
+<h1 id="async-procedure-pool">Async Procedure Pool</h1>
 <blockquote>
+<p>Handle <strong><code>AsyncProcedure(TInput)</code></strong> instances into pool of synchronous or asynchronous routines.</p>
 </blockquote>
-<h2 id="handle-asyncproceduretinput-instances-into-pool-of-synchronous-or-asynchronous-routines">Handle <strong><code>AsyncProcedure(TInput)</code></strong> instances into pool of synchronous or asynchronous routines.</h2>
+<hr>
 <p><strong><code>Async Procedure</code></strong> can be used for procedures that require various operations (complex ones) and requires the output of all pending procedures to finish together. If a procedure breaks or stop working due an error then <strong><code>Async Procedure Pool</code></strong> will be set as invalid response flag type. See example below:</p>
 <pre><code class="lang-csharp">public static void Main() {
   var procedures = new IAsyncProcedure[] {

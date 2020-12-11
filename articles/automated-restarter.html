@@ -67,11 +67,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="automated-restarter"><a href="/CA/Threading/Tasks/AutomatedRestarter.cs">Automated Restarter</a></h1>
+<h1 id="automated-restarter">Automated Restarter</h1>
 
 <blockquote>
+<p>Creates an <code>InternalRoutine</code> adapted class to handle events and execute a process when threshold is achieved.</p>
 </blockquote>
-<h2 id="creates-an--adapted-to-handle-events-and-execute-a-process-when-threshold-is-achieved">Creates an <see cref="InternalRoutine"></see> adapted to handle events and execute a process when threshold is achieved.</h2>
+<hr>
 <p><strong><code>Automated Restarter</code></strong> can be used for procedures that check listeners with a countdown. Once an event listener matches with its timeout definition, then an action is invoked during process in parallel. Note that <code>Restarter</code> prefix on its name <strong>doesn't</strong> restart the application but could be used as one, see example below:</p>
 <pre><code class="lang-csharp">private static readonly ManualResetEvent _mre = new ManualResetEvent(false);
 
