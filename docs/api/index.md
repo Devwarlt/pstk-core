@@ -45,11 +45,11 @@ For more details, consider to check our [**API documentation**][api-docs].
 
 [github-page-ci]: https://github.com/Devwarlt/pstk-core/actions?query=workflow%3A"GitHub+Pages+CI"
 [github-page-ci-dev-badge]: https://github.com/Devwarlt/pstk-core/workflows/GitHub%20Pages%20CI/badge.svg?branch=dev
-[github-page-ci-prod-badge]: https://github.com/Devwarlt/pstk-core/workflows/GitHub%20Pages%20CI/badge.svg?branch=prod
+[github-page-ci-prod-badge]: https://github.com/Devwarlt/pstk-core/workflows/GitHub%20Pages%20CI/badge.svg
 
 [dotnet-ci]: https://github.com/Devwarlt/pstk-core/actions?query=workflow%3A".NET+CI"
 [dotnet-ci-dev-badge]: https://github.com/Devwarlt/pstk-core/workflows/.NET%20CI/badge.svg?branch=dev
-[dotnet-ci-prod-badge]: https://github.com/Devwarlt/pstk-core/workflows/.NET%20CI/badge.svg?branch=prod
+[dotnet-ci-prod-badge]: https://github.com/Devwarlt/pstk-core/workflows/.NET%20CI/badge.svg
 
 [pstk-core-badge]: https://img.shields.io/nuget/v/PSTk.Core.svg?logo=nuget&style=plastic
 [pstk-core-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Core.svg?logo=nuget&style=plastic
