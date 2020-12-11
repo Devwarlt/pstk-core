@@ -990,12 +990,12 @@ references:
   commentId: T:PSTk.Threading.Tasks.InternalRoutineEventArgs
   fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs
   nameWithType: InternalRoutineEventArgs
-- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int32,System.Int32,System.Int32)
-  name: InternalRoutineEventArgs(Int32, Int32, Int32)
-  href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_System_Int32_System_Int32_System_Int32_
-  commentId: M:PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int32,System.Int32,System.Int32)
-  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.InternalRoutineEventArgs(System.Int32, System.Int32, System.Int32)
-  nameWithType: InternalRoutineEventArgs.InternalRoutineEventArgs(Int32, Int32, Int32)
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int64,System.Int32,System.Int64)
+  name: InternalRoutineEventArgs(Int64, Int32, Int64)
+  href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_System_Int64_System_Int32_System_Int64_
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int64,System.Int32,System.Int64)
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.InternalRoutineEventArgs(System.Int64, System.Int32, System.Int64)
+  nameWithType: InternalRoutineEventArgs.InternalRoutineEventArgs(Int64, Int32, Int64)
 - uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor*
   name: InternalRoutineEventArgs
   href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_
@@ -1042,6 +1042,159 @@ references:
   isSpec: "True"
   fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout
   nameWithType: InternalRoutineEventArgs.Timeout
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim
+  name: InternalRoutineSlim
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html
+  commentId: T:PSTk.Threading.Tasks.InternalRoutineSlim
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim
+  nameWithType: InternalRoutineSlim
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action)
+  name: InternalRoutineSlim(Int32, Action)
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_Int32_Action_
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action)
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action)
+  nameWithType: InternalRoutineSlim.InternalRoutineSlim(Int32, Action)
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action,Action{System.String})
+  name: InternalRoutineSlim(Int32, Action, Action<String>)
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_Int32_Action_Action_System_String__
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action,Action{System.String})
+  name.vb: InternalRoutineSlim(Int32, Action, Action(Of String))
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action, Action<System.String>)
+  fullName.vb: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action, Action(Of System.String))
+  nameWithType: InternalRoutineSlim.InternalRoutineSlim(Int32, Action, Action<String>)
+  nameWithType.vb: InternalRoutineSlim.InternalRoutineSlim(Int32, Action, Action(Of String))
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action{System.Int64},Action{System.String})
+  name: InternalRoutineSlim(Int32, Action<Int64>, Action<String>)
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_Int32_Action_System_Int64__Action_System_String__
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action{System.Int64},Action{System.String})
+  name.vb: InternalRoutineSlim(Int32, Action(Of Int64), Action(Of String))
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action<System.Int64>, Action<System.String>)
+  fullName.vb: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action(Of System.Int64), Action(Of System.String))
+  nameWithType: InternalRoutineSlim.InternalRoutineSlim(Int32, Action<Int64>, Action<String>)
+  nameWithType.vb: InternalRoutineSlim.InternalRoutineSlim(Int32, Action(Of Int64), Action(Of String))
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor*
+  name: InternalRoutineSlim
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim
+  nameWithType: InternalRoutineSlim.InternalRoutineSlim
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.AttachToParent(CancellationToken)
+  name: AttachToParent(CancellationToken)
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_AttachToParent_CancellationToken_
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.AttachToParent(CancellationToken)
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.AttachToParent(CancellationToken)
+  nameWithType: InternalRoutineSlim.AttachToParent(CancellationToken)
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.AttachToParent*
+  name: AttachToParent
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_AttachToParent_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.AttachToParent
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.AttachToParent
+  nameWithType: InternalRoutineSlim.AttachToParent
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Delta
+  name: Delta
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Delta
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineSlim.Delta
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Delta
+  nameWithType: InternalRoutineSlim.Delta
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Delta*
+  name: Delta
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Delta_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.Delta
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Delta
+  nameWithType: InternalRoutineSlim.Delta
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.IsCanceled
+  name: IsCanceled
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_IsCanceled
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineSlim.IsCanceled
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.IsCanceled
+  nameWithType: InternalRoutineSlim.IsCanceled
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.IsCanceled*
+  name: IsCanceled
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_IsCanceled_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.IsCanceled
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.IsCanceled
+  nameWithType: InternalRoutineSlim.IsCanceled
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.IsRunning
+  name: IsRunning
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_IsRunning
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineSlim.IsRunning
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.IsRunning
+  nameWithType: InternalRoutineSlim.IsRunning
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.IsRunning*
+  name: IsRunning
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_IsRunning_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.IsRunning
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.IsRunning
+  nameWithType: InternalRoutineSlim.IsRunning
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.OnDeltaVariation
+  name: OnDeltaVariation
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_OnDeltaVariation
+  commentId: E:PSTk.Threading.Tasks.InternalRoutineSlim.OnDeltaVariation
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.OnDeltaVariation
+  nameWithType: InternalRoutineSlim.OnDeltaVariation
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.OnFinished
+  name: OnFinished
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_OnFinished
+  commentId: E:PSTk.Threading.Tasks.InternalRoutineSlim.OnFinished
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.OnFinished
+  nameWithType: InternalRoutineSlim.OnFinished
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Start
+  name: Start()
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Start
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.Start
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Start()
+  nameWithType: InternalRoutineSlim.Start()
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Start*
+  name: Start
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Start_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.Start
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Start
+  nameWithType: InternalRoutineSlim.Start
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Stop
+  name: Stop()
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Stop
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.Stop
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Stop()
+  nameWithType: InternalRoutineSlim.Stop()
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Stop*
+  name: Stop
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Stop_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.Stop
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Stop
+  nameWithType: InternalRoutineSlim.Stop
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Token
+  name: Token
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Token
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineSlim.Token
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Token
+  nameWithType: InternalRoutineSlim.Token
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Token*
+  name: Token
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Token_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.Token
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Token
+  nameWithType: InternalRoutineSlim.Token
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.TotalElapsedMilliseconds
+  name: TotalElapsedMilliseconds
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_TotalElapsedMilliseconds
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineSlim.TotalElapsedMilliseconds
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.TotalElapsedMilliseconds
+  nameWithType: InternalRoutineSlim.TotalElapsedMilliseconds
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.TotalElapsedMilliseconds*
+  name: TotalElapsedMilliseconds
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_TotalElapsedMilliseconds_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.TotalElapsedMilliseconds
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.TotalElapsedMilliseconds
+  nameWithType: InternalRoutineSlim.TotalElapsedMilliseconds
 - uid: PSTk.Threading.Tasks.Procedures
   name: PSTk.Threading.Tasks.Procedures
   href: api/PSTk.Threading.Tasks.Procedures.html

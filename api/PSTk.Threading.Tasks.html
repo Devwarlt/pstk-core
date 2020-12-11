@@ -86,6 +86,15 @@
       <h4><a class="xref" href="PSTk.Threading.Tasks.InternalRoutineEventArgs.html">InternalRoutineEventArgs</a></h4>
       <section><p>Contains event arguments from <a class="xref" href="PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine_OnDeltaVariation">OnDeltaVariation</a> event.</p>
 </section>
+      <h4><a class="xref" href="PSTk.Threading.Tasks.InternalRoutineSlim.html">InternalRoutineSlim</a></h4>
+      <section><p>This class is a lightweight version of <a class="xref" href="PSTk.Threading.Tasks.InternalRoutine.html">InternalRoutine</a>. Most of exist
+features part of implementation from <a class="xref" href="PSTk.Threading.Tasks.InternalRoutineSlim.html">InternalRoutineSlim</a> got revised
+and optimized to avoid extra cost for performance.</p>
+<p>
+<a class="xref" href="PSTk.Threading.Tasks.InternalRoutineSlim.html">InternalRoutineSlim</a> runs <span class="xref">PSTk.Threading.Tasks.InternalRoutineSlim.TickCore</span> process on a <see cref="!:Task"></see>
+attached on main <see cref="!:Thread"></see> to avoid thread-unsafe issues.
+</p>
+</section>
     <h3 id="structs">Structs
   </h3>
       <h4><a class="xref" href="PSTk.Threading.Tasks.AutomatedRestarterListener.html">AutomatedRestarterListener</a></h4>
