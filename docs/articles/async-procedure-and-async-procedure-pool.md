@@ -1,8 +1,9 @@
-# [Async Procedure][ref-1]
+# Async Procedure
 > Used for situations that require dependency between other procedure. Recommended to use it with **`AsyncProcedurePool`**.
 
-# [Async Procedure Pool][ref-2]
+# Async Procedure Pool
 > Handle **`AsyncProcedure(TInput)`** instances into pool of synchronous or asynchronous routines.
+
 ---
 
 **`Async Procedure`** can be used for procedures that require various operations (complex ones) and requires the output of all pending procedures to finish together. If a procedure breaks or stop working due an error then **`Async Procedure Pool`** will be set as invalid response flag type. See example below:
@@ -51,6 +52,3 @@ private static AsyncProcedureEventArgs<TInput> OnProcedureExecute(AsyncProcedure
 
 private static void OnProcedureError(string message) => Console.WriteLine($"An error occurred! -> message: {message}");
 ```
-
-[ref-1]: /CA/Threading/Tasks/Procedures/AsyncProcedure.cs
-[ref-2]: /CA/Threading/Tasks/Procedures/AsyncProcedurePool.cs
