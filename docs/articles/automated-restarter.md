@@ -1,5 +1,6 @@
-# [Automated Restarter][ref-1]
-> Creates an <see cref="InternalRoutine"/> adapted to handle events and execute a process when threshold is achieved.
+# Automated Restarter
+> Creates an `InternalRoutine` adapted class to handle events and execute a process when threshold is achieved.
+
 ---
 
 **`Automated Restarter`** can be used for procedures that check listeners with a countdown. Once an event listener matches with its timeout definition, then an action is invoked during process in parallel. Note that `Restarter` prefix on its name **doesn't** restart the application but could be used as one, see example below:
@@ -33,5 +34,3 @@ private static void RestartOperation() {
   _mre.Set();
 }
 ```
-
-[ref-1]: /CA/Threading/Tasks/AutomatedRestarter.cs

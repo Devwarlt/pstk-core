@@ -1,5 +1,6 @@
-# [Internal Routine][ref-1]
+# Internal Routine
 > Used for synchronous or asynchronous routine.
+
 ---
 
 **`Internal Routine`** can be used for cyclic operations running in parallel as loop process, see example below:
@@ -48,5 +49,3 @@ private static void OnFinished(object sender, EventArgs args) {
   _mre.Set();
 }
 ```
-
-[ref-1]: /CA/Threading/Tasks/InternalRoutine.cs

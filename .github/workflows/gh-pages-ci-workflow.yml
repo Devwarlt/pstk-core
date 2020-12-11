@@ -5,9 +5,6 @@ on:
       - '.github/**'
     branches:
       - prod
-  pull_request:
-    branches:
-      - prod
 jobs:
   deploy:
     runs-on: ubuntu-latest
