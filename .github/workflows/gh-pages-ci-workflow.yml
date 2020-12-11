@@ -2,11 +2,6 @@ name: GitHub Pages CI
 on:
   push:
     paths-ignore:
-      - '**.png'
-      - '**.xml'
-      - '**.yml'
-      - '**.md'
-      - '**.config'
       - '.github/**'
     branches:
       - prod
