@@ -31,9 +31,9 @@ namespace PSTk.Threading.Tasks
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public AutomatedRestarter(TimeSpan timeout, int routineMs = 1000, Action<string> errorLogger = null)
         {
-            if (routineMs <= 0) throw new ArgumentOutOfRangeException("routineMs", "Only non-zero and non-negative values are permitted.");
+            if (routineMs <= 0) throw new ArgumentOutOfRangeException(nameof(routineMs), "Only non-zero and non-negative values are permitted.");
 
-            if (timeout == null) throw new ArgumentNullException("timeout");
+            if (timeout == null) throw new ArgumentNullException(nameof(timeout));
 
             this.routineMs = routineMs;
             this.timeout = timeout;

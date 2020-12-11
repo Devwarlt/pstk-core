@@ -25,10 +25,10 @@ namespace PSTk.Threading.Tasks.Procedures
         public AsyncProcedure(string name, TInput input, Func<AsyncProcedure<TInput>, string, TInput, AsyncProcedureEventArgs<TInput>> procedure, Action<string> errorLogger = null)
         {
             if (input == null)
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
 
             if (procedure == null)
-                throw new ArgumentNullException("procedure");
+                throw new ArgumentNullException(nameof(procedure));
 
             Name = name;
 

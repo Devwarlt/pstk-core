@@ -25,10 +25,10 @@ namespace PSTk.Threading.Tasks.Procedures
 
         {
             if (pool == null)
-                throw new ArgumentNullException("pool");
+                throw new ArgumentNullException(nameof(pool));
 
             if (pool.Length == 0)
-                throw new ArgumentOutOfRangeException("pool", "Required at least 1 AsyncProcedure.");
+                throw new ArgumentOutOfRangeException(nameof(pool), "Required at least 1 AsyncProcedure.");
 
             this.pool = pool;
             this.source = source ?? new CancellationTokenSource();
@@ -66,9 +66,9 @@ namespace PSTk.Threading.Tasks.Procedures
         /// <param name="token"></param>
         public void AttachToParent(CancellationToken token)
         {
-            this.Token = token;
+            Token = token;
 
-            AttachPoolToContext(this.Token);
+            AttachPoolToContext(Token);
         }
 
         /// <summary>

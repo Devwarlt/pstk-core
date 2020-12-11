@@ -21,6 +21,7 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <PackageId>PSTk.Core</PackageId>
     <ApplicationIcon>ICON.ico</ApplicationIcon>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

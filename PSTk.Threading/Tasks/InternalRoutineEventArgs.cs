@@ -14,7 +14,7 @@ namespace PSTk.Threading.Tasks
         /// <param name="delta"></param>
         /// <param name="ticksPerSecond"></param>
         /// <param name="timeout"></param>
-        public InternalRoutineEventArgs(int delta, int ticksPerSecond, int timeout)
+        public InternalRoutineEventArgs(long delta, int ticksPerSecond, long timeout)
             : base()
         {
             Delta = delta;
@@ -25,7 +25,7 @@ namespace PSTk.Threading.Tasks
         /// <summary>
         /// Delta variation of <see cref="InternalRoutine.routine"/>.
         /// </summary>
-        public int Delta { get; }
+        public long Delta { get; }
 
         /// <summary>
         /// Ticks per second for <see cref="InternalRoutine.routine"/> invoke on <see cref="TaskScheduler"/>.
@@ -35,6 +35,6 @@ namespace PSTk.Threading.Tasks
         /// <summary>
         /// Timeout in milliseconds for <see cref="InternalRoutine.routine"/> invoke on <see cref="TaskScheduler"/>.
         /// </summary>
-        public int Timeout { get; }
+        public long Timeout { get; }
     }
 }

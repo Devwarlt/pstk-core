@@ -38,10 +38,10 @@ namespace PSTk.Threading.Tasks
         public InternalRoutine(int timeout, Action<int> routine, Action<string> errorLogger = null)
         {
             if (timeout <= 0)
-                throw new ArgumentOutOfRangeException("timeout", "Only non-zero and non-negative values are permitted.");
+                throw new ArgumentOutOfRangeException(nameof(timeout), "Only non-zero and non-negative values are permitted.");
 
             if (routine == null)
-                throw new ArgumentNullException("routine");
+                throw new ArgumentNullException(nameof(routine));
 
             this.timeout = timeout;
             this.routine = (delta, cancel) => { if (!cancel) routine.Invoke(delta); };
@@ -86,7 +86,7 @@ namespace PSTk.Threading.Tasks
         /// Attach a process to parent in case of external task cancellation request.
         /// </summary>
         /// <param name="token"></param>
-        public void AttachToParent(CancellationToken token) => this.Token = token;
+        public void AttachToParent(CancellationToken token) => Token = token;
 
         /// <summary>
         /// Initialize and starts the core routine, to stop it must use <see cref="CancellationTokenSource.Cancel(bool)"/>.
