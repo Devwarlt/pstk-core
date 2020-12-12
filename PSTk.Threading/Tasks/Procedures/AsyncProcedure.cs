@@ -26,18 +26,15 @@ namespace PSTk.Threading.Tasks.Procedures
         {
             if (input == null)
                 throw new ArgumentNullException(nameof(input));
-
             if (procedure == null)
                 throw new ArgumentNullException(nameof(procedure));
 
             Name = name;
-
             this.input = input;
             this.procedure = (inputRef, tokenRef) =>
                 tokenRef != null
                     ? Task.Run(() => procedure(this, name, inputRef), tokenRef)
                     : Task.Run(() => procedure(this, name, inputRef));
-
             onError += (s, e) => errorLogger?.Invoke(e.ToString());
         }
 
@@ -54,9 +51,9 @@ namespace PSTk.Threading.Tasks.Procedures
         private event EventHandler<Exception> onError;
 
         /// <summary>
-        /// Get the name of procedure.
+        /// Get the name of <see cref="AsyncProcedure{TInput}"/>.
         /// </summary>
-        public string Name { get; private set; }
+        public string Name { get; }
 
         /// <summary>
         /// Get the <see cref="CancellationToken"/> of attached task.

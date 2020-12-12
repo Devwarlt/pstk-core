@@ -1,5 +1,6 @@
 ﻿using PSTk.Threading.Tasks.Procedures;
 using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -13,41 +14,45 @@ namespace PSTk.Threading.Tasks
     /// <exception cref="OperationCanceledException"></exception>
     public sealed class InternalRoutine : IAttachedTask
     {
-        private readonly ManualResetEvent resetEvent;
-        private readonly Action<int, bool> routine;
+        private readonly ManualResetEventSlim resetEvent;
+        private readonly Action<long, bool> routine;
         private readonly int ticksPerSecond;
         private readonly int timeout;
 
-        private int delta = 0;
+        private long delta = 0L;
         private bool isCanceled = false;
+        private Stopwatch stopwatch;
 
         /// <summary>
-        /// Create a new instance of <see cref="InternalRoutine"/>. This is a lightweight version.
+        /// Create a new instance of <see cref="InternalRoutine"/>. This is a simplified version.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="timeout"></param>
         /// <param name="routine"></param>
-        public InternalRoutine(int timeout, Action routine)
-            : this(timeout, (delta) => routine(), null) { }
+        public InternalRoutine(string name, int timeout, Action routine)
+            : this(name, timeout, (delta) => routine(), null) { }
 
         /// <summary>
         /// Create a new instance of <see cref="InternalRoutine"/>.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="timeout"></param>
         /// <param name="routine"></param>
         /// <param name="errorLogger"></param>
-        public InternalRoutine(int timeout, Action<int> routine, Action<string> errorLogger = null)
+        public InternalRoutine(string name, int timeout, Action<long> routine, Action<string> errorLogger = null)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException(nameof(name));
             if (timeout <= 0)
                 throw new ArgumentOutOfRangeException(nameof(timeout), "Only non-zero and non-negative values are permitted.");
-
             if (routine == null)
                 throw new ArgumentNullException(nameof(routine));
 
+            Name = name;
             this.timeout = timeout;
             this.routine = (delta, cancel) => { if (!cancel) routine.Invoke(delta); };
-
             ticksPerSecond = 1000 / timeout;
-            resetEvent = new ManualResetEvent(false);
+            resetEvent = new ManualResetEventSlim(false);
             onError += (s, e) =>
             {
                 errorLogger?.Invoke(e.ToString());
@@ -65,17 +70,12 @@ namespace PSTk.Threading.Tasks
         /// </summary>
         public event EventHandler OnFinished;
 
-        /// <summary>
-        /// When routine is already initialized.
-        /// </summary>
-        [Obsolete("Not supported feature since version 3.4.2.", true)] public event EventHandler OnInitialized;
-
-        /// <summary>
-        /// When routine is preparing to initialize.
-        /// </summary>
-        [Obsolete("Not supported feature since version 3.4.2.", true)] public event EventHandler OnInitializing;
-
         private event EventHandler<Exception> onError;
+
+        /// <summary>
+        /// Get the name of <see cref="InternalRoutine"/>.
+        /// </summary>
+        public string Name { get; }
 
         /// <summary>
         /// Get the <see cref="CancellationToken"/> of attached task.
@@ -93,9 +93,12 @@ namespace PSTk.Threading.Tasks
         /// </summary>
         public void Start() => Execute(Loop);
 
-        private Task<int> Execute(Action method)
+        private Task<long> Execute(Action method)
         {
-            Task<int> task = null;
+            if (stopwatch == null)
+                stopwatch = Stopwatch.StartNew();
+
+            Task<long> task = null;
 
             if (Token != default)
                 try
@@ -104,9 +107,9 @@ namespace PSTk.Threading.Tasks
                     Token.ThrowIfCancellationRequested();
                     task = Task.Run(() =>
                     {
-                        var elapsedMs = Environment.TickCount;
+                        var elapsedMs = stopwatch.ElapsedMilliseconds;
                         method.Invoke();
-                        var elapsedMsDelta = Environment.TickCount - elapsedMs;
+                        var elapsedMsDelta = stopwatch.ElapsedMilliseconds - elapsedMs;
                         return timeout - elapsedMsDelta;
                     }, Token);
                 }
@@ -114,13 +117,13 @@ namespace PSTk.Threading.Tasks
             else
                 task = Task.Run(() =>
                 {
-                    var elapsedMs = Environment.TickCount;
+                    var elapsedMs = stopwatch.ElapsedMilliseconds;
                     method.Invoke();
-                    var elapsedMsDelta = Environment.TickCount - elapsedMs;
+                    var elapsedMsDelta = stopwatch.ElapsedMilliseconds - elapsedMs;
                     return timeout - elapsedMsDelta;
                 });
 
-            task?.ContinueWith(t => onError.Invoke(null, t.Exception.InnerException), TaskContinuationOptions.OnlyOnFaulted);
+            task?.ContinueWith(t => onError.Invoke(this, t.Exception.InnerException), TaskContinuationOptions.OnlyOnFaulted);
             return task;
         }
 
@@ -138,12 +141,10 @@ namespace PSTk.Threading.Tasks
 
             var result = task.Result < 0 ? 0 : task.Result;
             delta = Math.Max(0, result);
-
             if (delta > timeout)
-                OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(delta, ticksPerSecond, timeout));
+                OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(Name, delta, ticksPerSecond, timeout));
 
-            resetEvent.WaitOne(delta);
-
+            resetEvent.Wait((int)delta);
             Loop();
         }
     }

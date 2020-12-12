@@ -13,7 +13,6 @@ namespace PSTk.Threading.Tasks.Procedures
         /// <param name="input"></param>
         /// <param name="result"></param>
         public AsyncProcedureEventArgs(TInput input, bool result) : base()
-
         {
             Input = input;
             Result = result;

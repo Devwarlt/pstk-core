@@ -4,8 +4,6 @@
 
     public interface IAsyncProcedure : IAttachedTask
     {
-        string Name { get; }
-
         bool Execute();
     }
 
