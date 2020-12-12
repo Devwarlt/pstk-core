@@ -17,16 +17,16 @@ namespace PSTk.Diagnostics
         /// <param name="output"></param>
         public TimedProfiler(string message, Func<bool> condition = null, Action<string> output = null)
         {
-            Message = message;
-            Stopwatch = Stopwatch.StartNew();
-            Condition = condition;
-            Output = output;
+            this.message = message;
+            this.condition = condition;
+            this.output = output;
+            stopwatch = Stopwatch.StartNew();
         }
 
-        private Func<bool> Condition { get; }
-        private string Message { get; }
-        private Action<string> Output { get; }
-        private Stopwatch Stopwatch { get; }
+        private Func<bool> condition { get; }
+        private string message { get; }
+        private Action<string> output { get; }
+        private Stopwatch stopwatch { get; }
 
         /// <summary>
         /// Called automatically at the end of the scope when used along side a using statment or explicitly called in the code
@@ -35,14 +35,14 @@ namespace PSTk.Diagnostics
         /// </summary>
         public void Dispose()
         {
-            if (Condition != null && !Condition.Invoke())
+            if (condition != null && !condition.Invoke())
                 return;
 
-            Stopwatch.Stop();
+            stopwatch.Stop();
 
-            var result = $"{Message} | Elapsed: {Stopwatch.Elapsed} ({Stopwatch.ElapsedMilliseconds}ms)";
-            Output?.Invoke(result);
-            if (Output == null)
+            var result = $"{message} | Elapsed: {stopwatch.Elapsed} ({stopwatch.ElapsedMilliseconds}ms)";
+            output?.Invoke(result);
+            if (output == null)
                 Console.WriteLine(result);
         }
     }

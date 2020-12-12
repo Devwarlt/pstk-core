@@ -16,6 +16,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageTags>dotnet;toolkit;game-tools;pserver</PackageTags>
     <ApplicationIcon>ICON.ico</ApplicationIcon>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -38,5 +39,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PSTk.Diagnostics\PSTk.Diagnostics.csproj" />
+    <ProjectReference Include="..\PSTk.Threading\PSTk.Threading.csproj" />
   </ItemGroup>
 </Project>

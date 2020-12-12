@@ -6,6 +6,8 @@ namespace PSTk.Threading.Tasks.Procedures
 
     public interface IAttachedTask
     {
+        string Name { get; }
+
         CancellationToken Token { get; }
 
         void AttachToParent(CancellationToken token);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 
@@ -25,19 +26,23 @@ namespace PSTk.Threading.Tasks
         /// <summary>
         /// Create a new instance of <see cref="AutomatedRestarter"/>.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="timeout"></param>
         /// <param name="routineMs"></param>
         /// <param name="errorLogger"></param>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        public AutomatedRestarter(TimeSpan timeout, int routineMs = 1000, Action<string> errorLogger = null)
+        public AutomatedRestarter(string name, TimeSpan timeout, int routineMs = 1000, Action<string> errorLogger = null)
         {
-            if (routineMs <= 0) throw new ArgumentOutOfRangeException(nameof(routineMs), "Only non-zero and non-negative values are permitted.");
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException(nameof(name));
+            if (routineMs <= 0)
+                throw new ArgumentOutOfRangeException(nameof(routineMs), "Only non-zero and non-negative values are permitted.");
+            if (timeout == null)
+                throw new ArgumentNullException(nameof(timeout));
 
-            if (timeout == null) throw new ArgumentNullException(nameof(timeout));
-
+            Name = name;
             this.routineMs = routineMs;
             this.timeout = timeout;
-
             source = new CancellationTokenSource();
             listeners = new List<AutomatedRestarterListener>();
             onError += (s, e) => errorLogger?.Invoke(e.ToString());
@@ -55,7 +60,10 @@ namespace PSTk.Threading.Tasks
         /// </summary>
         public AutomatedRestarterFlag GetFlag { get; private set; } = AutomatedRestarterFlag.Idle;
 
-        private long GetTickCount => Environment.TickCount;
+        /// <summary>
+        /// Get name of <see cref="AutomatedRestarter"/>.
+        /// </summary>
+        public string Name { get; }
 
         /// <summary>
         /// Adds a new event into listeners.
@@ -72,9 +80,13 @@ namespace PSTk.Threading.Tasks
                     throw new InvalidOperationException($"You cannot perform new listener addition when in {GetFlag} mode.");
             }
 
-            var entry = new AutomatedRestarterListener { Timeout = timeout, Handler = action };
-
-            if (entry.IsInvalid) throw new InvalidOperationException("The listener is invalid.");
+            var entry = new AutomatedRestarterListener
+            {
+                Timeout = timeout,
+                Handler = action
+            };
+            if (entry.IsInvalid)
+                throw new InvalidOperationException("The listener is invalid.");
 
             listeners.Add(entry);
         }
@@ -97,14 +109,18 @@ namespace PSTk.Threading.Tasks
 
                 foreach (var listener in listeners)
                 {
-                    var entry = new AutomatedRestarterListener { Timeout = listener.Key, Handler = listener.Value };
-
-                    if (entry.IsInvalid) throw new InvalidOperationException("The listener is invalid.");
+                    var entry = new AutomatedRestarterListener
+                    {
+                        Timeout = listener.Key,
+                        Handler = listener.Value
+                    };
+                    if (entry.IsInvalid)
+                        throw new InvalidOperationException("The listener is invalid.");
 
                     this.listeners.Add(entry);
                 }
             }
-            catch (InvalidOperationException e) { onError.Invoke(null, e); }
+            catch (InvalidOperationException e) { onError.Invoke(this, e); }
         }
 
         /// <summary>
@@ -118,19 +134,20 @@ namespace PSTk.Threading.Tasks
             {
                 if (routine != null || GetFlag == AutomatedRestarterFlag.Running)
                     throw new InvalidOperationException("AutomatedRestarter instance is already running.");
+                if (OnFinished == null)
+                    throw new ArgumentNullException("OnFinished", "Event must be raised once routine finish its execution.");
 
-                if (OnFinished == null) throw new ArgumentNullException("OnFinished", "Event must be raised once routine finish its execution.");
-
-                listeners = listeners.OrderByDescending(listener => listener.Timeout.TotalMilliseconds).ToList();
+                listeners = listeners
+                    .OrderByDescending(listener => listener.Timeout.TotalMilliseconds)
+                    .ToList();
 
                 var isCompleted = false;
-
-                routine = new InternalRoutine(routineMs, () =>
+                var stopwatch = Stopwatch.StartNew();
+                routine = new InternalRoutine(Name, routineMs, () =>
                 {
-                    if (GetTickCount >= finalTickCount && !isCompleted)
+                    if (stopwatch.ElapsedMilliseconds >= finalTickCount && !isCompleted)
                     {
                         isCompleted = true;
-
                         Stop(true);
                         return;
                     }
@@ -139,8 +156,7 @@ namespace PSTk.Threading.Tasks
                         for (var i = 0; i < listeners.Count; i++)
                         {
                             var timeout = finalTickCount - listeners[i].Timeout.TotalMilliseconds;
-
-                            if (GetTickCount >= timeout)
+                            if (stopwatch.ElapsedMilliseconds >= timeout)
                             {
                                 listeners[i].Handler.Invoke();
                                 listeners.RemoveAt(i);
@@ -149,12 +165,9 @@ namespace PSTk.Threading.Tasks
                         }
                 });
                 routine.AttachToParent(source.Token);
-
-                initialTickCount = GetTickCount;
+                initialTickCount = stopwatch.ElapsedMilliseconds;
                 finalTickCount = initialTickCount + (long)timeout.TotalMilliseconds;
-
                 routine.Start();
-
                 GetFlag = AutomatedRestarterFlag.Running;
             }
             catch (Exception e)
@@ -176,12 +189,13 @@ namespace PSTk.Threading.Tasks
             {
                 if (source.IsCancellationRequested || GetFlag == AutomatedRestarterFlag.Stopped)
                     throw new InvalidOperationException("AutomatedRestarter instance is already stopped.");
-
-                if (OnFinished == null) throw new ArgumentNullException("OnFinished", "Event must be raised once routine finish its execution.");
+                if (OnFinished == null)
+                    throw new ArgumentNullException("OnFinished", "Event must be raised once routine finish its execution.");
 
                 source.Cancel();
 
-                if (isFinished) OnFinished.Invoke(this, null);
+                if (isFinished)
+                    OnFinished.Invoke(this, null);
 
                 GetFlag = AutomatedRestarterFlag.Stopped;
             }

@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PSTk.Extensions.ConcurrentCollections
+namespace PSTk.Extensions.Utils
 {
     /// <summary>
     /// Contains <see cref="ConcurrentDictionary{TKey, TValue}"/> utilities.

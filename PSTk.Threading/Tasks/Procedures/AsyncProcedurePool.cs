@@ -19,24 +19,29 @@ namespace PSTk.Threading.Tasks.Procedures
         /// <summary>
         /// Create a new instance of <see cref="AsyncProcedurePool"/>.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="pool"></param>
         /// <param name="source"></param>
-        public AsyncProcedurePool(IAsyncProcedure[] pool, CancellationTokenSource source = null)
-
+        public AsyncProcedurePool(string name, IAsyncProcedure[] pool, CancellationTokenSource source = null)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException(nameof(name));
             if (pool == null)
                 throw new ArgumentNullException(nameof(pool));
-
             if (pool.Length == 0)
                 throw new ArgumentOutOfRangeException(nameof(pool), "Required at least 1 AsyncProcedure.");
 
+            Name = name;
             this.pool = pool;
             this.source = source ?? new CancellationTokenSource();
-
             Token = this.source.Token;
-
             AttachPoolToContext(Token);
         }
+
+        /// <summary>
+        /// Get name of <see cref="AsyncProcedurePool"/>.
+        /// </summary>
+        public string Name { get; }
 
         /// <summary>
         /// Return number of <see cref="IAsyncProcedure"/> in pool.
@@ -67,7 +72,6 @@ namespace PSTk.Threading.Tasks.Procedures
         public void AttachToParent(CancellationToken token)
         {
             Token = token;
-
             AttachPoolToContext(Token);
         }
 
@@ -94,7 +98,7 @@ namespace PSTk.Threading.Tasks.Procedures
         {
             var tasks = pool
                 .AsParallel()
-                .Select(async asyncProcedure => await Task.Run(() => asyncProcedure.Execute()))
+                .Select(asyncProcedure => Task.Run(() => asyncProcedure.Execute()))
                 .ToArray();
             return Task.WhenAll(tasks).Result;
         }

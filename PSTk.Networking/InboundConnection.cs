@@ -80,6 +80,12 @@ namespace PSTk.Networking
             }
         }
 
+#pragma warning disable
+
+        public string Name => throw new NotImplementedException();
+
+#pragma warning restore
+
         /// <summary>
         /// Get the <see cref="CancellationToken"/> of attached task.
         /// </summary>

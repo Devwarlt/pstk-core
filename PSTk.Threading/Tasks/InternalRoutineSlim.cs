@@ -30,25 +30,30 @@ namespace PSTk.Threading.Tasks
         /// <summary>
         /// Create a new instance of <see cref="InternalRoutineSlim"/> without log tracking.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="timeout"></param>
         /// <param name="routine"></param>
-        public InternalRoutineSlim(int timeout, Action routine)
-            : this(timeout, routine, null)
+        public InternalRoutineSlim(string name, int timeout, Action routine)
+            : this(name, timeout, routine, null)
         { }
 
         /// <summary>
         /// Create a new instance of <see cref="InternalRoutineSlim"/> with log tracking.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="timeout"></param>
         /// <param name="routine"></param>
         /// <param name="errorLogger"></param>
-        public InternalRoutineSlim(int timeout, Action routine, Action<string> errorLogger = null)
+        public InternalRoutineSlim(string name, int timeout, Action routine, Action<string> errorLogger = null)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException(nameof(name));
             if (timeout <= 0)
                 throw new ArgumentOutOfRangeException(nameof(timeout), "Only non-zero and non-negative values are permitted.");
             if (routine == null)
                 throw new ArgumentNullException(nameof(routine));
 
+            Name = name;
             this.timeout = timeout;
             this.routine = (delta) => routine.Invoke();
             onError += (s, e) =>
@@ -61,14 +66,18 @@ namespace PSTk.Threading.Tasks
         /// <summary>
         /// Create a new instance of <see cref="InternalRoutineSlim"/> with log and delta per tick tracking.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="timeout"></param>
         /// <param name="routine"></param>
         /// <param name="errorLogger"></param>
-        public InternalRoutineSlim(int timeout, Action<long> routine, Action<string> errorLogger = null)
+        public InternalRoutineSlim(string name, int timeout, Action<long> routine, Action<string> errorLogger = null)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException(nameof(name));
             if (timeout <= 0)
                 throw new ArgumentOutOfRangeException(nameof(timeout), "Only non-zero and non-negative values are permitted.");
 
+            Name = name;
             this.timeout = timeout;
             this.routine = routine ?? throw new ArgumentNullException(nameof(routine));
             onError += (s, e) =>
@@ -106,12 +115,17 @@ namespace PSTk.Threading.Tasks
         public bool IsRunning { get; private set; } = false;
 
         /// <summary>
+        /// Get name of <see cref="InternalRoutineSlim"/>.
+        /// </summary>
+        public string Name { get; }
+
+        /// <summary>
         /// Get the <see cref="CancellationToken"/> of attached task.
         /// </summary>
         public CancellationToken Token { get; private set; } = default;
 
         /// <summary>
-        /// Gets total <see cref="Stopwatch.ElapsedMilliseconds"/> since <see cref="Start"/> of <see cref="TickCore"/>.
+        /// Get total <see cref="Stopwatch.ElapsedMilliseconds"/> since <see cref="Start"/> of <see cref="TickCore"/>.
         /// </summary>
         public long TotalElapsedMilliseconds => stopwatch.ElapsedMilliseconds;
 
@@ -151,7 +165,7 @@ namespace PSTk.Threading.Tasks
         {
             routine.Invoke(Delta = Math.Max(0, Math.Abs(Delta - stopwatch.ElapsedMilliseconds)));
             if (Delta > timeout)
-                OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(Delta, ticksPerSecond, timeout));
+                OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(Name, Delta, ticksPerSecond, timeout));
             return IsRunning && !IsCanceled;
         }
 
