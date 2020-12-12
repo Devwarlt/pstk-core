@@ -1,4 +1,4 @@
-# PSTk - `PServer Toolkit` [![license-badge]][license] [![version-badge]][latest]
+# PSTk - `PServer Toolkit` [![license-badge]][license] [![version-badge]][latest] [![size-badge]][latest] [![visitors-badge]][latest]
 
 **PServer Toolkit**, also known with acronym **PSTk** and former name **Core Algorithms**, is a collection of features available in .NET framework that enhances game server performance using .NET native implementations. Can be ported to any other .NET environment with properly adjusts and implementation. However, target is for any game server structure.
 
@@ -27,8 +27,8 @@ For more details, consider to check our [**API documentation**][api-docs].
 - [@Devwarlt][devwarlt-ref]
 - [@Slendergo][slendergo-ref]
 
-[dev-ref]: /tree/dev
-[prod-ref]: /../..
+[dev-ref]: https://github.com/Devwarlt/pstk-core/tree/dev
+[prod-ref]: https://github.com/Devwarlt/pstk-core
 
 [devwarlt-ref]: https://github.com/Devwarlt
 [slendergo-ref]: https://github.com/Slendergo
@@ -39,9 +39,11 @@ For more details, consider to check our [**API documentation**][api-docs].
 [api-docs]: https://devwarlt.github.io/pstk-core/api/
 
 [license-badge]: https://img.shields.io/badge/MIT-gray?style=plastic
-[language-badge]: https://img.shields.io/badge/8.0-purple?logo=c-sharp&style=plastic
+[language-badge]: https://img.shields.io/github/languages/top/Devwarlt/pstk-core?style=plastic&color=purple
 [framework-badge]: https://img.shields.io/badge/Core-3.1-purple?logo=.net&style=plastic
 [version-badge]: https://img.shields.io/github/release/Devwarlt/pstk-core?color=success&logo=github&style=plastic
+[size-badge]: https://img.shields.io/github/repo-size/Devwarlt/pstk-core?style=plastic
+[visitors-badge]: https://visitor-badge.glitch.me/badge?page_id=Devwarlt.pstk-core
 
 [github-page-ci]: https://github.com/Devwarlt/pstk-core/actions?query=workflow%3A"GitHub+Pages+CI"
 [github-page-ci-dev-badge]: https://github.com/Devwarlt/pstk-core/workflows/GitHub%20Pages%20CI/badge.svg?branch=dev
