@@ -27,8 +27,8 @@ For more details, consider to check our [**API documentation**][api-docs].
 - [@Devwarlt][devwarlt-ref]
 - [@Slendergo][slendergo-ref]
 
-[dev-ref]: /tree/dev
-[prod-ref]: /../..
+[dev-ref]: https://github.com/Devwarlt/pstk-core/tree/dev
+[prod-ref]: https://github.com/Devwarlt/pstk-core
 
 [devwarlt-ref]: https://github.com/Devwarlt
 [slendergo-ref]: https://github.com/Slendergo
