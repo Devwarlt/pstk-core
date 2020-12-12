@@ -26,14 +26,13 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>bin\Debug\netcoreapp3.1\PSTk.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PlatformTarget>x64</PlatformTarget>
-    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\pstk-core\PSTk.Core\PSTk.Core.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netcoreapp3.1\PSTk.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
