@@ -91,19 +91,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_System_Int64_System_Int32_System_Int64_.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.InternalRoutineEventArgs.%23ctor(System.Int64%2CSystem.Int32%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_System_String_System_Int64_System_Int32_System_Int64_.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.InternalRoutineEventArgs.%23ctor(System.String%2CSystem.Int64%2CSystem.Int32%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L17">View Source</a>
   </span>
   <a id="PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor*"></a>
-  <h4 id="PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_System_Int64_System_Int32_System_Int64_" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int64,System.Int32,System.Int64)">InternalRoutineEventArgs(Int64, Int32, Int64)</h4>
+  <h4 id="PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_System_String_System_Int64_System_Int32_System_Int64_" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.String,System.Int64,System.Int32,System.Int64)">InternalRoutineEventArgs(String, Int64, Int32, Int64)</h4>
   <div class="markdown level1 summary"><p>Create a new instance of <a class="xref" href="PSTk.Threading.Tasks.InternalRoutineEventArgs.html">InternalRoutineEventArgs</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InternalRoutineEventArgs(long delta, int ticksPerSecond, long timeout)</code></pre>
+    <pre><code class="lang-csharp hljs">public InternalRoutineEventArgs(string name, long delta, int ticksPerSecond, long timeout)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,6 +115,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">delta</span></td>
@@ -139,11 +144,11 @@
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_InternalRoutineEventArgs_Delta.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L28">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L29">View Source</a>
   </span>
   <a id="PSTk_Threading_Tasks_InternalRoutineEventArgs_Delta_" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta*"></a>
   <h4 id="PSTk_Threading_Tasks_InternalRoutineEventArgs_Delta" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta">Delta</h4>
-  <div class="markdown level1 summary"><p>Delta variation of <span class="xref">PSTk.Threading.Tasks.InternalRoutine.routine</span>.</p>
+  <div class="markdown level1 summary"><p>Get delta variation of <a class="xref" href="PSTk.Threading.Tasks.InternalRoutine.html">InternalRoutine</a> raised on last tick execution.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -167,14 +172,45 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_InternalRoutineEventArgs_Name.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.InternalRoutineEventArgs.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L34">View Source</a>
+  </span>
+  <a id="PSTk_Threading_Tasks_InternalRoutineEventArgs_Name_" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.Name*"></a>
+  <h4 id="PSTk_Threading_Tasks_InternalRoutineEventArgs_Name" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Get name of <a class="xref" href="PSTk.Threading.Tasks.InternalRoutine.html">InternalRoutine</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_InternalRoutineEventArgs_TicksPerSecond.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L33">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L39">View Source</a>
   </span>
   <a id="PSTk_Threading_Tasks_InternalRoutineEventArgs_TicksPerSecond_" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond*"></a>
   <h4 id="PSTk_Threading_Tasks_InternalRoutineEventArgs_TicksPerSecond" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond">TicksPerSecond</h4>
-  <div class="markdown level1 summary"><p>Ticks per second for <span class="xref">PSTk.Threading.Tasks.InternalRoutine.routine</span> invoke on <see cref="!:TaskScheduler"></see>.</p>
+  <div class="markdown level1 summary"><p>Get ticks per second or number of executions per 1000ms used by <a class="xref" href="PSTk.Threading.Tasks.InternalRoutine.html">InternalRoutine</a> to execute its internal task.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -201,11 +237,11 @@
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_InternalRoutineEventArgs_Timeout.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L38">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L44">View Source</a>
   </span>
   <a id="PSTk_Threading_Tasks_InternalRoutineEventArgs_Timeout_" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout*"></a>
   <h4 id="PSTk_Threading_Tasks_InternalRoutineEventArgs_Timeout" data-uid="PSTk.Threading.Tasks.InternalRoutineEventArgs.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"><p>Timeout in milliseconds for <span class="xref">PSTk.Threading.Tasks.InternalRoutine.routine</span> invoke on <see cref="!:TaskScheduler"></see>.</p>
+  <div class="markdown level1 summary"><p>Get timeout in milliseconds used by <a class="xref" href="PSTk.Threading.Tasks.InternalRoutine.html">InternalRoutine</a> to execute its internal task.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -227,6 +263,10 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.html#PSTk_Extensions_Utils_InternalRoutineEventArgsExtensions_TrackDelta__1_PSTk_Threading_Tasks_InternalRoutineEventArgs_PSTk_Diagnostics_Logging_ILog___0__">InternalRoutineEventArgsExtensions.TrackDelta&lt;T&gt;(InternalRoutineEventArgs, ILog&lt;T&gt;)</a>
+  </div>
 </article>
           </div>
           
@@ -238,7 +278,7 @@
                     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_InternalRoutineEventArgs.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.InternalRoutineEventArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/InternalRoutineEventArgs.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

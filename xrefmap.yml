@@ -1,12 +1,716 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: PSTk.Core.Collections
+  name: PSTk.Core.Collections
+  href: api/PSTk.Core.Collections.html
+  commentId: N:PSTk.Core.Collections
+  fullName: PSTk.Core.Collections
+  nameWithType: PSTk.Core.Collections
+- uid: PSTk.Core.Collections.SafeQueue`1
+  name: SafeQueue<T>
+  href: api/PSTk.Core.Collections.SafeQueue-1.html
+  commentId: T:PSTk.Core.Collections.SafeQueue`1
+  name.vb: SafeQueue(Of T)
+  fullName: PSTk.Core.Collections.SafeQueue<T>
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T)
+  nameWithType: SafeQueue<T>
+  nameWithType.vb: SafeQueue(Of T)
+- uid: PSTk.Core.Collections.SafeQueue`1.Clear
+  name: Clear()
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_Clear
+  commentId: M:PSTk.Core.Collections.SafeQueue`1.Clear
+  fullName: PSTk.Core.Collections.SafeQueue<T>.Clear()
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).Clear()
+  nameWithType: SafeQueue<T>.Clear()
+  nameWithType.vb: SafeQueue(Of T).Clear()
+- uid: PSTk.Core.Collections.SafeQueue`1.Clear*
+  name: Clear
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_Clear_
+  commentId: Overload:PSTk.Core.Collections.SafeQueue`1.Clear
+  isSpec: "True"
+  fullName: PSTk.Core.Collections.SafeQueue<T>.Clear
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).Clear
+  nameWithType: SafeQueue<T>.Clear
+  nameWithType.vb: SafeQueue(Of T).Clear
+- uid: PSTk.Core.Collections.SafeQueue`1.Count
+  name: Count
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_Count
+  commentId: P:PSTk.Core.Collections.SafeQueue`1.Count
+  fullName: PSTk.Core.Collections.SafeQueue<T>.Count
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).Count
+  nameWithType: SafeQueue<T>.Count
+  nameWithType.vb: SafeQueue(Of T).Count
+- uid: PSTk.Core.Collections.SafeQueue`1.Count*
+  name: Count
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_Count_
+  commentId: Overload:PSTk.Core.Collections.SafeQueue`1.Count
+  isSpec: "True"
+  fullName: PSTk.Core.Collections.SafeQueue<T>.Count
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).Count
+  nameWithType: SafeQueue<T>.Count
+  nameWithType.vb: SafeQueue(Of T).Count
+- uid: PSTk.Core.Collections.SafeQueue`1.Enqueue(`0)
+  name: Enqueue(T)
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_Enqueue__0_
+  commentId: M:PSTk.Core.Collections.SafeQueue`1.Enqueue(`0)
+  fullName: PSTk.Core.Collections.SafeQueue<T>.Enqueue(T)
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).Enqueue(T)
+  nameWithType: SafeQueue<T>.Enqueue(T)
+  nameWithType.vb: SafeQueue(Of T).Enqueue(T)
+- uid: PSTk.Core.Collections.SafeQueue`1.Enqueue*
+  name: Enqueue
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_Enqueue_
+  commentId: Overload:PSTk.Core.Collections.SafeQueue`1.Enqueue
+  isSpec: "True"
+  fullName: PSTk.Core.Collections.SafeQueue<T>.Enqueue
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).Enqueue
+  nameWithType: SafeQueue<T>.Enqueue
+  nameWithType.vb: SafeQueue(Of T).Enqueue
+- uid: PSTk.Core.Collections.SafeQueue`1.TryDequeue(`0@)
+  name: TryDequeue(out T)
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_TryDequeue__0__
+  commentId: M:PSTk.Core.Collections.SafeQueue`1.TryDequeue(`0@)
+  name.vb: TryDequeue(ByRef T)
+  fullName: PSTk.Core.Collections.SafeQueue<T>.TryDequeue(out T)
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).TryDequeue(ByRef T)
+  nameWithType: SafeQueue<T>.TryDequeue(out T)
+  nameWithType.vb: SafeQueue(Of T).TryDequeue(ByRef T)
+- uid: PSTk.Core.Collections.SafeQueue`1.TryDequeue*
+  name: TryDequeue
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_TryDequeue_
+  commentId: Overload:PSTk.Core.Collections.SafeQueue`1.TryDequeue
+  isSpec: "True"
+  fullName: PSTk.Core.Collections.SafeQueue<T>.TryDequeue
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).TryDequeue
+  nameWithType: SafeQueue<T>.TryDequeue
+  nameWithType.vb: SafeQueue(Of T).TryDequeue
+- uid: PSTk.Core.Collections.SafeQueue`1.TryDequeueAll(`0[]@)
+  name: TryDequeueAll(out T[])
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_TryDequeueAll__0____
+  commentId: M:PSTk.Core.Collections.SafeQueue`1.TryDequeueAll(`0[]@)
+  name.vb: TryDequeueAll(ByRef T())
+  fullName: PSTk.Core.Collections.SafeQueue<T>.TryDequeueAll(out T[])
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).TryDequeueAll(ByRef T())
+  nameWithType: SafeQueue<T>.TryDequeueAll(out T[])
+  nameWithType.vb: SafeQueue(Of T).TryDequeueAll(ByRef T())
+- uid: PSTk.Core.Collections.SafeQueue`1.TryDequeueAll*
+  name: TryDequeueAll
+  href: api/PSTk.Core.Collections.SafeQueue-1.html#PSTk_Core_Collections_SafeQueue_1_TryDequeueAll_
+  commentId: Overload:PSTk.Core.Collections.SafeQueue`1.TryDequeueAll
+  isSpec: "True"
+  fullName: PSTk.Core.Collections.SafeQueue<T>.TryDequeueAll
+  fullName.vb: PSTk.Core.Collections.SafeQueue(Of T).TryDequeueAll
+  nameWithType: SafeQueue<T>.TryDequeueAll
+  nameWithType.vb: SafeQueue(Of T).TryDequeueAll
+- uid: PSTk.Core.Tools
+  name: PSTk.Core.Tools
+  href: api/PSTk.Core.Tools.html
+  commentId: N:PSTk.Core.Tools
+  fullName: PSTk.Core.Tools
+  nameWithType: PSTk.Core.Tools
+- uid: PSTk.Core.Tools.Google
+  name: PSTk.Core.Tools.Google
+  href: api/PSTk.Core.Tools.Google.html
+  commentId: N:PSTk.Core.Tools.Google
+  fullName: PSTk.Core.Tools.Google
+  nameWithType: PSTk.Core.Tools.Google
+- uid: PSTk.Core.Tools.Google.GMailCentral
+  name: GMailCentral
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html
+  commentId: T:PSTk.Core.Tools.Google.GMailCentral
+  fullName: PSTk.Core.Tools.Google.GMailCentral
+  nameWithType: GMailCentral
+- uid: PSTk.Core.Tools.Google.GMailCentral.#ctor(System.String,System.String,System.UInt32)
+  name: GMailCentral(String, String, UInt32)
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html#PSTk_Core_Tools_Google_GMailCentral__ctor_System_String_System_String_System_UInt32_
+  commentId: M:PSTk.Core.Tools.Google.GMailCentral.#ctor(System.String,System.String,System.UInt32)
+  fullName: PSTk.Core.Tools.Google.GMailCentral.GMailCentral(System.String, System.String, System.UInt32)
+  nameWithType: GMailCentral.GMailCentral(String, String, UInt32)
+- uid: PSTk.Core.Tools.Google.GMailCentral.#ctor*
+  name: GMailCentral
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html#PSTk_Core_Tools_Google_GMailCentral__ctor_
+  commentId: Overload:PSTk.Core.Tools.Google.GMailCentral.#ctor
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.Google.GMailCentral.GMailCentral
+  nameWithType: GMailCentral.GMailCentral
+- uid: PSTk.Core.Tools.Google.GMailCentral.IsValid(System.String)
+  name: IsValid(String)
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html#PSTk_Core_Tools_Google_GMailCentral_IsValid_System_String_
+  commentId: M:PSTk.Core.Tools.Google.GMailCentral.IsValid(System.String)
+  fullName: PSTk.Core.Tools.Google.GMailCentral.IsValid(System.String)
+  nameWithType: GMailCentral.IsValid(String)
+- uid: PSTk.Core.Tools.Google.GMailCentral.IsValid*
+  name: IsValid
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html#PSTk_Core_Tools_Google_GMailCentral_IsValid_
+  commentId: Overload:PSTk.Core.Tools.Google.GMailCentral.IsValid
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.Google.GMailCentral.IsValid
+  nameWithType: GMailCentral.IsValid
+- uid: PSTk.Core.Tools.Google.GMailCentral.OnError
+  name: OnError
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html#PSTk_Core_Tools_Google_GMailCentral_OnError
+  commentId: F:PSTk.Core.Tools.Google.GMailCentral.OnError
+  fullName: PSTk.Core.Tools.Google.GMailCentral.OnError
+  nameWithType: GMailCentral.OnError
+- uid: PSTk.Core.Tools.Google.GMailCentral.OnSuccess
+  name: OnSuccess
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html#PSTk_Core_Tools_Google_GMailCentral_OnSuccess
+  commentId: F:PSTk.Core.Tools.Google.GMailCentral.OnSuccess
+  fullName: PSTk.Core.Tools.Google.GMailCentral.OnSuccess
+  nameWithType: GMailCentral.OnSuccess
+- uid: PSTk.Core.Tools.Google.GMailCentral.SendMailAsync(MailMessage)
+  name: SendMailAsync(MailMessage)
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html#PSTk_Core_Tools_Google_GMailCentral_SendMailAsync_MailMessage_
+  commentId: M:PSTk.Core.Tools.Google.GMailCentral.SendMailAsync(MailMessage)
+  fullName: PSTk.Core.Tools.Google.GMailCentral.SendMailAsync(MailMessage)
+  nameWithType: GMailCentral.SendMailAsync(MailMessage)
+- uid: PSTk.Core.Tools.Google.GMailCentral.SendMailAsync*
+  name: SendMailAsync
+  href: api/PSTk.Core.Tools.Google.GMailCentral.html#PSTk_Core_Tools_Google_GMailCentral_SendMailAsync_
+  commentId: Overload:PSTk.Core.Tools.Google.GMailCentral.SendMailAsync
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.Google.GMailCentral.SendMailAsync
+  nameWithType: GMailCentral.SendMailAsync
+- uid: PSTk.Core.Tools.Google.GMailMessage
+  name: GMailMessage
+  href: api/PSTk.Core.Tools.Google.GMailMessage.html
+  commentId: T:PSTk.Core.Tools.Google.GMailMessage
+  fullName: PSTk.Core.Tools.Google.GMailMessage
+  nameWithType: GMailMessage
+- uid: PSTk.Core.Tools.Google.GMailMessage.#ctor(System.String)
+  name: GMailMessage(String)
+  href: api/PSTk.Core.Tools.Google.GMailMessage.html#PSTk_Core_Tools_Google_GMailMessage__ctor_System_String_
+  commentId: M:PSTk.Core.Tools.Google.GMailMessage.#ctor(System.String)
+  fullName: PSTk.Core.Tools.Google.GMailMessage.GMailMessage(System.String)
+  nameWithType: GMailMessage.GMailMessage(String)
+- uid: PSTk.Core.Tools.Google.GMailMessage.#ctor*
+  name: GMailMessage
+  href: api/PSTk.Core.Tools.Google.GMailMessage.html#PSTk_Core_Tools_Google_GMailMessage__ctor_
+  commentId: Overload:PSTk.Core.Tools.Google.GMailMessage.#ctor
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.Google.GMailMessage.GMailMessage
+  nameWithType: GMailMessage.GMailMessage
+- uid: PSTk.Core.Tools.Google.GMailMessage.Build(System.String,System.String,System.Boolean)
+  name: Build(String, String, Boolean)
+  href: api/PSTk.Core.Tools.Google.GMailMessage.html#PSTk_Core_Tools_Google_GMailMessage_Build_System_String_System_String_System_Boolean_
+  commentId: M:PSTk.Core.Tools.Google.GMailMessage.Build(System.String,System.String,System.Boolean)
+  fullName: PSTk.Core.Tools.Google.GMailMessage.Build(System.String, System.String, System.Boolean)
+  nameWithType: GMailMessage.Build(String, String, Boolean)
+- uid: PSTk.Core.Tools.Google.GMailMessage.Build*
+  name: Build
+  href: api/PSTk.Core.Tools.Google.GMailMessage.html#PSTk_Core_Tools_Google_GMailMessage_Build_
+  commentId: Overload:PSTk.Core.Tools.Google.GMailMessage.Build
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.Google.GMailMessage.Build
+  nameWithType: GMailMessage.Build
+- uid: PSTk.Core.Tools.Google.GMailValidator
+  name: GMailValidator
+  href: api/PSTk.Core.Tools.Google.GMailValidator.html
+  commentId: T:PSTk.Core.Tools.Google.GMailValidator
+  fullName: PSTk.Core.Tools.Google.GMailValidator
+  nameWithType: GMailValidator
+- uid: PSTk.Core.Tools.Google.GMailValidator.#ctor(System.String)
+  name: GMailValidator(String)
+  href: api/PSTk.Core.Tools.Google.GMailValidator.html#PSTk_Core_Tools_Google_GMailValidator__ctor_System_String_
+  commentId: M:PSTk.Core.Tools.Google.GMailValidator.#ctor(System.String)
+  fullName: PSTk.Core.Tools.Google.GMailValidator.GMailValidator(System.String)
+  nameWithType: GMailValidator.GMailValidator(String)
+- uid: PSTk.Core.Tools.Google.GMailValidator.#ctor*
+  name: GMailValidator
+  href: api/PSTk.Core.Tools.Google.GMailValidator.html#PSTk_Core_Tools_Google_GMailValidator__ctor_
+  commentId: Overload:PSTk.Core.Tools.Google.GMailValidator.#ctor
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.Google.GMailValidator.GMailValidator
+  nameWithType: GMailValidator.GMailValidator
+- uid: PSTk.Core.Tools.Google.GMailValidator.IsValid(System.String)
+  name: IsValid(String)
+  href: api/PSTk.Core.Tools.Google.GMailValidator.html#PSTk_Core_Tools_Google_GMailValidator_IsValid_System_String_
+  commentId: M:PSTk.Core.Tools.Google.GMailValidator.IsValid(System.String)
+  fullName: PSTk.Core.Tools.Google.GMailValidator.IsValid(System.String)
+  nameWithType: GMailValidator.IsValid(String)
+- uid: PSTk.Core.Tools.Google.GMailValidator.IsValid*
+  name: IsValid
+  href: api/PSTk.Core.Tools.Google.GMailValidator.html#PSTk_Core_Tools_Google_GMailValidator_IsValid_
+  commentId: Overload:PSTk.Core.Tools.Google.GMailValidator.IsValid
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.Google.GMailValidator.IsValid
+  nameWithType: GMailValidator.IsValid
+- uid: PSTk.Core.Tools.InterlockedExtra
+  name: InterlockedExtra
+  href: api/PSTk.Core.Tools.InterlockedExtra.html
+  commentId: T:PSTk.Core.Tools.InterlockedExtra
+  fullName: PSTk.Core.Tools.InterlockedExtra
+  nameWithType: InterlockedExtra
+- uid: PSTk.Core.Tools.InterlockedExtra.Increment(System.Double@)
+  name: Increment(ref Double)
+  href: api/PSTk.Core.Tools.InterlockedExtra.html#PSTk_Core_Tools_InterlockedExtra_Increment_System_Double__
+  commentId: M:PSTk.Core.Tools.InterlockedExtra.Increment(System.Double@)
+  name.vb: Increment(ByRef Double)
+  fullName: PSTk.Core.Tools.InterlockedExtra.Increment(ref System.Double)
+  fullName.vb: PSTk.Core.Tools.InterlockedExtra.Increment(ByRef System.Double)
+  nameWithType: InterlockedExtra.Increment(ref Double)
+  nameWithType.vb: InterlockedExtra.Increment(ByRef Double)
+- uid: PSTk.Core.Tools.InterlockedExtra.Increment(System.Single@)
+  name: Increment(ref Single)
+  href: api/PSTk.Core.Tools.InterlockedExtra.html#PSTk_Core_Tools_InterlockedExtra_Increment_System_Single__
+  commentId: M:PSTk.Core.Tools.InterlockedExtra.Increment(System.Single@)
+  name.vb: Increment(ByRef Single)
+  fullName: PSTk.Core.Tools.InterlockedExtra.Increment(ref System.Single)
+  fullName.vb: PSTk.Core.Tools.InterlockedExtra.Increment(ByRef System.Single)
+  nameWithType: InterlockedExtra.Increment(ref Single)
+  nameWithType.vb: InterlockedExtra.Increment(ByRef Single)
+- uid: PSTk.Core.Tools.InterlockedExtra.Increment(System.UInt64@)
+  name: Increment(ref UInt64)
+  href: api/PSTk.Core.Tools.InterlockedExtra.html#PSTk_Core_Tools_InterlockedExtra_Increment_System_UInt64__
+  commentId: M:PSTk.Core.Tools.InterlockedExtra.Increment(System.UInt64@)
+  name.vb: Increment(ByRef UInt64)
+  fullName: PSTk.Core.Tools.InterlockedExtra.Increment(ref System.UInt64)
+  fullName.vb: PSTk.Core.Tools.InterlockedExtra.Increment(ByRef System.UInt64)
+  nameWithType: InterlockedExtra.Increment(ref UInt64)
+  nameWithType.vb: InterlockedExtra.Increment(ByRef UInt64)
+- uid: PSTk.Core.Tools.InterlockedExtra.Increment*
+  name: Increment
+  href: api/PSTk.Core.Tools.InterlockedExtra.html#PSTk_Core_Tools_InterlockedExtra_Increment_
+  commentId: Overload:PSTk.Core.Tools.InterlockedExtra.Increment
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.InterlockedExtra.Increment
+  nameWithType: InterlockedExtra.Increment
+- uid: PSTk.Core.Tools.SerialNumberGenerator
+  name: SerialNumberGenerator
+  href: api/PSTk.Core.Tools.SerialNumberGenerator.html
+  commentId: T:PSTk.Core.Tools.SerialNumberGenerator
+  fullName: PSTk.Core.Tools.SerialNumberGenerator
+  nameWithType: SerialNumberGenerator
+- uid: PSTk.Core.Tools.SerialNumberGenerator.#ctor(System.String,System.Int32,System.Char,System.Int32)
+  name: SerialNumberGenerator(String, Int32, Char, Int32)
+  href: api/PSTk.Core.Tools.SerialNumberGenerator.html#PSTk_Core_Tools_SerialNumberGenerator__ctor_System_String_System_Int32_System_Char_System_Int32_
+  commentId: M:PSTk.Core.Tools.SerialNumberGenerator.#ctor(System.String,System.Int32,System.Char,System.Int32)
+  fullName: PSTk.Core.Tools.SerialNumberGenerator.SerialNumberGenerator(System.String, System.Int32, System.Char, System.Int32)
+  nameWithType: SerialNumberGenerator.SerialNumberGenerator(String, Int32, Char, Int32)
+- uid: PSTk.Core.Tools.SerialNumberGenerator.#ctor*
+  name: SerialNumberGenerator
+  href: api/PSTk.Core.Tools.SerialNumberGenerator.html#PSTk_Core_Tools_SerialNumberGenerator__ctor_
+  commentId: Overload:PSTk.Core.Tools.SerialNumberGenerator.#ctor
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.SerialNumberGenerator.SerialNumberGenerator
+  nameWithType: SerialNumberGenerator.SerialNumberGenerator
+- uid: PSTk.Core.Tools.SerialNumberGenerator.Create(System.String)
+  name: Create(String)
+  href: api/PSTk.Core.Tools.SerialNumberGenerator.html#PSTk_Core_Tools_SerialNumberGenerator_Create_System_String_
+  commentId: M:PSTk.Core.Tools.SerialNumberGenerator.Create(System.String)
+  fullName: PSTk.Core.Tools.SerialNumberGenerator.Create(System.String)
+  nameWithType: SerialNumberGenerator.Create(String)
+- uid: PSTk.Core.Tools.SerialNumberGenerator.Create*
+  name: Create
+  href: api/PSTk.Core.Tools.SerialNumberGenerator.html#PSTk_Core_Tools_SerialNumberGenerator_Create_
+  commentId: Overload:PSTk.Core.Tools.SerialNumberGenerator.Create
+  isSpec: "True"
+  fullName: PSTk.Core.Tools.SerialNumberGenerator.Create
+  nameWithType: SerialNumberGenerator.Create
 - uid: PSTk.Diagnostics
   name: PSTk.Diagnostics
   href: api/PSTk.Diagnostics.html
   commentId: N:PSTk.Diagnostics
   fullName: PSTk.Diagnostics
   nameWithType: PSTk.Diagnostics
+- uid: PSTk.Diagnostics.Logging
+  name: PSTk.Diagnostics.Logging
+  href: api/PSTk.Diagnostics.Logging.html
+  commentId: N:PSTk.Diagnostics.Logging
+  fullName: PSTk.Diagnostics.Logging
+  nameWithType: PSTk.Diagnostics.Logging
+- uid: PSTk.Diagnostics.Logging.ILog`1
+  name: ILog<T>
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html
+  commentId: T:PSTk.Diagnostics.Logging.ILog`1
+  name.vb: ILog(Of T)
+  fullName: PSTk.Diagnostics.Logging.ILog<T>
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T)
+  nameWithType: ILog<T>
+  nameWithType.vb: ILog(Of T)
+- uid: PSTk.Diagnostics.Logging.ILog`1.Endl
+  name: Endl()
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_Endl
+  commentId: M:PSTk.Diagnostics.Logging.ILog`1.Endl
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.Endl()
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).Endl()
+  nameWithType: ILog<T>.Endl()
+  nameWithType.vb: ILog(Of T).Endl()
+- uid: PSTk.Diagnostics.Logging.ILog`1.Endl*
+  name: Endl
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_Endl_
+  commentId: Overload:PSTk.Diagnostics.Logging.ILog`1.Endl
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.Endl
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).Endl
+  nameWithType: ILog<T>.Endl
+  nameWithType.vb: ILog(Of T).Endl
+- uid: PSTk.Diagnostics.Logging.ILog`1.OnUnhandledException(System.Object,UnhandledExceptionEventArgs)
+  name: OnUnhandledException(Object, UnhandledExceptionEventArgs)
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_OnUnhandledException_System_Object_UnhandledExceptionEventArgs_
+  commentId: M:PSTk.Diagnostics.Logging.ILog`1.OnUnhandledException(System.Object,UnhandledExceptionEventArgs)
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.OnUnhandledException(System.Object, UnhandledExceptionEventArgs)
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).OnUnhandledException(System.Object, UnhandledExceptionEventArgs)
+  nameWithType: ILog<T>.OnUnhandledException(Object, UnhandledExceptionEventArgs)
+  nameWithType.vb: ILog(Of T).OnUnhandledException(Object, UnhandledExceptionEventArgs)
+- uid: PSTk.Diagnostics.Logging.ILog`1.OnUnhandledException*
+  name: OnUnhandledException
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_OnUnhandledException_
+  commentId: Overload:PSTk.Diagnostics.Logging.ILog`1.OnUnhandledException
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.OnUnhandledException
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).OnUnhandledException
+  nameWithType: ILog<T>.OnUnhandledException
+  nameWithType.vb: ILog(Of T).OnUnhandledException
+- uid: PSTk.Diagnostics.Logging.ILog`1.Print(System.String)
+  name: Print(String)
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_Print_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.ILog`1.Print(System.String)
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.Print(System.String)
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).Print(System.String)
+  nameWithType: ILog<T>.Print(String)
+  nameWithType.vb: ILog(Of T).Print(String)
+- uid: PSTk.Diagnostics.Logging.ILog`1.Print*
+  name: Print
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_Print_
+  commentId: Overload:PSTk.Diagnostics.Logging.ILog`1.Print
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.Print
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).Print
+  nameWithType: ILog<T>.Print
+  nameWithType.vb: ILog(Of T).Print
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintDbg(System.String)
+  name: PrintDbg(String)
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintDbg_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.ILog`1.PrintDbg(System.String)
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintDbg(System.String)
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintDbg(System.String)
+  nameWithType: ILog<T>.PrintDbg(String)
+  nameWithType.vb: ILog(Of T).PrintDbg(String)
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintDbg*
+  name: PrintDbg
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintDbg_
+  commentId: Overload:PSTk.Diagnostics.Logging.ILog`1.PrintDbg
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintDbg
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintDbg
+  nameWithType: ILog<T>.PrintDbg
+  nameWithType.vb: ILog(Of T).PrintDbg
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintErr(System.String)
+  name: PrintErr(String)
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintErr_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.ILog`1.PrintErr(System.String)
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintErr(System.String)
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintErr(System.String)
+  nameWithType: ILog<T>.PrintErr(String)
+  nameWithType.vb: ILog(Of T).PrintErr(String)
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintErr(System.String,Exception)
+  name: PrintErr(String, Exception)
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintErr_System_String_Exception_
+  commentId: M:PSTk.Diagnostics.Logging.ILog`1.PrintErr(System.String,Exception)
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintErr(System.String, Exception)
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintErr(System.String, Exception)
+  nameWithType: ILog<T>.PrintErr(String, Exception)
+  nameWithType.vb: ILog(Of T).PrintErr(String, Exception)
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintErr*
+  name: PrintErr
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintErr_
+  commentId: Overload:PSTk.Diagnostics.Logging.ILog`1.PrintErr
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintErr
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintErr
+  nameWithType: ILog<T>.PrintErr
+  nameWithType.vb: ILog(Of T).PrintErr
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintFtl(System.String,Exception)
+  name: PrintFtl(String, Exception)
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintFtl_System_String_Exception_
+  commentId: M:PSTk.Diagnostics.Logging.ILog`1.PrintFtl(System.String,Exception)
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintFtl(System.String, Exception)
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintFtl(System.String, Exception)
+  nameWithType: ILog<T>.PrintFtl(String, Exception)
+  nameWithType.vb: ILog(Of T).PrintFtl(String, Exception)
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintFtl*
+  name: PrintFtl
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintFtl_
+  commentId: Overload:PSTk.Diagnostics.Logging.ILog`1.PrintFtl
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintFtl
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintFtl
+  nameWithType: ILog<T>.PrintFtl
+  nameWithType.vb: ILog(Of T).PrintFtl
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintWarn(System.String)
+  name: PrintWarn(String)
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintWarn_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.ILog`1.PrintWarn(System.String)
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintWarn(System.String)
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintWarn(System.String)
+  nameWithType: ILog<T>.PrintWarn(String)
+  nameWithType.vb: ILog(Of T).PrintWarn(String)
+- uid: PSTk.Diagnostics.Logging.ILog`1.PrintWarn*
+  name: PrintWarn
+  href: api/PSTk.Diagnostics.Logging.ILog-1.html#PSTk_Diagnostics_Logging_ILog_1_PrintWarn_
+  commentId: Overload:PSTk.Diagnostics.Logging.ILog`1.PrintWarn
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.ILog<T>.PrintWarn
+  fullName.vb: PSTk.Diagnostics.Logging.ILog(Of T).PrintWarn
+  nameWithType: ILog<T>.PrintWarn
+  nameWithType.vb: ILog(Of T).PrintWarn
+- uid: PSTk.Diagnostics.Logging.LogSlim`1
+  name: LogSlim<T>
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html
+  commentId: T:PSTk.Diagnostics.Logging.LogSlim`1
+  name.vb: LogSlim(Of T)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T)
+  nameWithType: LogSlim<T>
+  nameWithType.vb: LogSlim(Of T)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.#ctor(PSTk.Diagnostics.Logging.LogTimeOptions,System.Boolean)
+  name: LogSlim(LogTimeOptions, Boolean)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1__ctor_PSTk_Diagnostics_Logging_LogTimeOptions_System_Boolean_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.#ctor(PSTk.Diagnostics.Logging.LogTimeOptions,System.Boolean)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.LogSlim(PSTk.Diagnostics.Logging.LogTimeOptions, System.Boolean)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).LogSlim(PSTk.Diagnostics.Logging.LogTimeOptions, System.Boolean)
+  nameWithType: LogSlim<T>.LogSlim(LogTimeOptions, Boolean)
+  nameWithType.vb: LogSlim(Of T).LogSlim(LogTimeOptions, Boolean)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.#ctor(PSTk.Diagnostics.Logging.LogTimeOptions,System.Boolean,System.Boolean)
+  name: LogSlim(LogTimeOptions, Boolean, Boolean)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1__ctor_PSTk_Diagnostics_Logging_LogTimeOptions_System_Boolean_System_Boolean_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.#ctor(PSTk.Diagnostics.Logging.LogTimeOptions,System.Boolean,System.Boolean)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.LogSlim(PSTk.Diagnostics.Logging.LogTimeOptions, System.Boolean, System.Boolean)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).LogSlim(PSTk.Diagnostics.Logging.LogTimeOptions, System.Boolean, System.Boolean)
+  nameWithType: LogSlim<T>.LogSlim(LogTimeOptions, Boolean, Boolean)
+  nameWithType.vb: LogSlim(Of T).LogSlim(LogTimeOptions, Boolean, Boolean)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.#ctor*
+  name: LogSlim
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1__ctor_
+  commentId: Overload:PSTk.Diagnostics.Logging.LogSlim`1.#ctor
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.LogSlim
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).LogSlim
+  nameWithType: LogSlim<T>.LogSlim
+  nameWithType.vb: LogSlim(Of T).LogSlim
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.Endl
+  name: Endl()
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_Endl
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.Endl
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.Endl()
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).Endl()
+  nameWithType: LogSlim<T>.Endl()
+  nameWithType.vb: LogSlim(Of T).Endl()
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.Endl*
+  name: Endl
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_Endl_
+  commentId: Overload:PSTk.Diagnostics.Logging.LogSlim`1.Endl
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.Endl
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).Endl
+  nameWithType: LogSlim<T>.Endl
+  nameWithType.vb: LogSlim(Of T).Endl
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.OnTerminate
+  name: OnTerminate
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_OnTerminate
+  commentId: F:PSTk.Diagnostics.Logging.LogSlim`1.OnTerminate
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.OnTerminate
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).OnTerminate
+  nameWithType: LogSlim<T>.OnTerminate
+  nameWithType.vb: LogSlim(Of T).OnTerminate
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.OnUnhandledException(System.Object,UnhandledExceptionEventArgs)
+  name: OnUnhandledException(Object, UnhandledExceptionEventArgs)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_OnUnhandledException_System_Object_UnhandledExceptionEventArgs_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.OnUnhandledException(System.Object,UnhandledExceptionEventArgs)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.OnUnhandledException(System.Object, UnhandledExceptionEventArgs)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).OnUnhandledException(System.Object, UnhandledExceptionEventArgs)
+  nameWithType: LogSlim<T>.OnUnhandledException(Object, UnhandledExceptionEventArgs)
+  nameWithType.vb: LogSlim(Of T).OnUnhandledException(Object, UnhandledExceptionEventArgs)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.OnUnhandledException*
+  name: OnUnhandledException
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_OnUnhandledException_
+  commentId: Overload:PSTk.Diagnostics.Logging.LogSlim`1.OnUnhandledException
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.OnUnhandledException
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).OnUnhandledException
+  nameWithType: LogSlim<T>.OnUnhandledException
+  nameWithType.vb: LogSlim(Of T).OnUnhandledException
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.Print(System.String)
+  name: Print(String)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_Print_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.Print(System.String)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.Print(System.String)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).Print(System.String)
+  nameWithType: LogSlim<T>.Print(String)
+  nameWithType.vb: LogSlim(Of T).Print(String)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.Print*
+  name: Print
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_Print_
+  commentId: Overload:PSTk.Diagnostics.Logging.LogSlim`1.Print
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.Print
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).Print
+  nameWithType: LogSlim<T>.Print
+  nameWithType.vb: LogSlim(Of T).Print
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintDbg(System.String)
+  name: PrintDbg(String)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintDbg_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.PrintDbg(System.String)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintDbg(System.String)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintDbg(System.String)
+  nameWithType: LogSlim<T>.PrintDbg(String)
+  nameWithType.vb: LogSlim(Of T).PrintDbg(String)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintDbg*
+  name: PrintDbg
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintDbg_
+  commentId: Overload:PSTk.Diagnostics.Logging.LogSlim`1.PrintDbg
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintDbg
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintDbg
+  nameWithType: LogSlim<T>.PrintDbg
+  nameWithType.vb: LogSlim(Of T).PrintDbg
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintErr(System.String)
+  name: PrintErr(String)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintErr_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.PrintErr(System.String)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintErr(System.String)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintErr(System.String)
+  nameWithType: LogSlim<T>.PrintErr(String)
+  nameWithType.vb: LogSlim(Of T).PrintErr(String)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintErr(System.String,Exception)
+  name: PrintErr(String, Exception)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintErr_System_String_Exception_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.PrintErr(System.String,Exception)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintErr(System.String, Exception)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintErr(System.String, Exception)
+  nameWithType: LogSlim<T>.PrintErr(String, Exception)
+  nameWithType.vb: LogSlim(Of T).PrintErr(String, Exception)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintErr*
+  name: PrintErr
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintErr_
+  commentId: Overload:PSTk.Diagnostics.Logging.LogSlim`1.PrintErr
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintErr
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintErr
+  nameWithType: LogSlim<T>.PrintErr
+  nameWithType.vb: LogSlim(Of T).PrintErr
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintFtl(System.String,Exception)
+  name: PrintFtl(String, Exception)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintFtl_System_String_Exception_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.PrintFtl(System.String,Exception)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintFtl(System.String, Exception)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintFtl(System.String, Exception)
+  nameWithType: LogSlim<T>.PrintFtl(String, Exception)
+  nameWithType.vb: LogSlim(Of T).PrintFtl(String, Exception)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintFtl*
+  name: PrintFtl
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintFtl_
+  commentId: Overload:PSTk.Diagnostics.Logging.LogSlim`1.PrintFtl
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintFtl
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintFtl
+  nameWithType: LogSlim<T>.PrintFtl
+  nameWithType.vb: LogSlim(Of T).PrintFtl
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintWarn(System.String)
+  name: PrintWarn(String)
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintWarn_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.LogSlim`1.PrintWarn(System.String)
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintWarn(System.String)
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintWarn(System.String)
+  nameWithType: LogSlim<T>.PrintWarn(String)
+  nameWithType.vb: LogSlim(Of T).PrintWarn(String)
+- uid: PSTk.Diagnostics.Logging.LogSlim`1.PrintWarn*
+  name: PrintWarn
+  href: api/PSTk.Diagnostics.Logging.LogSlim-1.html#PSTk_Diagnostics_Logging_LogSlim_1_PrintWarn_
+  commentId: Overload:PSTk.Diagnostics.Logging.LogSlim`1.PrintWarn
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.LogSlim<T>.PrintWarn
+  fullName.vb: PSTk.Diagnostics.Logging.LogSlim(Of T).PrintWarn
+  nameWithType: LogSlim<T>.PrintWarn
+  nameWithType.vb: LogSlim(Of T).PrintWarn
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions
+  name: LogTimeOptions
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html
+  commentId: T:PSTk.Diagnostics.Logging.LogTimeOptions
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions
+  nameWithType: LogTimeOptions
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions.Classic
+  name: Classic
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html#PSTk_Diagnostics_Logging_LogTimeOptions_Classic
+  commentId: F:PSTk.Diagnostics.Logging.LogTimeOptions.Classic
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions.Classic
+  nameWithType: LogTimeOptions.Classic
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions.ClassicRegular
+  name: ClassicRegular
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html#PSTk_Diagnostics_Logging_LogTimeOptions_ClassicRegular
+  commentId: F:PSTk.Diagnostics.Logging.LogTimeOptions.ClassicRegular
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions.ClassicRegular
+  nameWithType: LogTimeOptions.ClassicRegular
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions.ClassicScientific
+  name: ClassicScientific
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html#PSTk_Diagnostics_Logging_LogTimeOptions_ClassicScientific
+  commentId: F:PSTk.Diagnostics.Logging.LogTimeOptions.ClassicScientific
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions.ClassicScientific
+  nameWithType: LogTimeOptions.ClassicScientific
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions.FullRegular
+  name: FullRegular
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html#PSTk_Diagnostics_Logging_LogTimeOptions_FullRegular
+  commentId: F:PSTk.Diagnostics.Logging.LogTimeOptions.FullRegular
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions.FullRegular
+  nameWithType: LogTimeOptions.FullRegular
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions.FullScientific
+  name: FullScientific
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html#PSTk_Diagnostics_Logging_LogTimeOptions_FullScientific
+  commentId: F:PSTk.Diagnostics.Logging.LogTimeOptions.FullScientific
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions.FullScientific
+  nameWithType: LogTimeOptions.FullScientific
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions.None
+  name: None
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html#PSTk_Diagnostics_Logging_LogTimeOptions_None
+  commentId: F:PSTk.Diagnostics.Logging.LogTimeOptions.None
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions.None
+  nameWithType: LogTimeOptions.None
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions.Regular
+  name: Regular
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html#PSTk_Diagnostics_Logging_LogTimeOptions_Regular
+  commentId: F:PSTk.Diagnostics.Logging.LogTimeOptions.Regular
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions.Regular
+  nameWithType: LogTimeOptions.Regular
+- uid: PSTk.Diagnostics.Logging.LogTimeOptions.Scientific
+  name: Scientific
+  href: api/PSTk.Diagnostics.Logging.LogTimeOptions.html#PSTk_Diagnostics_Logging_LogTimeOptions_Scientific
+  commentId: F:PSTk.Diagnostics.Logging.LogTimeOptions.Scientific
+  fullName: PSTk.Diagnostics.Logging.LogTimeOptions.Scientific
+  nameWithType: LogTimeOptions.Scientific
+- uid: PSTk.Diagnostics.Logging.TerminateEventArgs
+  name: TerminateEventArgs
+  href: api/PSTk.Diagnostics.Logging.TerminateEventArgs.html
+  commentId: T:PSTk.Diagnostics.Logging.TerminateEventArgs
+  fullName: PSTk.Diagnostics.Logging.TerminateEventArgs
+  nameWithType: TerminateEventArgs
+- uid: PSTk.Diagnostics.Logging.TerminateEventArgs.#ctor(System.String)
+  name: TerminateEventArgs(String)
+  href: api/PSTk.Diagnostics.Logging.TerminateEventArgs.html#PSTk_Diagnostics_Logging_TerminateEventArgs__ctor_System_String_
+  commentId: M:PSTk.Diagnostics.Logging.TerminateEventArgs.#ctor(System.String)
+  fullName: PSTk.Diagnostics.Logging.TerminateEventArgs.TerminateEventArgs(System.String)
+  nameWithType: TerminateEventArgs.TerminateEventArgs(String)
+- uid: PSTk.Diagnostics.Logging.TerminateEventArgs.#ctor*
+  name: TerminateEventArgs
+  href: api/PSTk.Diagnostics.Logging.TerminateEventArgs.html#PSTk_Diagnostics_Logging_TerminateEventArgs__ctor_
+  commentId: Overload:PSTk.Diagnostics.Logging.TerminateEventArgs.#ctor
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.TerminateEventArgs.TerminateEventArgs
+  nameWithType: TerminateEventArgs.TerminateEventArgs
+- uid: PSTk.Diagnostics.Logging.TerminateEventArgs.Message
+  name: Message
+  href: api/PSTk.Diagnostics.Logging.TerminateEventArgs.html#PSTk_Diagnostics_Logging_TerminateEventArgs_Message
+  commentId: P:PSTk.Diagnostics.Logging.TerminateEventArgs.Message
+  fullName: PSTk.Diagnostics.Logging.TerminateEventArgs.Message
+  nameWithType: TerminateEventArgs.Message
+- uid: PSTk.Diagnostics.Logging.TerminateEventArgs.Message*
+  name: Message
+  href: api/PSTk.Diagnostics.Logging.TerminateEventArgs.html#PSTk_Diagnostics_Logging_TerminateEventArgs_Message_
+  commentId: Overload:PSTk.Diagnostics.Logging.TerminateEventArgs.Message
+  isSpec: "True"
+  fullName: PSTk.Diagnostics.Logging.TerminateEventArgs.Message
+  nameWithType: TerminateEventArgs.Message
 - uid: PSTk.Diagnostics.TimedProfiler
   name: TimedProfiler
   href: api/PSTk.Diagnostics.TimedProfiler.html
@@ -42,194 +746,474 @@ references:
   isSpec: "True"
   fullName: PSTk.Diagnostics.TimedProfiler.Dispose
   nameWithType: TimedProfiler.Dispose
-- uid: PSTk.Extensions.ConcurrentCollections
-  name: PSTk.Extensions.ConcurrentCollections
-  href: api/PSTk.Extensions.ConcurrentCollections.html
-  commentId: N:PSTk.Extensions.ConcurrentCollections
-  fullName: PSTk.Extensions.ConcurrentCollections
-  nameWithType: PSTk.Extensions.ConcurrentCollections
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
-  name: ConcurrentDictionaryExtensions
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html
-  commentId: T:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions
-  nameWithType: ConcurrentDictionaryExtensions
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere*
-  name: EntryWhere
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhere_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere
+- uid: PSTk.Extensions.Utils
+  name: PSTk.Extensions.Utils
+  href: api/PSTk.Extensions.Utils.html
+  commentId: N:PSTk.Extensions.Utils
+  fullName: PSTk.Extensions.Utils
+  nameWithType: PSTk.Extensions.Utils
+- uid: PSTk.Extensions.Utils.BufferExtensions
+  name: BufferExtensions
+  href: api/PSTk.Extensions.Utils.BufferExtensions.html
+  commentId: T:PSTk.Extensions.Utils.BufferExtensions
+  fullName: PSTk.Extensions.Utils.BufferExtensions
+  nameWithType: BufferExtensions
+- uid: PSTk.Extensions.Utils.BufferExtensions.GZipCompress(System.Byte[])
+  name: GZipCompress(Byte[])
+  href: api/PSTk.Extensions.Utils.BufferExtensions.html#PSTk_Extensions_Utils_BufferExtensions_GZipCompress_System_Byte___
+  commentId: M:PSTk.Extensions.Utils.BufferExtensions.GZipCompress(System.Byte[])
+  name.vb: GZipCompress(Byte())
+  fullName: PSTk.Extensions.Utils.BufferExtensions.GZipCompress(System.Byte[])
+  fullName.vb: PSTk.Extensions.Utils.BufferExtensions.GZipCompress(System.Byte())
+  nameWithType: BufferExtensions.GZipCompress(Byte[])
+  nameWithType.vb: BufferExtensions.GZipCompress(Byte())
+- uid: PSTk.Extensions.Utils.BufferExtensions.GZipCompress*
+  name: GZipCompress
+  href: api/PSTk.Extensions.Utils.BufferExtensions.html#PSTk_Extensions_Utils_BufferExtensions_GZipCompress_
+  commentId: Overload:PSTk.Extensions.Utils.BufferExtensions.GZipCompress
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere
+  fullName: PSTk.Extensions.Utils.BufferExtensions.GZipCompress
+  nameWithType: BufferExtensions.GZipCompress
+- uid: PSTk.Extensions.Utils.BufferExtensions.GZipDecompress(System.Byte[])
+  name: GZipDecompress(Byte[])
+  href: api/PSTk.Extensions.Utils.BufferExtensions.html#PSTk_Extensions_Utils_BufferExtensions_GZipDecompress_System_Byte___
+  commentId: M:PSTk.Extensions.Utils.BufferExtensions.GZipDecompress(System.Byte[])
+  name.vb: GZipDecompress(Byte())
+  fullName: PSTk.Extensions.Utils.BufferExtensions.GZipDecompress(System.Byte[])
+  fullName.vb: PSTk.Extensions.Utils.BufferExtensions.GZipDecompress(System.Byte())
+  nameWithType: BufferExtensions.GZipDecompress(Byte[])
+  nameWithType.vb: BufferExtensions.GZipDecompress(Byte())
+- uid: PSTk.Extensions.Utils.BufferExtensions.GZipDecompress*
+  name: GZipDecompress
+  href: api/PSTk.Extensions.Utils.BufferExtensions.html#PSTk_Extensions_Utils_BufferExtensions_GZipDecompress_
+  commentId: Overload:PSTk.Extensions.Utils.BufferExtensions.GZipDecompress
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.BufferExtensions.GZipDecompress
+  nameWithType: BufferExtensions.GZipDecompress
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions
+  name: ConcurrentDictionaryExtensions
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html
+  commentId: T:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions
+  nameWithType: ConcurrentDictionaryExtensions
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhere*
+  name: EntryWhere
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_EntryWhere_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhere
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhere
   nameWithType: ConcurrentDictionaryExtensions.EntryWhere
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhere``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})
   name: EntryWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, Boolean>)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhere__2_ConcurrentDictionary___0___1__Func_KeyValuePair___0___1__System_Boolean__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_EntryWhere__2_ConcurrentDictionary___0___1__Func_KeyValuePair___0___1__System_Boolean__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhere``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})
   name.vb: EntryWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), Boolean))
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, System.Boolean>)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), System.Boolean))
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, System.Boolean>)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), System.Boolean))
   nameWithType: ConcurrentDictionaryExtensions.EntryWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, Boolean>)
   nameWithType.vb: ConcurrentDictionaryExtensions.EntryWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), Boolean))
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhereAsParallel*
   name: EntryWhereAsParallel
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhereAsParallel_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_EntryWhereAsParallel_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhereAsParallel
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhereAsParallel
   nameWithType: ConcurrentDictionaryExtensions.EntryWhereAsParallel
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhereAsParallel``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})
   name: EntryWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, Boolean>)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_EntryWhereAsParallel__2_ConcurrentDictionary___0___1__Func_KeyValuePair___0___1__System_Boolean__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_EntryWhereAsParallel__2_ConcurrentDictionary___0___1__Func_KeyValuePair___0___1__System_Boolean__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhereAsParallel``2(ConcurrentDictionary{``0,``1},Func{KeyValuePair{``0,``1},System.Boolean})
   name.vb: EntryWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), Boolean))
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, System.Boolean>)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.EntryWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), System.Boolean))
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, System.Boolean>)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.EntryWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), System.Boolean))
   nameWithType: ConcurrentDictionaryExtensions.EntryWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<KeyValuePair<TKey, TValue>, Boolean>)
   nameWithType.vb: ConcurrentDictionaryExtensions.EntryWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of KeyValuePair(Of TKey, TValue), Boolean))
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel*
   name: KeyFromValueWhereAsParallel
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyFromValueWhereAsParallel_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_KeyFromValueWhereAsParallel_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel
   nameWithType: ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
   name: KeyFromValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyFromValueWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_KeyFromValueWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
   name.vb: KeyFromValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
   nameWithType: ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
   nameWithType.vb: ConcurrentDictionaryExtensions.KeyFromValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhere*
   name: KeyWhere
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhere_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_KeyWhere_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhere
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhere
   nameWithType: ConcurrentDictionaryExtensions.KeyWhere
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere``2(ConcurrentDictionary{``0,``1},Predicate{``0})
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhere``2(ConcurrentDictionary{``0,``1},Predicate{``0})
   name: KeyWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhere__2_ConcurrentDictionary___0___1__Predicate___0__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere``2(ConcurrentDictionary{``0,``1},Predicate{``0})
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_KeyWhere__2_ConcurrentDictionary___0___1__Predicate___0__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhere``2(ConcurrentDictionary{``0,``1},Predicate{``0})
   name.vb: KeyWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
   nameWithType: ConcurrentDictionaryExtensions.KeyWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
   nameWithType.vb: ConcurrentDictionaryExtensions.KeyWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhereAsParallel*
   name: KeyWhereAsParallel
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhereAsParallel_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_KeyWhereAsParallel_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhereAsParallel
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhereAsParallel
   nameWithType: ConcurrentDictionaryExtensions.KeyWhereAsParallel
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``0})
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``0})
   name: KeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_KeyWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___0__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``0})
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_KeyWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___0__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``0})
   name.vb: KeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.KeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.KeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
   nameWithType: ConcurrentDictionaryExtensions.KeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>)
   nameWithType.vb: ConcurrentDictionaryExtensions.KeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey))
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetKeySingle*
   name: TryGetKeySingle
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetKeySingle_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_TryGetKeySingle_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetKeySingle
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetKeySingle
   nameWithType: ConcurrentDictionaryExtensions.TryGetKeySingle
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle``2(ConcurrentDictionary{``0,``1},Predicate{``1},``0@)
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetKeySingle``2(ConcurrentDictionary{``0,``1},Predicate{``1},``0@)
   name: TryGetKeySingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>, out TKey)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetKeySingle__2_ConcurrentDictionary___0___1__Predicate___1____0__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle``2(ConcurrentDictionary{``0,``1},Predicate{``1},``0@)
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_TryGetKeySingle__2_ConcurrentDictionary___0___1__Predicate___1____0__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetKeySingle``2(ConcurrentDictionary{``0,``1},Predicate{``1},``0@)
   name.vb: TryGetKeySingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue), ByRef TKey)
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>, out TKey)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetKeySingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue), ByRef TKey)
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetKeySingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>, out TKey)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetKeySingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue), ByRef TKey)
   nameWithType: ConcurrentDictionaryExtensions.TryGetKeySingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>, out TKey)
   nameWithType.vb: ConcurrentDictionaryExtensions.TryGetKeySingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue), ByRef TKey)
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetValueSingle*
   name: TryGetValueSingle
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetValueSingle_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_TryGetValueSingle_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetValueSingle
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetValueSingle
   nameWithType: ConcurrentDictionaryExtensions.TryGetValueSingle
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle``2(ConcurrentDictionary{``0,``1},Predicate{``0},``1@)
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetValueSingle``2(ConcurrentDictionary{``0,``1},Predicate{``0},``1@)
   name: TryGetValueSingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>, out TValue)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryGetValueSingle__2_ConcurrentDictionary___0___1__Predicate___0____1__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle``2(ConcurrentDictionary{``0,``1},Predicate{``0},``1@)
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_TryGetValueSingle__2_ConcurrentDictionary___0___1__Predicate___0____1__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetValueSingle``2(ConcurrentDictionary{``0,``1},Predicate{``0},``1@)
   name.vb: TryGetValueSingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey), ByRef TValue)
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>, out TValue)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryGetValueSingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey), ByRef TValue)
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetValueSingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>, out TValue)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryGetValueSingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey), ByRef TValue)
   nameWithType: ConcurrentDictionaryExtensions.TryGetValueSingle<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TKey>, out TValue)
   nameWithType.vb: ConcurrentDictionaryExtensions.TryGetValueSingle(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TKey), ByRef TValue)
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryRemoveRange*
   name: TryRemoveRange
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryRemoveRange_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_TryRemoveRange_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryRemoveRange
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryRemoveRange
   nameWithType: ConcurrentDictionaryExtensions.TryRemoveRange
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange``2(ConcurrentDictionary{``0,``1},``0[])
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryRemoveRange``2(ConcurrentDictionary{``0,``1},``0[])
   name: TryRemoveRange<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, TKey[])
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_TryRemoveRange__2_ConcurrentDictionary___0___1____0___
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange``2(ConcurrentDictionary{``0,``1},``0[])
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_TryRemoveRange__2_ConcurrentDictionary___0___1____0___
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryRemoveRange``2(ConcurrentDictionary{``0,``1},``0[])
   name.vb: TryRemoveRange(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), TKey())
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, TKey[])
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.TryRemoveRange(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), TKey())
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryRemoveRange<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, TKey[])
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.TryRemoveRange(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), TKey())
   nameWithType: ConcurrentDictionaryExtensions.TryRemoveRange<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, TKey[])
   nameWithType.vb: ConcurrentDictionaryExtensions.TryRemoveRange(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), TKey())
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel*
   name: ValueFromKeyWhereAsParallel
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueFromKeyWhereAsParallel_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_ValueFromKeyWhereAsParallel_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel
   nameWithType: ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
   name: ValueFromKeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueFromKeyWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_ValueFromKeyWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
   name.vb: ValueFromKeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
   nameWithType: ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
   nameWithType.vb: ConcurrentDictionaryExtensions.ValueFromKeyWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhere*
   name: ValueWhere
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhere_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_ValueWhere_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhere
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhere
   nameWithType: ConcurrentDictionaryExtensions.ValueWhere
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere``2(ConcurrentDictionary{``0,``1},Predicate{``1})
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhere``2(ConcurrentDictionary{``0,``1},Predicate{``1})
   name: ValueWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhere__2_ConcurrentDictionary___0___1__Predicate___1__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere``2(ConcurrentDictionary{``0,``1},Predicate{``1})
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_ValueWhere__2_ConcurrentDictionary___0___1__Predicate___1__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhere``2(ConcurrentDictionary{``0,``1},Predicate{``1})
   name.vb: ValueWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
   nameWithType: ConcurrentDictionaryExtensions.ValueWhere<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
   nameWithType.vb: ConcurrentDictionaryExtensions.ValueWhere(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel*
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhereAsParallel*
   name: ValueWhereAsParallel
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhereAsParallel_
-  commentId: Overload:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_ValueWhereAsParallel_
+  commentId: Overload:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhereAsParallel
   isSpec: "True"
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhereAsParallel
   nameWithType: ConcurrentDictionaryExtensions.ValueWhereAsParallel
-- uid: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
+- uid: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
   name: ValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
-  href: api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html#PSTk_Extensions_ConcurrentCollections_ConcurrentDictionaryExtensions_ValueWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__
-  commentId: M:PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
+  href: api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html#PSTk_Extensions_Utils_ConcurrentDictionaryExtensions_ValueWhereAsParallel__2_ConcurrentDictionary___0___1__Predicate___1__
+  commentId: M:PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhereAsParallel``2(ConcurrentDictionary{``0,``1},Predicate{``1})
   name.vb: ValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
-  fullName: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
-  fullName.vb: PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.ValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+  fullName: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
+  fullName.vb: PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.ValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
   nameWithType: ConcurrentDictionaryExtensions.ValueWhereAsParallel<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Predicate<TValue>)
   nameWithType.vb: ConcurrentDictionaryExtensions.ValueWhereAsParallel(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Predicate(Of TValue))
+- uid: PSTk.Extensions.Utils.DateTimeExtensions
+  name: DateTimeExtensions
+  href: api/PSTk.Extensions.Utils.DateTimeExtensions.html
+  commentId: T:PSTk.Extensions.Utils.DateTimeExtensions
+  fullName: PSTk.Extensions.Utils.DateTimeExtensions
+  nameWithType: DateTimeExtensions
+- uid: PSTk.Extensions.Utils.DateTimeExtensions.GetElapsedTime(DateTime,System.String)
+  name: GetElapsedTime(DateTime, String)
+  href: api/PSTk.Extensions.Utils.DateTimeExtensions.html#PSTk_Extensions_Utils_DateTimeExtensions_GetElapsedTime_DateTime_System_String_
+  commentId: M:PSTk.Extensions.Utils.DateTimeExtensions.GetElapsedTime(DateTime,System.String)
+  fullName: PSTk.Extensions.Utils.DateTimeExtensions.GetElapsedTime(DateTime, System.String)
+  nameWithType: DateTimeExtensions.GetElapsedTime(DateTime, String)
+- uid: PSTk.Extensions.Utils.DateTimeExtensions.GetElapsedTime*
+  name: GetElapsedTime
+  href: api/PSTk.Extensions.Utils.DateTimeExtensions.html#PSTk_Extensions_Utils_DateTimeExtensions_GetElapsedTime_
+  commentId: Overload:PSTk.Extensions.Utils.DateTimeExtensions.GetElapsedTime
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.DateTimeExtensions.GetElapsedTime
+  nameWithType: DateTimeExtensions.GetElapsedTime
+- uid: PSTk.Extensions.Utils.IDisposableExtensions
+  name: IDisposableExtensions
+  href: api/PSTk.Extensions.Utils.IDisposableExtensions.html
+  commentId: T:PSTk.Extensions.Utils.IDisposableExtensions
+  fullName: PSTk.Extensions.Utils.IDisposableExtensions
+  nameWithType: IDisposableExtensions
+- uid: PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack*
+  name: DisposeAndTrack
+  href: api/PSTk.Extensions.Utils.IDisposableExtensions.html#PSTk_Extensions_Utils_IDisposableExtensions_DisposeAndTrack_
+  commentId: Overload:PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack
+  nameWithType: IDisposableExtensions.DisposeAndTrack
+- uid: PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack``2(``0,PSTk.Diagnostics.Logging.ILog{``1})
+  name: DisposeAndTrack<T, N>(T, ILog<N>)
+  href: api/PSTk.Extensions.Utils.IDisposableExtensions.html#PSTk_Extensions_Utils_IDisposableExtensions_DisposeAndTrack__2___0_PSTk_Diagnostics_Logging_ILog___1__
+  commentId: M:PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack``2(``0,PSTk.Diagnostics.Logging.ILog{``1})
+  name.vb: DisposeAndTrack(Of T, N)(T, ILog(Of N))
+  fullName: PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack<T, N>(T, PSTk.Diagnostics.Logging.ILog<N>)
+  fullName.vb: PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack(Of T, N)(T, PSTk.Diagnostics.Logging.ILog(Of N))
+  nameWithType: IDisposableExtensions.DisposeAndTrack<T, N>(T, ILog<N>)
+  nameWithType.vb: IDisposableExtensions.DisposeAndTrack(Of T, N)(T, ILog(Of N))
+- uid: PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions
+  name: InternalRoutineEventArgsExtensions
+  href: api/PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.html
+  commentId: T:PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions
+  fullName: PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions
+  nameWithType: InternalRoutineEventArgsExtensions
+- uid: PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.TrackDelta*
+  name: TrackDelta
+  href: api/PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.html#PSTk_Extensions_Utils_InternalRoutineEventArgsExtensions_TrackDelta_
+  commentId: Overload:PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.TrackDelta
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.TrackDelta
+  nameWithType: InternalRoutineEventArgsExtensions.TrackDelta
+- uid: PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.TrackDelta``1(PSTk.Threading.Tasks.InternalRoutineEventArgs,PSTk.Diagnostics.Logging.ILog{``0})
+  name: TrackDelta<T>(InternalRoutineEventArgs, ILog<T>)
+  href: api/PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.html#PSTk_Extensions_Utils_InternalRoutineEventArgsExtensions_TrackDelta__1_PSTk_Threading_Tasks_InternalRoutineEventArgs_PSTk_Diagnostics_Logging_ILog___0__
+  commentId: M:PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.TrackDelta``1(PSTk.Threading.Tasks.InternalRoutineEventArgs,PSTk.Diagnostics.Logging.ILog{``0})
+  name.vb: TrackDelta(Of T)(InternalRoutineEventArgs, ILog(Of T))
+  fullName: PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.TrackDelta<T>(PSTk.Threading.Tasks.InternalRoutineEventArgs, PSTk.Diagnostics.Logging.ILog<T>)
+  fullName.vb: PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.TrackDelta(Of T)(PSTk.Threading.Tasks.InternalRoutineEventArgs, PSTk.Diagnostics.Logging.ILog(Of T))
+  nameWithType: InternalRoutineEventArgsExtensions.TrackDelta<T>(InternalRoutineEventArgs, ILog<T>)
+  nameWithType.vb: InternalRoutineEventArgsExtensions.TrackDelta(Of T)(InternalRoutineEventArgs, ILog(Of T))
+- uid: PSTk.Extensions.Utils.NetworkStreamExtensions
+  name: NetworkStreamExtensions
+  href: api/PSTk.Extensions.Utils.NetworkStreamExtensions.html
+  commentId: T:PSTk.Extensions.Utils.NetworkStreamExtensions
+  fullName: PSTk.Extensions.Utils.NetworkStreamExtensions
+  nameWithType: NetworkStreamExtensions
+- uid: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadExactly(NetworkStream,System.Byte[],System.Int32)
+  name: ReadExactly(NetworkStream, Byte[], Int32)
+  href: api/PSTk.Extensions.Utils.NetworkStreamExtensions.html#PSTk_Extensions_Utils_NetworkStreamExtensions_ReadExactly_NetworkStream_System_Byte___System_Int32_
+  commentId: M:PSTk.Extensions.Utils.NetworkStreamExtensions.ReadExactly(NetworkStream,System.Byte[],System.Int32)
+  name.vb: ReadExactly(NetworkStream, Byte(), Int32)
+  fullName: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadExactly(NetworkStream, System.Byte[], System.Int32)
+  fullName.vb: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadExactly(NetworkStream, System.Byte(), System.Int32)
+  nameWithType: NetworkStreamExtensions.ReadExactly(NetworkStream, Byte[], Int32)
+  nameWithType.vb: NetworkStreamExtensions.ReadExactly(NetworkStream, Byte(), Int32)
+- uid: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadExactly*
+  name: ReadExactly
+  href: api/PSTk.Extensions.Utils.NetworkStreamExtensions.html#PSTk_Extensions_Utils_NetworkStreamExtensions_ReadExactly_
+  commentId: Overload:PSTk.Extensions.Utils.NetworkStreamExtensions.ReadExactly
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadExactly
+  nameWithType: NetworkStreamExtensions.ReadExactly
+- uid: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadSafely(NetworkStream,System.Byte[],System.Int32,System.Int32)
+  name: ReadSafely(NetworkStream, Byte[], Int32, Int32)
+  href: api/PSTk.Extensions.Utils.NetworkStreamExtensions.html#PSTk_Extensions_Utils_NetworkStreamExtensions_ReadSafely_NetworkStream_System_Byte___System_Int32_System_Int32_
+  commentId: M:PSTk.Extensions.Utils.NetworkStreamExtensions.ReadSafely(NetworkStream,System.Byte[],System.Int32,System.Int32)
+  name.vb: ReadSafely(NetworkStream, Byte(), Int32, Int32)
+  fullName: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadSafely(NetworkStream, System.Byte[], System.Int32, System.Int32)
+  fullName.vb: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadSafely(NetworkStream, System.Byte(), System.Int32, System.Int32)
+  nameWithType: NetworkStreamExtensions.ReadSafely(NetworkStream, Byte[], Int32, Int32)
+  nameWithType.vb: NetworkStreamExtensions.ReadSafely(NetworkStream, Byte(), Int32, Int32)
+- uid: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadSafely*
+  name: ReadSafely
+  href: api/PSTk.Extensions.Utils.NetworkStreamExtensions.html#PSTk_Extensions_Utils_NetworkStreamExtensions_ReadSafely_
+  commentId: Overload:PSTk.Extensions.Utils.NetworkStreamExtensions.ReadSafely
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.NetworkStreamExtensions.ReadSafely
+  nameWithType: NetworkStreamExtensions.ReadSafely
+- uid: PSTk.Extensions.Utils.StringExtensions
+  name: StringExtensions
+  href: api/PSTk.Extensions.Utils.StringExtensions.html
+  commentId: T:PSTk.Extensions.Utils.StringExtensions
+  fullName: PSTk.Extensions.Utils.StringExtensions
+  nameWithType: StringExtensions
+- uid: PSTk.Extensions.Utils.StringExtensions.ChunkSplit(System.String,System.Int32)
+  name: ChunkSplit(String, Int32)
+  href: api/PSTk.Extensions.Utils.StringExtensions.html#PSTk_Extensions_Utils_StringExtensions_ChunkSplit_System_String_System_Int32_
+  commentId: M:PSTk.Extensions.Utils.StringExtensions.ChunkSplit(System.String,System.Int32)
+  fullName: PSTk.Extensions.Utils.StringExtensions.ChunkSplit(System.String, System.Int32)
+  nameWithType: StringExtensions.ChunkSplit(String, Int32)
+- uid: PSTk.Extensions.Utils.StringExtensions.ChunkSplit*
+  name: ChunkSplit
+  href: api/PSTk.Extensions.Utils.StringExtensions.html#PSTk_Extensions_Utils_StringExtensions_ChunkSplit_
+  commentId: Overload:PSTk.Extensions.Utils.StringExtensions.ChunkSplit
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.StringExtensions.ChunkSplit
+  nameWithType: StringExtensions.ChunkSplit
+- uid: PSTk.Extensions.Utils.StringExtensions.IsVowel(System.Char)
+  name: IsVowel(Char)
+  href: api/PSTk.Extensions.Utils.StringExtensions.html#PSTk_Extensions_Utils_StringExtensions_IsVowel_System_Char_
+  commentId: M:PSTk.Extensions.Utils.StringExtensions.IsVowel(System.Char)
+  fullName: PSTk.Extensions.Utils.StringExtensions.IsVowel(System.Char)
+  nameWithType: StringExtensions.IsVowel(Char)
+- uid: PSTk.Extensions.Utils.StringExtensions.IsVowel*
+  name: IsVowel
+  href: api/PSTk.Extensions.Utils.StringExtensions.html#PSTk_Extensions_Utils_StringExtensions_IsVowel_
+  commentId: Overload:PSTk.Extensions.Utils.StringExtensions.IsVowel
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.StringExtensions.IsVowel
+  nameWithType: StringExtensions.IsVowel
+- uid: PSTk.Extensions.Utils.StringExtensions.ToHumanReadable(System.String)
+  name: ToHumanReadable(String)
+  href: api/PSTk.Extensions.Utils.StringExtensions.html#PSTk_Extensions_Utils_StringExtensions_ToHumanReadable_System_String_
+  commentId: M:PSTk.Extensions.Utils.StringExtensions.ToHumanReadable(System.String)
+  fullName: PSTk.Extensions.Utils.StringExtensions.ToHumanReadable(System.String)
+  nameWithType: StringExtensions.ToHumanReadable(String)
+- uid: PSTk.Extensions.Utils.StringExtensions.ToHumanReadable*
+  name: ToHumanReadable
+  href: api/PSTk.Extensions.Utils.StringExtensions.html#PSTk_Extensions_Utils_StringExtensions_ToHumanReadable_
+  commentId: Overload:PSTk.Extensions.Utils.StringExtensions.ToHumanReadable
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.StringExtensions.ToHumanReadable
+  nameWithType: StringExtensions.ToHumanReadable
+- uid: PSTk.Extensions.Utils.StringExtensions.ToUpperFirst(System.String)
+  name: ToUpperFirst(String)
+  href: api/PSTk.Extensions.Utils.StringExtensions.html#PSTk_Extensions_Utils_StringExtensions_ToUpperFirst_System_String_
+  commentId: M:PSTk.Extensions.Utils.StringExtensions.ToUpperFirst(System.String)
+  fullName: PSTk.Extensions.Utils.StringExtensions.ToUpperFirst(System.String)
+  nameWithType: StringExtensions.ToUpperFirst(String)
+- uid: PSTk.Extensions.Utils.StringExtensions.ToUpperFirst*
+  name: ToUpperFirst
+  href: api/PSTk.Extensions.Utils.StringExtensions.html#PSTk_Extensions_Utils_StringExtensions_ToUpperFirst_
+  commentId: Overload:PSTk.Extensions.Utils.StringExtensions.ToUpperFirst
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.StringExtensions.ToUpperFirst
+  nameWithType: StringExtensions.ToUpperFirst
+- uid: PSTk.Extensions.Utils.XmlExtensions
+  name: XmlExtensions
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html
+  commentId: T:PSTk.Extensions.Utils.XmlExtensions
+  fullName: PSTk.Extensions.Utils.XmlExtensions
+  nameWithType: XmlExtensions
+- uid: PSTk.Extensions.Utils.XmlExtensions.GetAttribute*
+  name: GetAttribute
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_GetAttribute_
+  commentId: Overload:PSTk.Extensions.Utils.XmlExtensions.GetAttribute
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.XmlExtensions.GetAttribute
+  nameWithType: XmlExtensions.GetAttribute
+- uid: PSTk.Extensions.Utils.XmlExtensions.GetAttribute``1(XElement,System.String)
+  name: GetAttribute<T>(XElement, String)
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_GetAttribute__1_XElement_System_String_
+  commentId: M:PSTk.Extensions.Utils.XmlExtensions.GetAttribute``1(XElement,System.String)
+  name.vb: GetAttribute(Of T)(XElement, String)
+  fullName: PSTk.Extensions.Utils.XmlExtensions.GetAttribute<T>(XElement, System.String)
+  fullName.vb: PSTk.Extensions.Utils.XmlExtensions.GetAttribute(Of T)(XElement, System.String)
+  nameWithType: XmlExtensions.GetAttribute<T>(XElement, String)
+  nameWithType.vb: XmlExtensions.GetAttribute(Of T)(XElement, String)
+- uid: PSTk.Extensions.Utils.XmlExtensions.GetValue*
+  name: GetValue
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_GetValue_
+  commentId: Overload:PSTk.Extensions.Utils.XmlExtensions.GetValue
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.XmlExtensions.GetValue
+  nameWithType: XmlExtensions.GetValue
+- uid: PSTk.Extensions.Utils.XmlExtensions.GetValue``1(XElement,System.String)
+  name: GetValue<T>(XElement, String)
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_GetValue__1_XElement_System_String_
+  commentId: M:PSTk.Extensions.Utils.XmlExtensions.GetValue``1(XElement,System.String)
+  name.vb: GetValue(Of T)(XElement, String)
+  fullName: PSTk.Extensions.Utils.XmlExtensions.GetValue<T>(XElement, System.String)
+  fullName.vb: PSTk.Extensions.Utils.XmlExtensions.GetValue(Of T)(XElement, System.String)
+  nameWithType: XmlExtensions.GetValue<T>(XElement, String)
+  nameWithType.vb: XmlExtensions.GetValue(Of T)(XElement, String)
+- uid: PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode(XElement,System.String)
+  name: GetXmlsByNode(XElement, String)
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_GetXmlsByNode_XElement_System_String_
+  commentId: M:PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode(XElement,System.String)
+  fullName: PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode(XElement, System.String)
+  nameWithType: XmlExtensions.GetXmlsByNode(XElement, String)
+- uid: PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode(XElement,System.String,System.String)
+  name: GetXmlsByNode(XElement, String, String)
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_GetXmlsByNode_XElement_System_String_System_String_
+  commentId: M:PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode(XElement,System.String,System.String)
+  fullName: PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode(XElement, System.String, System.String)
+  nameWithType: XmlExtensions.GetXmlsByNode(XElement, String, String)
+- uid: PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode*
+  name: GetXmlsByNode
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_GetXmlsByNode_
+  commentId: Overload:PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.XmlExtensions.GetXmlsByNode
+  nameWithType: XmlExtensions.GetXmlsByNode
+- uid: PSTk.Extensions.Utils.XmlExtensions.HasAttribute(XElement,System.String)
+  name: HasAttribute(XElement, String)
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_HasAttribute_XElement_System_String_
+  commentId: M:PSTk.Extensions.Utils.XmlExtensions.HasAttribute(XElement,System.String)
+  fullName: PSTk.Extensions.Utils.XmlExtensions.HasAttribute(XElement, System.String)
+  nameWithType: XmlExtensions.HasAttribute(XElement, String)
+- uid: PSTk.Extensions.Utils.XmlExtensions.HasAttribute*
+  name: HasAttribute
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_HasAttribute_
+  commentId: Overload:PSTk.Extensions.Utils.XmlExtensions.HasAttribute
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.XmlExtensions.HasAttribute
+  nameWithType: XmlExtensions.HasAttribute
+- uid: PSTk.Extensions.Utils.XmlExtensions.HasElement(XElement,System.String)
+  name: HasElement(XElement, String)
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_HasElement_XElement_System_String_
+  commentId: M:PSTk.Extensions.Utils.XmlExtensions.HasElement(XElement,System.String)
+  fullName: PSTk.Extensions.Utils.XmlExtensions.HasElement(XElement, System.String)
+  nameWithType: XmlExtensions.HasElement(XElement, String)
+- uid: PSTk.Extensions.Utils.XmlExtensions.HasElement*
+  name: HasElement
+  href: api/PSTk.Extensions.Utils.XmlExtensions.html#PSTk_Extensions_Utils_XmlExtensions_HasElement_
+  commentId: Overload:PSTk.Extensions.Utils.XmlExtensions.HasElement
+  isSpec: "True"
+  fullName: PSTk.Extensions.Utils.XmlExtensions.HasElement
+  nameWithType: XmlExtensions.HasElement
 - uid: PSTk.Networking
   name: PSTk.Networking
   href: api/PSTk.Networking.html
@@ -531,6 +1515,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Networking.InboundConnection.GetIPAddress
   nameWithType: InboundConnection.GetIPAddress
+- uid: PSTk.Networking.InboundConnection.Name
+  name: Name
+  href: api/PSTk.Networking.InboundConnection.html#PSTk_Networking_InboundConnection_Name
+  commentId: P:PSTk.Networking.InboundConnection.Name
+  fullName: PSTk.Networking.InboundConnection.Name
+  nameWithType: InboundConnection.Name
+- uid: PSTk.Networking.InboundConnection.Name*
+  name: Name
+  href: api/PSTk.Networking.InboundConnection.html#PSTk_Networking_InboundConnection_Name_
+  commentId: Overload:PSTk.Networking.InboundConnection.Name
+  isSpec: "True"
+  fullName: PSTk.Networking.InboundConnection.Name
+  nameWithType: InboundConnection.Name
 - uid: PSTk.Networking.InboundConnection.op_Equality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)
   name: Equality(InboundConnection, InboundConnection)
   href: api/PSTk.Networking.InboundConnection.html#PSTk_Networking_InboundConnection_op_Equality_PSTk_Networking_InboundConnection_PSTk_Networking_InboundConnection_
@@ -748,15 +1745,15 @@ references:
   commentId: T:PSTk.Threading.Tasks.AutomatedRestarter
   fullName: PSTk.Threading.Tasks.AutomatedRestarter
   nameWithType: AutomatedRestarter
-- uid: PSTk.Threading.Tasks.AutomatedRestarter.#ctor(TimeSpan,System.Int32,Action{System.String})
-  name: AutomatedRestarter(TimeSpan, Int32, Action<String>)
-  href: api/PSTk.Threading.Tasks.AutomatedRestarter.html#PSTk_Threading_Tasks_AutomatedRestarter__ctor_TimeSpan_System_Int32_Action_System_String__
-  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.#ctor(TimeSpan,System.Int32,Action{System.String})
-  name.vb: AutomatedRestarter(TimeSpan, Int32, Action(Of String))
-  fullName: PSTk.Threading.Tasks.AutomatedRestarter.AutomatedRestarter(TimeSpan, System.Int32, Action<System.String>)
-  fullName.vb: PSTk.Threading.Tasks.AutomatedRestarter.AutomatedRestarter(TimeSpan, System.Int32, Action(Of System.String))
-  nameWithType: AutomatedRestarter.AutomatedRestarter(TimeSpan, Int32, Action<String>)
-  nameWithType.vb: AutomatedRestarter.AutomatedRestarter(TimeSpan, Int32, Action(Of String))
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.#ctor(System.String,TimeSpan,System.Int32,Action{System.String})
+  name: AutomatedRestarter(String, TimeSpan, Int32, Action<String>)
+  href: api/PSTk.Threading.Tasks.AutomatedRestarter.html#PSTk_Threading_Tasks_AutomatedRestarter__ctor_System_String_TimeSpan_System_Int32_Action_System_String__
+  commentId: M:PSTk.Threading.Tasks.AutomatedRestarter.#ctor(System.String,TimeSpan,System.Int32,Action{System.String})
+  name.vb: AutomatedRestarter(String, TimeSpan, Int32, Action(Of String))
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.AutomatedRestarter(System.String, TimeSpan, System.Int32, Action<System.String>)
+  fullName.vb: PSTk.Threading.Tasks.AutomatedRestarter.AutomatedRestarter(System.String, TimeSpan, System.Int32, Action(Of System.String))
+  nameWithType: AutomatedRestarter.AutomatedRestarter(String, TimeSpan, Int32, Action<String>)
+  nameWithType.vb: AutomatedRestarter.AutomatedRestarter(String, TimeSpan, Int32, Action(Of String))
 - uid: PSTk.Threading.Tasks.AutomatedRestarter.#ctor*
   name: AutomatedRestarter
   href: api/PSTk.Threading.Tasks.AutomatedRestarter.html#PSTk_Threading_Tasks_AutomatedRestarter__ctor_
@@ -806,6 +1803,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Threading.Tasks.AutomatedRestarter.GetFlag
   nameWithType: AutomatedRestarter.GetFlag
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.Name
+  name: Name
+  href: api/PSTk.Threading.Tasks.AutomatedRestarter.html#PSTk_Threading_Tasks_AutomatedRestarter_Name
+  commentId: P:PSTk.Threading.Tasks.AutomatedRestarter.Name
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.Name
+  nameWithType: AutomatedRestarter.Name
+- uid: PSTk.Threading.Tasks.AutomatedRestarter.Name*
+  name: Name
+  href: api/PSTk.Threading.Tasks.AutomatedRestarter.html#PSTk_Threading_Tasks_AutomatedRestarter_Name_
+  commentId: Overload:PSTk.Threading.Tasks.AutomatedRestarter.Name
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.AutomatedRestarter.Name
+  nameWithType: AutomatedRestarter.Name
 - uid: PSTk.Threading.Tasks.AutomatedRestarter.OnFinished
   name: OnFinished
   href: api/PSTk.Threading.Tasks.AutomatedRestarter.html#PSTk_Threading_Tasks_AutomatedRestarter_OnFinished
@@ -899,21 +1909,21 @@ references:
   commentId: T:PSTk.Threading.Tasks.InternalRoutine
   fullName: PSTk.Threading.Tasks.InternalRoutine
   nameWithType: InternalRoutine
-- uid: PSTk.Threading.Tasks.InternalRoutine.#ctor(System.Int32,Action)
-  name: InternalRoutine(Int32, Action)
-  href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine__ctor_System_Int32_Action_
-  commentId: M:PSTk.Threading.Tasks.InternalRoutine.#ctor(System.Int32,Action)
-  fullName: PSTk.Threading.Tasks.InternalRoutine.InternalRoutine(System.Int32, Action)
-  nameWithType: InternalRoutine.InternalRoutine(Int32, Action)
-- uid: PSTk.Threading.Tasks.InternalRoutine.#ctor(System.Int32,Action{System.Int32},Action{System.String})
-  name: InternalRoutine(Int32, Action<Int32>, Action<String>)
-  href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine__ctor_System_Int32_Action_System_Int32__Action_System_String__
-  commentId: M:PSTk.Threading.Tasks.InternalRoutine.#ctor(System.Int32,Action{System.Int32},Action{System.String})
-  name.vb: InternalRoutine(Int32, Action(Of Int32), Action(Of String))
-  fullName: PSTk.Threading.Tasks.InternalRoutine.InternalRoutine(System.Int32, Action<System.Int32>, Action<System.String>)
-  fullName.vb: PSTk.Threading.Tasks.InternalRoutine.InternalRoutine(System.Int32, Action(Of System.Int32), Action(Of System.String))
-  nameWithType: InternalRoutine.InternalRoutine(Int32, Action<Int32>, Action<String>)
-  nameWithType.vb: InternalRoutine.InternalRoutine(Int32, Action(Of Int32), Action(Of String))
+- uid: PSTk.Threading.Tasks.InternalRoutine.#ctor(System.String,System.Int32,Action)
+  name: InternalRoutine(String, Int32, Action)
+  href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine__ctor_System_String_System_Int32_Action_
+  commentId: M:PSTk.Threading.Tasks.InternalRoutine.#ctor(System.String,System.Int32,Action)
+  fullName: PSTk.Threading.Tasks.InternalRoutine.InternalRoutine(System.String, System.Int32, Action)
+  nameWithType: InternalRoutine.InternalRoutine(String, Int32, Action)
+- uid: PSTk.Threading.Tasks.InternalRoutine.#ctor(System.String,System.Int32,Action{System.Int64},Action{System.String})
+  name: InternalRoutine(String, Int32, Action<Int64>, Action<String>)
+  href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine__ctor_System_String_System_Int32_Action_System_Int64__Action_System_String__
+  commentId: M:PSTk.Threading.Tasks.InternalRoutine.#ctor(System.String,System.Int32,Action{System.Int64},Action{System.String})
+  name.vb: InternalRoutine(String, Int32, Action(Of Int64), Action(Of String))
+  fullName: PSTk.Threading.Tasks.InternalRoutine.InternalRoutine(System.String, System.Int32, Action<System.Int64>, Action<System.String>)
+  fullName.vb: PSTk.Threading.Tasks.InternalRoutine.InternalRoutine(System.String, System.Int32, Action(Of System.Int64), Action(Of System.String))
+  nameWithType: InternalRoutine.InternalRoutine(String, Int32, Action<Int64>, Action<String>)
+  nameWithType.vb: InternalRoutine.InternalRoutine(String, Int32, Action(Of Int64), Action(Of String))
 - uid: PSTk.Threading.Tasks.InternalRoutine.#ctor*
   name: InternalRoutine
   href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine__ctor_
@@ -934,6 +1944,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Threading.Tasks.InternalRoutine.AttachToParent
   nameWithType: InternalRoutine.AttachToParent
+- uid: PSTk.Threading.Tasks.InternalRoutine.Name
+  name: Name
+  href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine_Name
+  commentId: P:PSTk.Threading.Tasks.InternalRoutine.Name
+  fullName: PSTk.Threading.Tasks.InternalRoutine.Name
+  nameWithType: InternalRoutine.Name
+- uid: PSTk.Threading.Tasks.InternalRoutine.Name*
+  name: Name
+  href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine_Name_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutine.Name
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutine.Name
+  nameWithType: InternalRoutine.Name
 - uid: PSTk.Threading.Tasks.InternalRoutine.OnDeltaVariation
   name: OnDeltaVariation
   href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine_OnDeltaVariation
@@ -946,18 +1969,6 @@ references:
   commentId: E:PSTk.Threading.Tasks.InternalRoutine.OnFinished
   fullName: PSTk.Threading.Tasks.InternalRoutine.OnFinished
   nameWithType: InternalRoutine.OnFinished
-- uid: PSTk.Threading.Tasks.InternalRoutine.OnInitialized
-  name: OnInitialized
-  href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine_OnInitialized
-  commentId: E:PSTk.Threading.Tasks.InternalRoutine.OnInitialized
-  fullName: PSTk.Threading.Tasks.InternalRoutine.OnInitialized
-  nameWithType: InternalRoutine.OnInitialized
-- uid: PSTk.Threading.Tasks.InternalRoutine.OnInitializing
-  name: OnInitializing
-  href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine_OnInitializing
-  commentId: E:PSTk.Threading.Tasks.InternalRoutine.OnInitializing
-  fullName: PSTk.Threading.Tasks.InternalRoutine.OnInitializing
-  nameWithType: InternalRoutine.OnInitializing
 - uid: PSTk.Threading.Tasks.InternalRoutine.Start
   name: Start()
   href: api/PSTk.Threading.Tasks.InternalRoutine.html#PSTk_Threading_Tasks_InternalRoutine_Start
@@ -990,12 +2001,12 @@ references:
   commentId: T:PSTk.Threading.Tasks.InternalRoutineEventArgs
   fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs
   nameWithType: InternalRoutineEventArgs
-- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int64,System.Int32,System.Int64)
-  name: InternalRoutineEventArgs(Int64, Int32, Int64)
-  href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_System_Int64_System_Int32_System_Int64_
-  commentId: M:PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.Int64,System.Int32,System.Int64)
-  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.InternalRoutineEventArgs(System.Int64, System.Int32, System.Int64)
-  nameWithType: InternalRoutineEventArgs.InternalRoutineEventArgs(Int64, Int32, Int64)
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.String,System.Int64,System.Int32,System.Int64)
+  name: InternalRoutineEventArgs(String, Int64, Int32, Int64)
+  href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_System_String_System_Int64_System_Int32_System_Int64_
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor(System.String,System.Int64,System.Int32,System.Int64)
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.InternalRoutineEventArgs(System.String, System.Int64, System.Int32, System.Int64)
+  nameWithType: InternalRoutineEventArgs.InternalRoutineEventArgs(String, Int64, Int32, Int64)
 - uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.#ctor*
   name: InternalRoutineEventArgs
   href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs__ctor_
@@ -1016,6 +2027,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.Delta
   nameWithType: InternalRoutineEventArgs.Delta
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.Name
+  name: Name
+  href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs_Name
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineEventArgs.Name
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.Name
+  nameWithType: InternalRoutineEventArgs.Name
+- uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.Name*
+  name: Name
+  href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs_Name_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineEventArgs.Name
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineEventArgs.Name
+  nameWithType: InternalRoutineEventArgs.Name
 - uid: PSTk.Threading.Tasks.InternalRoutineEventArgs.TicksPerSecond
   name: TicksPerSecond
   href: api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html#PSTk_Threading_Tasks_InternalRoutineEventArgs_TicksPerSecond
@@ -1048,30 +2072,30 @@ references:
   commentId: T:PSTk.Threading.Tasks.InternalRoutineSlim
   fullName: PSTk.Threading.Tasks.InternalRoutineSlim
   nameWithType: InternalRoutineSlim
-- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action)
-  name: InternalRoutineSlim(Int32, Action)
-  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_Int32_Action_
-  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action)
-  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action)
-  nameWithType: InternalRoutineSlim.InternalRoutineSlim(Int32, Action)
-- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action,Action{System.String})
-  name: InternalRoutineSlim(Int32, Action, Action<String>)
-  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_Int32_Action_Action_System_String__
-  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action,Action{System.String})
-  name.vb: InternalRoutineSlim(Int32, Action, Action(Of String))
-  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action, Action<System.String>)
-  fullName.vb: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action, Action(Of System.String))
-  nameWithType: InternalRoutineSlim.InternalRoutineSlim(Int32, Action, Action<String>)
-  nameWithType.vb: InternalRoutineSlim.InternalRoutineSlim(Int32, Action, Action(Of String))
-- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action{System.Int64},Action{System.String})
-  name: InternalRoutineSlim(Int32, Action<Int64>, Action<String>)
-  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_Int32_Action_System_Int64__Action_System_String__
-  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.Int32,Action{System.Int64},Action{System.String})
-  name.vb: InternalRoutineSlim(Int32, Action(Of Int64), Action(Of String))
-  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action<System.Int64>, Action<System.String>)
-  fullName.vb: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.Int32, Action(Of System.Int64), Action(Of System.String))
-  nameWithType: InternalRoutineSlim.InternalRoutineSlim(Int32, Action<Int64>, Action<String>)
-  nameWithType.vb: InternalRoutineSlim.InternalRoutineSlim(Int32, Action(Of Int64), Action(Of String))
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.String,System.Int32,Action)
+  name: InternalRoutineSlim(String, Int32, Action)
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_String_System_Int32_Action_
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.String,System.Int32,Action)
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.String, System.Int32, Action)
+  nameWithType: InternalRoutineSlim.InternalRoutineSlim(String, Int32, Action)
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.String,System.Int32,Action,Action{System.String})
+  name: InternalRoutineSlim(String, Int32, Action, Action<String>)
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_String_System_Int32_Action_Action_System_String__
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.String,System.Int32,Action,Action{System.String})
+  name.vb: InternalRoutineSlim(String, Int32, Action, Action(Of String))
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.String, System.Int32, Action, Action<System.String>)
+  fullName.vb: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.String, System.Int32, Action, Action(Of System.String))
+  nameWithType: InternalRoutineSlim.InternalRoutineSlim(String, Int32, Action, Action<String>)
+  nameWithType.vb: InternalRoutineSlim.InternalRoutineSlim(String, Int32, Action, Action(Of String))
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.String,System.Int32,Action{System.Int64},Action{System.String})
+  name: InternalRoutineSlim(String, Int32, Action<Int64>, Action<String>)
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_System_String_System_Int32_Action_System_Int64__Action_System_String__
+  commentId: M:PSTk.Threading.Tasks.InternalRoutineSlim.#ctor(System.String,System.Int32,Action{System.Int64},Action{System.String})
+  name.vb: InternalRoutineSlim(String, Int32, Action(Of Int64), Action(Of String))
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.String, System.Int32, Action<System.Int64>, Action<System.String>)
+  fullName.vb: PSTk.Threading.Tasks.InternalRoutineSlim.InternalRoutineSlim(System.String, System.Int32, Action(Of System.Int64), Action(Of System.String))
+  nameWithType: InternalRoutineSlim.InternalRoutineSlim(String, Int32, Action<Int64>, Action<String>)
+  nameWithType.vb: InternalRoutineSlim.InternalRoutineSlim(String, Int32, Action(Of Int64), Action(Of String))
 - uid: PSTk.Threading.Tasks.InternalRoutineSlim.#ctor*
   name: InternalRoutineSlim
   href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim__ctor_
@@ -1131,6 +2155,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Threading.Tasks.InternalRoutineSlim.IsRunning
   nameWithType: InternalRoutineSlim.IsRunning
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Name
+  name: Name
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Name
+  commentId: P:PSTk.Threading.Tasks.InternalRoutineSlim.Name
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Name
+  nameWithType: InternalRoutineSlim.Name
+- uid: PSTk.Threading.Tasks.InternalRoutineSlim.Name*
+  name: Name
+  href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_Name_
+  commentId: Overload:PSTk.Threading.Tasks.InternalRoutineSlim.Name
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.InternalRoutineSlim.Name
+  nameWithType: InternalRoutineSlim.Name
 - uid: PSTk.Threading.Tasks.InternalRoutineSlim.OnDeltaVariation
   name: OnDeltaVariation
   href: api/PSTk.Threading.Tasks.InternalRoutineSlim.html#PSTk_Threading_Tasks_InternalRoutineSlim_OnDeltaVariation
@@ -1378,15 +2415,15 @@ references:
   commentId: T:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
   fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool
   nameWithType: AsyncProcedurePool
-- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor(PSTk.Threading.Tasks.Procedures.IAsyncProcedure[],CancellationTokenSource)
-  name: AsyncProcedurePool(IAsyncProcedure[], CancellationTokenSource)
-  href: api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html#PSTk_Threading_Tasks_Procedures_AsyncProcedurePool__ctor_PSTk_Threading_Tasks_Procedures_IAsyncProcedure___CancellationTokenSource_
-  commentId: M:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor(PSTk.Threading.Tasks.Procedures.IAsyncProcedure[],CancellationTokenSource)
-  name.vb: AsyncProcedurePool(IAsyncProcedure(), CancellationTokenSource)
-  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AsyncProcedurePool(PSTk.Threading.Tasks.Procedures.IAsyncProcedure[], CancellationTokenSource)
-  fullName.vb: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AsyncProcedurePool(PSTk.Threading.Tasks.Procedures.IAsyncProcedure(), CancellationTokenSource)
-  nameWithType: AsyncProcedurePool.AsyncProcedurePool(IAsyncProcedure[], CancellationTokenSource)
-  nameWithType.vb: AsyncProcedurePool.AsyncProcedurePool(IAsyncProcedure(), CancellationTokenSource)
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor(System.String,PSTk.Threading.Tasks.Procedures.IAsyncProcedure[],CancellationTokenSource)
+  name: AsyncProcedurePool(String, IAsyncProcedure[], CancellationTokenSource)
+  href: api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html#PSTk_Threading_Tasks_Procedures_AsyncProcedurePool__ctor_System_String_PSTk_Threading_Tasks_Procedures_IAsyncProcedure___CancellationTokenSource_
+  commentId: M:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor(System.String,PSTk.Threading.Tasks.Procedures.IAsyncProcedure[],CancellationTokenSource)
+  name.vb: AsyncProcedurePool(String, IAsyncProcedure(), CancellationTokenSource)
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AsyncProcedurePool(System.String, PSTk.Threading.Tasks.Procedures.IAsyncProcedure[], CancellationTokenSource)
+  fullName.vb: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.AsyncProcedurePool(System.String, PSTk.Threading.Tasks.Procedures.IAsyncProcedure(), CancellationTokenSource)
+  nameWithType: AsyncProcedurePool.AsyncProcedurePool(String, IAsyncProcedure[], CancellationTokenSource)
+  nameWithType.vb: AsyncProcedurePool.AsyncProcedurePool(String, IAsyncProcedure(), CancellationTokenSource)
 - uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.#ctor*
   name: AsyncProcedurePool
   href: api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html#PSTk_Threading_Tasks_Procedures_AsyncProcedurePool__ctor_
@@ -1462,6 +2499,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Item
   nameWithType: AsyncProcedurePool.Item
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Name
+  name: Name
+  href: api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html#PSTk_Threading_Tasks_Procedures_AsyncProcedurePool_Name
+  commentId: P:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Name
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Name
+  nameWithType: AsyncProcedurePool.Name
+- uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Name*
+  name: Name
+  href: api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html#PSTk_Threading_Tasks_Procedures_AsyncProcedurePool_Name_
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Name
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.Name
+  nameWithType: AsyncProcedurePool.Name
 - uid: PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.NumProcedures
   name: NumProcedures
   href: api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html#PSTk_Threading_Tasks_Procedures_AsyncProcedurePool_NumProcedures
@@ -1507,19 +2557,6 @@ references:
   isSpec: "True"
   fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute
   nameWithType: IAsyncProcedure.Execute
-- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
-  name: Name
-  href: api/PSTk.Threading.Tasks.Procedures.IAsyncProcedure.html#PSTk_Threading_Tasks_Procedures_IAsyncProcedure_Name
-  commentId: P:PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
-  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
-  nameWithType: IAsyncProcedure.Name
-- uid: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name*
-  name: Name
-  href: api/PSTk.Threading.Tasks.Procedures.IAsyncProcedure.html#PSTk_Threading_Tasks_Procedures_IAsyncProcedure_Name_
-  commentId: Overload:PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
-  isSpec: "True"
-  fullName: PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Name
-  nameWithType: IAsyncProcedure.Name
 - uid: PSTk.Threading.Tasks.Procedures.IAttachedTask
   name: IAttachedTask
   href: api/PSTk.Threading.Tasks.Procedures.IAttachedTask.html
@@ -1539,6 +2576,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.AttachToParent
   nameWithType: IAttachedTask.AttachToParent
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.Name
+  name: Name
+  href: api/PSTk.Threading.Tasks.Procedures.IAttachedTask.html#PSTk_Threading_Tasks_Procedures_IAttachedTask_Name
+  commentId: P:PSTk.Threading.Tasks.Procedures.IAttachedTask.Name
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.Name
+  nameWithType: IAttachedTask.Name
+- uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.Name*
+  name: Name
+  href: api/PSTk.Threading.Tasks.Procedures.IAttachedTask.html#PSTk_Threading_Tasks_Procedures_IAttachedTask_Name_
+  commentId: Overload:PSTk.Threading.Tasks.Procedures.IAttachedTask.Name
+  isSpec: "True"
+  fullName: PSTk.Threading.Tasks.Procedures.IAttachedTask.Name
+  nameWithType: IAttachedTask.Name
 - uid: PSTk.Threading.Tasks.Procedures.IAttachedTask.Token
   name: Token
   href: api/PSTk.Threading.Tasks.Procedures.IAttachedTask.html#PSTk_Threading_Tasks_Procedures_IAttachedTask_Token

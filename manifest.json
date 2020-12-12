@@ -5,11 +5,179 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Collections.SafeQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Collections.SafeQueue-1.html",
+          "hash": "jlEd5SgrH2IXxbG+AWinog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Collections.html",
+          "hash": "Jf6GyQ+vMTtP5pwzvEz5WQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Tools.Google.GMailCentral.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Tools.Google.GMailCentral.html",
+          "hash": "7jUbxyIeNpuFwEXU/ZetYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Tools.Google.GMailMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Tools.Google.GMailMessage.html",
+          "hash": "mlhXPof02NLxEO/iCmnhcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Tools.Google.GMailValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Tools.Google.GMailValidator.html",
+          "hash": "h5hm3wLMlhB8tuqTD265yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Tools.Google.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Tools.Google.html",
+          "hash": "qGG+KO8aZURu2gMbZYCBCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Tools.InterlockedExtra.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Tools.InterlockedExtra.html",
+          "hash": "CHCODIPLngJTFol1GYW4Ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Tools.SerialNumberGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Tools.SerialNumberGenerator.html",
+          "hash": "FscDVeMaVUkqwu/EDwSmoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Core.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Core.Tools.html",
+          "hash": "hMHpA/ejGLEqh+cpJZj2BQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Diagnostics.Logging.ILog-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Diagnostics.Logging.ILog-1.html",
+          "hash": "LplsVhLPVPJgGiaNBH+rKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Diagnostics.Logging.LogSlim-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Diagnostics.Logging.LogSlim-1.html",
+          "hash": "fzJt9UGEsy4j/KE2b0Tm1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Diagnostics.Logging.LogTimeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Diagnostics.Logging.LogTimeOptions.html",
+          "hash": "d2Nt/Tpg2saVAA7wts6R8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Diagnostics.Logging.TerminateEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Diagnostics.Logging.TerminateEventArgs.html",
+          "hash": "0pOar1rrStyPi5UwLDIyOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Diagnostics.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Diagnostics.Logging.html",
+          "hash": "5RI2RNKIpACz2Os42yXfxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PSTk.Diagnostics.TimedProfiler.yml",
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Diagnostics.TimedProfiler.html",
-          "hash": "tMCwoB3K+Oybm41EEGTp5g=="
+          "hash": "A3+ttIaZafuGGdw0Nwzbtg=="
         }
       },
       "is_incremental": false,
@@ -29,11 +197,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.yml",
+      "source_relative_path": "api/PSTk.Extensions.Utils.BufferExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PSTk.Extensions.ConcurrentCollections.ConcurrentDictionaryExtensions.html",
-          "hash": "e6pda4tavVqFi0TEqJL1zg=="
+          "relative_path": "api/PSTk.Extensions.Utils.BufferExtensions.html",
+          "hash": "gfu4VMy9zvBUMna3v8tHcg=="
         }
       },
       "is_incremental": false,
@@ -41,11 +209,95 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PSTk.Extensions.ConcurrentCollections.yml",
+      "source_relative_path": "api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PSTk.Extensions.ConcurrentCollections.html",
-          "hash": "TDbxAQHqDwoPt1Lxcn8vZw=="
+          "relative_path": "api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html",
+          "hash": "smMOMStTaKuLaA+exztIug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.Utils.DateTimeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.Utils.DateTimeExtensions.html",
+          "hash": "/gbYQr/jv33ltQjfFYSMEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.Utils.IDisposableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.Utils.IDisposableExtensions.html",
+          "hash": "f2KrTGLx9FyCPxybSD7GcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.html",
+          "hash": "ZCK9uXFEG84NBFbULPKXDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.Utils.NetworkStreamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.Utils.NetworkStreamExtensions.html",
+          "hash": "Y7stgzNonE87gZvWbl4doQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.Utils.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.Utils.StringExtensions.html",
+          "hash": "J4vuwRplK7woYDFgrAFBPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.Utils.XmlExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.Utils.XmlExtensions.html",
+          "hash": "KF82Ebj3trKSgQ2aj/cI7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Extensions.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Extensions.Utils.html",
+          "hash": "lxA0T1yFtkz5zb9AAnPbPw=="
         }
       },
       "is_incremental": false,
@@ -93,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Networking.InboundConnection.html",
-          "hash": "gRAeeD1v5WPR2fbqGL0WGg=="
+          "hash": "SlNRer3RwZYs79XZwGwAcA=="
         }
       },
       "is_incremental": false,
@@ -165,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarter.html",
-          "hash": "r6fEsTDTa5Gx1eMP5SLJMA=="
+          "hash": "n6M6OudPqN8CF/yRl/+J9w=="
         }
       },
       "is_incremental": false,
@@ -201,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.InternalRoutine.html",
-          "hash": "nkBddC9NjcKKTxxdEbSjhg=="
+          "hash": "cYCBlEiejkWzsSW+ZvGnBQ=="
         }
       },
       "is_incremental": false,
@@ -213,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html",
-          "hash": "AUNEM+HOMWdlY6DuoyG9sw=="
+          "hash": "Ea4ZvvqTsCou329c2X2Zew=="
         }
       },
       "is_incremental": false,
@@ -225,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.InternalRoutineSlim.html",
-          "hash": "lxJR9krgAJhQi7dHy28KKw=="
+          "hash": "uwOsHMuvUePttB1xcPKuMg=="
         }
       },
       "is_incremental": false,
@@ -237,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedure-1.html",
-          "hash": "sa/kUkp42hIhUspqUxVzAw=="
+          "hash": "nytCuGzpEGCHvmjCZcQYxw=="
         }
       },
       "is_incremental": false,
@@ -249,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs-1.html",
-          "hash": "rncIgfETZfoVOBmtGo0LAA=="
+          "hash": "cY3UHBeHqfWNv01kgA+hPQ=="
         }
       },
       "is_incremental": false,
@@ -261,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html",
-          "hash": "BrNkoN7B9ZT69A4RHXdpUQ=="
+          "hash": "hYcvCD+jFYeKaM989ccR3A=="
         }
       },
       "is_incremental": false,
@@ -273,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.IAsyncProcedure.html",
-          "hash": "qe5PHLu+DAUY16VpBoB3Ig=="
+          "hash": "lYmuuVMCUlenSjESp6L2Gw=="
         }
       },
       "is_incremental": false,
@@ -285,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.IAttachedTask.html",
-          "hash": "8eEEwqPKHLQw44LfOH5u3Q=="
+          "hash": "xXgN1ecdJWW14/P9Wsg2eA=="
         }
       },
       "is_incremental": false,
@@ -333,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "9mgE2LmxWvH93h1j/06bWQ=="
+          "hash": "bCcOmAXERkKOIKZomRoWwA=="
         }
       },
       "is_incremental": false,
@@ -405,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "PESYYqDus6fiJgATmec0og=="
+          "hash": "8V1AfzeCiKLRRhGny5IGWQ=="
         }
       },
       "is_incremental": false,
@@ -442,16 +694,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 47,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 6,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 26,
           "skipped_file_count": 0
         }
       }

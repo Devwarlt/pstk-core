@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IAsyncProcedure
+    <title>Enum LogTimeOptions
    | PSTk - PServer Toolkit </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IAsyncProcedure
+    <meta name="title" content="Enum LogTimeOptions
    | PSTk - PServer Toolkit ">
     <meta name="generator" content="docfx 2.45.1.0">
     
@@ -68,63 +68,96 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PSTk.Threading.Tasks.Procedures.IAsyncProcedure">
+            <article class="content wrap" id="_content" data-uid="PSTk.Diagnostics.Logging.LogTimeOptions">
   
   
-  <h1 id="PSTk_Threading_Tasks_Procedures_IAsyncProcedure" data-uid="PSTk.Threading.Tasks.Procedures.IAsyncProcedure" class="text-break">Interface IAsyncProcedure
+  <h1 id="PSTk_Diagnostics_Logging_LogTimeOptions" data-uid="PSTk.Diagnostics.Logging.LogTimeOptions" class="text-break">Enum LogTimeOptions
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the <a class="xref" href="PSTk.Diagnostics.Logging.LogSlim-1.html">LogSlim&lt;T&gt;</a> options for time format pattern.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="PSTk.Threading.Tasks.Procedures.IAttachedTask.html#PSTk_Threading_Tasks_Procedures_IAttachedTask_Name">IAttachedTask.Name</a>
-    </div>
-    <div>
-      <a class="xref" href="PSTk.Threading.Tasks.Procedures.IAttachedTask.html#PSTk_Threading_Tasks_Procedures_IAttachedTask_Token">IAttachedTask.Token</a>
-    </div>
-    <div>
-      <a class="xref" href="PSTk.Threading.Tasks.Procedures.IAttachedTask.html#PSTk_Threading_Tasks_Procedures_IAttachedTask_AttachToParent_CancellationToken_">IAttachedTask.AttachToParent(CancellationToken)</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PSTk.Threading.Tasks.Procedures.html">PSTk.Threading.Tasks.Procedures</a></h6>
-  <h6><strong>Assembly</strong>: PSTk.Threading.dll</h6>
-  <h5 id="PSTk_Threading_Tasks_Procedures_IAsyncProcedure_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PSTk.Diagnostics.Logging.html">PSTk.Diagnostics.Logging</a></h6>
+  <h6><strong>Assembly</strong>: PSTk.Diagnostics.dll</h6>
+  <h5 id="PSTk_Diagnostics_Logging_LogTimeOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IAsyncProcedure : IAttachedTask</code></pre>
+    <pre><code class="lang-csharp hljs">public enum LogTimeOptions : int</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_Procedures_IAsyncProcedure_Execute.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/Procedures/IAsyncProcedure.cs/#L7">View Source</a>
-  </span>
-  <a id="PSTk_Threading_Tasks_Procedures_IAsyncProcedure_Execute_" data-uid="PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute*"></a>
-  <h4 id="PSTk_Threading_Tasks_Procedures_IAsyncProcedure_Execute" data-uid="PSTk.Threading.Tasks.Procedures.IAsyncProcedure.Execute">Execute()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool Execute()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
-    </thead>
+    <thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td id="PSTk_Diagnostics_Logging_LogTimeOptions_Classic">Classic</td>
+        <td><p>Apply time format pattern to display year, month, day, hours and minutes.</p>
+<p>
+Pattern: MM/dd/yyyy hh:mm tt
+</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PSTk_Diagnostics_Logging_LogTimeOptions_ClassicRegular">ClassicRegular</td>
+        <td><p>Apply time format pattern to display year, month, day, hours, minutes and seconds.</p>
+<p>
+Pattern: MM/dd/yyyy hh:mm:ss tt
+</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PSTk_Diagnostics_Logging_LogTimeOptions_ClassicScientific">ClassicScientific</td>
+        <td><p>Apply time format pattern to display year, month, day, hours, minutes, seconds and milliseconds (four most significant digits of the seconds).</p>
+<p>
+Pattern: MM/dd/yyyy hh:mm:ss:ffff tt
+</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PSTk_Diagnostics_Logging_LogTimeOptions_FullRegular">FullRegular</td>
+        <td><p>Apply time format pattern to display year, month, day, hours, minutes and seconds.</p>
+<p>
+Pattern: dddd, dd MMMM yyyy - HH:mm:ss tt
+</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PSTk_Diagnostics_Logging_LogTimeOptions_FullScientific">FullScientific</td>
+        <td><p>Apply time format pattern to display year, month, day, hours, minutes, seconds and milliseconds (four most significant digits of the seconds).</p>
+<p>
+Pattern: dddd, dd MMMM yyyy - HH:mm:ss:ffff
+</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PSTk_Diagnostics_Logging_LogTimeOptions_None">None</td>
+        <td><p>Apply default time format pattern to display year, month, day, hours, minutes and seconds.</p>
+<p>
+Pattern: MM/dd/yyyy HH:mm:ss
+</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PSTk_Diagnostics_Logging_LogTimeOptions_Regular">Regular</td>
+        <td><p>Apply time format pattern to display hours, minutes and seconds.</p>
+<p>
+Pattern: HH:mm:ss tt
+</p>
+</td>
+      </tr>
+      <tr>
+        <td id="PSTk_Diagnostics_Logging_LogTimeOptions_Scientific">Scientific</td>
+        <td><p>Apply time format pattern to display hours, minutes, seconds and milliseconds (four most significant digits of the seconds).</p>
+<p>
+Pattern: HH:mm:ss:ffff
+</p>
+</td>
       </tr>
     </tbody>
-  </table>
+  </thead></thead></table>
 </article>
           </div>
           
@@ -133,10 +166,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Threading_Tasks_Procedures_IAsyncProcedure.md&amp;value=---%0Auid%3A%20PSTk.Threading.Tasks.Procedures.IAsyncProcedure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Diagnostics_Logging_LogTimeOptions.md&amp;value=---%0Auid%3A%20PSTk.Diagnostics.Logging.LogTimeOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Threading/Tasks/Procedures/IAsyncProcedure.cs/#L5" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Diagnostics/Logging/LogTimeOptions.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

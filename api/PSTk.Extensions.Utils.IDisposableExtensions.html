@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TimedProfiler
+    <title>Class IDisposableExtensions
    | PSTk - PServer Toolkit </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TimedProfiler
+    <meta name="title" content="Class IDisposableExtensions
    | PSTk - PServer Toolkit ">
     <meta name="generator" content="docfx 2.45.1.0">
     
@@ -68,43 +68,43 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PSTk.Diagnostics.TimedProfiler">
+            <article class="content wrap" id="_content" data-uid="PSTk.Extensions.Utils.IDisposableExtensions">
   
   
-  <h1 id="PSTk_Diagnostics_TimedProfiler" data-uid="PSTk.Diagnostics.TimedProfiler" class="text-break">Class TimedProfiler
+  <h1 id="PSTk_Extensions_Utils_IDisposableExtensions" data-uid="PSTk.Extensions.Utils.IDisposableExtensions" class="text-break">Class IDisposableExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Prints the total elapsed time in full and in milliseconds that it has taken to call Dispose
-until <a class="xref" href="PSTk.Diagnostics.TimedProfiler.html">TimedProfiler</a> is disposed.</p>
+  <div class="markdown level0 summary"><p>Contains <see cref="!:IDisposable"></see> utilities.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TimedProfiler</span></div>
+    <div class="level1"><span class="xref">IDisposableExtensions</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PSTk.Diagnostics.html">PSTk.Diagnostics</a></h6>
-  <h6><strong>Assembly</strong>: PSTk.Diagnostics.dll</h6>
-  <h5 id="PSTk_Diagnostics_TimedProfiler_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PSTk.Extensions.Utils.html">PSTk.Extensions.Utils</a></h6>
+  <h6><strong>Assembly</strong>: PSTk.Extensions.dll</h6>
+  <h5 id="PSTk_Extensions_Utils_IDisposableExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TimedProfiler : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IDisposableExtensions : object</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Diagnostics_TimedProfiler__ctor_System_String_Func_System_Boolean__Action_System_String__.md&amp;value=---%0Auid%3A%20PSTk.Diagnostics.TimedProfiler.%23ctor(System.String%2CFunc%7BSystem.Boolean%7D%2CAction%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_Utils_IDisposableExtensions_DisposeAndTrack__2___0_PSTk_Diagnostics_Logging_ILog___1__.md&amp;value=---%0Auid%3A%20PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack%60%602(%60%600%2CPSTk.Diagnostics.Logging.ILog%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Diagnostics/Profiling/TimedProfiler.cs/#L18">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Extensions/Utils/IDisposableExtensions.cs/#L18">View Source</a>
   </span>
-  <a id="PSTk_Diagnostics_TimedProfiler__ctor_" data-uid="PSTk.Diagnostics.TimedProfiler.#ctor*"></a>
-  <h4 id="PSTk_Diagnostics_TimedProfiler__ctor_System_String_Func_System_Boolean__Action_System_String__" data-uid="PSTk.Diagnostics.TimedProfiler.#ctor(System.String,Func{System.Boolean},Action{System.String})">TimedProfiler(String, Func&lt;Boolean&gt;, Action&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"><p>Create a new instance of <a class="xref" href="PSTk.Diagnostics.TimedProfiler.html">TimedProfiler</a>.</p>
+  <a id="PSTk_Extensions_Utils_IDisposableExtensions_DisposeAndTrack_" data-uid="PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack*"></a>
+  <h4 id="PSTk_Extensions_Utils_IDisposableExtensions_DisposeAndTrack__2___0_PSTk_Diagnostics_Logging_ILog___1__" data-uid="PSTk.Extensions.Utils.IDisposableExtensions.DisposeAndTrack``2(``0,PSTk.Diagnostics.Logging.ILog{``1})">DisposeAndTrack&lt;T, N&gt;(T, ILog&lt;N&gt;)</h4>
+  <div class="markdown level1 summary"><p>Dispose a class that implements interface <see cref="!:IDisposable"></see> and track message on <a class="xref" href="PSTk.Diagnostics.Logging.ILog-1.html">ILog&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimedProfiler(string message, Func&lt;bool&gt; condition = null, Action&lt;string&gt; output = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DisposeAndTrack&lt;T, N&gt;(this T disposable, ILog&lt;N&gt; log)
+    where T : IDisposable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,42 +117,36 @@ until <a class="xref" href="PSTk.Diagnostics.TimedProfiler.html">TimedProfiler</
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">disposable</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td><span class="parametername">condition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">output</span></td>
+        <td><a class="xref" href="PSTk.Diagnostics.Logging.ILog-1.html">ILog</a>&lt;N&gt;</td>
+        <td><span class="parametername">log</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Diagnostics_TimedProfiler_Dispose.md&amp;value=---%0Auid%3A%20PSTk.Diagnostics.TimedProfiler.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Diagnostics/Profiling/TimedProfiler.cs/#L36">View Source</a>
-  </span>
-  <a id="PSTk_Diagnostics_TimedProfiler_Dispose_" data-uid="PSTk.Diagnostics.TimedProfiler.Dispose*"></a>
-  <h4 id="PSTk_Diagnostics_TimedProfiler_Dispose" data-uid="PSTk.Diagnostics.TimedProfiler.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"><p>Called automatically at the end of the scope when used along side a using statment or explicitly called in the code
-It will only print out the elapsed time when the condition is met if there is a condition to the desired output if set
-otherwise it will log to the console</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">N</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -161,10 +155,10 @@ otherwise it will log to the console</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Diagnostics_TimedProfiler.md&amp;value=---%0Auid%3A%20PSTk.Diagnostics.TimedProfiler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Extensions_Utils_IDisposableExtensions.md&amp;value=---%0Auid%3A%20PSTk.Extensions.Utils.IDisposableExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Diagnostics/Profiling/TimedProfiler.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Extensions/Utils/IDisposableExtensions.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
