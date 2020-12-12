@@ -21,7 +21,7 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <PackageId>PSTk.Core</PackageId>
     <ApplicationIcon>ICON.ico</ApplicationIcon>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -33,7 +33,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PlatformTarget>x64</PlatformTarget>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>C:\Users\devwarlt\Desktop\Git\pstk-core\PSTk.Core\PSTk.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
