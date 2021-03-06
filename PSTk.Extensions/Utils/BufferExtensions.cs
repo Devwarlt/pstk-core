@@ -20,11 +20,15 @@ namespace PSTk.Extensions.Utils
             if (buffer == null)
                 throw new ArgumentNullException(nameof(buffer), "Cannot compress a null buffer.");
 
-            using var stream = new MemoryStream();
-            using var zip = new GZipStream(stream, CompressionMode.Compress);
-            zip.Write(buffer, 0, buffer.Length);
-            zip.Close();
-            return stream.ToArray();
+            using (var stream = new MemoryStream())
+            {
+                using (var zip = new GZipStream(stream, CompressionMode.Compress))
+                {
+                    zip.Write(buffer, 0, buffer.Length);
+                    zip.Close();
+                    return stream.ToArray();
+                }
+            }
         }
 
         /// <summary>
@@ -38,11 +42,17 @@ namespace PSTk.Extensions.Utils
             if (buffer == null)
                 throw new ArgumentNullException(nameof(buffer), "Cannot decompress a null buffer.");
 
-            using var zipStream = new MemoryStream(buffer);
-            using var stream = new MemoryStream();
-            using var unzip = new GZipStream(zipStream, CompressionMode.Decompress);
-            unzip.CopyTo(stream);
-            return stream.ToArray();
+            using (var zipStream = new MemoryStream(buffer))
+            {
+                using (var stream = new MemoryStream())
+                {
+                    using (var unzip = new GZipStream(zipStream, CompressionMode.Decompress))
+                    {
+                        unzip.CopyTo(stream);
+                        return stream.ToArray();
+                    }
+                }
+            }
         }
     }
 }
