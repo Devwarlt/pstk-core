@@ -98,6 +98,21 @@ namespace PSTk.Diagnostics.Logging
         public void PrintWarn(string message) => OnConsoleLog(Wrn, message, ConsoleColor.Yellow);
 
         private static string GenerateTimePattern(LogTimeOptions options)
+#if NET472
+        {
+            switch (options)
+            {
+                case LogTimeOptions.Classic: return "MM/dd/yyyy hh:mm tt";
+                case LogTimeOptions.ClassicRegular: return "MM/dd/yyyy hh:mm:ss tt";
+                case LogTimeOptions.ClassicScientific: return "MM/dd/yyyy hh:mm:ss:ffff tt";
+                case LogTimeOptions.FullRegular: return "dddd, dd MMMM yyyy - HH:mm:ss tt";
+                case LogTimeOptions.FullScientific: return "dddd, dd MMMM yyyy - HH:mm:ss:ffff";
+                case LogTimeOptions.Regular: return "HH:mm:ss tt";
+                case LogTimeOptions.Scientific: return "HH:mm:ss:ffff";
+                default: return string.Empty;
+            }
+        }
+#else
             => options switch
             {
                 LogTimeOptions.Classic => "MM/dd/yyyy hh:mm tt",
@@ -109,6 +124,8 @@ namespace PSTk.Diagnostics.Logging
                 LogTimeOptions.Scientific => "HH:mm:ss:ffff",
                 _ => string.Empty
             };
+
+#endif
 
         private string LogHeader(string level) => $"[{LogTimer()}] | [{level}] | <{typeof(T).Name}> -> ";
 
