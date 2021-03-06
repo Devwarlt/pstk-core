@@ -5,4 +5,4 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Style", "IDE0021:Use block body for constructors", Justification = "<Pending>", Scope = "member", Target = "~M:PSTk.Redis.Database.RedisEngine.#ctor(PSTk.Redis.Database.RedisSettings)")]
+[assembly: SuppressMessage("Style", "IDE0021:Use block body for constructors", Justification = "<Pending>", Scope = "member", Target = "~M:PSTk.Redis.Database.AsyncRedisEngine.#ctor(PSTk.Redis.Database.RedisSettings)")]

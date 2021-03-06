@@ -6,6 +6,38 @@
     public sealed class RedisSettings
     {
         /// <summary>
+        /// Create a new instance of <see cref="RedisSettings"/> with default values.
+        /// </summary>
+        public RedisSettings()
+        { }
+
+        /// <summary>
+        /// Create a new instance of <see cref="RedisSettings"/> with custom values.
+        /// </summary>
+        /// <param name="host"></param>
+        /// <param name="index"></param>
+        /// <param name="password"></param>
+        /// <param name="port"></param>
+        /// <param name="syncTimeout"></param>
+        /// <param name="asyncTimeout"></param>
+        public RedisSettings(string host, sbyte index, string password, int port, int syncTimeout, int asyncTimeout)
+        {
+            Host = host;
+            Index = index;
+            Password = password;
+            Port = port;
+            SyncTimeout = syncTimeout;
+            AsyncTimeout = asyncTimeout;
+        }
+
+        /// <summary>
+        /// Time in milliseconds to allow for asynchronous operations.
+        /// Default value:
+        /// <code>5000</code>
+        /// </summary>
+        public int AsyncTimeout { get; set; } = 5000;
+
+        /// <summary>
         /// The host name, default value:
         /// <code>localhost</code>
         /// </summary>
@@ -35,12 +67,5 @@
         /// <code>5000</code>
         /// </summary>
         public int SyncTimeout { get; set; } = 5000;
-
-        /// <summary>
-        /// Time in milliseconds to allow for asynchronous operations.
-        /// Default value:
-        /// <code>5000</code>
-        /// </summary>
-        public int AsyncTimeout { get; set; } = 5000;
     }
 }
