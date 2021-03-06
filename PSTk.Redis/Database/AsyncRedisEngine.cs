@@ -58,18 +58,18 @@ namespace PSTk.Redis.Database
                     e
                 );
             }
+        }
 
-            /// <summary>
-            /// Dispose <see cref="IConnectionMultiplexer"/> asynchronously and close connection.
-            /// </summary>
-            public async void Dispose()
-            {
-                if (!IsConnected)
-                    return;
+        /// <summary>
+        /// Dispose <see cref="IConnectionMultiplexer"/> asynchronously and close connection.
+        /// </summary>
+        public async void Dispose()
+        {
+            if (!IsConnected)
+                return;
 
-                await connectionMultiplexer.CloseAsync();
-                connectionMultiplexer.Dispose();
-            }
+            await connectionMultiplexer.CloseAsync();
+            connectionMultiplexer.Dispose();
         }
     }
 }
