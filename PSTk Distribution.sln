@@ -47,6 +47,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Articles", "Articles", "{D2
 		docs\articles\toc.yml = docs\articles\toc.yml
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Redis", "PSTk.Redis\PSTk.Redis.csproj", "{70734C00-A57D-44C2-A9AF-8C53438867C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{3023C538-B4F6-45C4-A683-923BF7AF2E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3023C538-B4F6-45C4-A683-923BF7AF2E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3023C538-B4F6-45C4-A683-923BF7AF2E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70734C00-A57D-44C2-A9AF-8C53438867C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70734C00-A57D-44C2-A9AF-8C53438867C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70734C00-A57D-44C2-A9AF-8C53438867C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70734C00-A57D-44C2-A9AF-8C53438867C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

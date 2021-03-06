@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1;net472;net5.0</TargetFrameworks>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
@@ -9,24 +9,25 @@
     <Company>PSTk Core Team</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Contains networking utilities part of PSTk.Core toolkit.</Description>
-    <Copyright>Copyright © PSTk Core Team 2020</Copyright>
+    <Copyright>Copyright © PSTk Core Team 2021</Copyright>
     <PackageProjectUrl>https://github.com/Devwarlt/pstk-core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Devwarlt/pstk-core</RepositoryUrl>
     <PackageIcon>ICON.png</PackageIcon>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>dotnet;toolkit;game-tools;pserver</PackageTags>
     <ApplicationIcon>ICON.ico</ApplicationIcon>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\Debug\netcoreapp3.1\PSTk.Networking.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\$(TargetFramework)\PSTk.Networking.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>x64</PlatformTarget>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>bin\Release\netcoreapp3.1\PSTk.Networking.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\$(TargetFramework)\PSTk.Networking.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
