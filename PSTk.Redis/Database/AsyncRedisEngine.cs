@@ -8,7 +8,7 @@ namespace PSTk.Redis.Database
     /// <summary>
     /// Base class to initialize Redis storage engine.
     /// </summary>
-    public sealed class RedisEngine
+    public sealed class AsyncRedisEngine
         : IDisposable
     {
         private readonly RedisSettings redisSettings;
@@ -18,7 +18,7 @@ namespace PSTk.Redis.Database
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-        public RedisEngine(RedisSettings redisSettings) => this.redisSettings = redisSettings;
+        public AsyncRedisEngine(RedisSettings redisSettings) => this.redisSettings = redisSettings;
 
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
@@ -40,7 +40,7 @@ namespace PSTk.Redis.Database
             if (!IsConnected)
                 return;
 
-            connectionMultiplexer.Close();
+            await connectionMultiplexer.CloseAsync();
             connectionMultiplexer.Dispose();
         }
 
@@ -48,7 +48,7 @@ namespace PSTk.Redis.Database
         /// Tries to create a new <see cref="IConnectionMultiplexer"/> connection asynchronously.
         /// </summary>
         /// <exception cref="ConnectionException"></exception>
-        public void Start()
+        public async void StartAsync()
         {
             var connectionStr = new StringBuilder();
             connectionStr.Append($"{redisSettings.Host}:{redisSettings.Port}");
@@ -60,7 +60,7 @@ namespace PSTk.Redis.Database
 
             try
             {
-                connectionMultiplexer = ConnectionMultiplexer.Connect(connectionStr.ToString());
+                connectionMultiplexer = await ConnectionMultiplexer.ConnectAsync(connectionStr.ToString());
                 database = connectionMultiplexer.GetDatabase(redisSettings.Index);
             }
             catch (RedisConnectionException e)
