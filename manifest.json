@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Collections.SafeQueue-1.html",
-          "hash": "jlEd5SgrH2IXxbG+AWinog=="
+          "hash": "6zdhtFbMXW9YvG5O5UfG0g=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Collections.html",
-          "hash": "Jf6GyQ+vMTtP5pwzvEz5WQ=="
+          "hash": "4ekg5dc6Q743RKTc5X1K0A=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Tools.Google.GMailCentral.html",
-          "hash": "7jUbxyIeNpuFwEXU/ZetYA=="
+          "hash": "P2kUxi2XqHVPmUjljpRC3g=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Tools.Google.GMailMessage.html",
-          "hash": "mlhXPof02NLxEO/iCmnhcg=="
+          "hash": "qg8TiiZ/06Ezx95lmkFbEA=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Tools.Google.GMailValidator.html",
-          "hash": "h5hm3wLMlhB8tuqTD265yQ=="
+          "hash": "Ta1rM8OKVQMj0bmLIL6xVg=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Tools.Google.html",
-          "hash": "qGG+KO8aZURu2gMbZYCBCw=="
+          "hash": "iu2/y+M2M42/uExiWhAB7w=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Tools.InterlockedExtra.html",
-          "hash": "CHCODIPLngJTFol1GYW4Ow=="
+          "hash": "rl53ou9ia0KuZZ1AGmiIfA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Tools.SerialNumberGenerator.html",
-          "hash": "FscDVeMaVUkqwu/EDwSmoQ=="
+          "hash": "JS92Q2Mv51LSurIaaN3ejQ=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Core.Tools.html",
-          "hash": "hMHpA/ejGLEqh+cpJZj2BQ=="
+          "hash": "Cz8FO39tYrm8QU2rvtbSFA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Diagnostics.Logging.ILog-1.html",
-          "hash": "LplsVhLPVPJgGiaNBH+rKA=="
+          "hash": "Sb9roQrrZZ5bp47gMWvzDA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Diagnostics.Logging.LogSlim-1.html",
-          "hash": "fzJt9UGEsy4j/KE2b0Tm1A=="
+          "hash": "h9nYcmUrrXN3rxhiifzlBA=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Diagnostics.Logging.LogTimeOptions.html",
-          "hash": "d2Nt/Tpg2saVAA7wts6R8g=="
+          "hash": "5RE2za1OhbvcnjTNXqDZsw=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Diagnostics.Logging.TerminateEventArgs.html",
-          "hash": "0pOar1rrStyPi5UwLDIyOA=="
+          "hash": "edBjbmVp1f0gsmxpQNduig=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Diagnostics.Logging.html",
-          "hash": "5RI2RNKIpACz2Os42yXfxA=="
+          "hash": "OHc8wbdUNTtMg0KUXR3svA=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Diagnostics.TimedProfiler.html",
-          "hash": "A3+ttIaZafuGGdw0Nwzbtg=="
+          "hash": "CUNpyhcIEBrX4WOxPlBpCg=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Diagnostics.html",
-          "hash": "Ogiis1YHjg5BF+9iRowjPw=="
+          "hash": "8O0pK1Tk9Y8YfV83bUHRCA=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.BufferExtensions.html",
-          "hash": "gfu4VMy9zvBUMna3v8tHcg=="
+          "hash": "GaUKpiyGmScsMP6A7WiiCw=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.ConcurrentDictionaryExtensions.html",
-          "hash": "smMOMStTaKuLaA+exztIug=="
+          "hash": "XjoZ0SL3K0fQeUDPPkNlJQ=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.DateTimeExtensions.html",
-          "hash": "/gbYQr/jv33ltQjfFYSMEQ=="
+          "hash": "0f2tO/A1O/eF8K6WTBAobA=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.IDisposableExtensions.html",
-          "hash": "f2KrTGLx9FyCPxybSD7GcQ=="
+          "hash": "phjz/tATrNkuCd1eK0JQkw=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.InternalRoutineEventArgsExtensions.html",
-          "hash": "ZCK9uXFEG84NBFbULPKXDg=="
+          "hash": "UX7A4eQBdyMqNnutPC7syA=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.NetworkStreamExtensions.html",
-          "hash": "Y7stgzNonE87gZvWbl4doQ=="
+          "hash": "XtWMei6XraPyNSTKAK8mvg=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.StringExtensions.html",
-          "hash": "J4vuwRplK7woYDFgrAFBPg=="
+          "hash": "0QRhTKutqKuCiMK+syfLRw=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.XmlExtensions.html",
-          "hash": "KF82Ebj3trKSgQ2aj/cI7g=="
+          "hash": "puk+Do4mZEWMDevYVDsjnw=="
         }
       },
       "is_incremental": false,
@@ -297,19 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Extensions.Utils.html",
-          "hash": "lxA0T1yFtkz5zb9AAnPbPw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PSTk.Networking.ConnectionCentral.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PSTk.Networking.ConnectionCentral.html",
-          "hash": "vm0MQRWPEd8LzjxLApdDVA=="
+          "hash": "uphH4rhIgYFNpREmAPh1gQ=="
         }
       },
       "is_incremental": false,
@@ -321,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Networking.ConnectionFlag.html",
-          "hash": "Dm5AmyWqw8XUbmcLERpOaA=="
+          "hash": "g9l8bgiOHKlex11EluB8Kw=="
         }
       },
       "is_incremental": false,
@@ -333,19 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Networking.ConnectionType.html",
-          "hash": "XCTqtFeA7yh2zI1ah73C7g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PSTk.Networking.InboundConnection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PSTk.Networking.InboundConnection.html",
-          "hash": "SlNRer3RwZYs79XZwGwAcA=="
+          "hash": "BZY0pSUjOpksZsvUQ7lNIw=="
         }
       },
       "is_incremental": false,
@@ -357,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Networking.InboundPacket.html",
-          "hash": "zHL/AJpF1tWmsJFptzHDHA=="
+          "hash": "BEXhGvKs9bgmP945kBx8+A=="
         }
       },
       "is_incremental": false,
@@ -369,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Networking.InboundTraffic.html",
-          "hash": "Bfgp5Ar7k+erRD1855pNDg=="
+          "hash": "q2rRqW4TcjlLzpjQmyXz6A=="
         }
       },
       "is_incremental": false,
@@ -381,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Networking.Utils.ConnectionUtils.html",
-          "hash": "3Z4JQVDIMJzQ5YqMwTGg6A=="
+          "hash": "eD3MZyMH+hyIQT7tAGNAQw=="
         }
       },
       "is_incremental": false,
@@ -393,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Networking.Utils.html",
-          "hash": "vWuCLLWfZCpYZCIYtS5+3w=="
+          "hash": "vsrTv4UAmnUDBI/rCTbM1g=="
         }
       },
       "is_incremental": false,
@@ -405,7 +381,91 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Networking.html",
-          "hash": "M9DOtOt4P6z8zlIc7vQaxA=="
+          "hash": "p2ttvR3xbORgeaUG+N5TtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Redis.Database.RedisEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Redis.Database.RedisEngine.html",
+          "hash": "/5CAvVM/V1qgk0C9IY8qGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Redis.Database.RedisField-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Redis.Database.RedisField-1.html",
+          "hash": "XlgkmwqT1162kqy5Ts+zmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Redis.Database.RedisObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Redis.Database.RedisObject.html",
+          "hash": "HReDlOnUe7TjNs7rGbbcrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Redis.Database.RedisSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Redis.Database.RedisSettings.html",
+          "hash": "GAO4cXlER0o7pa7sEcjyRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Redis.Database.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Redis.Database.html",
+          "hash": "2M9upyk2mwSOPjOrdSWQ8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Redis.Exceptions.ConnectionException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Redis.Exceptions.ConnectionException.html",
+          "hash": "922c/DNJo/uEn7kYxh9KeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PSTk.Redis.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PSTk.Redis.Exceptions.html",
+          "hash": "gbxIMABivpV74kL2EFt0Xw=="
         }
       },
       "is_incremental": false,
@@ -417,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarter.html",
-          "hash": "n6M6OudPqN8CF/yRl/+J9w=="
+          "hash": "96sem0sBfYc2gXlE2hlYtQ=="
         }
       },
       "is_incremental": false,
@@ -429,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarterFlag.html",
-          "hash": "wcoQhlCEHR4ed6fDyg1aOA=="
+          "hash": "0ntkq3z2DTkJUUICDRvn9g=="
         }
       },
       "is_incremental": false,
@@ -441,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.AutomatedRestarterListener.html",
-          "hash": "ndHVV9ONzU+57eccZuB8MA=="
+          "hash": "2gGteX1a13xOfVMewesqww=="
         }
       },
       "is_incremental": false,
@@ -453,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.InternalRoutine.html",
-          "hash": "cYCBlEiejkWzsSW+ZvGnBQ=="
+          "hash": "Reo8BxeCA9Vy8xBbEF/RMw=="
         }
       },
       "is_incremental": false,
@@ -465,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.InternalRoutineEventArgs.html",
-          "hash": "Ea4ZvvqTsCou329c2X2Zew=="
+          "hash": "fPzqyqcOquhuGismoXLz7Q=="
         }
       },
       "is_incremental": false,
@@ -477,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.InternalRoutineSlim.html",
-          "hash": "uwOsHMuvUePttB1xcPKuMg=="
+          "hash": "cJ4D4Je7sIg83CWncSV2ng=="
         }
       },
       "is_incremental": false,
@@ -489,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedure-1.html",
-          "hash": "nytCuGzpEGCHvmjCZcQYxw=="
+          "hash": "HCawHYmLD0tFjC+Z5eGlXA=="
         }
       },
       "is_incremental": false,
@@ -501,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedureEventArgs-1.html",
-          "hash": "cY3UHBeHqfWNv01kgA+hPQ=="
+          "hash": "OT2RP1CjDkRHzjO4y3AX8A=="
         }
       },
       "is_incremental": false,
@@ -513,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.AsyncProcedurePool.html",
-          "hash": "hYcvCD+jFYeKaM989ccR3A=="
+          "hash": "aeKtxk8p+qy3bbRbQH96bA=="
         }
       },
       "is_incremental": false,
@@ -525,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.IAsyncProcedure.html",
-          "hash": "lYmuuVMCUlenSjESp6L2Gw=="
+          "hash": "7DAot/0UnGiVrl3hiLoWhg=="
         }
       },
       "is_incremental": false,
@@ -537,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.IAttachedTask.html",
-          "hash": "xXgN1ecdJWW14/P9Wsg2eA=="
+          "hash": "Q8etYzFn0/4wDXTrdfyT5g=="
         }
       },
       "is_incremental": false,
@@ -549,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.Procedures.html",
-          "hash": "UDPR1LL+DuRqAJKuxBHCSQ=="
+          "hash": "ZqCRdR+8qnwCA5R7GTgpZQ=="
         }
       },
       "is_incremental": false,
@@ -561,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PSTk.Threading.Tasks.html",
-          "hash": "yTZUyTw+DgeiuGINORerkg=="
+          "hash": "rnQTPcRzeh+9a2y733IK3w=="
         }
       },
       "is_incremental": false,
@@ -573,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "anNsR0xEmeywPDaQOhhTNw=="
+          "hash": "DM0aF1PIpYk0d2PtA24K8w=="
         }
       },
       "is_incremental": false,
@@ -585,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "bCcOmAXERkKOIKZomRoWwA=="
+          "hash": "5Sko71TiEtia0r6d4IBbDw=="
         }
       },
       "is_incremental": false,
@@ -597,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/async-procedure-and-async-procedure-pool.html",
-          "hash": "eidwZbgXFZx3H/9GvM9xPQ=="
+          "hash": "p6qnE7tqAE87mbjCvTBxRA=="
         }
       },
       "is_incremental": false,
@@ -609,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/automated-restarter.html",
-          "hash": "EUIRk/yzH9eTiptYwO1ivA=="
+          "hash": "qtxCE6t6lBVRKJqkdDVK7Q=="
         }
       },
       "is_incremental": false,
@@ -621,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/internal-routine.html",
-          "hash": "Vu3AbeIon+x1Aw5A7w6+xg=="
+          "hash": "cscS2iLVAWe2GgWYBVWbtg=="
         }
       },
       "is_incremental": false,
@@ -633,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "VxOXHD57K0MtTUz7v3WNwg=="
+          "hash": "p5YsPYrFn1r3G9il9LsjfQ=="
         }
       },
       "is_incremental": false,
@@ -645,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "WL8wUPcB5QtXCoq/ICK/Cw=="
+          "hash": "uYTb6EIbuq7g35IYD2PcHg=="
         }
       },
       "is_incremental": false,
@@ -657,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "b3sFv/mfA0KBg1EY5iMMFg=="
+          "hash": "Sr+TbjT/e7TTQMrJUAVRUg=="
         }
       },
       "is_incremental": false,
@@ -669,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
         }
       },
       "is_incremental": false,
@@ -687,13 +747,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -703,7 +756,14 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 47,
+          "total_file_count": 52,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

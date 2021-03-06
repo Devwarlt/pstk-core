@@ -5,9 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Internal Routine | PSTk - PServer Toolkit </title>
+    <title>Namespace PSTk.Redis.Database
+   | PSTk - PServer Toolkit </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Internal Routine | PSTk - PServer Toolkit ">
+    <meta name="title" content="Namespace PSTk.Redis.Database
+   | PSTk - PServer Toolkit ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,57 +68,27 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="internal-routine">Internal Routine</h1>
-
-<blockquote>
-<p>Used for synchronous or asynchronous routine.</p>
-</blockquote>
-<hr>
-<p><strong><code>Internal Routine</code></strong> can be used for cyclic operations running in parallel as loop process, see example below:</p>
-<pre><code class="lang-csharp">private const int _threshold = 10;
-
-private static int i = 0;
-
-private static readonly ManualResetEvent _mre = new ManualResetEvent(false);
-private static readonly CancellationTokenSource _cts = new CancellationTokenSource();
-
-public static void Main() {
-  // note that internal routine uses timeout in milliseconds
-  var routine = new InternalRoutine(Timespan.FromSeconds(1).TotalMilliseconds, OnTickDelta, OnTickError);
-  routine.AttachToParent(_cts.Token);
-  routine.OnDeltaVariation += OnTickDelay;
-  routine.OnFinished += OnTickOver;
-  routine.Start();
+            <article class="content wrap" id="_content" data-uid="PSTk.Redis.Database">
   
-  _mre.WaitOne();
-  
-  Thread.Sleep(3000);
-  Environment.Exit(0);
-}
-
-private static void OnTickDelta(int delta) {
-  if (!_cts.IsCancellationRequested &amp;&amp; ++i == _threshold) {
-    _cts.Cancel();
-    return;
-  }
-}
-
-private static void OnTickError(string message) =&gt; Console.WriteLine($&quot;An error occurred! -&gt; message: {message}&quot;);
-
-private static void OnTickDelay(object sender, InternalRoutineEventArgs args)
-  =&gt; Console.WriteLine(
-      &quot;Long tick detected! -&gt; &quot; +
-      $&quot;delay: {args.Delta}ms, &quot; +
-      $&quot;timeout: {args.Timeout}ms, &quot; +
-      $&quot;ticks per second: {args.TicksPerSecond}&quot;
-  );
-
-private static void OnFinished(object sender, EventArgs args) {
-  Console.WriteLine(&quot;Finished routine!&quot;);
-  _mre.Set();
-}
-</code></pre>
+  <h1 id="PSTk_Redis_Database" data-uid="PSTk.Redis.Database" class="text-break">Namespace PSTk.Redis.Database
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="PSTk.Redis.Database.RedisEngine.html">RedisEngine</a></h4>
+      <section><p>Base class to initialize Redis storage engine.</p>
+</section>
+      <h4><a class="xref" href="PSTk.Redis.Database.RedisField-1.html">RedisField&lt;T&gt;</a></h4>
+      <section><p>Base class to iterate with <a class="xref" href="PSTk.Redis.Database.RedisObject.html">RedisObject</a>.</p>
+</section>
+      <h4><a class="xref" href="PSTk.Redis.Database.RedisObject.html">RedisObject</a></h4>
+      <section><p>Represents the base class for <see cref="!:RedisValue"></see> object manipulation.</p>
+</section>
+      <h4><a class="xref" href="PSTk.Redis.Database.RedisSettings.html">RedisSettings</a></h4>
+      <section><p>Standard configuration for <a class="xref" href="PSTk.Redis.Database.RedisEngine.html">RedisEngine</a>.</p>
+</section>
 </article>
           </div>
           
@@ -124,9 +96,6 @@ private static void OnFinished(object sender, EventArgs args) {
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/Devwarlt/pstk-core/blob/master/docs/articles/internal-routine.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

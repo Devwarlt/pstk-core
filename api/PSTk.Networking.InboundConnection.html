@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InboundConnection
    | PSTk - PServer Toolkit ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,11 +85,30 @@
     <h5>Implements</h5>
     <div><a class="xref" href="PSTk.Threading.Tasks.Procedures.IAttachedTask.html">IAttachedTask</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="PSTk.Networking.html">PSTk.Networking</a></h6>
   <h6><strong>Assembly</strong>: PSTk.Networking.dll</h6>
   <h5 id="PSTk_Networking_InboundConnection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InboundConnection : object, IAttachedTask</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This feature isn't completed, avoid use it for your projects. No test was made within its development period.&quot;, true)]
+public class InboundConnection : IAttachedTask</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -98,7 +117,7 @@
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection__ctor_PSTk_Networking_ConnectionCentral_System_Int32_System_UInt16_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.%23ctor(PSTk.Networking.ConnectionCentral%2CSystem.Int32%2CSystem.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L33">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L33">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection__ctor_" data-uid="PSTk.Networking.InboundConnection.#ctor*"></a>
   <h4 id="PSTk_Networking_InboundConnection__ctor_PSTk_Networking_ConnectionCentral_System_Int32_System_UInt16_" data-uid="PSTk.Networking.InboundConnection.#ctor(PSTk.Networking.ConnectionCentral,System.Int32,System.UInt16)">InboundConnection(ConnectionCentral, Int32, UInt16)</h4>
@@ -135,6 +154,33 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -142,11 +188,11 @@
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Clients.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Clients%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L56">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L56">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_Clients_" data-uid="PSTk.Networking.InboundConnection.Clients*"></a>
   <h4 id="PSTk_Networking_InboundConnection_Clients" data-uid="PSTk.Networking.InboundConnection.Clients">Clients</h4>
-  <div class="markdown level1 summary"><p>Get a list of all sockets associated to <see cref="!:IPAddress"></see>.</p>
+  <div class="markdown level1 summary"><p>Get a list of all sockets associated to <span class="xref">System.Net.IPAddress</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -163,7 +209,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">TcpClient</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Net.Sockets.TcpClient</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -173,7 +246,7 @@
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_GetConnections.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.GetConnections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L61">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L61">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_GetConnections_" data-uid="PSTk.Networking.InboundConnection.GetConnections*"></a>
   <h4 id="PSTk_Networking_InboundConnection_GetConnections" data-uid="PSTk.Networking.InboundConnection.GetConnections">GetConnections</h4>
@@ -199,12 +272,39 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_GetFlag.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.GetFlag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L66">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L66">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_GetFlag_" data-uid="PSTk.Networking.InboundConnection.GetFlag*"></a>
   <h4 id="PSTk_Networking_InboundConnection_GetFlag" data-uid="PSTk.Networking.InboundConnection.GetFlag">GetFlag</h4>
@@ -230,16 +330,43 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_GetIPAddress.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.GetIPAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L71">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L71">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_GetIPAddress_" data-uid="PSTk.Networking.InboundConnection.GetIPAddress*"></a>
   <h4 id="PSTk_Networking_InboundConnection_GetIPAddress" data-uid="PSTk.Networking.InboundConnection.GetIPAddress">GetIPAddress</h4>
-  <div class="markdown level1 summary"><p>Returns the <see cref="!:IPAddress"></see> from remote associated <a class="xref" href="PSTk.Networking.InboundConnection.html#PSTk_Networking_InboundConnection_Clients">Clients</a>.</p>
+  <div class="markdown level1 summary"><p>Returns the <span class="xref">System.Net.IPAddress</span> from remote associated <a class="xref" href="PSTk.Networking.InboundConnection.html#PSTk_Networking_InboundConnection_Clients">Clients</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -256,37 +383,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPAddress</span></td>
+        <td><span class="xref">System.Net.IPAddress</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Name.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L85">View Source</a>
-  </span>
-  <a id="PSTk_Networking_InboundConnection_Name_" data-uid="PSTk.Networking.InboundConnection.Name*"></a>
-  <h4 id="PSTk_Networking_InboundConnection_Name" data-uid="PSTk.Networking.InboundConnection.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
+        <th>Condition</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -296,11 +420,11 @@
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Token.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Token%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L92">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L86">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_Token_" data-uid="PSTk.Networking.InboundConnection.Token*"></a>
   <h4 id="PSTk_Networking_InboundConnection_Token" data-uid="PSTk.Networking.InboundConnection.Token">Token</h4>
-  <div class="markdown level1 summary"><p>Get the <see cref="!:CancellationToken"></see> of attached task.</p>
+  <div class="markdown level1 summary"><p>Get the <span class="xref">System.Threading.CancellationToken</span> of attached task.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -317,7 +441,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -326,14 +477,14 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Add_TcpClient_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Add(TcpClient)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Add_System_Net_Sockets_TcpClient_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Add(System.Net.Sockets.TcpClient)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L107">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L101">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_Add_" data-uid="PSTk.Networking.InboundConnection.Add*"></a>
-  <h4 id="PSTk_Networking_InboundConnection_Add_TcpClient_" data-uid="PSTk.Networking.InboundConnection.Add(TcpClient)">Add(TcpClient)</h4>
-  <div class="markdown level1 summary"><p>Add <see cref="!:TcpClient"></see> to current inbound connection of current thread.</p>
+  <h4 id="PSTk_Networking_InboundConnection_Add_System_Net_Sockets_TcpClient_" data-uid="PSTk.Networking.InboundConnection.Add(System.Net.Sockets.TcpClient)">Add(TcpClient)</h4>
+  <div class="markdown level1 summary"><p>Add <span class="xref">System.Net.Sockets.TcpClient</span> to current inbound connection of current thread.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -351,21 +502,36 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TcpClient</span></td>
+        <td><span class="xref">System.Net.Sockets.TcpClient</span></td>
         <td><span class="parametername">tcpClient</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_AttachToParent_CancellationToken_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.AttachToParent(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_AttachToParent_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.AttachToParent(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L122">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L116">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_AttachToParent_" data-uid="PSTk.Networking.InboundConnection.AttachToParent*"></a>
-  <h4 id="PSTk_Networking_InboundConnection_AttachToParent_CancellationToken_" data-uid="PSTk.Networking.InboundConnection.AttachToParent(CancellationToken)">AttachToParent(CancellationToken)</h4>
+  <h4 id="PSTk_Networking_InboundConnection_AttachToParent_System_Threading_CancellationToken_" data-uid="PSTk.Networking.InboundConnection.AttachToParent(System.Threading.CancellationToken)">AttachToParent(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Attach a process to parent in case of external task cancellation request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -384,8 +550,35 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">token</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -395,11 +588,11 @@
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Equals_System_Object_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L129">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L123">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_Equals_" data-uid="PSTk.Networking.InboundConnection.Equals*"></a>
   <h4 id="PSTk_Networking_InboundConnection_Equals_System_Object_" data-uid="PSTk.Networking.InboundConnection.Equals(System.Object)">Equals(Object)</h4>
-  <div class="markdown level1 summary"><p>Compare two <a class="xref" href="PSTk.Networking.InboundConnection.html">InboundConnection</a> by <see cref="!:IPAddress"></see>.</p>
+  <div class="markdown level1 summary"><p>Compare two <a class="xref" href="PSTk.Networking.InboundConnection.html">InboundConnection</a> by <span class="xref">System.Net.IPAddress</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -438,17 +631,46 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_GetEndPointPackets.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.GetEndPointPackets%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L143">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L137">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_GetEndPointPackets_" data-uid="PSTk.Networking.InboundConnection.GetEndPointPackets*"></a>
   <h4 id="PSTk_Networking_InboundConnection_GetEndPointPackets" data-uid="PSTk.Networking.InboundConnection.GetEndPointPackets">GetEndPointPackets()</h4>
   <div class="markdown level1 summary"><p>Get an enumerable of <a class="xref" href="PSTk.Networking.InboundPacket.html">InboundPacket</a> from <a class="xref" href="PSTk.Networking.InboundTraffic.html">InboundTraffic</a>.
-All pending packets are enqueued into <a class="xref" href="PSTk.Networking.InboundConnection.html">InboundConnection</a> for each <see cref="!:EndPoint"></see>.</p>
+All pending packets are enqueued into <a class="xref" href="PSTk.Networking.InboundConnection.html">InboundConnection</a> for each <span class="xref">System.Net.EndPoint</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -465,7 +687,34 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="PSTk.Networking.InboundPacket.html">InboundPacket</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="PSTk.Networking.InboundPacket.html">InboundPacket</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -475,7 +724,7 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_GetHashCode.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L161">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L155">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_GetHashCode_" data-uid="PSTk.Networking.InboundConnection.GetHashCode*"></a>
   <h4 id="PSTk_Networking_InboundConnection_GetHashCode" data-uid="PSTk.Networking.InboundConnection.GetHashCode">GetHashCode()</h4>
@@ -500,16 +749,45 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Remove_TcpClient_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Remove(TcpClient)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Remove_System_Net_Sockets_TcpClient_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Remove(System.Net.Sockets.TcpClient)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L171">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L165">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_Remove_" data-uid="PSTk.Networking.InboundConnection.Remove*"></a>
-  <h4 id="PSTk_Networking_InboundConnection_Remove_TcpClient_" data-uid="PSTk.Networking.InboundConnection.Remove(TcpClient)">Remove(TcpClient)</h4>
-  <div class="markdown level1 summary"><p>Remove <see cref="!:TcpClient"></see> to current inbound connection of current thread.</p>
+  <h4 id="PSTk_Networking_InboundConnection_Remove_System_Net_Sockets_TcpClient_" data-uid="PSTk.Networking.InboundConnection.Remove(System.Net.Sockets.TcpClient)">Remove(TcpClient)</h4>
+  <div class="markdown level1 summary"><p>Remove <span class="xref">System.Net.Sockets.TcpClient</span> to current inbound connection of current thread.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -527,8 +805,27 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TcpClient</span></td>
+        <td><span class="xref">System.Net.Sockets.TcpClient</span></td>
         <td><span class="parametername">tcpClient</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -538,7 +835,7 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Start.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L188">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L182">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_Start_" data-uid="PSTk.Networking.InboundConnection.Start*"></a>
   <h4 id="PSTk_Networking_InboundConnection_Start" data-uid="PSTk.Networking.InboundConnection.Start">Start()</h4>
@@ -549,12 +846,27 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Start()</code></pre>
   </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_Stop.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L204">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L198">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_Stop_" data-uid="PSTk.Networking.InboundConnection.Stop*"></a>
   <h4 id="PSTk_Networking_InboundConnection_Stop" data-uid="PSTk.Networking.InboundConnection.Stop">Stop()</h4>
@@ -565,6 +877,21 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
   </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
@@ -572,7 +899,7 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_op_Equality_PSTk_Networking_InboundConnection_PSTk_Networking_InboundConnection_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.op_Equality(PSTk.Networking.InboundConnection%2CPSTk.Networking.InboundConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L98">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L92">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_op_Equality_" data-uid="PSTk.Networking.InboundConnection.op_Equality*"></a>
   <h4 id="PSTk_Networking_InboundConnection_op_Equality_PSTk_Networking_InboundConnection_PSTk_Networking_InboundConnection_" data-uid="PSTk.Networking.InboundConnection.op_Equality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)">Equality(InboundConnection, InboundConnection)</h4>
@@ -619,12 +946,39 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection_op_Inequality_PSTk_Networking_InboundConnection_PSTk_Networking_InboundConnection_.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection.op_Inequality(PSTk.Networking.InboundConnection%2CPSTk.Networking.InboundConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L96">View Source</a>
+    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L90">View Source</a>
   </span>
   <a id="PSTk_Networking_InboundConnection_op_Inequality_" data-uid="PSTk.Networking.InboundConnection.op_Inequality*"></a>
   <h4 id="PSTk_Networking_InboundConnection_op_Inequality_PSTk_Networking_InboundConnection_PSTk_Networking_InboundConnection_" data-uid="PSTk.Networking.InboundConnection.op_Inequality(PSTk.Networking.InboundConnection,PSTk.Networking.InboundConnection)">Inequality(InboundConnection, InboundConnection)</h4>
@@ -671,6 +1025,33 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.OperationCanceledException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Sockets.SocketException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="PSTk.Threading.Tasks.Procedures.IAttachedTask.html">IAttachedTask</a>
@@ -686,12 +1067,13 @@ All pending packets are enqueued into <a class="xref" href="PSTk.Networking.Inbo
                     <a href="https://github.com/Devwarlt/pstk-core/new/master/apiSpec/new?filename=PSTk_Networking_InboundConnection.md&amp;value=---%0Auid%3A%20PSTk.Networking.InboundConnection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Devwarlt/pstk-core/blob/prod/PSTk.Networking/InboundConnection.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Devwarlt/pstk-core/blob/master/PSTk.Networking/InboundConnection.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
