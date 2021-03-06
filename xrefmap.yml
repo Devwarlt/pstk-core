@@ -1438,6 +1438,32 @@ references:
   isSpec: "True"
   fullName: PSTk.Redis.Database.RedisEngine.RedisEngine
   nameWithType: RedisEngine.RedisEngine
+- uid: PSTk.Redis.Database.RedisEngine.Close
+  name: Close()
+  href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_Close
+  commentId: M:PSTk.Redis.Database.RedisEngine.Close
+  fullName: PSTk.Redis.Database.RedisEngine.Close()
+  nameWithType: RedisEngine.Close()
+- uid: PSTk.Redis.Database.RedisEngine.Close*
+  name: Close
+  href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_Close_
+  commentId: Overload:PSTk.Redis.Database.RedisEngine.Close
+  isSpec: "True"
+  fullName: PSTk.Redis.Database.RedisEngine.Close
+  nameWithType: RedisEngine.Close
+- uid: PSTk.Redis.Database.RedisEngine.CloseAsync
+  name: CloseAsync()
+  href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_CloseAsync
+  commentId: M:PSTk.Redis.Database.RedisEngine.CloseAsync
+  fullName: PSTk.Redis.Database.RedisEngine.CloseAsync()
+  nameWithType: RedisEngine.CloseAsync()
+- uid: PSTk.Redis.Database.RedisEngine.CloseAsync*
+  name: CloseAsync
+  href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_CloseAsync_
+  commentId: Overload:PSTk.Redis.Database.RedisEngine.CloseAsync
+  isSpec: "True"
+  fullName: PSTk.Redis.Database.RedisEngine.CloseAsync
+  nameWithType: RedisEngine.CloseAsync
 - uid: PSTk.Redis.Database.RedisEngine.Database
   name: Database
   href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_Database
@@ -1477,6 +1503,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Redis.Database.RedisEngine.IsConnected
   nameWithType: RedisEngine.IsConnected
+- uid: PSTk.Redis.Database.RedisEngine.Start
+  name: Start()
+  href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_Start
+  commentId: M:PSTk.Redis.Database.RedisEngine.Start
+  fullName: PSTk.Redis.Database.RedisEngine.Start()
+  nameWithType: RedisEngine.Start()
+- uid: PSTk.Redis.Database.RedisEngine.Start*
+  name: Start
+  href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_Start_
+  commentId: Overload:PSTk.Redis.Database.RedisEngine.Start
+  isSpec: "True"
+  fullName: PSTk.Redis.Database.RedisEngine.Start
+  nameWithType: RedisEngine.Start
 - uid: PSTk.Redis.Database.RedisEngine.StartAsync
   name: StartAsync()
   href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_StartAsync
@@ -1707,6 +1746,25 @@ references:
   commentId: T:PSTk.Redis.Database.RedisSettings
   fullName: PSTk.Redis.Database.RedisSettings
   nameWithType: RedisSettings
+- uid: PSTk.Redis.Database.RedisSettings.#ctor
+  name: RedisSettings()
+  href: api/PSTk.Redis.Database.RedisSettings.html#PSTk_Redis_Database_RedisSettings__ctor
+  commentId: M:PSTk.Redis.Database.RedisSettings.#ctor
+  fullName: PSTk.Redis.Database.RedisSettings.RedisSettings()
+  nameWithType: RedisSettings.RedisSettings()
+- uid: PSTk.Redis.Database.RedisSettings.#ctor(System.String,System.SByte,System.String,System.Int32,System.Int32,System.Int32)
+  name: RedisSettings(String, SByte, String, Int32, Int32, Int32)
+  href: api/PSTk.Redis.Database.RedisSettings.html#PSTk_Redis_Database_RedisSettings__ctor_System_String_System_SByte_System_String_System_Int32_System_Int32_System_Int32_
+  commentId: M:PSTk.Redis.Database.RedisSettings.#ctor(System.String,System.SByte,System.String,System.Int32,System.Int32,System.Int32)
+  fullName: PSTk.Redis.Database.RedisSettings.RedisSettings(System.String, System.SByte, System.String, System.Int32, System.Int32, System.Int32)
+  nameWithType: RedisSettings.RedisSettings(String, SByte, String, Int32, Int32, Int32)
+- uid: PSTk.Redis.Database.RedisSettings.#ctor*
+  name: RedisSettings
+  href: api/PSTk.Redis.Database.RedisSettings.html#PSTk_Redis_Database_RedisSettings__ctor_
+  commentId: Overload:PSTk.Redis.Database.RedisSettings.#ctor
+  isSpec: "True"
+  fullName: PSTk.Redis.Database.RedisSettings.RedisSettings
+  nameWithType: RedisSettings.RedisSettings
 - uid: PSTk.Redis.Database.RedisSettings.AsyncTimeout
   name: AsyncTimeout
   href: api/PSTk.Redis.Database.RedisSettings.html#PSTk_Redis_Database_RedisSettings_AsyncTimeout
