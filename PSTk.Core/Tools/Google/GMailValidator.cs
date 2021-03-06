@@ -37,15 +37,21 @@ namespace PSTk.Core.Tools.Google
         /// <returns></returns>
         public bool IsValid(string email)
         {
-            using var client = new TcpClient(SMTP_DNS, SMTP_PORT);
-            using var stream = client.GetStream();
-            using var rdr = new StreamReader(stream);
-            PerformHELO(stream, rdr);
-            PerformMAIL(emailRegistry, stream, rdr);
-            PerformRCPT(stream, rdr, email, out var isValid);
-            PerformQUITE(stream);
-            client.Close();
-            return isValid;
+            using (var client = new TcpClient(SMTP_DNS, SMTP_PORT))
+            {
+                using (var stream = client.GetStream())
+                {
+                    using (var rdr = new StreamReader(stream))
+                    {
+                        PerformHELO(stream, rdr);
+                        PerformMAIL(emailRegistry, stream, rdr);
+                        PerformRCPT(stream, rdr, email, out var isValid);
+                        PerformQUITE(stream);
+                        client.Close();
+                        return isValid;
+                    }
+                }
+            }
         }
 
         private static void PerformHELO(NetworkStream stream, StreamReader rdr)
