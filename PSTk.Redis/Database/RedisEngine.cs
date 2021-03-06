@@ -33,22 +33,42 @@ namespace PSTk.Redis.Database
         public bool IsConnected => connectionMultiplexer != null && connectionMultiplexer.IsConnected;
 
         /// <summary>
-        /// Tries to create a new <see cref="IConnectionMultiplexer"/> connection asynchronously.
+        /// Tries to close <see cref="IConnectionMultiplexer"/> connection synchronously.
+        /// </summary>
+        public void Close()
+        {
+            if (!IsConnected)
+                return;
+
+            connectionMultiplexer.Close();
+        }
+
+        /// <summary>
+        /// Tries to close <see cref="IConnectionMultiplexer"/> connection asynchronously.
+        /// </summary>
+        public async void CloseAsync()
+        {
+            if (!IsConnected)
+                return;
+
+            connectionMultiplexer.CloseAsync();
+        }
+
+        /// <summary>
+        /// Dispose <see cref="IConnectionMultiplexer"/>.
+        /// </summary>
+        public void Dispose() => connectionMultiplexer.Dispose();
+
+        /// <summary>
+        /// Tries to create a new <see cref="IConnectionMultiplexer"/> connection synchronously.
         /// </summary>
         /// <exception cref="ConnectionException"></exception>
         public void Start()
         {
-            var connectionStr = new StringBuilder();
-            connectionStr.Append($"{redisSettings.Host}:{redisSettings.Port}");
-            if (!string.IsNullOrWhiteSpace(redisSettings.Password))
-                connectionStr.Append($",password={redisSettings.Password}");
-
-            connectionStr.Append($",syncTimeout={redisSettings.SyncTimeout}");
-            connectionStr.Append($",asyncTimeout={redisSettings.AsyncTimeout}");
-
             try
             {
-                connectionMultiplexer = ConnectionMultiplexer.Connect(connectionStr.ToString());
+                var connectionStr = GetConnectionStrings();
+                connectionMultiplexer = ConnectionMultiplexer.Connect(connectionStr);
                 database = connectionMultiplexer.GetDatabase(redisSettings.Index);
             }
             catch (RedisConnectionException e)
@@ -61,15 +81,36 @@ namespace PSTk.Redis.Database
         }
 
         /// <summary>
-        /// Dispose <see cref="IConnectionMultiplexer"/> asynchronously and close connection.
+        /// Tries to create a new <see cref="IConnectionMultiplexer"/> connection asynchronously.
         /// </summary>
-        public void Dispose()
+        /// <exception cref="ConnectionException"></exception>
+        public async void StartAsync()
         {
-            if (!IsConnected)
-                return;
+            try
+            {
+                var connectionStr = GetConnectionStrings();
+                connectionMultiplexer = await ConnectionMultiplexer.ConnectAsync(connectionStr);
+                database = connectionMultiplexer.GetDatabase(redisSettings.Index);
+            }
+            catch (RedisConnectionException e)
+            {
+                throw new ConnectionException(
+                    "Redis service cannot initialize. Turn on cluster server to begin database transactions.",
+                    e
+                );
+            }
+        }
 
-            connectionMultiplexer.Close();
-            connectionMultiplexer.Dispose();
+        private string GetConnectionStrings()
+        {
+            var connectionStr = new StringBuilder();
+            connectionStr.Append($"{redisSettings.Host}:{redisSettings.Port}");
+            if (!string.IsNullOrWhiteSpace(redisSettings.Password))
+                connectionStr.Append($",password={redisSettings.Password}");
+
+            connectionStr.Append($",syncTimeout={redisSettings.SyncTimeout}");
+            connectionStr.Append($",asyncTimeout={redisSettings.AsyncTimeout}");
+            return connectionStr.ToString();
         }
     }
 }
