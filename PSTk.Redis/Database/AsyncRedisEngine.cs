@@ -33,18 +33,6 @@ namespace PSTk.Redis.Database
         public bool IsConnected => connectionMultiplexer != null && connectionMultiplexer.IsConnected;
 
         /// <summary>
-        /// Dispose <see cref="IConnectionMultiplexer"/> asynchronously and close connection.
-        /// </summary>
-        public async void Dispose()
-        {
-            if (!IsConnected)
-                return;
-
-            await connectionMultiplexer.CloseAsync();
-            connectionMultiplexer.Dispose();
-        }
-
-        /// <summary>
         /// Tries to create a new <see cref="IConnectionMultiplexer"/> connection asynchronously.
         /// </summary>
         /// <exception cref="ConnectionException"></exception>
@@ -69,6 +57,18 @@ namespace PSTk.Redis.Database
                     "Redis service cannot initialize. Turn on cluster server to begin database transactions.",
                     e
                 );
+            }
+
+            /// <summary>
+            /// Dispose <see cref="IConnectionMultiplexer"/> asynchronously and close connection.
+            /// </summary>
+            public async void Dispose()
+            {
+                if (!IsConnected)
+                    return;
+
+                await connectionMultiplexer.CloseAsync();
+                connectionMultiplexer.Dispose();
             }
         }
     }
