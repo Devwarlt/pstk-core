@@ -6,7 +6,7 @@
 For more details, consider to check our [**API documentation**][api-docs].
 
 ## Language & Framework
-![language-badge] ![framework-badge]
+![language-badge] ![net-core-framework-badge] ![net-framework-badge] ![net-five-framework-badge]
 
 ## Build status
 | Branch                      | .NET CI Status                       | GitHub Pages CI Status                         |
@@ -40,7 +40,9 @@ For more details, consider to check our [**API documentation**][api-docs].
 
 [license-badge]: https://img.shields.io/badge/MIT-gray?style=plastic
 [language-badge]: https://img.shields.io/github/languages/top/Devwarlt/pstk-core?style=plastic&color=purple
-[framework-badge]: https://img.shields.io/badge/Core-3.1-purple?logo=.net&style=plastic
+[net-framework-badge]: https://img.shields.io/badge/Framework-4.7.2%2B-purple?logo=.net&style=plastic
+[net-core-framework-badge]: https://img.shields.io/badge/Core-3.1%2B-purple?logo=.net&style=plastic
+[net-five-framework-badge]: https://img.shields.io/badge/%20-5.0%2B-purple?logo=.net&style=plastic
 [version-badge]: https://img.shields.io/github/release/Devwarlt/pstk-core?color=success&logo=github&style=plastic
 [size-badge]: https://img.shields.io/github/repo-size/Devwarlt/pstk-core?style=plastic
 [visitors-badge]: https://visitor-badge.glitch.me/badge?page_id=Devwarlt.pstk-core
