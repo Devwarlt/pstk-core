@@ -39,23 +39,25 @@ namespace PSTk.Core.Tools
         /// <returns></returns>
         public string Create(string text)
         {
-            using var sha256 = new SHA256Managed();
-            var buffer = Encoding.UTF8.GetBytes(text + secret);
-            var hash = sha256.ComputeHash(buffer);
-            var encoder = Convert.ToBase64String(hash);
-            var byteHash = EightByteHash(encoder);
-            var byteHashAbs = Math.Abs(byteHash) * 10f + (byteHash < 0 ? 1d : 0d);
-            var key = new StringBuilder();
-            var hashStr = byteHashAbs.ToString();
-            var pieces = hashStr.ChunkSplit(pieceSize).ToArray();
-            for (var i = 0; i < pieces.Length; i++)
+            using (var sha256 = new SHA256Managed())
             {
-                var piece = ushort.Parse(pieces[i]);
-                key.Append($"{piece:X4}");
-                if (i + 1 < pieces.Length)
-                    key.Append(pieceSeparator);
+                var buffer = Encoding.UTF8.GetBytes(text + secret);
+                var hash = sha256.ComputeHash(buffer);
+                var encoder = Convert.ToBase64String(hash);
+                var byteHash = EightByteHash(encoder);
+                var byteHashAbs = Math.Abs(byteHash) * 10f + (byteHash < 0 ? 1d : 0d);
+                var key = new StringBuilder();
+                var hashStr = byteHashAbs.ToString();
+                var pieces = hashStr.ChunkSplit(pieceSize).ToArray();
+                for (var i = 0; i < pieces.Length; i++)
+                {
+                    var piece = ushort.Parse(pieces[i]);
+                    key.Append($"{piece:X4}");
+                    if (i + 1 < pieces.Length)
+                        key.Append(pieceSeparator);
+                }
+                return key.ToString();
             }
-            return key.ToString();
         }
 
         private int EightByteHash(string text)

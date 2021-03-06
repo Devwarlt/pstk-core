@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1;net472;net5.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>PSTk Core Team</Authors>
-    <Copyright>Copyright © PSTk Core Team 2020</Copyright>
+    <Copyright>Copyright © PSTk Core Team 2021</Copyright>
     <Company>PSTk Core Team</Company>
     <Product>PSTk.Core</Product>
     <Description>PSTk is a collection of features available in .NET Core that enhances your game server performance. This toolkit contains optimized code and utilities commonly used on game development.</Description>
@@ -21,18 +21,18 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <PackageId>PSTk.Core</PackageId>
     <ApplicationIcon>ICON.ico</ApplicationIcon>
-    <Version>1.0.2</Version>
+    <Version>1.1.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\Debug\netcoreapp3.1\PSTk.Core.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\$(TargetFramework)\PSTk.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PlatformTarget>x64</PlatformTarget>
-    <DocumentationFile>bin\Release\netcoreapp3.1\PSTk.Core.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\$(TargetFramework)\PSTk.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -47,6 +47,7 @@
       <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\PSTk.Redis\PSTk.Redis.csproj" />
     <ProjectReference Include="..\PSTk.Threading\PSTk.Threading.csproj">
       <Private>true</Private>
       <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>

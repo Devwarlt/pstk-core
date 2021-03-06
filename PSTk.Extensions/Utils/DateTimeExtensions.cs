@@ -71,7 +71,11 @@ namespace PSTk.Extensions.Utils
                 }
 
                 sb.Append(" and ");
+#if NET472
+                sb.Append(format[format.Count - 1]);
+#else
                 sb.Append(format[^1]);
+#endif
             }
             else
             {

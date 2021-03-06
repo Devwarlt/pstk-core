@@ -51,6 +51,13 @@ namespace PSTk.Extensions.Utils
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public static string ToUpperFirst(this string text) => char.ToUpper(text[0]) + text[1..];
+        public static string ToUpperFirst(this string text)
+            => char.ToUpper(text[0]) +
+#if NET472
+                text.Substring(1);
+#else
+                text[1..];
+
+#endif
     }
 }

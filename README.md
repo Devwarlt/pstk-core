@@ -6,7 +6,7 @@
 For more details, consider to check our [**API documentation**][api-docs].
 
 ## Language & Framework
-![language-badge] ![framework-badge]
+![language-badge] ![net-core-framework-badge] ![net-framework-badge] ![net-five-framework-badge]
 
 ## Build status
 | Branch                      | .NET CI Status                       | GitHub Pages CI Status                         |
@@ -22,6 +22,7 @@ For more details, consider to check our [**API documentation**][api-docs].
 | **`PSTk.Extensions`**  | [![pstk-extensions-badge]][pstk-extensions-nuget]   | [![pstk-extensions-downloads-badge]][pstk-extensions-nuget]   |
 | **`PSTk.Networking`**  | [![pstk-networking-badge]][pstk-networking-nuget]   | [![pstk-networking-downloads-badge]][pstk-networking-nuget]   |
 | **`PSTk.Threading`**   | [![pstk-threading-badge]][pstk-threading-nuget]     | [![pstk-threading-downloads-badge]][pstk-threading-nuget]     |
+| **`PSTk.Redis`**       | [![pstk-redis-badge]][pstk-redis-nuget]             | [![pstk-redis-downloads-badge]][pstk-redis-nuget]             |
 
 ### Contributors
 - [@Devwarlt][devwarlt-ref]
@@ -40,7 +41,9 @@ For more details, consider to check our [**API documentation**][api-docs].
 
 [license-badge]: https://img.shields.io/badge/MIT-gray?style=plastic
 [language-badge]: https://img.shields.io/github/languages/top/Devwarlt/pstk-core?style=plastic&color=purple
-[framework-badge]: https://img.shields.io/badge/Core-3.1-purple?logo=.net&style=plastic
+[net-framework-badge]: https://img.shields.io/badge/Framework-4.7.2%2B-purple?logo=.net&style=plastic
+[net-core-framework-badge]: https://img.shields.io/badge/Core-3.1%2B-purple?logo=.net&style=plastic
+[net-five-framework-badge]: https://img.shields.io/badge/%20-5.0%2B-purple?logo=.net&style=plastic
 [version-badge]: https://img.shields.io/github/release/Devwarlt/pstk-core?color=success&logo=github&style=plastic
 [size-badge]: https://img.shields.io/github/repo-size/Devwarlt/pstk-core?style=plastic
 [visitors-badge]: https://visitor-badge.glitch.me/badge?page_id=Devwarlt.pstk-core
@@ -72,3 +75,7 @@ For more details, consider to check our [**API documentation**][api-docs].
 [pstk-threading-badge]: https://img.shields.io/nuget/v/PSTk.Threading.svg?logo=nuget&style=plastic
 [pstk-threading-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Threading.svg?logo=nuget&style=plastic
 [pstk-threading-nuget]: https://www.nuget.org/packages/PSTk.Threading/
+
+[pstk-redis-badge]: https://img.shields.io/nuget/v/PSTk.Redis.svg?logo=nuget&style=plastic
+[pstk-redis-downloads-badge]: https://img.shields.io/nuget/dt/PSTk.Redis.svg?logo=nuget&style=plastic
+[pstk-redis-nuget]: https://www.nuget.org/packages/PSTk.Redis/
