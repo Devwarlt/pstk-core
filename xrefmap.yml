@@ -1529,6 +1529,19 @@ references:
   isSpec: "True"
   fullName: PSTk.Redis.Database.RedisEngine.StartAsync
   nameWithType: RedisEngine.StartAsync
+- uid: PSTk.Redis.Database.RedisEngine.Subscriber
+  name: Subscriber
+  href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_Subscriber
+  commentId: P:PSTk.Redis.Database.RedisEngine.Subscriber
+  fullName: PSTk.Redis.Database.RedisEngine.Subscriber
+  nameWithType: RedisEngine.Subscriber
+- uid: PSTk.Redis.Database.RedisEngine.Subscriber*
+  name: Subscriber
+  href: api/PSTk.Redis.Database.RedisEngine.html#PSTk_Redis_Database_RedisEngine_Subscriber_
+  commentId: Overload:PSTk.Redis.Database.RedisEngine.Subscriber
+  isSpec: "True"
+  fullName: PSTk.Redis.Database.RedisEngine.Subscriber
+  nameWithType: RedisEngine.Subscriber
 - uid: PSTk.Redis.Database.RedisField`1
   name: RedisField<T>
   href: api/PSTk.Redis.Database.RedisField-1.html
