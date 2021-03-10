@@ -15,6 +15,7 @@ namespace PSTk.Redis.Database
 
         private IConnectionMultiplexer connectionMultiplexer;
         private IDatabase database;
+        private ISubscriber subscriber;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -31,6 +32,11 @@ namespace PSTk.Redis.Database
         /// Verify if <see cref="IConnectionMultiplexer"/> is connected.
         /// </summary>
         public bool IsConnected => connectionMultiplexer != null && connectionMultiplexer.IsConnected;
+
+        /// <summary>
+        /// Gets <see cref="ISubscriber"/> of current <see cref="IDatabase"/> instance.
+        /// </summary>
+        public ISubscriber Subscriber => subscriber;
 
         /// <summary>
         /// Tries to close <see cref="IConnectionMultiplexer"/> connection synchronously.
@@ -51,7 +57,7 @@ namespace PSTk.Redis.Database
             if (!IsConnected)
                 return;
 
-            connectionMultiplexer.CloseAsync();
+            await connectionMultiplexer.CloseAsync();
         }
 
         /// <summary>
@@ -70,6 +76,7 @@ namespace PSTk.Redis.Database
                 var connectionStr = GetConnectionStrings();
                 connectionMultiplexer = ConnectionMultiplexer.Connect(connectionStr);
                 database = connectionMultiplexer.GetDatabase(redisSettings.Index);
+                subscriber = connectionMultiplexer.GetSubscriber();
             }
             catch (RedisConnectionException e)
             {
@@ -91,6 +98,7 @@ namespace PSTk.Redis.Database
                 var connectionStr = GetConnectionStrings();
                 connectionMultiplexer = await ConnectionMultiplexer.ConnectAsync(connectionStr);
                 database = connectionMultiplexer.GetDatabase(redisSettings.Index);
+                subscriber = connectionMultiplexer.GetSubscriber();
             }
             catch (RedisConnectionException e)
             {
