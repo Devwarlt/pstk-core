@@ -14,7 +14,7 @@ registries:
     type: git
     url: https://github.com
     username: Devwarlt
-    password: "${{secrets.GIT_GITHUB_COM_PASSWORD}}"
+    password: "${{secrets.NUGET_FEED_NUGET_PKG_GITHUB_COM_DEVWARLT_INDEX_JSON_PASSWORD}}"
 updates:
 - package-ecosystem: nuget
   directory: "/"
