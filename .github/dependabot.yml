@@ -10,6 +10,11 @@ registries:
     url: https://nuget.pkg.github.com/Devwarlt/index.json
     username: "${{secrets.NUGET_FEED_NUGET_PKG_GITHUB_COM_DEVWARLT_INDEX_JSON_USERNAME}}"
     password: "${{secrets.NUGET_FEED_NUGET_PKG_GITHUB_COM_DEVWARLT_INDEX_JSON_PASSWORD}}"
+  git-github-com:
+    type: git
+    url: https://github.com
+    username: Devwarlt
+    password: "${{secrets.GIT_GITHUB_COM_PASSWORD}}"
 updates:
 - package-ecosystem: nuget
   directory: "/"
