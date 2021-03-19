@@ -5,11 +5,6 @@ registries:
     url: https://api.nuget.org/v3/index.json
     username: "${{secrets.NUGET_FEED_API_NUGET_ORG_V3_INDEX_JSON_USERNAME}}"
     password: "${{secrets.NUGET_FEED_API_NUGET_ORG_V3_INDEX_JSON_PASSWORD}}"
-  git-github-com:
-    type: git
-    url: https://github.com
-    username: Devwarlt
-    password: "${{secrets.GIT_GITHUB_COM_PASSWORD}}"
   nuget-feed-nuget-pkg-github-com-devwarlt-index-json:
     type: nuget-feed
     url: https://nuget.pkg.github.com/Devwarlt/index.json
