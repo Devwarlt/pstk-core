@@ -127,7 +127,7 @@ namespace PSTk.Diagnostics.Logging
 
 #endif
 
-        private string LogHeader(string level) => $"[{LogTimer()}] | [{level}] | <{typeof(T).Name}> -> ";
+        private string LogHeader(string level) => $"[{LogTimer()}] | [{level}] | <{typeof(T).Name}> ";
 
         private string LogTimer() => DateTime.Now.ToString(timePattern);
 
