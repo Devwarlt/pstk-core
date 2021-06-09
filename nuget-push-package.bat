@@ -3,6 +3,7 @@
 IF "%~4"=="" EXIT 1
 
 SETLOCAL
+
 SET DISTRIBUTION=%1
 SET VERSION=%2
 SET SOURCE=%3
@@ -16,6 +17,7 @@ ECHO Source: %SOURCE%
 ECHO.
 
 dotnet nuget push "%DISTRIBUTION%\bin\Release\%DISTRIBUTION%.%VERSION%.nupkg" --source "%SOURCE%" --api-key %TOKEN%
+
 ENDLOCAL
 
 TIMEOUT 30
