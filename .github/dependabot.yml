@@ -1,0 +1,36 @@
+version: 2
+registries:
+  nuget-feed-api-nuget-org-v3-index-json:
+    type: nuget-feed
+    url: https://api.nuget.org/v3/index.json
+    username: "${{secrets.NUGET_FEED_API_NUGET_ORG_V3_INDEX_JSON_USERNAME}}"
+    password: "${{secrets.NUGET_FEED_API_NUGET_ORG_V3_INDEX_JSON_PASSWORD}}"
+  nuget-feed-nuget-pkg-github-com-devwarlt-index-json:
+    type: nuget-feed
+    url: https://nuget.pkg.github.com/Devwarlt/index.json
+    username: "${{secrets.NUGET_FEED_NUGET_PKG_GITHUB_COM_DEVWARLT_INDEX_JSON_USERNAME}}"
+    password: "${{secrets.NUGET_FEED_NUGET_PKG_GITHUB_COM_DEVWARLT_INDEX_JSON_PASSWORD}}"
+  git-github-com:
+    type: git
+    url: https://github.com
+    username: Devwarlt
+    password: "${{secrets.NUGET_FEED_NUGET_PKG_GITHUB_COM_DEVWARLT_INDEX_JSON_PASSWORD}}"
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "09:00"
+  open-pull-requests-limit: 10
+  target-branch: dev
+  reviewers:
+  - Devwarlt
+  assignees:
+  - Devwarlt
+  labels:
+  - ".net dependencies"
+  - dependabot
+  registries:
+  - nuget-feed-api-nuget-org-v3-index-json
+  - nuget-feed-nuget-pkg-github-com-devwarlt-index-json
+  - git-github-com
