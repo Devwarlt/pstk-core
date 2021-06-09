@@ -56,11 +56,7 @@ namespace PSTk.Threading.Tasks
             Name = name;
             this.timeout = timeout;
             this.routine = (delta) => routine.Invoke();
-            onError += (s, e) =>
-            {
-                errorLogger?.Invoke(e.ToString());
-                Finish();
-            };
+            onError += (s, e) => errorLogger?.Invoke(e.ToString());
         }
 
         /// <summary>
@@ -80,11 +76,7 @@ namespace PSTk.Threading.Tasks
             Name = name;
             this.timeout = timeout;
             this.routine = routine ?? throw new ArgumentNullException(nameof(routine));
-            onError += (s, e) =>
-            {
-                errorLogger?.Invoke(e.ToString());
-                Finish();
-            };
+            onError += (s, e) => errorLogger?.Invoke(e.ToString());
         }
 
         /// <summary>
@@ -95,7 +87,7 @@ namespace PSTk.Threading.Tasks
         /// <summary>
         /// When routine finished its task.
         /// </summary>
-        public event EventHandler OnFinished;
+        [Obsolete("Not supported feature since version 1.4.0.", true)] public event EventHandler OnFinished;
 
         private event EventHandler<Exception> onError;
 
@@ -155,17 +147,16 @@ namespace PSTk.Threading.Tasks
             IsCanceled = false;
         }
 
-        private void Finish()
-        {
-            IsCanceled = true;
-            OnFinished?.Invoke(this, null);
-        }
-
         private bool RoutineLoop()
         {
-            routine.Invoke(Delta = Math.Max(0, Math.Abs(Delta - stopwatch.ElapsedMilliseconds)));
+            var elapsedMs = stopwatch.ElapsedMilliseconds;
+            routine.Invoke(Delta);
+
+            var elapsedMsDelta = stopwatch.ElapsedMilliseconds - elapsedMs;
+            Delta = Math.Max(0, timeout - elapsedMsDelta);
             if (Delta > timeout)
                 OnDeltaVariation?.Invoke(this, new InternalRoutineEventArgs(Name, Delta, ticksPerSecond, timeout));
+
             return IsRunning && !IsCanceled;
         }
 
@@ -192,7 +183,7 @@ namespace PSTk.Threading.Tasks
                         }
                         return true;
                     }
-                    catch (OperationCanceledException) { Finish(); }
+                    catch (OperationCanceledException) { }
                     return false;
                 }, Token);
 

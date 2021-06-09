@@ -62,6 +62,11 @@ namespace PSTk.Sandbox
             internalRoutine.AttachToParent(_cts.Token);
             internalRoutine.Start();
 
+            var internalRoutineSlim = new InternalRoutineSlim($"{nameof(Sandbox)}::internalRoutineSlim()", 200, OnTickDelta, _logger.PrintErr);
+            internalRoutineSlim.OnDeltaVariation += (s, e) => e.TrackDelta(_logger);
+            internalRoutineSlim.AttachToParent(_cts.Token);
+            internalRoutineSlim.Start();
+
             var mre = new ManualResetEventSlim(false);
             mre.Wait();
         }
