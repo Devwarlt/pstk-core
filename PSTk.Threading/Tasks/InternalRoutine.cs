@@ -53,11 +53,7 @@ namespace PSTk.Threading.Tasks
             this.routine = (delta, cancel) => { if (!cancel) routine.Invoke(delta); };
             ticksPerSecond = 1000 / timeout;
             resetEvent = new ManualResetEventSlim(false);
-            onError += (s, e) =>
-            {
-                errorLogger?.Invoke(e.ToString());
-                Finish();
-            };
+            onError += (s, e) => errorLogger?.Invoke(e.ToString());
         }
 
         /// <summary>
@@ -68,7 +64,7 @@ namespace PSTk.Threading.Tasks
         /// <summary>
         /// When routine finished its task.
         /// </summary>
-        public event EventHandler OnFinished;
+        [Obsolete("Not supported feature since version 1.4.0.", true)] public event EventHandler OnFinished;
 
         private event EventHandler<Exception> onError;
 
@@ -113,7 +109,7 @@ namespace PSTk.Threading.Tasks
                         return timeout - elapsedMsDelta;
                     }, Token);
                 }
-                catch (OperationCanceledException) { Finish(); }
+                catch (OperationCanceledException) { }
             else
                 task = Task.Run(() =>
                 {
@@ -125,12 +121,6 @@ namespace PSTk.Threading.Tasks
 
             task?.ContinueWith(t => onError.Invoke(this, t.Exception.InnerException), TaskContinuationOptions.OnlyOnFaulted);
             return task;
-        }
-
-        private void Finish()
-        {
-            isCanceled = true;
-            OnFinished?.Invoke(this, null);
         }
 
         private void Loop()

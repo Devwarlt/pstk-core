@@ -8,7 +8,7 @@
     <Copyright>Copyright © PSTk Core Team 2021</Copyright>
     <Company>PSTk Core Team</Company>
     <Product>PSTk.Core</Product>
-    <Description>PSTk is a collection of features available in .NET Core that enhances your game server performance. This toolkit contains optimized code and utilities commonly used on game development.</Description>
+    <Description>PSTk is a collection of features available in .NET that enhances your game server performance. This toolkit contains optimized code and utilities commonly used on game development.</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/Devwarlt/pstk-core</PackageProjectUrl>
     <PackageIcon>ICON.png</PackageIcon>
@@ -21,7 +21,7 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <PackageId>PSTk.Core</PackageId>
     <ApplicationIcon>ICON.ico</ApplicationIcon>
-    <Version>1.1.3</Version>
+    <Version>1.1.4</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -42,11 +42,7 @@
       <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
       <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\PSTk.Networking\PSTk.Networking.csproj">
-      <Private>true</Private>
-      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-    </ProjectReference>
+    <ProjectReference Include="..\PSTk.Networking\PSTk.Networking.csproj" />
     <ProjectReference Include="..\PSTk.Redis\PSTk.Redis.csproj" />
     <ProjectReference Include="..\PSTk.Threading\PSTk.Threading.csproj">
       <Private>true</Private>

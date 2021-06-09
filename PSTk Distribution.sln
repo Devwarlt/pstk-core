@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Extensions", "PSTk.Extensions\PSTk.Extensions.csproj", "{6B575794-7661-495C-9B2E-2F0BCDE161B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Networking", "PSTk.Networking\PSTk.Networking.csproj", "{B5A56ACE-3AC5-4AF5-84EE-7444E4857EAF}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Threading", "PSTk.Threading\PSTk.Threading.csproj", "{954FC365-7F58-4572-A2FA-F79868EAB77B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Core", "PSTk.Core\PSTk.Core.csproj", "{35EFBE05-9804-4EFA-B34D-A34935FB4AED}"
@@ -50,6 +48,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Articles", "Articles", "{D2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Redis", "PSTk.Redis\PSTk.Redis.csproj", "{70734C00-A57D-44C2-A9AF-8C53438867C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSTk.Sandbox", "PSTk.Sandbox\PSTk.Sandbox.csproj", "{C8247C96-0DC9-465E-BD8C-6828E4C08FEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSTk.Networking", "PSTk.Networking\PSTk.Networking.csproj", "{8D890CAF-E098-43C5-BCBF-BA99C9309BAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,10 +62,6 @@ Global
 		{6B575794-7661-495C-9B2E-2F0BCDE161B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B575794-7661-495C-9B2E-2F0BCDE161B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B575794-7661-495C-9B2E-2F0BCDE161B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5A56ACE-3AC5-4AF5-84EE-7444E4857EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5A56ACE-3AC5-4AF5-84EE-7444E4857EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5A56ACE-3AC5-4AF5-84EE-7444E4857EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5A56ACE-3AC5-4AF5-84EE-7444E4857EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{954FC365-7F58-4572-A2FA-F79868EAB77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{954FC365-7F58-4572-A2FA-F79868EAB77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{954FC365-7F58-4572-A2FA-F79868EAB77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -80,6 +78,14 @@ Global
 		{70734C00-A57D-44C2-A9AF-8C53438867C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70734C00-A57D-44C2-A9AF-8C53438867C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70734C00-A57D-44C2-A9AF-8C53438867C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8247C96-0DC9-465E-BD8C-6828E4C08FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8247C96-0DC9-465E-BD8C-6828E4C08FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8247C96-0DC9-465E-BD8C-6828E4C08FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8247C96-0DC9-465E-BD8C-6828E4C08FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D890CAF-E098-43C5-BCBF-BA99C9309BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D890CAF-E098-43C5-BCBF-BA99C9309BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D890CAF-E098-43C5-BCBF-BA99C9309BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D890CAF-E098-43C5-BCBF-BA99C9309BAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
